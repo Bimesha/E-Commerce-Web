@@ -108,4 +108,15 @@ ul li {
     height: 60px;
 }
 
+.nav {
+    display: flex;
+    gap: 60px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+}
+
 
