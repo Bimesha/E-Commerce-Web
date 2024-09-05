@@ -32,7 +32,7 @@ class SpecialHeader extends HTMLElement {
                         <a class="nav-link" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Shop</a>
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Shop</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Chair Collection</a></li>
                                 <li><a class="dropdown-item" href="#">Table Collection</a></li>
