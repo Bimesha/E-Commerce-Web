@@ -55,6 +55,7 @@ body {
 }
 
 .header-user img {
+    cursor: pointer;
     width: 55px;
     height: 55px;
     border-radius: 50%;
