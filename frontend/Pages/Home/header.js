@@ -3,9 +3,9 @@ class SpecialHeader extends HTMLElement {
         this.innerHTML = `
             <header>
                 <div class="header-container">
-                    <div class="header-search" style="display: flex; align-items: center;">
+                    <div class="header-search">
                         <img id="search" src="../../assets/search.png">
-                        <input type="text" placeholder="Search" style="margin-left: 8px;">
+                        <input type="text" placeholder="Search">
                     </div>
 
                     <div class="header-logo">
