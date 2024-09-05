@@ -70,11 +70,12 @@ ul li {
     text-align: center;
     display: none;
     position: absolute;
-    top: 100px;
+    top: 105px;
     padding: 10px;
     margin-left: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
 #login-link, #signup-link, #profile-link, #logout-link {
@@ -100,3 +101,11 @@ ul li {
     background-color: #fff;
     transform: rotate(45deg);
 }
+
+.header-menu {
+    background-color: black;
+    margin-top: -70px;
+    height: 60px;
+}
+
+
