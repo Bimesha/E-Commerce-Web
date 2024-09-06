@@ -167,7 +167,6 @@ ul li {
 
 .active {
     color: #FFBA35; 
-    font-weight: bold;
 }
 
 #cart.active i,
@@ -181,8 +180,9 @@ ul li {
 }
 
 .nav-link a.active {
-    color: #007bff; /* Change this to your preferred active link color */
-    font-weight: bold; /* Optional: to make the active link stand out more */
+    padding: 10px 20px;
+    background-color: #FFBA35;
+    border-radius: 3px;
 }
 
 #products-dropdown li a:hover {
