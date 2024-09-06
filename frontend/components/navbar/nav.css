@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.header-search {
+    width: 150px;
+    margin-top: -60px;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    display: flex;  
+    align-items: center;
+    padding: 5px;
+}
+
+#search {
+    width: 25px;
+    margin-left: 10px;
+}
+
+.header-search input {
+    width: 100px;
+    background-color: #D9D9D9;
+    outline: none;
+    border: none;
+    padding: 2px 10px;
+    font-size: 16px;
+}
+
+.header-search input::placeholder {
+    color: #000;
+}
+
+.header-logo img {
+    width: 250px;
+    height: 160px;
+}
+
+.header-user {
+    display: flex;
+    margin-top: -50px;
+    align-items: center;
+    gap: 30px;
+}
+
+#cart i, #user i, #search1 i {
+    font-size: 22px;
+    padding: 10px 10px;
+    color: #000;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+#cart-count {
+    position: absolute;
+    top: 34px;
+    right: 185px;
+    font-size: 10px;
+    color: black;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li {
+    list-style: none;
+}
+
+#drop-down {
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 105px;
+    padding:10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+#login-link, #signup-link, #profile-link, #logout-link {
+    padding: 10px 20px;
+}
+
+#login-link, #profile-link {
+    border-bottom: black 1px solid;
+}
+
+#login-link a, #signup-link a, #profile-link a, #logout-link a {
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.box {
+    position: absolute;
+    top: -10px;
+    right: 75px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    transform: rotate(45deg);
+}
+
+.header-menu {
+    background-color: black;
+    margin-top: -70px;
+    height: 60px;
+}
+
+.nav {
+    display: flex;
+    gap: 60px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 20px;
+}
+
+.nav-link {
+    margin-top: 10px;
+} 
+
+#products-dropdown {
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 160px;
+    right: 780px;
+    padding:10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+#chair-link, #table-link, #sofa-link {
+    padding: 10px 20px;
+}
+
+#chair-link, #table-link {
+    border-bottom: black 1px solid;
+}
+
+#chair-link a, #table-link a, #sofa-link a {
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.active {
+    color: #FFBA35; 
+}
+
+#cart.active i,
+#user.active i {
+    background-color: #FFBA35;
+}
+
+#drop-down li.active {
+    background-color: #FFBA35;
+    border-radius: 3px;
+}
+
+.nav-link a.active {
+    padding: 10px 20px;
+    background-color: #FFBA35;
+    border-radius: 3px;
+}
+
+#products-dropdown li a:hover {
+    background-color: #FFBA35;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+
+@media (max-width: 767px) {
+    .header-container {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .header-search {
+        display: none;
+    }
+
+    .header-logo img {
+        width: 260px;
+        margin-left: -70px;
+    }
+
+    .header-menu {
+        margin-top: 1px;
+    }
+
+    .header-user {
+        margin-right: 10px;
+        gap: 20px;
+    }
+
+    #search1 {
+        display: block !important;
+    }
+
+    #cart-count {
+        top: 34px;
+        right: 165px;
+    }
+
+    #drop-down {
+        top: 105px;
+        right: 10px;
+    }
+
+    .box {
+        right: 95px;
+    }
+
+    .header-menu {
+        margin-top: -70px;
+    }
+
+    .header-menu #list {
+        display: block !important;
+        color: #fff;
+        margin-top: -10px;
+        font-size: 30px;
+        margin-left: 40px;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .nav-link a {
+        color: black;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
