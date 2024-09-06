@@ -57,7 +57,7 @@ body {
 
 #cart i, #user i {
     font-size: 22px;
-    padding: 12px 12px;
+    padding: 10px 10px;
     color: #000;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -67,8 +67,8 @@ body {
 #cart-count {
     position: absolute;
     top: 34px;
-    right: 190px;
-    font-size: 12px;
+    right: 185px;
+    font-size: 10px;
     color: black;
     width: 15px;
     height: 15px;

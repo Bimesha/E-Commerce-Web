@@ -13,7 +13,7 @@ class SpecialHeader extends HTMLElement {
                     </div>
 
                     <div class="header-user">
-                        <div id="cart"><a href="#"><i class="bi bi-cart3"><span id="cart-count">0</span></i></a></div>
+                        <div id="cart"><a href="#"><i class="bi bi-cart3"><span id="cart-count">10</span></i></a></div>
                         <div id="user"><i class="bi bi-person" onClick="togglemenu()"></i></div>
                             <ul id="drop-down">
                                 <div class="box"></div>
