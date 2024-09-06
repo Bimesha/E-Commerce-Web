@@ -13,7 +13,7 @@ class SpecialHeader extends HTMLElement {
                     </div>
 
                     <div class="header-user">
-                        <div id="cart"><i class="bi bi-cart3"></i></div>
+                        <div id="cart"><a href="#"><i class="bi bi-cart3"><span id="cart-count">0</span></i></a></div>
                         <div id="user"><i class="bi bi-person" onClick="togglemenu()"></i></div>
                             <ul id="drop-down">
                                 <div class="box"></div>
@@ -27,24 +27,17 @@ class SpecialHeader extends HTMLElement {
             </header>
 
             <div class="header-menu">
-                <ul class="nav nav-pills justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                <ul class="nav justify-content-center">
+                    <li class="nav-link"><a href="#">Home</a></li>
+                    <li class="nav-link"><a href="#" onClick="toggleProductsDropdown()" id="products">Shop <i class="bi bi-caret-down-fill"></i></a>
+                        <ul id="products-dropdown" style="display:none;">
+                            <li id="chair-link"><a href="#">Chair Collection</a></li>
+                            <li id="table-link"><a href="#">Table Collection</a></li>
+                            <li id="sofa-link"><a href="#">Sofa Collection</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Shop</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Chair Collection</a></li>
-                                <li><a class="dropdown-item" href="#">Table Collection</a></li>
-                                <li><a class="dropdown-item" href="#">Sofa Collection</a></li>
-                            </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Our Story</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
-                    </li>
+                    <li class="nav-link"><a href="#">Our Story</a></li>
+                    <li class="nav-link"><a href="#">Contact Us</a></li>
                 </ul>
             </div>
         `;

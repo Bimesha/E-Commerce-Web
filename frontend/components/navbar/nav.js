@@ -7,12 +7,28 @@ function togglemenu() {
   }
 }
 
+function toggleProductsDropdown() {
+  let dropdown = document.getElementById("products-dropdown");
+  // Toggle the display property of the drop-down menu
+  if (dropdown.style.display === "none" || dropdown.style.display === "") {
+      dropdown.style.display = "block";
+  } else {
+      dropdown.style.display = "none";
+  }
+}
+
 // Close the drop-down menu if the user clicks outside of it
 window.onclick = function (event) {
   var dropdown = document.getElementById("drop-down");
   var avatar = document.getElementById("user");
   if (!avatar.contains(event.target) && !dropdown.contains(event.target)) {
     dropdown.style.display = "none";
+  }
+
+  var productsDropdown = document.getElementById("products-dropdown");
+  var products = document.getElementById("products");
+  if (!products.contains(event.target) && !productsDropdown.contains(event.target)) {
+      productsDropdown.style.display = "none";
   }
 };
 
@@ -46,4 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 });
+
+
+
 
