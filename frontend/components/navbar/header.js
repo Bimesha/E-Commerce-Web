@@ -13,8 +13,8 @@ class SpecialHeader extends HTMLElement {
                     </div>
 
                     <div class="header-user">
-                        <img id="cart" src="../../assets/cart.png">
-                        <img id="user" src="../../assets/user.png" onClick="togglemenu()">
+                        <div id="cart"><i class="bi bi-cart3"></i></div>
+                        <div id="user"><i class="bi bi-person" onClick="togglemenu()"></i></div>
                             <ul id="drop-down">
                                 <div class="box"></div>
                                 <li id="login-link"><a href="#">Log In</a></li>
@@ -52,3 +52,5 @@ class SpecialHeader extends HTMLElement {
 }
 
 customElements.define('special-header', SpecialHeader);
+
+
