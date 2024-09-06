@@ -20,7 +20,7 @@ class SpecialHeader extends HTMLElement {
                                 <li id="login-link"><a href="#">Log In</a></li>
                                 <li id="signup-link"><a href="#">Create Account</a></li>
                                 <li id="profile-link" style="display:none;"><a href="#">My Profile</a></li>
-                                <li id="logout-link" style="display:none;"><a href="#" onclick="logout()">Logout</a></li>
+                                <li id="logout-link" style="display:none;"><a href="#">Logout</a></li>
                             </ul>
                     </div>
                 </div>

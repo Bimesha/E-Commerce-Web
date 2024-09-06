@@ -39,12 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const links = document.querySelectorAll('#drop-down li a');
 
   function setActive(element) {
-      // Remove 'active' class from all icons and links
       cart.classList.remove('active');
       user.classList.remove('active');
       links.forEach(link => link.parentElement.classList.remove('active'));
 
-      // Add 'active' class to the clicked element
       if (element.id === 'cart' || element.id === 'user') {
           element.classList.add('active');
       } else if (element.tagName === 'A') {
@@ -65,14 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Function to toggle the active class on the clicked link
 function setActiveLink(event) {
-  // Prevent the default link action
   event.preventDefault();
 
-  // Remove the active class from all links
-  var links = document.querySelectorAll('.nav-link a');
+  const links = document.querySelectorAll('.nav-link a');
   links.forEach(link => link.classList.remove('active'));
 
-  // Add the active class to the clicked link
   event.target.classList.add('active');
 }
 
