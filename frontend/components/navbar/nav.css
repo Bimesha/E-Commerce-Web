@@ -180,6 +180,18 @@ ul li {
     border-radius: 3px;
 }
 
+.nav-link a.active {
+    color: #007bff; /* Change this to your preferred active link color */
+    font-weight: bold; /* Optional: to make the active link stand out more */
+}
+
+#products-dropdown li a:hover {
+    background-color: #FFBA35;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+
 
 
 

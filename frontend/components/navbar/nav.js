@@ -63,6 +63,23 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Function to toggle the active class on the clicked link
+function setActiveLink(event) {
+  // Prevent the default link action
+  event.preventDefault();
 
+  // Remove the active class from all links
+  var links = document.querySelectorAll('.nav-link a');
+  links.forEach(link => link.classList.remove('active'));
+
+  // Add the active class to the clicked link
+  event.target.classList.add('active');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.nav-link a').forEach(link => {
+      link.addEventListener('click', setActiveLink);
+  });
+});
 
 
