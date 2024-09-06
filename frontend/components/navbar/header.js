@@ -28,9 +28,8 @@ class SpecialHeader extends HTMLElement {
             </header>
 
             <div class="header-menu">
-                <div id="list"></div>
                 <ul class="nav justify-content-center">
-                    <li class="nav-link" id="list"><i class="bi bi-list"></i></li>
+                    <li class="nav-link" id="list" style="display: none"><i class="bi bi-list"></i></li>
                     <li class="nav-link"><a href="#">Home</a></li>
                     <li class="nav-link"><a href="#" onClick="toggleProductsDropdown()" id="products">Shop <i class="bi bi-caret-down-fill"></i></a>
                         <ul id="products-dropdown" style="display:none;">
