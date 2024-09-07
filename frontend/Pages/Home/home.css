@@ -11,16 +11,16 @@
 }
 
 .container h1{
-    padding-top: 4rem;
+    padding-top: 2rem;
     font-family: "Buda", serif;
+    font-size: 4.5rem;
     letter-spacing: 1.5rem;
-    font-size: 5rem;
     line-height: 7rem;
 }
 
 .row {
     margin-left: 21rem;
-    margin-top: 2rem;
+    margin-top: 3.6rem;
 }
 
 .card {
@@ -61,53 +61,16 @@
     font-size: 0.9rem;
     text-align: left;
 }
-
-
-@media (min-width: 1200px) {
-    .bg-image {
-        height: 70vh;
-    }
-
-    .container h1 {
-        font-size: 5rem;
-        letter-spacing: 1.5rem;
-    }
-
-    .row {
-        margin-left: 21rem;
-    }
-
-    .card {
-        width: 35rem;
-    }
-
-    .details {
-        margin-left: 5rem;
-        gap: 4rem;
-    }
-
-    .detail {
-        margin-top: -4rem;
-    }
-
-    .detail h5 {
-        font-size: 1.8rem;
-    }
-
-    .detail h6 {
-        font-size: 0.9rem;
-    }
-    
-}
+ 
 
 
 @media (max-width: 1200px) {
     .bg-image {
-        height: 65vh;
+        height: 61vh;
     }
 
     .container h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
         letter-spacing: 15px;
     }
 
@@ -174,7 +137,7 @@
     }
 
     .detail {
-        margin-top: -1rem;
+        margin-top: -2rem;
     }
 
     .detail h5 {
