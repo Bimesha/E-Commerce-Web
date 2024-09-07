@@ -7,15 +7,24 @@ function togglemenu() {
   }
 }
 
+function toggleSearchmenu() {
+  let dropdown = document.getElementById("drop-down-list");
+  if (dropdown.style.display === "none" || dropdown.style.display === "") {
+    dropdown.style.display = "block";
+  } else {
+    dropdown.style.display = "none";
+  }
+}
+
 function toggleProductsDropdown() {
   let dropdown = document.getElementById("products-dropdown");
-  // Toggle the display property of the drop-down menu
   if (dropdown.style.display === "none" || dropdown.style.display === "") {
       dropdown.style.display = "block";
   } else {
       dropdown.style.display = "none";
   }
 }
+
 
 // Close the drop-down menu if the user clicks outside of it
 window.onclick = function (event) {
@@ -30,20 +39,30 @@ window.onclick = function (event) {
   if (!products.contains(event.target) && !productsDropdown.contains(event.target)) {
       productsDropdown.style.display = "none";
   }
+
+  var searchDropdown = document.getElementById("drop-down-list");
+  var search = document.getElementById("list");
+  if (!search.contains(event.target) && !searchDropdown.contains(event.target)) {
+    searchDropdown.style.display = "none";
+  }
 };
 
 // Active class for the cart and user icons
 document.addEventListener('DOMContentLoaded', () => {
   const cart = document.getElementById('cart');
   const user = document.getElementById('user');
+  const search = document.getElementById('search1');
+  const list = document.getElementById('list');
   const links = document.querySelectorAll('#drop-down li a');
 
   function setActive(element) {
       cart.classList.remove('active');
       user.classList.remove('active');
+      search.classList.remove('active');
+      list.classList.remove('active');
       links.forEach(link => link.parentElement.classList.remove('active'));
 
-      if (element.id === 'cart' || element.id === 'user') {
+      if (element.id === 'cart' || element.id === 'user' || element.id === 'search1' || element.id === 'list') {
           element.classList.add('active');
       } else if (element.tagName === 'A') {
           element.parentElement.classList.add('active');
@@ -52,6 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   cart.addEventListener('click', () => setActive(cart));
   user.addEventListener('click', () => setActive(user));
+  search.addEventListener('click', () => setActive(search));
+  list.addEventListener('click', () => setActive(list));
 
   links.forEach(link => {
       link.addEventListener('click', (event) => {

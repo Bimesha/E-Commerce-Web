@@ -23,6 +23,16 @@ class SpecialHeader extends HTMLElement {
                                 <li id="logout-link" style="display:none;"><a href="#">Logout</a></li>
                             </ul>
                         <div id="search1" style="display: none"><i class="bi bi-search"></i></div>
+                        <div id="list" style="display: none"><i class="bi bi-list" onClick="toggleSearchmenu()"></i></div>
+                            <ul id="drop-down-list" style="display: none">
+                                <div class="box"></div>
+                                <li id="home-link"><a href="#">Home</a></li>
+                                <li id="chair-link"><a href="#">Chair Collection</a></li>
+                                <li id="table-link"><a href="#">Table Collection</a></li>
+                                <li id="sofa-link"><a href="#">Sofa Collection</a></li>
+                                <li id="story-link"><a href="#">Our Story</a></li>
+                                <li id="contact-link"><a href="#">Contact Us</a></li>
+                            </ul>
                     </div>
                 </div>
             </header>
@@ -47,5 +57,3 @@ class SpecialHeader extends HTMLElement {
 }
 
 customElements.define('special-header', SpecialHeader);
-
-
