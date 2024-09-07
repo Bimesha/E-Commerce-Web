@@ -61,10 +61,46 @@
     font-size: 0.9rem;
     text-align: left;
 }
- 
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
+    .bg-image {
+        height: 62vh;
+    }
+
+    .container h1 {
+        font-size: 4rem;
+        letter-spacing: 1.5rem;
+    }
+
+    .row {
+        margin-top: -0.1rem;
+        margin-left: 14rem;
+    }
+
+    .card {
+        width: 33rem;
+    }
+
+    .details {
+        margin-left: 5rem;
+        gap: 4rem;
+    }
+
+    .detail {
+        margin-top: -4rem;
+    }
+
+    .detail h5 {
+        font-size: 1.8rem;
+    }
+
+    .detail h6 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1024px) {
     .bg-image {
         height: 61vh;
     }
@@ -75,12 +111,12 @@
     }
 
     .row {
-        margin-top: -1rem;
+        margin-top: -0.5rem;
         margin-left: 5rem;
     }
 
     .card {
-        width: 35rem;
+        width: 32rem;
     }
 
     .details {
