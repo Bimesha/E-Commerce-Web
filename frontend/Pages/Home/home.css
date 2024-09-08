@@ -63,6 +63,91 @@
 }
 
 
+
+.container1 .row1 {
+    margin-left: 8rem;
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.row1 .card {
+    width: 400px;
+    height: 45rem;
+    background-color: #fff;
+}
+
+.row1 .card-top {
+    margin-top: -16px;
+    margin-left: -16px;
+    width: 400px;
+    height: 30%;
+    background-color: #9a4444;
+}
+
+.card-top h5 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding-top: 1.5rem;
+    letter-spacing: 3px;
+}
+
+.card-top span {
+    font-size: 3rem;
+}
+
+.row1 .card-bottom {
+    background-image: url(../../assets/3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -8px;
+    margin-left: -16px;
+    width: 400px;
+    height: 70%;
+}
+
+.card-bottom .products-banner {
+    position: absolute;
+    background-color: rgba(241, 255, 255, 0.5);
+    padding: 1rem;
+    top: 15rem;
+    width: 200px;
+    margin-left: 2rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.banner-details h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.banner-details h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.btn-primary {
+    background-color: #FFBA35;
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+}
+
+.btn-primary i {
+    font-size: 20px;
+} 
+
+
 @media (max-width: 1440px) {
     .bg-image {
         height: 62vh;
@@ -152,7 +237,7 @@
 
     .row {
         margin-top: -2rem;
-        margin-left: 2rem;
+        margin-left: 1.6rem;
     }
 
     .card {
@@ -186,3 +271,8 @@
     
 }
   
+
+
+
+
+
