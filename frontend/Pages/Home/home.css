@@ -65,7 +65,7 @@
 
 
 .container1 .row1 {
-    margin-left: 8rem;
+    margin-left: 15rem;
     display: flex;
     gap: 2rem;
     margin-top: 2rem;
@@ -73,7 +73,7 @@
 }
 
 .row1 .card {
-    width: 400px;
+    width: 350px;
     height: 45rem;
     background-color: #fff;
 }
@@ -108,7 +108,7 @@
     height: 70%;
 }
 
-.card-bottom .products-banner {
+.card-bottom .products-banner, .card-bottom1 .products-banner {
     position: absolute;
     background-color: rgba(241, 255, 255, 0.5);
     padding: 1rem;
