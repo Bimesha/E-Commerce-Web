@@ -74,7 +74,7 @@
 
 .row1 .card {
     width: 350px;
-    height: 45rem;
+    height: 40rem;
     background-color: #fff;
 }
 
@@ -89,7 +89,7 @@
 .card-top h5 {
     font-size: 1.8rem;
     font-weight: 400;
-    padding-top: 3rem;
+    padding-top: 1.8rem;
     letter-spacing: 3px;
 }
 
@@ -105,14 +105,47 @@
     margin-top: -8px;
     margin-left: -16px;
     width: 350px;
-    height: 70%;
+    height: 75%;
 }
 
-.card-bottom .products-banner, .card-bottom1 .products-banner {
+.row1 .card-bottom1 {
+    background-image: url(../../assets/1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -16px;
+    margin-left: -16px;
+    width: 350px;
+    height: 105%;
+}
+
+.row1 .card-bottom2 {
+    background-image: url(../../assets/3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -16px;
+    margin-left: -16px;
+    width: 350px;
+    height: 105%;
+}
+
+.card-bottom .products-banner {
     position: absolute;
     background-color: rgba(241, 255, 255, 0.5);
     padding: 1rem;
-    top: 15rem;
+    top: 13.5rem;
+    width: 200px;
+    margin-left: 2rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.card-bottom1 .products-banner, .card-bottom2 .products-banner {
+    position: absolute;
+    background-color: rgba(241, 255, 255, 0.5);
+    padding: 1rem;
+    top: 2.2rem;
     width: 200px;
     margin-left: 2rem;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
