@@ -252,6 +252,10 @@
         width: 350px;
         height: 350px;
     }
+
+    .card-bottom .products-banner {
+        top: 2.2rem;
+    }
 }
 
 @media (max-width: 1300px) {
