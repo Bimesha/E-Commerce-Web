@@ -18,12 +18,12 @@
     line-height: 7rem;
 }
 
-.row {
-    margin-left: 21rem;
-    margin-top: 3.9rem;
+.row1 {
+    margin-left: 22rem;
+    margin-top: 5.5rem;
 }
 
-.card {
+.card1 {
     background-color: rgba(241, 255, 255, 0.5);
     width: 35rem;
     height: 10rem;
@@ -34,8 +34,8 @@
     border-radius: 3px;
 }
 
-.card-body p {
-    margin-top: 0.3rem;
+.card-body1 p {
+    padding-top: 2rem;
     font-size: 1rem;
     font-family: "Poppins", sans-serif;
     letter-spacing: 0.1rem;
@@ -43,6 +43,7 @@
 }
 
 .details {
+    padding-top: 4rem;
     margin-left: 5rem;
     display: flex;
     gap: 4rem;
@@ -66,21 +67,22 @@
 
 
 
-.container1 .row1 {
-    margin-left: 13rem;
+.container .row {
+    margin-left: 6rem;
     display: flex;
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-bottom: 2rem;
 }
 
-.row1 .card {
+.row .card {
+    border: none;
     width: 350px;
     height: 40rem;
     background-color: #fff;
 }
 
-.row1 .card-top {
+.row .card-top {
     margin-top: -16px;
     margin-left: -16px;
     width: 350px;
@@ -99,7 +101,7 @@
     font-size: 3rem;
 }
 
-.row1 .card-bottom {
+.row .card-bottom {
     background-image: url(../../assets/home1.jpg);
     background-size: cover;
     background-position: center;
@@ -110,7 +112,7 @@
     height: 75%;
 }
 
-.row1 .card-bottom1 {
+.row .card-bottom1 {
     background-image: url(../../assets/home2.png);
     background-size: cover;
     background-position: center;
@@ -121,7 +123,7 @@
     height: 105%;
 }
 
-.row1 .card-bottom2 {
+.row .card-bottom2 {
     background-image: url(../../assets/home3.png);
     background-size: cover;
     background-position: center;
@@ -188,6 +190,57 @@
 
 
 
+/* Featured Products */
+/* .container.my-5 {
+    margin-left: -15rem;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.card-text {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.btn-primary {
+    background-color: #000;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #FFBA35;
+} */
+
+.featured-products {
+    justify-content: center;
+}
+
+.products {
+    padding: 0 300px 0 300px;
+}
+
+.products .card {
+    display: flex;
+    gap: 1rem;
+    width: 200px;
+    height: 300px;
+    border: 1px solid #e52727;
+    background-color: #fff;
+}
+
+
 
 
 
@@ -203,12 +256,12 @@
         letter-spacing: 1.5rem;
     }
 
-    .row {
-        margin-top: -0.1rem;
+    .row1 {
+        margin-top: 5rem;
         margin-left: 22rem;
     }
 
-    .card {
+    .card1 {
         width: 33rem;
     }
 
@@ -218,7 +271,7 @@
     }
 
     .detail {
-        margin-top: -4rem;
+        margin-top: -4.5rem;
     }
 
     .detail h5 {
@@ -264,11 +317,11 @@
         letter-spacing: 15px;
     }
 
-    .row {
-        margin-left: 16rem;
+    .row1 {
+        margin-left: 17rem;
     }
 
-    .card {
+    .card1 {
         width: 32rem;
     }
 
@@ -278,7 +331,7 @@
     }
 
     .detail {
-        margin-top: 0;
+        margin-top: -4rem;
     }
 
     .detail h5 {
@@ -305,7 +358,7 @@
 }
 
 @media (max-width: 1210px) {
-    .row {
+    .row1 {
         margin-left: 13rem;
     }
 
@@ -313,7 +366,7 @@
         margin-left: 6rem;
     }
 
-    .row1 .card {
+    .row .card {
         width: 300px;
         height: 300px;
     }
@@ -341,11 +394,11 @@
 }
 
 @media (max-width: 1140px) {
-    .row {
+    .row1 {
         margin-left: 12rem;
     }
 
-    .container1 .row1 {
+    .container1 .row {
         margin-left: 6rem;
         gap: 1rem;
     }
@@ -366,26 +419,32 @@
         height: 61vh;
     }
 
-    .row {
-        margin-top: -0.5rem;
+    .container h1 {
+        font-size: 3rem;
+        line-height: 5rem;
+        letter-spacing: 1.5rem;
+    }
+
+    .row1 {
+        margin-top: -1rem;
         margin-left: 12rem;
     }
 
 
-    .container1 .row1 {
+    .container1 .row {
         margin-left: 7rem;
     }
 
-    .row1 .card {
+    .row .card {
         width: 260px;
         height: 260px;
     }
 
-    .row1 .card-bottom {
+    .row .card-bottom {
         margin-top: -1rem;
     }
 
-    .row1 .card-top, .row1 .card-bottom, .row1 .card-bottom1, .row1 .card-bottom2 {
+    .row .card-top, .row .card-bottom, .row1 .card-bottom1, .row1 .card-bottom2 {
         width: 260px;
         height: 260px;
     }
@@ -418,7 +477,7 @@
 
 
 @media (max-width: 991px) {
-    .row {
+    .row1 {
         margin-top: -0.5rem;
         margin-left: 6rem;
     }
@@ -466,7 +525,7 @@
 
 @media (max-width: 890px) {
     .bg-image {
-        height: 45vh;
+        height: 40vh;
     }
 
     .container h1 {
@@ -476,17 +535,17 @@
         letter-spacing: 0.7rem;
     }
 
-    .row {
-        margin-top: -0.5rem;
+    .row1 {
+        margin-top: -1.3rem;
         margin-left: 7rem;
     }
 
-    .card {
+    .card1 {
         width: 28rem;
-        height: 8rem;
+        height: 9rem;
     }
 
-    .card-body p {
+    .card-body1 p {
         margin-top: -0.2rem;
         font-size: 0.9rem;
         line-height: 1.3rem;
@@ -494,13 +553,13 @@
     }
 
     .details {
-        margin-left: 2rem;
+        margin-left: 4rem;
         display: flex;
         gap: 4rem;
     }
 
     .detail {
-        margin-top: -2rem;
+        margin-top: -4rem;
     }
 
 
@@ -545,12 +604,11 @@
         letter-spacing: 0.5rem;
     }
 
-    .row {
-        margin-top: -0.5rem;
+    .row1 {
         margin-left: 3rem;
     }
 
-    .card {
+    .card1 {
         width: 26rem;
     }
 
@@ -565,8 +623,7 @@
 }
 
 @media (max-width: 700px) {
-    .row {
-        margin-top: -0.5rem;
+    .row1 {
         margin-left: 3rem;
     }
 
@@ -597,7 +654,7 @@
 }
 
 @media (max-width: 630px) {
-    .row {
+    .row1 {
         margin-left: 1.1rem;
     }
 
