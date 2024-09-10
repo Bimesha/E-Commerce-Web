@@ -10,7 +10,7 @@
     z-index: -1;
 }
 
-.container h1{
+.container1 h1{
     padding-top: 2rem;
     font-family: "Buda", serif;
     font-size: 4.5rem;
@@ -18,9 +18,9 @@
     line-height: 7rem;
 }
 
-.row1 {
-    margin-left: 22rem;
-    margin-top: 5.5rem;
+.row1 .card1 {
+    margin-left: 16rem;
+    margin-top: 3.9rem;
 }
 
 .card1 {
@@ -35,7 +35,7 @@
 }
 
 .card-body1 p {
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     font-size: 1rem;
     font-family: "Poppins", sans-serif;
     letter-spacing: 0.1rem;
@@ -43,14 +43,9 @@
 }
 
 .details {
-    padding-top: 4rem;
     margin-left: 5rem;
     display: flex;
     gap: 4rem;
-}
-
-.detail {
-    margin-top: -4rem;
 }
 
 .detail h5 {
@@ -67,22 +62,21 @@
 
 
 
-.container .row {
-    margin-left: 6rem;
+.container1 .row1 {
+    margin-left: 13rem;
     display: flex;
     gap: 2rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
-.row .card {
-    border: none;
+.row1 .card {
     width: 350px;
     height: 40rem;
     background-color: #fff;
 }
 
-.row .card-top {
+.row1 .card-top {
     margin-top: -16px;
     margin-left: -16px;
     width: 350px;
@@ -101,7 +95,7 @@
     font-size: 3rem;
 }
 
-.row .card-bottom {
+.row1 .card-bottom {
     background-image: url(../../assets/home1.jpg);
     background-size: cover;
     background-position: center;
@@ -112,7 +106,7 @@
     height: 75%;
 }
 
-.row .card-bottom1 {
+.row1 .card-bottom1 {
     background-image: url(../../assets/home2.png);
     background-size: cover;
     background-position: center;
@@ -123,7 +117,7 @@
     height: 105%;
 }
 
-.row .card-bottom2 {
+.row1 .card-bottom2 {
     background-image: url(../../assets/home3.png);
     background-size: cover;
     background-position: center;
@@ -190,97 +184,37 @@
 
 
 
-/* Featured Products */
-/* .container.my-5 {
-    margin-left: -15rem;
-}
-
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-body {
-    text-align: center;
-}
-
-.card-title {
-    font-size: 1.25rem;
-    font-weight: 500;
-}
-
-.card-text {
-    font-size: 0.875rem;
-    color: #6c757d;
-}
-
-.btn-primary {
-    background-color: #000;
-    border: none;
-}
-
-.btn-primary:hover {
-    background-color: #FFBA35;
-} */
-
-.featured-products {
-    justify-content: center;
-}
-
-.products {
-    padding: 0 300px 0 300px;
-}
-
-.products .card {
-    display: flex;
-    gap: 1rem;
-    width: 200px;
-    height: 300px;
-    border: 1px solid #e52727;
-    background-color: #fff;
-}
-
-
-
-
-
-
 /* Media Queries */
 @media (max-width: 1440px) {
     .bg-image {
-        height: 62vh;
+        height: 65vh;
     }
 
-    .container h1 {
+    .container1 h1{
         font-size: 4rem;
-        letter-spacing: 1.5rem;
-    }
-
-    .row1 {
-        margin-top: 5rem;
-        margin-left: 22rem;
+        letter-spacing: 1.3rem;
     }
 
     .card1 {
         width: 33rem;
     }
 
+    .row1 .card1 {
+        margin-top: 4.6rem;
+        margin-left: 21rem;
+    }
+
+    .card-body1 p {
+        font-size: 1.1rem;
+    }
     .details {
         margin-left: 5rem;
         gap: 4rem;
     }
 
-    .detail {
-        margin-top: -4.5rem;
-    }
+    
 
-    .detail h5 {
-        font-size: 1.8rem;
-    }
 
-    .detail h6 {
-        font-size: 0.9rem;
-    }
 
 
     .container1 .row1 {
@@ -311,27 +245,102 @@
     }
 }
 
-@media (max-width: 1300px) {
-    .container h1 {
-        font-size: 3.5rem;
-        letter-spacing: 15px;
+@media (max-width: 1024px) {
+    .bg-image {
+        height: 62vh;
     }
 
-    .row1 {
-        margin-left: 17rem;
+    .container1 h1 {
+        font-size: 3rem;
+        letter-spacing: 1rem;
+        line-height: 4.5rem;
+    }
+
+    .row1 .card1 {
+        margin-top: 2rem;
+        margin-left: 7.5rem;
+    }
+    
+    .card-body1 p {
+        font-size: 1rem;
+    }
+    
+    .detail {
+        margin-top: rem;
+        margin-left: -0.1rem;
+    }
+
+
+    .container1 .row1 {
+        margin-left: 7rem;
+    }
+
+    .row1 .card {
+        width: 260px;
+        height: 260px;
+    }
+
+    .row1 .card-bottom {
+        margin-top: -1rem;
+    }
+
+    .row1 .card-top, .row1 .card-bottom, .row1 .card-bottom1, .row1 .card-bottom2 {
+        width: 260px;
+        height: 260px;
+    }
+
+    .row1 .card-bottom2 {
+        margin-right: 4rem;
+    }
+
+    .row1 .products-banner {
+        top: 2rem;
+    }
+
+    .row1 .products-banner, .row1 .products-banner1, .row1 .products-banner2 {
+        width: 150px;
+        margin-left: 2rem;
+    }
+
+    .banner-details h5 {
+        font-size: 0.8rem;
+    }
+
+    .banner-details h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .bg-image {
+        height: 58vh;
+    }
+
+    .container1 h1 {
+        font-size: 2.5rem;
+        letter-spacing: 0.8rem;
+    }
+
+    .row1 .card1 {
+        margin-top: 1.2rem;
+        margin-left: 5.5rem;
     }
 
     .card1 {
-        width: 32rem;
+        width: 30rem;
+        height: 9rem;
+    }
+
+    .card-body1 p {
+        font-size: 0.9rem;
     }
 
     .details {
-        margin-left: 6rem;
-        gap: 5rem;
-    }
-
-    .detail {
-        margin-top: -4rem;
+        margin-left: 5rem;
     }
 
     .detail h5 {
@@ -342,236 +351,67 @@
         font-size: 0.8rem;
     }
 
-    .container1 .row1 {
-        margin-left: 7rem;
-    }
-
-    .row1 .card {
-        width: 320px;
-        height: 320px;
-    }
-
-    .row1 .card-top, .row1 .card-bottom, .row1 .card-bottom1, .row1 .card-bottom2 {
-        width: 320px;
-        height: 320px;
-    }
-}
-
-@media (max-width: 1210px) {
-    .row1 {
-        margin-left: 13rem;
-    }
 
     .container1 .row1 {
-        margin-left: 6rem;
-    }
-
-    .row .card {
-        width: 300px;
-        height: 300px;
-    }
-
-    .row1 .card-top, .row1 .card-bottom, .row1 .card-bottom1, .row1 .card-bottom2 {
-        width: 300px;
-        height: 300px;
-    }
-
-    .card-bottom .products-banner {
-        top: 2rem;
-        width: 180px;
-    }
-
-    .card-bottom1 .products-banner, .card-bottom2 .products-banner {
-        top: 2rem;
-        width: 180px;
-    }
-
-    .btn-primary {
-        padding: 0.3rem 0.5rem;
-        font-size: 0.9rem;
-    }
-
-}
-
-@media (max-width: 1140px) {
-    .row1 {
-        margin-left: 12rem;
-    }
-
-    .container1 .row {
-        margin-left: 6rem;
-        gap: 1rem;
-    }
-
-    .row1 .card {
-        width: 280px;
-        height: 280px;
-    }
-
-    .row1 .card-top, .row1 .card-bottom, .row1 .card-bottom1, .row1 .card-bottom2 {
-        width: 280px;
-        height: 280px;
+        margin-left: 3rem;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 426px) {
     .bg-image {
-        height: 61vh;
+        height: 50vh;
+        margin-top: -3.5rem;
     }
 
-    .container h1 {
-        font-size: 3rem;
-        line-height: 5rem;
-        letter-spacing: 1.5rem;
+    .container1 h1 {
+        font-size: 2rem;
+        letter-spacing: 0.6rem;
+        line-height: 3.5rem;
     }
 
-    .row1 {
-        margin-top: -1rem;
-        margin-left: 12rem;
-    }
-
-
-    .container1 .row {
-        margin-left: 7rem;
-    }
-
-    .row .card {
-        width: 260px;
-        height: 260px;
-    }
-
-    .row .card-bottom {
-        margin-top: -1rem;
-    }
-
-    .row .card-top, .row .card-bottom, .row1 .card-bottom1, .row1 .card-bottom2 {
-        width: 260px;
-        height: 260px;
-    }
-
-    .row1 .card-bottom2 {
-        margin-right: 4rem;
-    }
-
-    .row1 .products-banner {
-        top: 2rem;
-    }
-
-    .row1 .products-banner, .row1 .products-banner1, .row1 .products-banner2 {
-        width: 150px;
-        margin-left: 2rem;
-    }
-
-    .banner-details h5 {
-        font-size: 0.8rem;
-    }
-
-    .banner-details h2 {
-        font-size: 1.5rem;
-    }
-
-    .btn-primary {
-        font-size: 0.8rem;
-    }
-}
-
-
-@media (max-width: 991px) {
-    .row1 {
-        margin-top: -0.5rem;
-        margin-left: 6rem;
-    }
-
-
-    .container1 .row1 {
-        margin-left: 6.8rem;
-    }
-
-    .row1 .card {
-        width: 230px;
-        height: 230px;
-    }
-
-    .row1 .card-top, .row1 .card-bottom, .row1 .card-bottom1, .row1 .card-bottom2 {
-        width: 230px;
-        height: 230px;
-    }
-
-    .row1 .card-bottom2 {
-        margin-right: 4rem;
-    }
-
-    .row1 .products-banner {
-        top: 2rem;
-    }
-
-    .row1 .products-banner, .row1 .products-banner1, .row1 .products-banner2 {
-        width: 150px;
-        margin-left: 2rem;
-    }
-
-    .banner-details h5 {
-        font-size: 0.8rem;
-    }
-
-    .banner-details h2 {
-        font-size: 1.5rem;
-    }
-
-    .btn-primary {
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 890px) {
-    .bg-image {
-        height: 40vh;
-    }
-
-    .container h1 {
-        padding-top: 1.5rem;
-        font-size: 2.8rem;
-        line-height: 4.5rem;
-        letter-spacing: 0.7rem;
-    }
-
-    .row1 {
-        margin-top: -1.3rem;
-        margin-left: 7rem;
+    .row1 .card1 {
+        margin-top: 1rem;
+        margin-left: -0.2rem;
     }
 
     .card1 {
-        width: 28rem;
-        height: 9rem;
+        width: 23rem;
+        height: 8rem;
     }
 
     .card-body1 p {
-        margin-top: -0.2rem;
-        font-size: 0.9rem;
-        line-height: 1.3rem;
-        letter-spacing: 1px;
+        font-size: 0.8rem;
     }
 
     .details {
-        margin-left: 4rem;
-        display: flex;
-        gap: 4rem;
+        margin-left: 2.5rem;
     }
 
     .detail {
-        margin-top: -4rem;
+        margin-top: -0.7rem;
+    }
+
+    .detail h5 {
+        font-size: 1.2rem;
+    }
+
+    .detail h6 {
+        margin-top: -0.4rem;
+        font-size: 0.7rem;
     }
 
 
-
     .container1 .row1 {
-        margin-left: 5.5rem;
-    
+        margin-left: 2rem;
     }
 
     .row1 .card {
         width: 200px;
         height: 200px;
+    }
+
+    .row1 .card-bottom {
+        margin-top: -1rem;
     }
 
     .row1 .card-top, .row1 .card-bottom, .row1 .card-bottom1, .row1 .card-bottom2 {
@@ -579,132 +419,117 @@
         height: 200px;
     }
 
-    .card-bottom .products-banner {
-        margin-left: 1.3rem;
-        top: 1rem;
-        width: 160px;
+    .row1 .card-bottom2 {
+        margin-right: 4rem;
     }
 
-    .card-bottom1 .products-banner, .card-bottom2 .products-banner {
-        margin-left: 1.3rem;
-        top: 1rem;
-        width: 160px;
-    }
-    
-}
-
-@media (max-width: 768px) {
-    .bg-image {
-        margin-top: -4rem;
-        height: 45vh;
+    .row1 .products-banner {
+        top: 2rem;
     }
 
-    .container h1 {
-        font-size: 2.5rem;
-        letter-spacing: 0.5rem;
-    }
-
-    .row1 {
-        margin-left: 3rem;
-    }
-
-    .card1 {
-        width: 26rem;
-    }
-
-    .details {
-        margin-left: 2.5rem;
-    }
-
-
-    .container1 .row1 {
-        margin-left: 3rem;
-    }
-}
-
-@media (max-width: 700px) {
-    .row1 {
-        margin-left: 3rem;
-    }
-
-
-    .container1 .row1 {
-        margin-left: 2.5rem;
-        gap: 0.1rem;
-    }
-
-    .row1 .card {
-        width: 190px;
-        height: 190px;
-    }
-
-     .row1 .card-bottom, .row1 .card-bottom1, .row1 .card-bottom2 {
-        width: 190px;
-        height: 190px;
-    }
-
-    .card-bottom .products-banner {
-        margin-left: 1rem;
-    }
-
-    .card-bottom1 .products-banner, .card-bottom2 .products-banner {
-        margin-left: 1rem;
-    }
-
-}
-
-@media (max-width: 630px) {
-    .row1 {
-        margin-left: 1.1rem;
-    }
-
-    .container1 .row1 {
-        flex-direction: column;
-        margin-left: 4.5rem;
-
-    }
-
-    .row1 .card {
-        width: 350px;
-        height: 350px;
-    }
-
-     .row1 .card-bottom, .row1 .card-bottom1, .row1 .card-bottom2 {
-        width: 350px;
-        height: 350px;
-    }
-
-    .card-bottom .products-banner {
-        margin-left: 3rem;
-        top: 3rem;
-        width: 250px;
-    }
-
-    .card-bottom1 .products-banner, .card-bottom2 .products-banner {
-        margin-left: 3rem;
-        top: 3rem;
-        width: 250px;
+    .row1 .products-banner, .row1 .products-banner1, .row1 .products-banner2 {
+        width: 150px;
+        margin-left: 2rem;
     }
 
     .banner-details h5 {
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
 
     .banner-details h2 {
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
 
     .btn-primary {
-        padding: 0.5rem 1rem;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 376px) {
+    .bg-image {
+        height: 45vh;
+    }
+
+    .container1 h1 {
+        font-size: 1.8rem;
+        letter-spacing: 0.5rem;
+        line-height: 3rem;
+    }
+
+    .row1 .card1 {
+        margin-top: 1rem;
+        margin-left: -1.4rem;
+    }
+
+    .card1 {
+        width: 22rem;
+        height: 7.5rem;
+    }
+
+    .card1 .card-body1 p {
+        font-size: 0.7rem;
+        padding-top: 1rem;
+    }
+
+    .details {
+        margin-left: 3rem;
+    }
+
+    .detail {
+        margin-top: 0.2rem;
+    }
+
+    .detail h5 {
         font-size: 1rem;
     }
 
+    .detail h6 {
+        font-size: 0.6rem;
+    }
 }
 
+@media (max-width: 320px) {
+    .bg-image {
+        height: 35vh;
+        margin-top: -4rem;
+    }
 
-  
+    .container1 h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0.4rem;
+        line-height: 2.5rem;
+        padding-top: 1rem;
+    }
 
+    .row1 .card1 {
+        margin-top: -0.2rem;
+        margin-left: -1.5rem;
+    }
 
+    .card1 {
+        width: 19rem;
+        height: 6.5rem;
+    }
 
+    .card-body1 p {
+        font-size: 0.5rem;
+        padding-bottom: 0.2rem;
+    }
 
+    .details {
+        margin-left: 1.2rem;
+    }
 
+    .detail {
+        margin-top: -1rem;
+    }
+
+    .detail h5 {
+        font-size: 0.9rem;
+    }
+
+    .detail h6 {
+        margin-top: -0.4rem;
+        font-size: 0.5rem;
+    }
+}
