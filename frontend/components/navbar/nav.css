@@ -55,7 +55,7 @@ body {
     gap: 30px;
 }
 
-#cart i, #user i, #search1 i {
+#cart i, #user i, #search1 i, #list i {
     font-size: 22px;
     padding: 10px 10px;
     color: #000;
@@ -151,7 +151,7 @@ ul li {
     background-color: #fff;
 }
 
-#chair-link, #table-link, #sofa-link {
+#chair-link, #table-link, #sofa-link, #home-link, #contact-link, #story-link {
     padding: 10px 20px;
 }
 
@@ -192,10 +192,13 @@ ul li {
 }
 
 
-@media (max-width: 767px) {
+
+/* Media Queries */
+@media (max-width: 426px) {
     .header-container {
         display: flex;
         align-items: center;
+        margin-top: -10px;
         padding: 0 20px;
     }
 
@@ -214,7 +217,12 @@ ul li {
 
     .header-user {
         margin-right: 10px;
-        gap: 20px;
+        gap: 12px;
+    }
+
+    #cart i, #user i, #search1 i, #list i {
+        font-size: 16px;
+        padding: 8px 8px;
     }
 
     #search1 {
@@ -222,40 +230,151 @@ ul li {
     }
 
     #cart-count {
-        top: 34px;
-        right: 165px;
-    }
-
-    #drop-down {
-        top: 105px;
-        right: 10px;
+        top: 28px;
+        right: 170px;
     }
 
     .box {
         right: 95px;
     }
 
-    .header-menu {
-        margin-top: -70px;
+    #drop-down {
+        top: 75px;
+        margin-left: -20px;
     }
 
-    .header-menu #list {
+    #list {
         display: block !important;
-        color: #fff;
-        margin-top: -10px;
-        font-size: 30px;
-        margin-left: 40px;
     }
 
-    .nav {
-        display: block;
+    #drop-down-list {
+        text-align: center;
+        position: absolute;
+        top: 75px;
+        padding:10px;
+        margin-left: 35px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
     }
 
-    .nav-link a {
-        color: black;
+    .box {
+        display: none;
     }
 
+    #home-link, #sofa-link, #story-link {
+        border-bottom: black 1px solid;
+    }
+    
+    #home-link a, #story-link a, #contact-link a {
+        color: #000;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #list.active i, #search1.active i {
+        background-color: #FFBA35;
+    }
+
+    #drop-down-list li:hover {
+        background-color: #FFBA35;
+        border-radius: 3px;
+    }
+
+    .header-menu {
+        display: none;
+    }
+
+    #home-link, #sofa-link, #story-link, #logout-link, #profile-link, #signup-link, #login-link, #contact-link, #table-link, #chair-link {
+        padding: 8px 12px;
+    }
+
+    #home-link a, #story-link a, #contact-link a, #login-link a, #logout-link a, #signup-link a, #chair-link a, #table-link a, #sofa-link a, #contact-link a {
+        font-size: 15px;
+        color: #000;
+    }
 }
+
+@media (max-width: 376px) {
+    .header-container {
+        padding: 0px 10px;
+        margin-top: -15px;
+    }
+
+    .header-logo img {
+        width: 220px;
+        margin-left: -56px;
+    }
+
+    #cart-count {
+        top: 23px;
+        right: 160px;
+    }
+
+    #drop-down {
+        top: 70px;
+        margin-left: -1px;
+    }
+
+    #drop-down-list {
+        top: 70px;
+        right: 10px;
+    }
+
+    #home-link, #sofa-link, #story-link, #logout-link, #profile-link, #signup-link, #login-link, #contact-link, #table-link, #chair-link {
+        padding: 6px 10px;
+    }
+
+    #home-link a, #story-link a, #contact-link a, #login-link a, #logout-link a, #chair-link a, #table-link a, #sofa-link a, #contact-link a, #signup-link a {
+        font-size: 13px;
+        color: #000;
+    }
+}
+
+@media (max-width: 321px) {
+    .header-container {
+        margin-top: 5px;
+    }
+    .header-logo img {
+        width: 180px;
+        height: 120px;
+        margin-top: -10px;
+        margin-left: -48px;
+    }
+
+    #cart i, #user i, #search1 i, #list i {
+        font-size: 15px;
+        padding: 7px 7px;
+    }
+
+    #cart-count {
+        font-size: 9px;
+        top: 18px;
+        right: 150px;
+    }
+
+    #drop-down {
+        top: 60px;
+    }
+
+    #drop-down-list {
+        top: 60px;
+        right: 10px;
+    }
+
+    #home-link, #sofa-link, #story-link, #logout-link, #profile-link, #signup-link, #login-link, #contact-link, #table-link, #chair-link {
+        padding: 5px 8px;
+    }
+
+    #home-link a, #story-link a, #contact-link a, #login-link a, #logout-link a, #chair-link a, #table-link a, #sofa-link a, #contact-link a, #signup-link a {
+        font-size: 12px;
+    }
+}
+
+
+    
+
+
 
 
 

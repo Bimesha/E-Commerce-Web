@@ -1,0 +1,535 @@
+.bg-image {
+    margin-top: 1.5rem;
+    background-image: url(../../assets/home.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+.container1 h1{
+    padding-top: 2rem;
+    font-family: "Buda", serif;
+    font-size: 4.5rem;
+    letter-spacing: 1.5rem;
+    line-height: 7rem;
+}
+
+.row1 .card1 {
+    margin-left: 16rem;
+    margin-top: 3.9rem;
+}
+
+.card1 {
+    background-color: rgba(241, 255, 255, 0.5);
+    width: 35rem;
+    height: 10rem;
+    text-align: center;
+    color: black;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 3px;
+}
+
+.card-body1 p {
+    padding-top: 1.5rem;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.1rem;
+    word-spacing: 2px;
+}
+
+.details {
+    margin-left: 5rem;
+    display: flex;
+    gap: 4rem;
+}
+
+.detail h5 {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.detail h6 {
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+
+
+
+
+.container1 .row1 {
+    margin-left: 13rem;
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.row1 .card {
+    width: 350px;
+    height: 40rem;
+    background-color: #fff;
+}
+
+.row1 .card-top {
+    margin-top: -16px;
+    margin-left: -16px;
+    width: 350px;
+    height: 30%;
+    background-color: #fff;
+}
+
+.card-top h5 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding-top: 1.8rem;
+    letter-spacing: 3px;
+}
+
+.card-top span {
+    font-size: 3rem;
+}
+
+.row1 .card-bottom {
+    background-image: url(../../assets/home1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -8px;
+    margin-left: -16px;
+    width: 350px;
+    height: 75%;
+}
+
+.row1 .card-bottom1 {
+    background-image: url(../../assets/home2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -16px;
+    margin-left: -16px;
+    width: 350px;
+    height: 105%;
+}
+
+.row1 .card-bottom2 {
+    background-image: url(../../assets/home3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -16px;
+    margin-left: -16px;
+    width: 350px;
+    height: 105%;
+}
+
+.card-bottom .products-banner {
+    position: absolute;
+    background-color: rgba(241, 255, 255, 0.5);
+    padding: 1rem;
+    top: 13.5rem;
+    width: 200px;
+    margin-left: 2rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.card-bottom1 .products-banner, .card-bottom2 .products-banner {
+    position: absolute;
+    background-color: rgba(241, 255, 255, 0.5);
+    padding: 1rem;
+    top: 2.2rem;
+    width: 200px;
+    margin-left: 2rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.banner-details h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.banner-details h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.btn-primary {
+    background-color: black;
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+}
+
+.btn-primary i {
+    font-size: 20px;
+} 
+
+.btn-primary:hover {
+    background-color: #FFBA35;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 1440px) {
+    .bg-image {
+        height: 65vh;
+    }
+
+    .container1 h1{
+        font-size: 4rem;
+        letter-spacing: 1.3rem;
+    }
+
+    .card1 {
+        width: 33rem;
+    }
+
+    .row1 .card1 {
+        margin-top: 4.6rem;
+        margin-left: 21rem;
+    }
+
+    .card-body1 p {
+        font-size: 1.1rem;
+    }
+    .details {
+        margin-left: 5rem;
+        gap: 4rem;
+    }
+
+    
+
+
+
+
+    .container1 .row1 {
+        margin-left: 8rem;
+        gap: 2rem;
+    }
+
+    .row1 .card {
+        width: 350px;
+        height: 350px;
+    }
+
+    .card-top {
+        display: none;
+    }
+
+    .row1 .card-bottom {
+        margin-top: -1rem;
+    }
+
+    .row1 .card-top, .row1 .card-bottom, .row1 .card-bottom1, .row1 .card-bottom2 {
+        width: 350px;
+        height: 350px;
+    }
+
+    .card-bottom .products-banner {
+        top: 2.2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .bg-image {
+        height: 62vh;
+    }
+
+    .container1 h1 {
+        font-size: 3rem;
+        letter-spacing: 1rem;
+        line-height: 4.5rem;
+    }
+
+    .row1 .card1 {
+        margin-top: 2rem;
+        margin-left: 7.5rem;
+    }
+    
+    .card-body1 p {
+        font-size: 1rem;
+    }
+    
+    .detail {
+        margin-top: rem;
+        margin-left: -0.1rem;
+    }
+
+
+    .container1 .row1 {
+        margin-left: 7rem;
+    }
+
+    .row1 .card {
+        width: 260px;
+        height: 260px;
+    }
+
+    .row1 .card-bottom {
+        margin-top: -1rem;
+    }
+
+    .row1 .card-top, .row1 .card-bottom, .row1 .card-bottom1, .row1 .card-bottom2 {
+        width: 260px;
+        height: 260px;
+    }
+
+    .row1 .card-bottom2 {
+        margin-right: 4rem;
+    }
+
+    .row1 .products-banner {
+        top: 2rem;
+    }
+
+    .row1 .products-banner, .row1 .products-banner1, .row1 .products-banner2 {
+        width: 150px;
+        margin-left: 2rem;
+    }
+
+    .banner-details h5 {
+        font-size: 0.8rem;
+    }
+
+    .banner-details h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .bg-image {
+        height: 58vh;
+    }
+
+    .container1 h1 {
+        font-size: 2.5rem;
+        letter-spacing: 0.8rem;
+    }
+
+    .row1 .card1 {
+        margin-top: 1.2rem;
+        margin-left: 5.5rem;
+    }
+
+    .card1 {
+        width: 30rem;
+        height: 9rem;
+    }
+
+    .card-body1 p {
+        font-size: 0.9rem;
+    }
+
+    .details {
+        margin-left: 5rem;
+    }
+
+    .detail h5 {
+        font-size: 1.5rem;
+    }
+
+    .detail h6 {
+        font-size: 0.8rem;
+    }
+
+
+    .container1 .row1 {
+        margin-left: 3rem;
+    }
+}
+
+@media (max-width: 426px) {
+    .bg-image {
+        height: 50vh;
+        margin-top: -4rem;
+    }
+
+    .container1 h1 {
+        font-size: 2rem;
+        letter-spacing: 0.6rem;
+        line-height: 3.5rem;
+    }
+
+    .row1 .card1 {
+        margin-top: 1rem;
+        margin-left: -0.2rem;
+    }
+
+    .card1 {
+        width: 23rem;
+        height: 8rem;
+    }
+
+    .card-body1 p {
+        font-size: 0.8rem;
+    }
+
+    .details {
+        margin-left: 2.5rem;
+    }
+
+    .detail {
+        margin-top: -0.7rem;
+    }
+
+    .detail h5 {
+        font-size: 1.2rem;
+    }
+
+    .detail h6 {
+        margin-top: -0.4rem;
+        font-size: 0.7rem;
+    }
+
+
+    .container1 .row1 {
+        margin-left: 2rem;
+    }
+
+    .row1 .card {
+        width: 200px;
+        height: 200px;
+    }
+
+    .row1 .card-bottom {
+        margin-top: -1rem;
+    }
+
+    .row1 .card-top, .row1 .card-bottom, .row1 .card-bottom1, .row1 .card-bottom2 {
+        width: 200px;
+        height: 200px;
+    }
+
+    .row1 .card-bottom2 {
+        margin-right: 4rem;
+    }
+
+    .row1 .products-banner {
+        top: 2rem;
+    }
+
+    .row1 .products-banner, .row1 .products-banner1, .row1 .products-banner2 {
+        width: 150px;
+        margin-left: 2rem;
+    }
+
+    .banner-details h5 {
+        font-size: 0.7rem;
+    }
+
+    .banner-details h2 {
+        font-size: 1.3rem;
+    }
+
+    .btn-primary {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 376px) {
+    .bg-image {
+        height: 45vh;
+    }
+
+    .container1 h1 {
+        font-size: 1.8rem;
+        letter-spacing: 0.5rem;
+        line-height: 3rem;
+    }
+
+    .row1 .card1 {
+        margin-top: 1rem;
+        margin-left: -1.4rem;
+    }
+
+    .card1 {
+        width: 22rem;
+        height: 7.5rem;
+    }
+
+    .card1 .card-body1 p {
+        font-size: 0.7rem;
+        padding-top: 1rem;
+    }
+
+    .details {
+        margin-left: 3rem;
+    }
+
+    .detail {
+        margin-top: 0.2rem;
+    }
+
+    .detail h5 {
+        font-size: 1rem;
+    }
+
+    .detail h6 {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .bg-image {
+        height: 35vh;
+        margin-top: -3rem;
+    }
+
+    .container1 h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0.4rem;
+        line-height: 2.5rem;
+        padding-top: 1rem;
+    }
+
+    .row1 .card1 {
+        margin-top: -0.5rem;
+        margin-left: -1.5rem;
+    }
+
+    .card1 {
+        width: 19rem;
+        height: 6.5rem;
+    }
+
+    .card-body1 p {
+        font-size: 0.5rem;
+        padding-bottom: 0.2rem;
+    }
+
+    .details {
+        margin-left: 1.2rem;
+    }
+
+    .detail {
+        margin-top: -1rem;
+    }
+
+    .detail h5 {
+        font-size: 0.9rem;
+    }
+
+    .detail h6 {
+        margin-top: -0.4rem;
+        font-size: 0.5rem;
+    }
+}
