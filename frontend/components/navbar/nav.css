@@ -333,11 +333,12 @@ ul li {
 
 @media (max-width: 321px) {
     .header-container {
-        margin-top: -20px;
+        margin-top: 5px;
     }
-
     .header-logo img {
         width: 180px;
+        height: 120px;
+        margin-top: -10px;
         margin-left: -48px;
     }
 

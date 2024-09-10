@@ -491,7 +491,7 @@
 @media (max-width: 320px) {
     .bg-image {
         height: 35vh;
-        margin-top: -4rem;
+        margin-top: -3rem;
     }
 
     .container1 h1 {
@@ -502,7 +502,7 @@
     }
 
     .row1 .card1 {
-        margin-top: -0.2rem;
+        margin-top: -0.5rem;
         margin-left: -1.5rem;
     }
 
