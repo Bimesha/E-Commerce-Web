@@ -1545,7 +1545,7 @@ body {
         font-size: 1.3rem;
         font-weight: 500;
         color: #fff;
-        padding-top: 1.6rem;
+        padding-top: 1.2rem;
         line-height: 3rem;
         letter-spacing: 1.5px;
     }
@@ -1654,14 +1654,6 @@ body {
         z-index: -1;
     }
 
-    .img .overlay {
-        height: 30vh;
-        background-color: rgba(187, 184, 184, 0.5);
-        width: 100%;
-        position: absolute;
-        z-index: -1;
-    }
-
     .img .content {
         text-align: center;
         align-items: center;
@@ -1671,7 +1663,7 @@ body {
         font-size: 1.1rem;
         font-weight: 500;
         color: #fff;
-        padding-top: 1.8rem;
+        padding-top: 1.2rem;
         line-height: 2.5rem;
         letter-spacing: 1.5px;
     }
