@@ -7,7 +7,7 @@ form {
     text-align: center;
 }
 
-input[type="email"], input[type="password"], input[type="text"] {
+.modal-body input[type="email"], .modal-body input[type="password"], .modal-body input[type="text"] {
     padding: 10px;
     margin-bottom: 15px;
 }
