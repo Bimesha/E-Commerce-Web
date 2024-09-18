@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 footer{
     background-color: black;
     color: white;
@@ -44,16 +50,7 @@ footer .list-inline {
     padding: 0;
 }
 
-footer .facebook i{
-    font-size: 25px;
-    color: black;
-    background-color: white;
-    border-radius: 50%;
-    transition: background-color 0.3s, color 0.3s;
-    padding: 6px 11px;
-}
-
-footer .twitter i{
+footer .facebook i, footer .twitter i{
     font-size: 25px;
     color: black;
     background-color: white;
@@ -77,7 +74,7 @@ footer .youtube i{
     background-color: white;
     border-radius: 50%;
     transition: background-color 0.3s, color 0.3s;
-    padding: 6px 5px;
+    padding: 6px 4.5px;
 }
 
 footer .facebook i:hover, footer .twitter i:hover, footer .instagram i:hover, footer .youtube i:hover{
@@ -153,10 +150,6 @@ footer .facebook i:hover, footer .twitter i:hover, footer .instagram i:hover, fo
     
     footer .facebook i, footer .twitter i, footer .instagram i, footer .youtube i {
         font-size: 18px;
-    }
-
-    footer .facebook i {
-        padding: 6px 9px;
     }
 
     footer .instagram i {

@@ -18,10 +18,10 @@ document.body.insertAdjacentHTML("beforeend", `
                     <h5 class=" font-weight-bold">LET'S TALK</h5>
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="instagram"><i class="fa-brands fa-square-instagram"></i></a>
                         </li>
                         <li class="list-inline-item">
                             <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
