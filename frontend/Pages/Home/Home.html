@@ -23,11 +23,17 @@
 
     <link rel="stylesheet" href="../../components/navbar/nav.css" />
     <link rel="stylesheet" href="home.css" />
-
+    <link rel="stylesheet" href="../../components/navbar/style.css">
+    <link rel="stylesheet" href="../../components/footer.css" />
+    
     <title>Home</title>
   </head>
   <body>
+    <!-- Special Header Component -->
     <special-header></special-header>
+
+     <!-- Modal Container for dynamically loaded modals -->
+     <div id="modals-container"></div>
     <script src="../../components/navbar/header.js"></script>
 
     <section class="hero-section">
@@ -126,7 +132,7 @@
         <div class="row">
           <div class="card col-12 col-md-4 mb-4">
             <div class="card-body1">
-              <button class="btn btn-primary">Explore <i class="bi bi-arrow-right-circle"></i></button>
+              <button class="btn btn-primary">Explore <i class="bi bi-arrow-right"></i></button>
               <div class="title">
                 <h2>Flat 15% Discount</h2>
                 <h1>Latest Wood <br /> Chair Collection</h1>
@@ -145,7 +151,7 @@
                 <h4>Your <span>Personalized <br /> Design <br /> Consultation</span></h4>
                 <p>Block consultations for expert advice <br /> & create your perfect space</p>
               </div>
-              <button class="btn btn-primary">Let's Connect <i class="bi bi-arrow-right-circle"></i></button>
+              <button class="btn btn-primary">Let's Connect <i class="bi bi-arrow-right"></i></button>
             </div>
           </div>
         </div>
@@ -165,5 +171,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="../../components/navbar/nav.js"></script>
+    <script src="../../components/navbar/registration.js"></script>
+    <script src="../../components/navbar/formValidation.js"></script>
+    <script src="../../components/footer.js"></script>
+    
+    
   </body>
 </html>
