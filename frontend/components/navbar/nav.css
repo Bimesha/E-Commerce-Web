@@ -215,7 +215,6 @@ ul li {
 @media only screen and (min-width: 1200px) and (max-width: 1280px) {
     #products-dropdown {
         right: 630px;
-
     }
 }
 
@@ -257,7 +256,7 @@ ul li {
     }
 
     .box {
-        right: 50px;
+        right: 45px;
     }
 
     #products-dropdown {
@@ -306,7 +305,7 @@ ul li {
     }
 
     #drop-down {
-        top: 75px;
+        top: 80px;
         margin-left: -20px;
         padding: 10px 18px;
     }
@@ -352,14 +351,16 @@ ul li {
         display: none;
     }
 
-    #home-link, #sofa-link, #story-link, #logout-link, #profile-link, #signup-link, #login-link, #contact-link, #table-link, #chair-link {
-        margin-left: -10px;
+    #logout-link, #profile-link, #signup-link, #login-link {
+        padding: 5px 10px;
+    }
+
+    #home-link, #sofa-link, #story-link, #contact-link, #table-link, #chair-link {
         padding: 8px 12px;
     }
 
     #home-link a, #story-link a, #contact-link a, #login-link a, #logout-link a, #signup-link a, #chair-link a, #table-link a, #sofa-link a, #contact-link a {
-       
-        font-size: 15px;
+        font-size: 14px;
         color: #000;
     }
 }
@@ -405,8 +406,8 @@ ul li {
     }
 
     #drop-down {
-        top: 75px;
-        margin-left: -10px;
+        top: 70px;
+        margin-left: -8px;
     }
 
     #list {
@@ -451,7 +452,11 @@ ul li {
         display: none;
     }
 
-    #home-link, #sofa-link, #story-link, #logout-link, #profile-link, #signup-link, #login-link, #contact-link, #table-link, #chair-link {
+    #logout-link, #profile-link, #signup-link, #login-link {
+        padding: 1px 10px;
+    }
+
+    #home-link, #sofa-link, #story-link, #contact-link, #table-link, #chair-link {
         padding: 6px 10px;
     }
 
@@ -498,8 +503,8 @@ ul li {
     }
     
     #drop-down {
-        top: 60px;
-        margin-left: -20px;
+        top: 59px;
+        margin-left: -3px;
     }
 
     #drop-down-list {
@@ -544,7 +549,11 @@ ul li {
         display: none;
     }
 
-    #home-link, #sofa-link, #story-link, #logout-link, #profile-link, #signup-link, #login-link, #contact-link, #table-link, #chair-link {
+    #logout-link, #profile-link, #signup-link, #login-link {
+        padding: 1px 10px;
+    }
+
+    #home-link, #sofa-link, #story-link, #contact-link, #table-link, #chair-link {
         padding: 4px 10px;
     }
 
