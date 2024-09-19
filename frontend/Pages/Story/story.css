@@ -29,7 +29,37 @@
 
 
 
+/* Features2 Section */
+.features2-section {
+    padding: 40px 0;
+    font-family: "Poppins", sans-serif;
+}
 
+.features2-section .row {
+    margin: 0 4rem;
+}
+
+.features2-section .card {
+    height: 15rem;
+    border-radius: 40px;
+}
+
+.features2-section .card-body {
+    padding: 50px;
+}
+
+.features2-section .image1 {
+    height: 31rem;
+    border: none;
+}
+
+.features2-section .image1 img {
+    height: 31rem;
+}
+
+.features2-section .second-line {
+    margin-top: -14.5rem;
+}
 
 
 
