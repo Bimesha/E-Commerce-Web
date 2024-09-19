@@ -62,7 +62,18 @@
     margin-top: -14.5rem;
 }
 
+.features2-section .title {
+    border: none;
+}
 
+.features2-section .third-line {
+    margin-top: 1.5rem;
+}
+
+.features2-section .image2 img {
+    height: 15rem;
+    border-radius: 40px;
+}
 
 
 
