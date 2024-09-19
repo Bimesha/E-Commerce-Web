@@ -55,11 +55,14 @@
 
 .features2-section .image1 img {
     height: 31rem;
+    border-radius: 40px;
 }
 
 .features2-section .second-line {
     margin-top: -14.5rem;
 }
+
+
 
 
 
