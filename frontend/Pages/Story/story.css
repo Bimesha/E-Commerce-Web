@@ -45,7 +45,7 @@
 }
 
 .features2-section .card-body {
-    padding: 50px;
+    padding: 35px 22px;
 }
 
 .features2-section .image1 {
@@ -73,6 +73,18 @@
 .features2-section .image2 img {
     height: 15rem;
     border-radius: 40px;
+}
+
+.features2-section .card-title {
+    font-size: 35px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.features2-section .card-text {
+    letter-spacing: 1px;
+    color: #646161;
 }
 
 
