@@ -114,6 +114,33 @@
     .about-section  img {
         margin-top: 5.5rem;
     }
+
+
+
+    .features2-section .row {
+        margin: 0 1.2rem;
+    }
+
+    .features2-section .second-line {
+        margin-top: -14.5rem;
+    }
+
+    .features2-section .third-line {
+        margin-top: 1.5rem;
+    }
+    
+    .features2-section .card-title {
+        font-size: 30px;
+    }
+    
+    .features2-section .card-text {
+        letter-spacing: 1px;
+        color: #646161;
+    }
+    
+    .features2-section .title h5 {
+        font-size: 50px;
+    }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1280px) {
@@ -123,6 +150,32 @@
 
     .about-section  img {
         margin-top: 5.5rem;
+    }
+
+
+    .features2-section .row {
+        margin: 0 1.2rem;
+    }
+
+    .features2-section .second-line {
+        margin-top: -14.5rem;
+    }
+
+    .features2-section .third-line {
+        margin-top: 1.5rem;
+    }
+    
+    .features2-section .card-title {
+        font-size: 30px;
+    }
+    
+    .features2-section .card-text {
+        letter-spacing: 1px;
+        color: #646161;
+    }
+    
+    .features2-section .title h5 {
+        font-size: 50px;
     }
 }
 
@@ -134,6 +187,33 @@
     .about-section  img {
         margin-top: 6.5rem;
     }
+
+
+
+    .features2-section .row {
+        margin: 0 -0.5rem;
+    }
+
+    .features2-section .second-line {
+        margin-top: -14.5rem;
+    }
+
+    .features2-section .third-line {
+        margin-top: 1.5rem;
+    }
+    
+    .features2-section .card-title {
+        font-size: 30px;
+    }
+    
+    .features2-section .card-text {
+        letter-spacing: 1px;
+        color: #646161;
+    }
+    
+    .features2-section .title h5 {
+        font-size: 50px;
+    }
 }
 
 @media only screen and (min-width:1000px) and (max-width: 1024px) {
@@ -144,6 +224,33 @@
     .about-section  img {
         margin-top: 6.5rem;
     }
+
+
+
+    .features2-section .row {
+        margin: 0 -0.5rem;
+    }
+
+    .features2-section .second-line {
+        margin-top: -14.5rem;
+    }
+
+    .features2-section .third-line {
+        margin-top: 1.5rem;
+    }
+    
+    .features2-section .card-title {
+        font-size: 30px;
+    }
+    
+    .features2-section .card-text {
+        letter-spacing: 1px;
+        color: #646161;
+    }
+    
+    .features2-section .title h5 {
+        font-size: 50px;
+    }
 }
 
 @media only screen and (min-width: 991px) and (max-width: 1000px) {
@@ -153,6 +260,33 @@
 
     .about-section  img {
         margin-top: 6.5rem;
+    }
+
+
+
+    .features2-section .row {
+        margin: 0 -0.5rem;
+    }
+
+    .features2-section .second-line {
+        margin-top: -14.5rem;
+    }
+
+    .features2-section .third-line {
+        margin-top: 1.5rem;
+    }
+    
+    .features2-section .card-title {
+        font-size: 30px;
+    }
+    
+    .features2-section .card-text {
+        letter-spacing: 1px;
+        color: #646161;
+    }
+    
+    .features2-section .title h5 {
+        font-size: 50px;
     }
 }
 
@@ -167,6 +301,48 @@
     .about-section  img {
         margin-top: 7rem;
     }
+
+
+
+    .features2-section .row {
+        margin: 0 -0.5rem;
+    }
+
+    .features2-section .card {
+        height: 12rem;
+    }
+
+    .features2-section .card-body {
+        padding: 30px 12px;
+    }
+
+    .features2-section .image1 {
+        height: 25rem;
+    }
+    
+    .features2-section .image1 img {
+        height: 25rem;
+    }
+
+    .features2-section .second-line {
+        margin-top: -11.5rem;
+    }
+
+    .features2-section .third-line {
+        margin-top: 1.5rem;
+    }
+    
+    .features2-section .card-title {
+        font-size: 20px;
+    }
+    
+    .features2-section .card-text {
+        font-size: 13px;
+    }
+    
+    .features2-section .title h5 {
+        font-size: 38px;
+    }
 }
 
 @media only screen and (min-width: 767px) and (max-width: 900px) {
@@ -180,6 +356,48 @@
     .about-section  img {
         margin-top: 7rem;
     }
+
+
+
+    .features2-section .row {
+        margin: 0 -0.5rem;
+    }
+
+    .features2-section .card {
+        height: 12rem;
+    }
+
+    .features2-section .card-body {
+        padding: 30px 12px;
+    }
+
+    .features2-section .image1 {
+        height: 25rem;
+    }
+    
+    .features2-section .image1 img {
+        height: 25rem;
+    }
+
+    .features2-section .second-line {
+        margin-top: -11.5rem;
+    }
+
+    .features2-section .third-line {
+        margin-top: 1.5rem;
+    }
+    
+    .features2-section .card-title {
+        font-size: 20px;
+    }
+    
+    .features2-section .card-text {
+        font-size: 13px;
+    }
+    
+    .features2-section .title h5 {
+        font-size: 38px;
+    }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
@@ -189,6 +407,53 @@
 
     .about-section  img {
         margin-top: 1rem;
+    }
+
+
+
+
+    .features2-section h1 {
+        display: block !important;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+    }
+
+    .features2-section .row {
+        margin: 0 1rem;
+    }
+
+    .features2-section .card {
+        height: 10rem;
+        margin-bottom: 1rem;
+    }
+
+    .features2-section .card-body {
+        padding: 30px 30px;
+    }
+
+    .features2-section .image1 {
+        display: none;
+    }
+    
+    .features2-section .image1 img {
+        display: none;
+    }
+    
+    .features2-section .card-title {
+        font-size: 25px;
+        letter-spacing: 0px;
+    }
+    
+    .features2-section .card-text {
+        font-size: 14px;
+    }
+    
+    .features2-section .title {
+        display: none;
+    }
+
+    .features2-section .image2 {
+        display: none;
     }
 }
 
@@ -205,6 +470,53 @@
     .about-section img {
         padding: 0 20px;
         margin-top: 1rem;
+    }
+
+
+
+
+    .features2-section h1 {
+        display: block !important;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+    }
+
+    .features2-section .row {
+        margin: 0 1rem;
+    }
+
+    .features2-section .card {
+        height: 10rem;
+        margin-bottom: 1rem;
+    }
+
+    .features2-section .card-body {
+        padding: 30px 30px;
+    }
+
+    .features2-section .image1 {
+        display: none;
+    }
+    
+    .features2-section .image1 img {
+        display: none;
+    }
+    
+    .features2-section .card-title {
+        font-size: 25px;
+        letter-spacing: 0px;
+    }
+    
+    .features2-section .card-text {
+        font-size: 14px;
+    }
+    
+    .features2-section .title {
+        display: none;
+    }
+
+    .features2-section .image2 {
+        display: none;
     }
 }
 
@@ -223,6 +535,53 @@
         padding: 0 20px;
         margin-top: 0.5rem;
     }
+
+
+
+
+    .features2-section h1 {
+        display: block !important;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+    }
+
+    .features2-section .row {
+        margin: 0 1rem;
+    }
+
+    .features2-section .card {
+        height: 10rem;
+        margin-bottom: 1rem;
+    }
+
+    .features2-section .card-body {
+        padding: 30px 30px;
+    }
+
+    .features2-section .image1 {
+        display: none;
+    }
+    
+    .features2-section .image1 img {
+        display: none;
+    }
+    
+    .features2-section .card-title {
+        font-size: 25px;
+        letter-spacing: 0px;
+    }
+    
+    .features2-section .card-text {
+        font-size: 14px;
+    }
+    
+    .features2-section .title {
+        display: none;
+    }
+
+    .features2-section .image2 {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 375px) and (max-width: 425px) {
@@ -240,6 +599,52 @@
         padding: 0 20px;
         margin-top: 0.5rem;
     }
+
+
+
+    .features2-section h1 {
+        display: block !important;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+    }
+
+    .features2-section .row {
+        margin: 0 1rem;
+    }
+
+    .features2-section .card {
+        height: 10rem;
+        margin-bottom: 1rem;
+    }
+
+    .features2-section .card-body {
+        padding: 30px 30px;
+    }
+
+    .features2-section .image1 {
+        display: none;
+    }
+    
+    .features2-section .image1 img {
+        display: none;
+    }
+    
+    .features2-section .card-title {
+        font-size: 25px;
+        letter-spacing: 0px;
+    }
+    
+    .features2-section .card-text {
+        font-size: 12px;
+    }
+    
+    .features2-section .title {
+        display: none;
+    }
+
+    .features2-section .image2 {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 375px) and (min-width: 320px) {
@@ -256,5 +661,52 @@
     .about-section img {
         padding: 0 20px;
         margin-top: 0.5rem;
+    }
+
+
+
+
+    .features2-section h1 {
+        display: block !important;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+    }
+
+    .features2-section .row {
+        margin: 0 1rem;
+    }
+
+    .features2-section .card {
+        height: 10rem;
+        margin-bottom: 1rem;
+    }
+
+    .features2-section .card-body {
+        padding: 20px 30px;
+    }
+
+    .features2-section .image1 {
+        display: none;
+    }
+    
+    .features2-section .image1 img {
+        display: none;
+    }
+    
+    .features2-section .card-title {
+        font-size: 20px;
+        letter-spacing: 0px;
+    }
+    
+    .features2-section .card-text {
+        font-size: 12px;
+    }
+    
+    .features2-section .title {
+        display: none;
+    }
+
+    .features2-section .image2 {
+        display: none;
     }
 }
