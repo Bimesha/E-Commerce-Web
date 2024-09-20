@@ -390,6 +390,44 @@ body {
     background-color: #FFBA35 !important;
 }
 
+/*Add new review*/
+#addReviewBtn{
+    background-color:#FFBA35 ;
+    margin: 2em auto;
+    width: 15%;
+    border-radius: 0%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 600;
+    padding: 20px;
+    
+    
+}
+
+#addReviewform .area{
+    width: 100%;
+    background-color: rgb(243, 242, 242);
+    border: none; 
+    margin: 15px;
+}
+
+
+
+#plusIcon{
+    font-size: 20px;
+    padding: 10px;
+}
+
+#addReviewform .btn{
+    width: 5em;
+    margin: 1em 0;    
+}
+
+#addReviewform .card{
+    padding: 10px; 
+    margin-bottom: 2em;   
+}
+
 /*end of review section*/
 
 

@@ -33,8 +33,6 @@
     <special-header></special-header>
     <script src="../../components/navbar/header.js"></script>
 
-    <!-- Modal Container for dynamically loaded modals -->
-    <div id="modals-container"></div>
 
     <section class="hero-section">
       <div class="bg-image">
@@ -165,6 +163,11 @@
       </div>
     </section>
 
+
+      <!--review section-->
+
+  <div class="container">
+
     <section class="reviews">
       <h3 class="section-title text-uppercase text-center">What Our clients say</h3>
 
@@ -228,7 +231,7 @@
                   <div class="quote text-start">
                     <i class="fa-solid fa-quote-left"></i>
                     <span class="review-name">Heri Mean</span>
-                    <p class="review-text">Our experience with Oakly was outstanding from start to finish. The delivery was prompt, and the furniture looks even better in person than it did online. The quality is top-notch, and the attention to detail in the craftsmanship is remarkable.Thank you for such a wonderful experience!</p>
+                    <p class="review-text">Our experience with Oakly was outstanding from start to finish. The delivery was prompt, and the furniture looks even better in person than it did online. The quality is top-notch, and the attention to detail in the craftsmanship is remarkable. Thank you for such a wonderful experience!</p>
                   </div>
                 </div>
               </div>
@@ -237,6 +240,30 @@
 
         </div>
       </div>
+    </div>
+
+      <!--add review-->
+
+      <div class="text-end">
+      <button type="button" class="btn text-start" id="addReviewBtn" data-bs-toggle="collapse" data-bs-target="#addReviewform" ><i id="plusIcon" class="bi bi-plus-lg"></i>Add Your Review</button>
+      </div>
+
+      <div class="container">
+
+      <div id="addReviewform" class="collapse">
+        <div class="card card-body d-flex flex-row align-items-center">
+          <input type="text" class="form-control area" placeholder="Enter your review here"></textarea>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-outline-dark me-md-2" type="button">Clear</button>
+            <button class="btn btn-dark" type="button">Add</button>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    
+
+    
     </section>
 
 
@@ -248,6 +275,7 @@
     <script src="../../components/navbar/nav.js"></script>
     <script src="../../components/navbar/registration.js"></script>
     <script src="../../components/navbar/formValidation.js"></script>
+    <script src="home.js"></script>
 
     <!-- Footer Component -->
     <script src="../../components/footer/footer.js"></script>
