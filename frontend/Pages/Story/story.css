@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* About Section */
+.about-section {
+    padding: 40px 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.about-section h1 {
+    font-weight: 600;
+}
+
+.about-section .story {
+    padding: 20px 30px 20px 70px;
+    font-size: 15px;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    color: #646161;
+}
+
+.about-section  img {
+    margin-top: 4rem;
+}
+
+
+
+/* Features2 Section */
+.features2-section {
+    padding: 40px 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.features2-section .row {
+    margin: 0 4rem;
+}
+
+.features2-section .card {
+    height: 15rem;
+    border-radius: 40px;
+}
+
+.features2-section .card-body {
+    padding: 50px;
+}
+
+.features2-section .image1 {
+    height: 31rem;
+    border: none;
+}
+
+.features2-section .image1 img {
+    height: 31rem;
+    border-radius: 40px;
+}
+
+.features2-section .second-line {
+    margin-top: -14.5rem;
+}
+
+.features2-section .title {
+    border: none;
+}
+
+.features2-section .third-line {
+    margin-top: 1.5rem;
+}
+
+.features2-section .image2 img {
+    height: 15rem;
+    border-radius: 40px;
+}
+
+
+
+
+
+
+
+/* Media Queries */
+@media only screen and (min-width: 1400px) and (max-width: 1440px) {
+
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1400px) {
+    .about-section .story {
+        padding: 20px 30px 20px 30px;
+    }
+
+    .about-section  img {
+        margin-top: 5.5rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1280px) {
+    .about-section .story {
+        padding: 20px 30px 20px 30px;
+    }
+
+    .about-section  img {
+        margin-top: 5.5rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    .about-section .story {
+        padding: 20px 30px 20px 10px;
+    }
+
+    .about-section  img {
+        margin-top: 6.5rem;
+    }
+}
+
+@media only screen and (min-width:1000px) and (max-width: 1024px) {
+    .about-section .story {
+        padding: 20px 30px 20px 10px;
+    }
+
+    .about-section  img {
+        margin-top: 6.5rem;
+    }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1000px) {
+    .about-section .story {
+        padding: 20px 30px 20px 5px;
+    }
+
+    .about-section  img {
+        margin-top: 6.5rem;
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 991px) {
+    .about-section .story {
+        padding: 20px 30px 20px 5px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        line-height: 1.8;
+    }
+
+    .about-section  img {
+        margin-top: 7rem;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 900px) {
+    .about-section .story {
+        padding: 20px 30px 20px 5px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        line-height: 1.8;
+    }
+
+    .about-section  img {
+        margin-top: 7rem;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .about-section .story {
+        align-items: center;
+    }
+
+    .about-section  img {
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+    .about-section {
+        margin-top: -80px;
+    }
+
+    .about-section .story {
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .about-section img {
+        padding: 0 20px;
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 500px) {
+    .about-section {
+        margin-top: -80px;
+    }
+
+    .about-section .story {
+        align-items: center;
+        padding: 0 20px;
+        font-size: 12px;
+    }
+
+    .about-section img {
+        padding: 0 20px;
+        margin-top: 0.5rem;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 425px) {
+    .about-section {
+        margin-top: -80px;
+    }
+
+    .about-section .story {
+        align-items: center;
+        padding: 0 20px;
+        font-size: 12px;
+    }
+
+    .about-section img {
+        padding: 0 20px;
+        margin-top: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 375px) and (min-width: 320px) {
+    .about-section {
+        margin-top: -75px;
+    }
+
+    .about-section .story {
+        align-items: center;
+        padding: 0 20px;
+        font-size: 11px;
+    }
+
+    .about-section img {
+        padding: 0 20px;
+        margin-top: 0.5rem;
+    }
+}
