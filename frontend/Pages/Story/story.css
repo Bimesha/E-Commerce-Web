@@ -28,6 +28,24 @@
 }
 
 
+/* Features1 Section */
+.features1-section {
+    margin-top: -2rem;
+    width: 99%;
+    font-family: "Poppins", sans-serif;
+}
+
+.features1-section .card {
+    text-align: center;
+    align-items: center;
+}
+
+.features1-section img {
+    width: 100px;
+    text-align: center;
+}
+
+
 
 /* Features2 Section */
 .features2-section {
