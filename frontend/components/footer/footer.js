@@ -14,20 +14,20 @@ document.body.insertAdjacentHTML("beforeend", `
                     </ul>
                     
                 </div>
-                <div class="col-lg-4 text-lg-right ">
+                <div class="col-lg-4 text-lg-right social-links">
                     <h5 class=" font-weight-bold">LET'S TALK</h5>
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                            <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="instagram"><i class="fa-brands fa-square-instagram"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
                         </li>
                     </ul>
                     <small> Copyright &copy; 2024 Oakly</small>
