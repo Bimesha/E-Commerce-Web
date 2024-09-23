@@ -31,7 +31,28 @@ body {
 }
 
 
+/* Service Section */
+.service-section {
+    margin-top: -1rem;
+    padding-left: 10px;
+    width: 99.2%;
+    margin-bottom: 1.5rem;
+}
 
+.service-section .card {
+    align-items: center;
+}
+
+.service-section .body {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-section img {
+    width: 80px;
+    text-align: center;
+}
 
 
 
