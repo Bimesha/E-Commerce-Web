@@ -194,7 +194,7 @@ body {
     }
 
     .about-section  img {
-        margin-top: 6.5rem;
+        margin-top: 7.5rem;
     }
 
 
@@ -226,7 +226,7 @@ body {
     }
 
     .about-section  img {
-        margin-top: 6.5rem;
+        margin-top: 7.5rem;
     }
 
 
@@ -258,7 +258,7 @@ body {
     }
 
     .about-section  img {
-        margin-top: 6.5rem;
+        margin-top: 7.5rem;
     }
 
 
@@ -398,7 +398,10 @@ body {
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
     .about-section .story {
+        padding: 0;
         align-items: center;
+        font-size: 14px;
+        letter-spacing: 0.3px;
     }
 
     .about-section  img {
@@ -460,6 +463,7 @@ body {
     .about-section .story {
         align-items: center;
         padding: 0 20px;
+        font-size: 13px;
     }
 
     .about-section img {
