@@ -109,6 +109,101 @@ body {
 
 
 
+/*slid section*/
+
+.slid-section .carousel{
+    display: flex;
+}
+
+.slid-section .row{
+    margin-left: 4.4rem;
+    margin-right: 4rem;
+    justify-content: center;
+}
+
+.slid-section .card{
+    border: none;
+    height: 325px;
+    max-width: 260px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: rgb(236, 235, 235);
+    
+
+}
+
+.slid-section .card img{
+    border-radius: 15px 15px 0 0;
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slid-section .status-badge{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 12px;
+    padding: 5px 10px;
+    font-size: 0.5rem;
+}
+
+.slid-section .in-stock{
+    background-color: green;
+}
+
+.out-of-stock{
+    background-color: red;
+}
+
+.price {
+    font-size: 1rem;
+    
+}
+
+.slid-section h5{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.slid-section .carousel-control-next-icon{
+    position: absolute;
+    bottom: 7px;
+    right: 0;
+    width: 2rem;
+    height: 4.4rem;
+    background-color: black;
+    margin-right: 5rem;
+    color: black;
+}
+
+.slid-section .carousel-control-next-icon:hover{
+    background-color: #FFBA35;
+}
+
+.slid-section .btn-primary{
+    color: white;
+    width: 8rem;
+    background-color: black;
+    border: none;
+    margin-top: 3rem;
+    justify-content: center;
+    margin-left: 37rem;
+    display: block;
+    text-align: center;
+    
+   
+    
+}
+
+.slid-section .btn-primary:hover{
+    background-color: #FFBA35;
+}
+
+
+
 /* Banner Section */
 .banner-section .row {
     margin-left: 6rem;
@@ -1796,3 +1891,5 @@ body {
         font-size: 0.9rem;
     }
 }
+
+
