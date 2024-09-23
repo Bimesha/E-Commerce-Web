@@ -1,4 +1,20 @@
-// Function to initialize form validation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* // Function to initialize form validation
 function regFormValidation() {
     const form = document.getElementById('registrationForm');
 
@@ -32,3 +48,4 @@ function regFormValidation() {
       }
     }, false);
   }
+*/

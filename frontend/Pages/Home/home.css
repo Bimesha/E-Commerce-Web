@@ -349,20 +349,14 @@ body {
 
 .carousel-item{
     width: 100%;
-    height: 270px;
+    height: 250px;
 }
 
 .review-img{
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
     margin: 10px;
-}
-
-.review-text{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: medium;
-    font-weight: 400;    
 }
 
 .carousel-caption {
@@ -370,11 +364,13 @@ body {
     padding: 10px;
     margin: 5px 10px;
     font-size: small;
+    display: flex;
+    align-items: flex-start; /* Align image and text to the top */
+    height: 100%;
 }
 
 .carousel-caption .row {
     display: flex;    
-    top: 0px;
     align-items: center; 
 }
 
@@ -386,13 +382,17 @@ body {
 .quote i{
     font-size: 20px;
 }
+
+.review-text{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 300; 
+    text-align: justify;   
+}
+
 .review-name{
     font-weight: 300;
     font-size: large;
-}
-
-.review-text{
-    text-align: justify;
 }
 
 .reviewmoreBtn{
@@ -403,8 +403,8 @@ body {
 }
 
 .btn-set{
-    padding-left: 0px;
-    padding-right: 0px;
+    margin: 30px 0 20px;
+    width: 300px;
   
 }
 
@@ -419,10 +419,6 @@ body {
     
 }
 
-#plusIcon{
-    font-size: 20px;
-}
-
 #addReviewform .area{
     background-color: rgb(243, 242, 242);
     border: none; 
@@ -433,8 +429,8 @@ body {
     padding: 10px; 
     margin: 1em;
     border-radius: 0;  
-    width: 200%;
-    margin-left: -100%; 
+    width: 400%;
+    margin-left: -200%; 
 }
 
 /*end of review section*/
@@ -626,6 +622,12 @@ body {
         margin-top: 1.1rem;
         width: 42%;
     }
+
+    .carousel-item{
+        width: 100%;
+        height: 260px;
+    }
+
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1280px) {
@@ -713,6 +715,16 @@ body {
     .card-body3 .btn-primary {
         margin-top: 1.4rem;
         width: 45%;
+    }
+
+    #addReviewform .card{ 
+        width: 300%;
+        margin-left: -150%; 
+    }
+
+    .carousel-item{
+        width: 100%;
+        height: 270px;
     }
 }
 
@@ -806,6 +818,16 @@ body {
     .card-body3 .btn-primary {
         margin-top: 2.2rem;
         width: 49%;
+    }
+
+    #addReviewform .card{ 
+        width: 250%;
+        margin-left: -125%; 
+    }
+
+    .carousel-item{
+        width: 100%;
+        height: 310px;
     }
 }
 
@@ -925,7 +947,18 @@ body {
         font-size: 0.8rem;
         letter-spacing: 1.1px;
     }
+
+    #addReviewform .card{ 
+        width: 200%;
+        margin-left: -100%; 
+    }
+
+    .carousel-item{
+        width: 100%;
+        height: 310px;
+    }
 }
+
 
 @media only screen and (min-width: 990px) and (max-width: 1000px) {
     .bg-image {
@@ -1050,6 +1083,16 @@ body {
     .card-body3 .title p {
         font-size: 0.8rem;
         letter-spacing: 1.1px;
+    }
+
+    #addReviewform .card{ 
+        width: 200%;
+        margin-left: -100%; 
+    }
+
+    .carousel-item{
+        width: 100%;
+        height: 315px;
     }
 }
 
@@ -1180,6 +1223,81 @@ body {
         font-size: 0.8rem;
         letter-spacing: 1.1px;
     }
+
+    .section-title h2{
+        font-size: larger;
+        font-weight: 600;
+    }
+
+    .section-title p{
+        font-size: small;
+        font-weight: 300;
+    }
+
+    #addReviewform .card{ 
+        width: 209%;
+        margin-left: -109%; 
+    }
+
+    .carousel-item{
+        width: 100%;
+        height: 350px;
+    }
+
+    .review-text{
+        font-size:1rem; 
+        
+    }
+
+    .carousel-caption{
+        margin-left: -65px;
+    }
+
+    .quote{
+        width: 600px;
+    }
+
+    .quote i{
+        font-size: 2rem;
+    }
+    
+    .review-name{
+        font-weight: 300;
+        font-size: 1.3rem;
+    }
+    
+    
+    .review-img {
+        width: 80px;
+        height: 80px;
+        margin: 20px 15px 0;
+        float: left;
+    }
+
+    .carousel-indicators button{
+        width: 6px !important;
+        height: 6px !important;
+    }
+
+    .reviewmoreBtn{
+        font-size: 1rem;
+    }
+    
+    #addReviewBtn{
+        font-size: 1rem;    
+    }
+
+    .services .col{
+        margin-right: -32px; 
+        margin-left: 32px;
+    }
+    
+    .services .row {
+        margin-left: -100px; /* To compensate for the added margin */
+        margin-right: -100px;
+    }
+
+    
 }
 
 @media only screen and (min-width: 767px) and (max-width: 900px) {
@@ -1312,6 +1430,94 @@ body {
     .card-body3 .title p {
         font-size: 12px;
         letter-spacing: 1px;
+    }
+    .section-title h2{
+        font-size: larger;
+        font-weight: 600;
+    }
+
+    .section-title p{
+        font-size: small;
+        font-weight: 300;
+    }
+
+    #addReviewform .card{ 
+        width: 209%;
+        margin-left: -109%; 
+    }
+
+    .carousel-item{
+        width: 100%;
+        height: 350px;
+    }
+
+    .review-text{
+        font-size:1rem;    
+    }
+
+    .carousel-caption{
+        margin-left: -65px;
+    }
+
+    .quote{
+        width: 600px;
+    }
+
+    .quote i{
+        font-size: 2rem;
+    }
+    
+    .review-name{
+        font-weight: 300;
+        font-size: 1.3rem;
+    }
+    
+    
+    .review-img {
+        width: 80px;
+        height: 80px;
+        margin: 20px 15px 0;
+        float: left;
+    }
+
+    .carousel-indicators button{
+        width: 6px !important;
+        height: 6px !important;
+    }
+
+    .reviewmoreBtn{
+        font-size: 1rem;
+    }
+    
+    #addReviewBtn{
+        font-size: 1rem;    
+    }
+
+    .services .col{
+        margin-right: -32px; 
+        margin-left: 32px;
+    }
+    
+    .services .row {
+        margin-left: -25px; /* To compensate for the added margin */
+        margin-right: -25px;
+    }
+    
+    .serviceImg {
+        margin-bottom: 10px; /* Add space between the image and the text */
+        width: 50px;
+        height: 50px;
+    }
+    
+    .serviceText {
+        font-size: 1rem;
+        margin: 0;
+    }
+    
+    .serviceText span{
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 0;
     }
 }
 
@@ -1452,6 +1658,105 @@ body {
     .card-body3 .title p {
         display: none;
     }
+
+    .section-title h2{
+        font-size: larger;
+        font-weight: 600;
+    }
+
+    .section-title p{
+        font-size:small;
+        font-weight: 300;
+    }
+
+    #addReviewform .card{ 
+        width: 194%;
+        margin-left: -94%; 
+    }
+
+    .carousel-item{
+        width: 100%;
+        height: 320px;
+    }
+
+    .review-text{
+        font-size:.9rem;    
+    }
+
+    .carousel-caption{
+        margin-left: -70px;
+    }
+
+    .quote{
+        width: 500px;
+    }
+
+    .quote i{
+        font-size: 1.7rem;
+    }
+    
+    .review-name{
+        font-weight: 300;
+        font-size: 1.1rem;
+    }
+    
+    
+    .review-img {
+        width: 80px;
+        height: 80px;
+        margin: 20px 15px 0;
+        float: left;
+    }
+
+    .carousel-indicators button{
+        width: 6px !important;
+        height: 6px !important;
+        margin: 20px 0;
+    }
+
+    .reviewmoreBtn{
+        font-size: .8rem;
+    }
+
+    .btn-set{
+        margin: -20px;
+        padding-bottom: 20px;
+    }
+    
+    #addReviewBtn{
+        font-size: .8rem;    
+    }
+
+    .services{
+        padding: 10px;
+    }
+    .services .col{
+        margin: 10px 0 15px;
+    }
+    
+    .services .row {
+        margin: 0 -105px 5px -30px;
+        padding-right: 40px;
+    }
+    
+    .serviceImg {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .serviceText {
+        font-size: .8rem;
+    }
+    
+    .serviceText span{
+        font-size: .9rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .card .btn{
+        font-size: .8rem;
+    }
 }
 
 @media only screen and (min-width: 500px) and (max-width: 600px) {
@@ -1569,6 +1874,110 @@ body {
         margin-top: 1.5rem;
         margin-left: -1rem;
     }
+
+    #addReviewform .card{ 
+        width: 150%;
+        margin-left: -67px; 
+    }
+
+    .section-title h2{
+        font-size: larger;
+        font-weight: 600;
+    }
+
+
+    .section-title p{
+        display: none;
+    }
+
+    .carousel-item{
+        width: 100%;
+        height: 290px;
+    }
+
+    .review-text{
+        font-size:.8rem;    
+    }
+
+    .carousel-caption{
+        margin-left: -50px;
+    }
+
+    .quote{
+        width: 450px;
+    }
+
+    .quote i{
+        font-size: 1.2rem;
+    }
+    
+    .review-name{
+        font-weight: 300;
+        font-size: .9rem;
+    }
+    
+    
+    .review-img {
+        width: 60px;
+        height: 60px;
+        margin: 20px 15px 0;
+        float: left;
+    }
+
+    .carousel-indicators button{
+        width: 6px !important;
+        height: 6px !important;
+        margin: 20px 0;
+    }
+
+    .reviewmoreBtn{
+        font-size: .8rem;
+    }
+
+    .btn-set{
+        margin: -1px;
+        padding-bottom: 20px;
+    }
+    
+    #addReviewBtn{
+        font-size: .8rem;    
+    }
+
+    .services{
+        padding: 10px;
+    }
+    .services .col{
+        margin: 0;
+    }
+    
+    .services .row {
+        margin: 0 -105px 5px -30px;
+        padding-right: 40px;
+    }
+    
+    .serviceImg {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .serviceText {
+        font-size: .8rem;
+    }
+    
+    .serviceText span{
+        font-size: .9rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .card .btn{
+        font-size: .8rem;
+    }
+
+    .section-title{
+        padding-bottom: 20px;
+    }
+
 }
 
 @media only screen and (min-width: 425px) and (max-width: 500px) {
@@ -1685,6 +2094,11 @@ body {
         margin-left: -1rem;
         width: 30%;
         font-size: 0.9rem;
+    }
+
+    #addReviewform .card{ 
+        width: 100%;
+        margin-left: 0; 
     }
 }
 
@@ -1805,6 +2219,10 @@ body {
         padding: 8px 0px;
         font-size: 0.9rem;
     }
+    #addReviewform .card{ 
+        width: 100%;
+        margin-left: 0; 
+    }
 }
 
 @media only screen and (max-width: 375px) and (min-width: 320px) {
@@ -1922,4 +2340,28 @@ body {
         padding: 8px 0px;
         font-size: 0.9rem;
     }
+
+    #addReviewform .card{ 
+        border: none;
+        width: 120%;
+        margin-left: -20px; 
+    }
+
+    #addReviewform .area{
+        margin: 10px;
+        height: 100px;
+    }
+
+    .reviewmoreBtn{
+        font-size: .9rem;
+        padding: 10px;
+        font-weight: 500;
+    }
+    
+    #addReviewBtn{
+        font-size: .9rem;
+        padding: 5px;
+        font-weight: 600;   
+    }
+    
 }
