@@ -167,6 +167,7 @@ body {
     }
 
 
+
     .features2-section .row {
         margin: 0 1.2rem;
     }
@@ -212,7 +213,7 @@ body {
     }
     
     .features2-section .card-title {
-        font-size: 30px;
+        font-size: 26px;
     }
     
     .features2-section .title h5 {
@@ -244,7 +245,7 @@ body {
     }
     
     .features2-section .card-title {
-        font-size: 30px;
+        font-size: 26px;
     }
     
     .features2-section .title h5 {
@@ -276,7 +277,7 @@ body {
     }
     
     .features2-section .card-title {
-        font-size: 30px;
+        font-size: 26px;
     }
     
     .features2-section .title h5 {
@@ -284,7 +285,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 900px) and (max-width: 991px) {
+@media only screen and (min-width: 900px) and (max-width: 992px) {
     .about-section .story {
         padding: 20px 30px 20px 5px;
         font-size: 12px;
