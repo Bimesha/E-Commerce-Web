@@ -7,7 +7,7 @@ class RegistrationForm extends HTMLElement {
                 <div class="modal-content">
         
                     <!-- Header -->
-                    <div class="modal-header">
+                    <div class="modal-header align-items-center">
                         <h2 class="modal-title text-uppercase mt-3">Create An Account</h2>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
@@ -17,7 +17,7 @@ class RegistrationForm extends HTMLElement {
                         <form id="registrationForm" action="" class="needs-validation" novalidate>
 
                             <div class="form-group">
-                                <div class="row mb-1">
+                                <div class="row">
                                     <div class="col-6">
                                         <label for="firstName" class="form-label">First Name</label>
                                         <input type="text" class="form-control" id="firstName" name="firstName" placeholder="John" pattern="[A-Za-z]+" required>
@@ -33,44 +33,44 @@ class RegistrationForm extends HTMLElement {
     
                             <div class="form-group">
                                 <div class="row">
-                                    <div class="col-12 mb-1">
+                                    <div class="col-12">
                                         <label for="email" class="form-label">Email</label>
                                         <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com" required>
-                                        <div class="invalid-feedback">Please enter a valid email address</div>
+                                        <div class="invalid-feedback">Please enter a valid email</div>
                                     </div>
                                 </div>
                             </div>
     
                             <div class="form-group">
                                 <div class="row">
-                                    <div class="col mb-1">
+                                    <div class="col">
                                         <label for="password" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="password" name="password" minlength="6" required>
-                                        <div class="invalid-feedback">Password must be at least 6 characters long</div>
+                                        <input type="password" class="form-control" id="password" name="password" minlength="6" placeholder="Create Password" required>
+                                        <div class="invalid-feedback">Password must be at least 6 characters</div>
                                     </div>
                                 </div>
                             </div>
     
                             <div class="form-group">
                                 <div class="row">
-                                    <div class="col mb-1">
+                                    <div class="col">
                                         <label for="confirmPassword" class="form-label">Confirm Password</label>
-                                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Re-Enter Password" required>
                                         <div class="invalid-feedback">Passwords do not match</div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Submit Button -->
-                            <div class="d-flex mb-1 mt-4 justify-content-center">
+                            <div class="d-flex mb-1 justify-content-center">
                                 <button type="submit" class="btn shadow-lg btn-warning w-100">Create Account</button>
+                                
                             </div>
     
                             <!-- Already have an account? -->
-                            <div class="form-group mt-4 mb-5">
-                                <p class="text-muted">Already have an account?</p>
-                                <div class="d-flex mb-3 justify-content-center">
-                                    <button type="button" class="btn shadow-lg btn-dark w-100" data-bs-toggle="modal" data-bs-target="#login">Log In</button>
+                            <div class="form-group mt-4">
+                                <div class="d-flex">
+                                    <p class="text-muted">Already have an account?</p><button type="button" class="btn btn-log shadow-lg btn-dark ms-auto" data-bs-toggle="modal" data-bs-target="#login">Log In</button>
                                 </div>
                             </div>  
                         </form>
