@@ -4,10 +4,13 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 /* About Section */
 .about-section {
     padding: 40px 0;
-    font-family: "Poppins", sans-serif;
 }
 
 .about-section h1 {
@@ -18,13 +21,13 @@
     padding: 20px 30px 20px 70px;
     font-size: 15px;
     text-align: justify;
-    letter-spacing: 1px;
+    letter-spacing: 0.3px;
     line-height: 1.8;
     color: #646161;
 }
 
 .about-section  img {
-    margin-top: 4rem;
+    margin-top: 4.5rem;
 }
 
 
@@ -32,7 +35,6 @@
 .features1-section {
     margin-top: -2rem;
     width: 99%;
-    font-family: "Poppins", sans-serif;
 }
 
 .features1-section .card {
@@ -50,7 +52,6 @@
 /* Features2 Section */
 .features2-section {
     padding: 40px 0;
-    font-family: "Poppins", sans-serif;
 }
 
 .features2-section .row {
@@ -101,6 +102,7 @@
 
 .features2-section .card-text {
     letter-spacing: 1px;
+    font-family: Arial, sans-serif;
     color: #646161;
 }
 
@@ -165,6 +167,7 @@
     }
 
 
+
     .features2-section .row {
         margin: 0 1.2rem;
     }
@@ -192,7 +195,7 @@
     }
 
     .about-section  img {
-        margin-top: 6.5rem;
+        margin-top: 7.5rem;
     }
 
 
@@ -210,7 +213,7 @@
     }
     
     .features2-section .card-title {
-        font-size: 30px;
+        font-size: 26px;
     }
     
     .features2-section .title h5 {
@@ -224,7 +227,7 @@
     }
 
     .about-section  img {
-        margin-top: 6.5rem;
+        margin-top: 7.5rem;
     }
 
 
@@ -242,7 +245,7 @@
     }
     
     .features2-section .card-title {
-        font-size: 30px;
+        font-size: 26px;
     }
     
     .features2-section .title h5 {
@@ -256,7 +259,7 @@
     }
 
     .about-section  img {
-        margin-top: 6.5rem;
+        margin-top: 7.5rem;
     }
 
 
@@ -274,7 +277,7 @@
     }
     
     .features2-section .card-title {
-        font-size: 30px;
+        font-size: 26px;
     }
     
     .features2-section .title h5 {
@@ -282,7 +285,7 @@
     }
 }
 
-@media only screen and (min-width: 900px) and (max-width: 991px) {
+@media only screen and (min-width: 900px) and (max-width: 992px) {
     .about-section .story {
         padding: 20px 30px 20px 5px;
         font-size: 12px;
@@ -291,7 +294,8 @@
     }
 
     .about-section  img {
-        margin-top: 7rem;
+        margin-top: 8rem;
+        height: 15rem;
     }
 
 
@@ -346,7 +350,8 @@
     }
 
     .about-section  img {
-        margin-top: 7rem;
+        margin-top: 8rem;
+        height: 15rem;
     }
 
 
@@ -394,7 +399,10 @@
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
     .about-section .story {
+        padding: 0;
         align-items: center;
+        font-size: 14px;
+        letter-spacing: 0.3px;
     }
 
     .about-section  img {
@@ -436,7 +444,7 @@
     }
     
     .features2-section .card-text {
-        font-size: 14px;
+        font-size: 14px; 
     }
     
     .features2-section .title {
@@ -456,6 +464,7 @@
     .about-section .story {
         align-items: center;
         padding: 0 20px;
+        font-size: 13px;
     }
 
     .about-section img {
@@ -498,7 +507,7 @@
     }
     
     .features2-section .card-text {
-        font-size: 14px;
+        font-size: 14px; 
     }
     
     .features2-section .title {
@@ -557,11 +566,11 @@
     }
     
     .features2-section .card-title {
-        font-size: 25px;
+        font-size: 24px;
     }
     
     .features2-section .card-text {
-        font-size: 14px;
+        font-size: 13px;
     }
     
     .features2-section .title {
@@ -619,7 +628,7 @@
     }
     
     .features2-section .card-title {
-        font-size: 25px;
+        font-size: 22px;
     }
     
     .features2-section .card-text {
