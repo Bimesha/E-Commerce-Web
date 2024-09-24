@@ -163,6 +163,10 @@ body {
     height: 80px;
 }
 
+.logo-section .card-image2 img {
+    padding-top: 0.5px;
+}
+
 
 
 
@@ -377,6 +381,7 @@ body {
     }
 
     .logo-section .card-image2 img {
+        padding-top: 0px;
         width: 225px;
     }
 }
@@ -839,6 +844,7 @@ body {
     .logo-section .row {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        margin-top: 2.5rem;
     }
 
     .logo-section .card {
