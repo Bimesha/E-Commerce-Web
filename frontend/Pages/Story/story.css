@@ -36,7 +36,7 @@ body {
     margin-top: -0.5rem;
     padding-right: 10px;
     width: 99.2%;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .service-section .card {
@@ -53,6 +53,10 @@ body {
 .service-section img {
     width: 80px;
     text-align: center;
+}
+
+.service-section .card-image2 img {
+    height: 80px;
 }
 
 .service-section h4 {
@@ -218,6 +222,13 @@ body {
 
 
 
+    .service-section {
+        margin-top: -1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+
+
     .features2-section .row {
         margin: 0 -0.5rem;
     }
@@ -250,6 +261,13 @@ body {
 
 
 
+    .service-section {
+        margin-top: -1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+
+
     .features2-section .row {
         margin: 0 -0.5rem;
     }
@@ -278,6 +296,13 @@ body {
 
     .about-section  img {
         margin-top: 7.5rem;
+    }
+
+
+
+    .service-section {
+        margin-top: -1.5rem;
+        margin-bottom: 1.5rem;
     }
 
 
@@ -315,6 +340,30 @@ body {
         margin-top: 8rem;
         height: 15rem;
     }
+
+
+
+    .service-section {
+        margin-top: -2rem;
+        margin-bottom: 1rem;
+    }
+
+    .service-section img {
+        width: 70px;
+    }
+
+    .service-section .card-image2 img {
+        height: 70px;
+    }
+
+    .service-section h4 {
+        font-size: 16px;
+    }
+
+    .service-section span {
+        font-size: 21px;
+    }
+
 
 
 
@@ -374,6 +423,30 @@ body {
 
 
 
+    .service-section {
+        margin-top: -1.8rem;
+        margin-bottom: 1rem;
+        padding-right: 15px;
+    }
+
+    .service-section img {
+        width: 50px;
+    }
+
+    .service-section .card-image2 img {
+        height: 50px;
+    }
+
+    .service-section h4 {
+        font-size: 14px;
+    }
+
+    .service-section span {
+        font-size: 19px;
+    }
+
+
+
     .features2-section .row {
         margin: 0 -0.5rem;
     }
@@ -425,6 +498,34 @@ body {
 
     .about-section  img {
         margin-top: 1rem;
+    }
+
+
+
+    .service-section {
+        margin-top: 0.5rem;
+        margin-bottom: -1.5rem;
+        padding-right: 15px;
+    }
+
+    .service-section .card {
+        margin-bottom: 2rem;
+    }
+
+    .service-section img {
+        width: 70px;
+    }
+
+    .service-section .card-image2 img {
+        height: 70px;
+    }
+
+    .service-section h4 {
+        font-size: 14px;
+    }
+
+    .service-section span {
+        font-size: 20px;
     }
 
 
@@ -493,6 +594,35 @@ body {
 
 
 
+    .service-section {
+        margin-top: 0.5rem;
+        margin-bottom: -1.5rem;
+        padding-right: 15px;
+    }
+
+    .service-section .card {
+        margin-bottom: 2rem;
+    }
+
+    .service-section img {
+        width: 70px;
+    }
+
+    .service-section .card-image2 img {
+        height: 70px;
+    }
+
+    .service-section h4 {
+        font-size: 14px;
+    }
+
+    .service-section span {
+        font-size: 20px;
+    }
+
+
+
+
     .features2-section h1 {
         display: block !important;
         margin-bottom: 1.5rem;
@@ -534,6 +664,72 @@ body {
 
     .features2-section .image2 {
         display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-section {
+        margin-top: 0.5rem;
+        margin-bottom: -1.5rem;
+        padding-right: 15px;
+    }
+
+    .service-section .card {
+        margin-bottom: 2rem;
+    }
+
+    .service-section .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-section img {
+        width: 70px;
+    }
+
+    .service-section .card-image2 img {
+        height: 70px;
+    }
+
+    .service-section h4 {
+        font-size: 14px;
+    }
+
+    .service-section span {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 430px) {
+    .service-section h4 {
+        font-size: 13px;
+    }
+
+    .service-section span {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 400px) {
+    .service-section {
+        margin-top: -0.5rem;
+        margin-bottom: -2.5rem;
+    }
+
+    .service-section img {
+        width: 50px;
+    }
+
+    .service-section .card-image2 img {
+        height: 50px;
+    }
+
+    .service-section h4 {
+        font-size: 10px;
+    }
+
+    .service-section span {
+        font-size: 13px;
     }
 }
 
