@@ -26,7 +26,7 @@ class SpecialHeader extends HTMLElement {
                         <div id="list" style="display: none"><i class="bi bi-list" onClick="toggleSearchmenu()"></i></div>
                             <ul id="drop-down-list" style="display: none">
                                 <div class="box"></div>
-                                <li id="home-link"><a href="#">Home</a></li>
+                                <li id="home-link"><a href="../../pages/Home/Home.html">Home</a></li>
                                 <li id="chair-link"><a href="#">Chair Collection</a></li>
                                 <li id="table-link"><a href="#">Table Collection</a></li>
                                 <li id="sofa-link"><a href="#">Sofa Collection</a></li>
@@ -41,7 +41,7 @@ class SpecialHeader extends HTMLElement {
             <div class="header-menu">
                 <ul class="nav justify-content-center">
                     <li class="nav-link" id="list" style="display: none"><i class="bi bi-list"></i></li>
-                    <li class="nav-link"><a href="#">Home</a></li>
+                    <li class="nav-link"><a href="../../pages/Home/Home.html">Home</a></li>
                     <li class="nav-link"><a href="#" onClick="toggleProductsDropdown()" id="products">Shop <i class="bi bi-caret-down-fill"></i></a>
                         <ul id="products-dropdown" style="display:none;">
                             <li id="chair-link"><a href="#">Chair Collection</a></li>
