@@ -47,54 +47,34 @@ window.onclick = function (event) {
   }
 };
 
-// Active class for the cart and user icons
-document.addEventListener('DOMContentLoaded', () => {
-  const cart = document.getElementById('cart');
-  const user = document.getElementById('user');
-  const search = document.getElementById('search1');
-  const list = document.getElementById('list');
-  const links = document.querySelectorAll('#drop-down li a');
+// document.addEventListener('DOMContentLoaded', () => {
+//   const cart = document.getElementById('cart');
 
-  function setActive(element) {
-      cart.classList.remove('active');
-      user.classList.remove('active');
-      search.classList.remove('active');
-      list.classList.remove('active');
-      links.forEach(link => link.parentElement.classList.remove('active'));
+//   function setActive() {
+//     cart.classList.add('active');
+//     localStorage.setItem('cartActive', 'true');
+//   }
 
-      if (element.id === 'cart' || element.id === 'user' || element.id === 'search1' || element.id === 'list') {
-          element.classList.add('active');
-      } else if (element.tagName === 'A') {
-          element.parentElement.classList.add('active');
-      }
-  }
+//   function removeActive() {
+//     cart.classList.remove('active');
+//     localStorage.removeItem('cartActive');
+//   }
 
-  cart.addEventListener('click', () => setActive(cart));
-  user.addEventListener('click', () => setActive(user));
-  search.addEventListener('click', () => setActive(search));
-  list.addEventListener('click', () => setActive(list));
+//   const isStoryPage = window.location.pathname.includes('');
+  
+//   if (isStoryPage) {
+//     if (localStorage.getItem('cartActive') === 'true') {
+//       cart.classList.add('active');
+//     }
+//   } else {
+//     removeActive();
+//   }
 
-  links.forEach(link => {
-      link.addEventListener('click', (event) => {
-          event.preventDefault(); 
-          setActive(link);
-      });
-  });
-});
+//   cart.addEventListener('click', () => setActive());
+// });
 
-// Function to toggle the active class on the clicked link
-function setActiveLink(event) {
-  event.preventDefault();
+  
 
-  const links = document.querySelectorAll('.nav-link a');
-  links.forEach(link => link.classList.remove('active'));
 
-  event.target.classList.add('active');
-}
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.nav-link a').forEach(link => {
-      link.addEventListener('click', setActiveLink);
-  });
-});
 
