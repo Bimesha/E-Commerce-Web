@@ -170,13 +170,7 @@ ul li {
     background-color: #FFBA35;
 }
 
-#drop-down li:hover {
-    background-color: #FFBA35;
-    padding: 10px 20px;
-    border-radius: 3px;
-}
-
-.header-menu a:hover {
+#drop-down li:hover, .header-menu a:hover {
     background-color: #FFBA35;
     padding: 10px 20px;
     border-radius: 3px;
