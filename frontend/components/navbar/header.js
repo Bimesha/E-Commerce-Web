@@ -30,7 +30,7 @@ class SpecialHeader extends HTMLElement {
                                 <li id="chair-link"><a href="#">Chair Collection</a></li>
                                 <li id="table-link"><a href="#">Table Collection</a></li>
                                 <li id="sofa-link"><a href="#">Sofa Collection</a></li>
-                                <li id="story-link"><a href="#">Our Story</a></li>
+                                <li id="story-link"><a href="../../pages/Story/Story.html">Our Story</a></li>
                                 <li id="contact-link"><a href="#">Contact Us</a></li>
                             </ul>
                     </div>
@@ -49,7 +49,7 @@ class SpecialHeader extends HTMLElement {
                             <li id="sofa-link"><a href="#">Sofa Collection</a></li>
                         </ul>
                     </li>
-                    <li class="nav-link"><a href="#">Our Story</a></li>
+                    <li class="nav-link"><a href="../../pages/Story/Story.html">Our Story</a></li>
                     <li class="nav-link"><a href="#">Contact Us</a></li>
                 </ul>
             </div>
