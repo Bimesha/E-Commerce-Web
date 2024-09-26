@@ -7,9 +7,9 @@ class RegistrationForm extends HTMLElement {
                 <div class="modal-content">
         
                     <!-- Header -->
-                    <div class="modal-header align-items-center">
+                    <div class="modal-header ">
                         <h2 class="modal-title text-uppercase mt-3">Create An Account</h2>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn btn-light close-btn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
                     </div>
   
                     <!-- Body -->
@@ -21,12 +21,12 @@ class RegistrationForm extends HTMLElement {
                                     <div class="col-6">
                                         <label for="firstName" class="form-label">First Name</label>
                                         <input type="text" class="form-control" id="firstName" name="firstName" placeholder="John" pattern="[A-Za-z]+" required>
-                                        <div class="invalid-feedback">Please enter a valid first name</div>
+                                        <div class="invalid-feedback">Enter a valid name</div>
                                     </div>
                                     <div class="col-6">
                                         <label for="lastName" class="form-label">Last Name</label>
                                         <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Doe" pattern="[A-Za-z]+" required>
-                                        <div class="invalid-feedback">Please enter a valid last name</div>
+                                        <div class="invalid-feedback">Enter a valid name</div>
                                     </div>
                                 </div>
                             </div>
@@ -55,7 +55,7 @@ class RegistrationForm extends HTMLElement {
                                 <div class="row">
                                     <div class="col">
                                         <label for="confirmPassword" class="form-label">Confirm Password</label>
-                                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Re-Enter Password" required>
+                                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" minlength="6" placeholder="Re-Enter Password" required>
                                         <div class="invalid-feedback">Passwords do not match</div>
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@ class RegistrationForm extends HTMLElement {
 
                             <!-- Submit Button -->
                             <div class="d-flex mb-1 justify-content-center">
-                                <button type="submit" class="btn shadow-lg btn-warning w-100">Create Account</button>
+                                <button type="submit" class="btn shadow-lg btn-warning btn-submit">Create Account</button>
                                 
                             </div>
     

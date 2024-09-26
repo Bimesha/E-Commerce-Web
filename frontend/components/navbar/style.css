@@ -8,30 +8,28 @@ form {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    align-items: center;
     border-bottom: 0;
     padding: 20px 0px 10px;
 }
 
 .modal-header .modal-title {
-    margin-left: 70px;
+    margin-left: 66px;
     font-weight: 700;
     color: white;
     font-size: 2rem;
 }
 
-.modal-header .btn-close {
-    background-color: white;
-    padding: 15px;
+.modal-header .close-btn {
+    border: none;
+    padding: 18px 15px;
     border-radius: 0;
-    margin-right: 60px;
-    position: relative;
-    z-index: 2;  
+    margin-left: 135px;
+    
 }
 
-.modal-header .btn-close:hover {
+.modal-header .close-btn:hover {
     background-color: red;
-    padding: 15px;
+    color: white;
 }
 
 .modal-body {
@@ -50,7 +48,7 @@ form {
     padding: 10px;  
 }
 
-button {
+.btn-submit {
     padding: 10px;
     font-size: 16px;
     width: 100%;
