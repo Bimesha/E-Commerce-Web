@@ -12,6 +12,20 @@ body {
     margin: 4rem 10rem 4rem 14rem;
 }
 
+.contact-section .card1 {
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.contact-section .card2 {
+    border: none;
+}
+
+.contact-section iframe {
+    border-radius: 10px;
+}
+
 .contact-section .gap {
     margin-right: 30px;
 }
@@ -20,6 +34,44 @@ body {
     padding: 2rem 4rem;
 }
 
+.contact-section .card-body h1 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.contact-section .card-body p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1px;
+    text-align: justify;
+}
+
+.contact-section button {
+    background-color: #FFBA35;
+    margin-bottom: 1rem;
+    border: none;
+    color: black;
+}
+
+.contact-section .contact-info {
+    margin-top: 1.3rem;
+    text-align: center;
+}
+
+.contact-section .contact-info p {
+    width: 100%;
+    background-color: black;
+    padding: 8px 0;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.contact-section .contact-info p i {
+    font-size: 18px;
+}
 
 
 
