@@ -120,15 +120,15 @@ body {
 
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
     .contact-section {
-        margin: 4rem 4rem 4rem 5rem;
+        margin: 4rem 4rem 4rem 3.5rem;
     }
 
     .contact-section .gap {
-        margin-right: 0px;
+        margin-right: 40px;
     }
 
     .contact-section .card1 {
-        width: 400px;
+        width: 450px;
     }
 
     .contact-section .card2 {
@@ -145,16 +145,20 @@ body {
 
     .contact-section button {
         margin: 0.4rem 0;
+    }
+
+    .contact-section iframe {
+        height: 340px;
     }
 }
 
 @media only screen and (min-width:1000px) and (max-width: 1024px) {
     .contact-section {
-        margin: 4rem 4rem 4rem 4.5rem;
+        margin: 4rem 4rem 4rem 4rem;
     }
 
     .contact-section .gap {
-        margin-right: 0px;
+        margin-right: 20px;
     }
 
     .contact-section .card1 {
@@ -178,13 +182,13 @@ body {
     }
 }
 
-@media only screen and (min-width: 991px) and (max-width: 1000px) {
+@media only screen and (min-width: 991.98px) and (max-width: 1000px) {
     .contact-section {
-        margin: 4rem 4rem 4rem 4.5rem;
+        margin: 4rem 4rem 4rem 3.5rem;
     }
 
     .contact-section .gap {
-        margin-right: 0px;
+        margin-right: 20px;
     }
 
     .contact-section .card1 {
@@ -208,7 +212,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 900px) and (max-width: 991px) {
+@media only screen and (min-width: 900px) and (max-width: 991.98px) {
     .contact-section {
         margin: 4rem 3.5rem 4rem -1rem;
     }
@@ -283,3 +287,130 @@ body {
         height: 320px;
     }
 }
+
+@media only screen and (min-width: 600px) and (max-width: 767.98px) {
+    .contact-section {
+        margin: 2.5rem 0;
+    }
+
+    .contact-section .card1 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+    .contact-section {
+        margin: -3rem 0 2rem 0;
+    }
+
+    .contact-section .card1 {
+        margin-bottom: 2rem;
+    }
+
+    .contact-section .card-body h1 {
+        font-size: 2rem;
+    }
+
+    .contact-section label {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 500px) {
+    .contact-section {
+        margin: -3rem 0 2rem 0;
+    }
+
+    .contact-section .card1 {
+        margin-bottom: 2rem;
+    }
+
+    .contact-section .card-body h1 {
+        font-size: 2rem;
+    }
+
+    .contact-section .card-body p {
+        font-size: 0.8rem;
+    }
+
+    .contact-section label {
+        font-size: 0.9rem;
+    }
+
+    .contact-section textarea {
+        height: 100px;
+    }
+
+    .contact-section .card-body {
+        padding: 2rem 2rem;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 425px) {
+    .contact-section {
+        margin: -3rem 0 2rem 0;
+    }
+
+    .contact-section .card1 {
+        margin-bottom: 2rem;
+    }
+
+    .contact-section .card-body h1 {
+        font-size: 1.8rem;
+    }
+
+    .contact-section .card-body p {
+        font-size: 0.7rem;
+    }
+
+    .contact-section label {
+        font-size: 0.9rem;
+    }
+
+    .contact-section textarea {
+        height: 100px;
+    }
+
+    .contact-section .card-body {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .contact-section button {
+        margin: 0.4rem 0;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+    .contact-section {
+        margin: -2rem 0 2rem 0;
+    }
+
+    .contact-section .card1 {
+        margin-bottom: 2rem;
+    }
+
+    .contact-section .card-body h1 {
+        font-size: 1.6rem;
+    }
+
+    .contact-section .card-body p {
+        font-size: 0.7rem;
+    }
+
+    .contact-section label {
+        font-size: 0.8rem;
+    }
+
+    .contact-section textarea {
+        height: 80px;
+    }
+
+    .contact-section .card-body {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .contact-section button {
+        margin: 0.4rem 0;
+    }
+}
+
