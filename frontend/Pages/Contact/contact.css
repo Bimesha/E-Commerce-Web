@@ -49,13 +49,13 @@ body {
 
 .contact-section button {
     background-color: #FFBA35;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     border: none;
     color: black;
 }
 
 .contact-section .contact-info {
-    margin-top: 1.3rem;
+    margin-top: 1.5rem;
     text-align: center;
 }
 
@@ -64,7 +64,7 @@ body {
     background-color: black;
     padding: 8px 0;
     margin-bottom: 0.5rem;
-    border-radius: 5px;
+    border-radius: 10px;
     color: #fff;
     font-size: 0.8rem;
 }
@@ -77,3 +77,209 @@ body {
 
 
 
+
+
+@media only screen and (min-width: 1400px) and (max-width: 1440px) {
+    .contact-section {
+        margin: 4rem 9rem 4rem 12.5rem;
+    }
+
+    .contact-section .card-body p {
+        letter-spacing: 0px;
+    }
+}
+
+
+@media only screen and (min-width: 1280px) and (max-width: 1400px) {
+    .contact-section {
+        margin: 4rem 9rem 4rem 12rem;
+    }
+
+    .contact-section .card-body p {
+        letter-spacing: 0px;
+    }
+
+    .contact-section button {
+        margin: 0.4rem 0;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1280px) {
+    .contact-section {
+        margin: 4rem 9rem 4rem 11.5rem;
+    }
+
+    .contact-section .card-body p {
+        letter-spacing: 0px;
+    }
+
+    .contact-section button {
+        margin: 0.4rem 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    .contact-section {
+        margin: 4rem 4rem 4rem 5rem;
+    }
+
+    .contact-section .gap {
+        margin-right: 0px;
+    }
+
+    .contact-section .card1 {
+        width: 400px;
+    }
+
+    .contact-section .card2 {
+        width: 400px;
+    }
+
+    .contact-section .card-body {
+        padding: 2rem 2rem;
+    }
+
+    .contact-section .card-body p {
+        letter-spacing: 0px;
+    }
+
+    .contact-section button {
+        margin: 0.4rem 0;
+    }
+}
+
+@media only screen and (min-width:1000px) and (max-width: 1024px) {
+    .contact-section {
+        margin: 4rem 4rem 4rem 4.5rem;
+    }
+
+    .contact-section .gap {
+        margin-right: 0px;
+    }
+
+    .contact-section .card1 {
+        width: 400px;
+    }
+
+    .contact-section .card2 {
+        width: 400px;
+    }
+
+    .contact-section .card-body {
+        padding: 2rem 2rem;
+    }
+
+    .contact-section .card-body p {
+        letter-spacing: 0px;
+    }
+
+    .contact-section button {
+        margin: 0.4rem 0;
+    }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1000px) {
+    .contact-section {
+        margin: 4rem 4rem 4rem 4.5rem;
+    }
+
+    .contact-section .gap {
+        margin-right: 0px;
+    }
+
+    .contact-section .card1 {
+        width: 400px;
+    }
+
+    .contact-section .card2 {
+        width: 400px;
+    }
+
+    .contact-section .card-body {
+        padding: 2rem 2rem;
+    }
+
+    .contact-section .card-body p {
+        letter-spacing: 0px;
+    }
+
+    .contact-section button {
+        margin: 0.4rem 0;
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 991px) {
+    .contact-section {
+        margin: 4rem 3.5rem 4rem -1rem;
+    }
+
+    .contact-section .gap {
+        margin-right: 60px;
+    }
+
+    .contact-section .card1 {
+        width: 400px;
+    }
+
+    .contact-section .card2 {
+        width: 350px;
+    }
+
+    .contact-section .card-body {
+        padding: 2rem 2rem;
+    }
+
+    .contact-section .card-body p {
+        letter-spacing: 0px;
+    }
+
+    .contact-section button {
+        margin: 0.4rem 0;
+    }
+}
+
+@media only screen and (min-width: 767.98px) and (max-width: 900px) {
+    .contact-section {
+        margin: 4rem 1rem 4rem -0.5rem;
+    }
+
+    .contact-section .gap {
+        margin-right: 60px;
+    }
+
+    .contact-section .card1 {
+        width: 380px;
+    }
+
+    .contact-section .card2 {
+        width: 300px;
+    }
+
+    .contact-section .card-body {
+        padding: 2rem 2rem;
+    }
+
+    .contact-section .card-body h1 {
+        font-size: 2rem;
+    }
+
+    .contact-section .card-body p {
+        letter-spacing: 0px;
+    }
+
+    .contact-section form label {
+        font-size: 0.9rem;
+    }
+
+    .contact-section textarea {
+        height: 100px;
+    }
+
+    .contact-section button {
+        margin: 0.4rem 0;
+    }
+
+    .contact-section iframe {
+        height: 320px;
+    }
+}
