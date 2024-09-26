@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.contact-section {
+    margin: 4rem 10rem 4rem 14rem;
+}
+
+.contact-section .gap {
+    margin-right: 30px;
+}
+
+.contact-section .card-body {
+    padding: 2rem 4rem;
+}
+
+
+
+
+
+
