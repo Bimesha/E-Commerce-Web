@@ -1,54 +1,54 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Function to validate the registration form
-  function regFormValidation() {
-      const form = document.getElementById('registrationForm');
-
-      // Check if the form exists in the DOM
-      if (form) {
-          form.addEventListener('submit', function (event) {
-              // Get all form fields
-              const fields = form.querySelectorAll('input');
-
-              // Loop through each field and check its validity
-              fields.forEach(function (field) {
-                  if (!field.checkValidity()) {
-                      field.classList.add('is-invalid');
-                      
-                  } else {
-                      field.classList.remove('is-invalid');
-                      field.classList.add('is-valid');
-                  }
-              });
-
-              // Custom validation for password matching
-              const password = document.getElementById('password');
-              const confirmPassword = document.getElementById('confirmPassword');
-              
-              if (password.value !== confirmPassword.value) {
-                  confirmPassword.setCustomValidity("Passwords do not match");
-                  confirmPassword.classList.add('is-invalid');
-                  confirmPassword.classList.remove('is-valid');
-              } else {
-                  confirmPassword.setCustomValidity('');
-                  confirmPassword.classList.remove('is-invalid');
-                  confirmPassword.classList.add('is-valid');
-              }
-
-              // Prevent form submission if any field is invalid
-              if (!form.checkValidity()) {
-                  event.preventDefault();
-                  event.stopPropagation();
-              }
-
-              
-          }, false);
+    // Function to validate a single field
+    function validateField(field) {
+      if (!field.checkValidity()) {
+        field.classList.add('is-invalid');
+        field.classList.remove('is-valid');
+      } else {
+        field.classList.remove('is-invalid');
+        field.classList.add('is-valid');
       }
-      
-  }
-
-  // Delay validation until the modal form is opened (to ensure form exists)
-  const modal = document.getElementById('createAccount');
-  modal.addEventListener('shown.bs.modal', function () {
-      regFormValidation();  // Call validation when the modal is fully shown
+    }
+  
+    // Real-time validation for each input field
+    const form = document.getElementById('registrationForm');
+    
+    if (form) {
+      const fields = form.querySelectorAll('input');
+  
+      // loop for Validate each field on input
+      fields.forEach(function (field) {
+        field.addEventListener('input', function () {
+          validateField(field);
+        });
+      });
+  
+      // Password matching validation in real-time
+      const password = document.getElementById('password');
+      const confirmPassword = document.getElementById('confirmPassword');
+  
+      confirmPassword.addEventListener('input', function () {
+        if (password.value !== confirmPassword.value) {
+          confirmPassword.setCustomValidity("Passwords do not match");
+          confirmPassword.classList.add('is-invalid');
+          confirmPassword.classList.remove('is-valid');
+        } else {
+          confirmPassword.setCustomValidity('');
+          confirmPassword.classList.remove('is-invalid');
+          confirmPassword.classList.add('is-valid');
+        }
+      });
+  
+      // Validate the entire form on submission
+      form.addEventListener('submit', function (event) {
+        fields.forEach(function (field) {
+          validateField(field);
+        });
+  
+        if (!form.checkValidity()) {
+          event.preventDefault();  // Prevent form submission if validation fails
+          event.stopPropagation();
+        }
+      });
+    }
   });
-});
