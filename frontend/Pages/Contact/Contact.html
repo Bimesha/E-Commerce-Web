@@ -54,7 +54,7 @@
                         <div class="card-body">
                           <h1>GET IN TOUCH</h1>
                           <p>We'd love to hear from you! If you have any questions, feedback, or need further assistance, feel free to reach out.</p>
-                          <form action="">
+                          <form action="" class="needs-validation" novalidate id="contactForm">
                             <div class="form-group">
                               <div class="mb-4">
                                 <label for="exampleFormControlInput1" class="form-label">Email</label>
@@ -63,7 +63,11 @@
                                   class="form-control"
                                   id="exampleFormControlInput1"
                                   placeholder="example@gmail.com"
+                                  required
                                 />
+                                <div class="invalid-feedback">
+                                  Please enter a valid email address.
+                                </div>
                               </div>
                               <div class="mb-4">
                                 <label for="exampleFormControlTextarea1" class="form-label">Message</label>
@@ -71,7 +75,11 @@
                                   class="form-control"
                                   id="exampleFormControlTextarea1"
                                   rows="5"
+                                  required
                                 ></textarea>
+                                <div class="invalid-feedback">
+                                  Please enter a message.
+                                </div>
                               </div>
                             </div>
 
