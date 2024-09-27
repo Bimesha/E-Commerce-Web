@@ -54,6 +54,11 @@ body {
     color: black;
 }
 
+.contact-section button:hover {
+    background-color: #FFBA35;
+    color: black;
+}
+
 .contact-section .contact-info {
     margin-top: 1.5rem;
     text-align: center;

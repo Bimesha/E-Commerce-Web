@@ -54,7 +54,7 @@
                         <div class="card-body">
                           <h1>GET IN TOUCH</h1>
                           <p>We'd love to hear from you! If you have any questions, feedback, or need further assistance, feel free to reach out.</p>
-                          <form action="">
+                          <form action="" class="needs-validation" novalidate id="contactForm">
                             <div class="form-group">
                               <div class="mb-4">
                                 <label for="exampleFormControlInput1" class="form-label">Email</label>
@@ -63,7 +63,11 @@
                                   class="form-control"
                                   id="exampleFormControlInput1"
                                   placeholder="example@gmail.com"
+                                  required
                                 />
+                                <div class="invalid-feedback">
+                                  Please enter a valid email address.
+                                </div>
                               </div>
                               <div class="mb-4">
                                 <label for="exampleFormControlTextarea1" class="form-label">Message</label>
@@ -71,7 +75,11 @@
                                   class="form-control"
                                   id="exampleFormControlTextarea1"
                                   rows="5"
+                                  required
                                 ></textarea>
+                                <div class="invalid-feedback">
+                                  Please enter a message.
+                                </div>
                               </div>
                             </div>
 
@@ -103,6 +111,46 @@
     <script src="../../components/navbar/nav.js"></script>
     <script src="../../components/navbar/registration.js"></script>
     <script src="../../components/navbar/formValidation.js"></script>
+
+    <script>
+      (function () {
+        'use strict';
+
+        // Fetch the form element
+        const form = document.getElementById('contactForm');
+
+        // Add event listener to handle validation on form submission
+        form.addEventListener('submit', function (event) {
+          // If form is invalid, prevent submission
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          // Add Bootstrap's was-validated class to trigger validation styles
+          form.classList.add('was-validated');
+        }, false);
+
+        // Add real-time validation feedback for each input and textarea
+        const inputs = form.querySelectorAll('input, textarea');
+
+        inputs.forEach(input => {
+          input.addEventListener('input', function () {
+            // If input is valid, remove invalid feedback and add valid feedback
+            if (input.checkValidity()) {
+              input.classList.remove('is-invalid');
+              input.classList.add('is-valid');
+              input.nextElementSibling.style.display = 'none'; // Hide invalid-feedback
+            } else {
+              // If input is invalid, add invalid feedback and remove valid feedback
+              input.classList.remove('is-valid');
+              input.classList.add('is-invalid');
+              input.nextElementSibling.style.display = 'block'; // Show invalid-feedback
+            }
+          });
+        });
+      })();
+    </script>
 
     <!-- Footer Component -->
     <script src="../../components/footer/footer.js"></script>
