@@ -126,7 +126,7 @@ body {
     max-width: 260px;
     border-radius: 15px;
     text-align: center;
-    background-color: rgb(236, 235, 235);
+    /* background-color: rgb(236, 235, 235); */
 }
 
 .slid-section .carousel-item .card{
