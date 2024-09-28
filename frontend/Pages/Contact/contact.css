@@ -18,6 +18,15 @@ body {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 }
 
+.contact-section input::placeholder {
+    font-size: 0.9rem;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important; 
+    -webkit-text-fill-color: #000 !important; 
+}
+
 .contact-section .card2 {
     border: none;
 }
@@ -371,6 +380,14 @@ body {
         font-size: 0.9rem;
     }
 
+    .contact-section input::placeholder {
+        font-size: 0.9rem;
+    }
+
+    .contact-section .message {
+        margin-top: -0.8rem;
+    }
+
     .contact-section textarea {
         height: 100px;
     }
@@ -389,6 +406,14 @@ body {
         margin: -2rem 0 2rem 0;
     }
 
+    .contact-section .form-group {
+        margin-top: -0.5rem;
+    }
+
+    .contact-section .message {
+        margin-top: -0.8rem;
+    }
+
     .contact-section .card1 {
         margin-bottom: 2rem;
     }
@@ -402,6 +427,10 @@ body {
     }
 
     .contact-section label {
+        font-size: 0.8rem;
+    }
+
+    .contact-section input::placeholder {
         font-size: 0.8rem;
     }
 
