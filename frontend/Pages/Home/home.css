@@ -109,6 +109,106 @@ body {
 
 
 
+/*slid section*/
+
+.slid-section .carousel{
+    display: flex;
+}
+
+.slid-section .d-flex{
+    margin-left: 5rem;
+    margin-right: 3rem;
+    justify-content: center; 
+}
+
+.slid-section .card{
+    border: none;
+    height: 325px;
+    max-width: 260px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: rgb(236, 235, 235);
+
+    
+
+}
+
+.slid-section .carousel-item .card{
+    width: 100%;
+}
+
+.slid-section .card img{
+    border-radius: 15px 15px 0 0;
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slid-section .status-badge{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 12px;
+    padding: 5px 10px;
+    font-size: 0.5rem;
+}
+
+.slid-section .in-stock{
+    background-color: green;
+}
+
+.out-of-stock{
+    background-color: red;
+}
+
+.price {
+    font-size: 1rem;
+    
+}
+
+.slid-section h5{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.slid-section .carousel-control-next-icon{
+    position: absolute;
+    bottom: 7px;
+    right: 0;
+    width: 2rem;
+    height: 4.4rem;
+    background-color: black;
+    margin-right: 5rem;
+    color: black;
+}
+
+.slid-section .carousel-control-next-icon:hover{
+    background-color: #FFBA35;
+}
+
+.slid-section .btn-primary{
+    color: white;
+    width: 8rem;
+    background-color: black;
+    border: none;
+    margin-top: 3rem;
+    justify-content: center;
+    margin-left: 37rem;
+    display: block;
+    text-align: center;
+    
+   
+    
+}
+
+.slid-section .btn-primary:hover{
+    background-color: #FFBA35;
+}
+
+
+
 /* Banner Section */
 .banner-section .row {
     margin-left: 6rem;
@@ -422,6 +522,35 @@ body {
         margin-top: 1.1rem;
         width: 40%;
     }
+
+    .slid-section .d-flex{
+        margin-left: 5rem;
+        margin-right: 3rem;
+        justify-content: center; 
+    }
+    
+    .slid-section .card{
+        height: 325px;
+        max-width: 260px;       
+    }
+    
+    
+    .slid-section .card img{
+        height: 180px;
+        width: 100%;
+    }
+    
+    
+    .slid-section .carousel-control-next-icon{
+        margin-right: 5rem;
+       
+    }
+        
+    .slid-section .btn-primary{
+        margin-left: 37rem;
+    }
+    
+    
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1400px) {
@@ -498,6 +627,32 @@ body {
         margin-top: 1.1rem;
         width: 42%;
     }
+
+
+    .slid-section .d-flex{
+        margin-left: 0.8rem;
+        margin-right: 0.6rem;
+    }
+    
+    .slid-section .card{
+        height: 324px;
+        max-width: 260px;     
+    }
+    
+    .slid-section .card img{
+        height: 180px;
+        width: 100%;
+       
+    }
+        
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 1.2rem;   
+    }
+       
+    .slid-section .btn-primary{      
+        margin-left: 31rem;
+    }
+    
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1280px) {
@@ -585,6 +740,30 @@ body {
     .card-body3 .btn-primary {
         margin-top: 1.4rem;
         width: 45%;
+    }
+
+    .slid-section .d-flex{
+        margin-left: 0.5rem;
+        margin-right: 0.6rem;
+    }
+    
+    .slid-section .card{
+        height: 322px;
+        max-width: 256px;     
+    }
+    
+    .slid-section .card img{
+        height: 176px;
+        width: 100%;
+       
+    }
+        
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 1.5rem;   
+    }
+       
+    .slid-section .btn-primary{      
+        margin-left: 31rem;
     }
 }
 
@@ -678,6 +857,30 @@ body {
     .card-body3 .btn-primary {
         margin-top: 2.2rem;
         width: 52%;
+    }
+
+    .slid-section .d-flex{
+        margin-left: 0.3rem;
+        margin-right: 0.1rem;
+    }
+    
+    .slid-section .card{
+        height: 310px;
+        max-width: 222px;     
+    }
+    
+    .slid-section .card img{
+        height: 144px;
+        width: 100%;
+       
+    }
+        
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 0.6rem;   
+    }
+       
+    .slid-section .btn-primary{      
+        margin-left: 25rem;
     }
 }
 
@@ -796,6 +999,30 @@ body {
     .card-body3 .title p {
         font-size: 0.8rem;
         letter-spacing: 1.1px;
+    }
+
+    .slid-section .d-flex{
+        margin-left: 3rem;
+        margin-right: 1.8rem;
+    }
+    
+    .slid-section .card{
+        height: 290px;
+        max-width: 205px;     
+    }
+    
+    .slid-section .card img{
+        height: 132px;
+        width: 100%;
+       
+    }
+        
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 2.2rem;   
+    }
+       
+    .slid-section .btn-primary{      
+        margin-left: 26rem;
     }
 }
 
@@ -922,6 +1149,30 @@ body {
     .card-body3 .title p {
         font-size: 0.8rem;
         letter-spacing: 1.1px;
+    }
+
+    .slid-section .d-flex{
+        margin-left: 4rem;
+        margin-right: 3rem;
+    }
+    
+    .slid-section .card{
+        height: 290px;
+        max-width: 190px;     
+    }
+    
+    .slid-section .card img{
+        height: 132px;
+        width: 100%;
+       
+    }
+        
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 4rem;   
+    }
+       
+    .slid-section .btn-primary{      
+        margin-left: 25rem;
     }
 }
 
@@ -1051,6 +1302,31 @@ body {
     .card-body3 .title p {
         font-size: 0.8rem;
         letter-spacing: 1.1px;
+    }
+
+    .slid-section .d-flex{
+        margin-left: 2rem;
+        margin-right: 1.8rem;
+    }
+    
+    .slid-section .card{
+        height: 290px;
+        max-width: 200px; 
+          
+    }
+    
+    .slid-section .card img{
+        height: 132px;
+        width: 100%;
+       
+    }
+        
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 2rem;   
+    }
+       
+    .slid-section .btn-primary{      
+        margin-left: 18rem;
     }
 }
 
@@ -1184,6 +1460,31 @@ body {
     .card-body3 .title p {
         font-size: 12px;
         letter-spacing: 1px;
+    }
+
+    .slid-section .d-flex{
+        margin-left: 2.4rem;
+        margin-right: 0.1rem;
+    }
+    
+    .slid-section .card{
+        height: 290px;
+        max-width: 210px; 
+          
+    }
+    
+    .slid-section .card img{
+        height: 132px;
+        width: 100%;
+       
+    }
+        
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 1rem;   
+    }
+       
+    .slid-section .btn-primary{      
+        margin-left: 18rem;
     }
 }
 
@@ -1324,6 +1625,103 @@ body {
     .card-body3 .title p {
         display: none;
     }
+
+    .slid-section .d-flex{
+        margin-left: 0.1rem;
+        margin-right: 0rem;
+    }
+    
+    .slid-section .card{
+        height: 300px;
+        max-width: 235px; 
+          
+    }
+    
+    .slid-section .card img{
+        height: 132px;
+        width: 100%;
+       
+    }
+        
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 1.6rem;   
+    }
+       
+    .slid-section .btn-primary{      
+        margin-left: 12rem;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:600px){
+    .slid-section .d-flex{
+        margin-left: 0.1rem;
+        margin-right: 0rem;
+    }
+    
+    .slid-section .card{
+        height: 300px;
+        max-width: 235px; 
+          
+    }
+    
+    .slid-section .card img{
+        height: 132px;
+        width: 100%;
+       
+    }
+        
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 1.6rem;   
+    }
+       
+    .slid-section .btn-primary{      
+        margin-left: 12rem;
+    }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 575px) {
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 10rem;   
+    }
+}
+
+@media only screen and (min-width: 525px) and (max-width: 550px) {
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 8.2rem;   
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 525px) {
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 6.8rem;   
+    }
+}
+
+
+@media only screen and (min-width: 500px) and (max-width: 575px) {
+    .slid-section .d-flex{
+        margin-left: 9rem;
+        margin-right: 0.2rem;
+        justify-content: center;
+    }
+    
+    .slid-section .card{
+        height: 300px;
+        max-width: 220px; 
+          
+    }
+    
+    .slid-section .card img{
+        height: 132px;
+        width: 100%;
+       
+    }
+        
+   
+       
+    .slid-section .btn-primary{      
+        margin-left: 12rem;
+    }
 }
 
 @media only screen and (min-width: 500px) and (max-width: 600px) {
@@ -1442,7 +1840,46 @@ body {
         margin-top: 1.5rem;
         margin-left: -1rem;
     }
+
+    
 }
+
+@media only screen and (min-width: 485px) and (max-width: 500px) {
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 7.4rem;   
+    }
+}
+
+@media only screen and (min-width: 475px) and (max-width: 485px) {
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 7rem;   
+    }
+}
+
+@media only screen and (min-width: 460px) and (max-width: 475px) {
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 6.2rem;   
+    }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 460px) {
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 5.4rem;   
+    }
+}
+
+@media only screen and (min-width: 435px) and (max-width: 450px) {
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 4.4rem;   
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 435px) {
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 3.7rem;   
+    }
+}
+
 
 @media only screen and (min-width: 425px) and (max-width: 500px) {
     .bg-image {
@@ -1558,6 +1995,54 @@ body {
         margin-left: -1rem;
         width: 30%;
         font-size: 0.9rem;
+    }
+
+    .slid-section .d-flex{
+        margin-left: 5rem;
+        margin-right: 0.1rem;
+    }
+    
+    .slid-section .card{
+        height: 300px;
+        max-width: 250px; 
+        margin-left: 10px;
+          
+    }
+    
+    .slid-section .card img{
+        height: 135px;
+        width: 100%;
+       
+    }
+        
+   
+       
+    .slid-section .btn-primary{      
+        margin-left: 9rem;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 415px) {
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 3.4rem;   
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 415px) {
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 3.6rem;   
+    }
+}
+
+@media only screen and (min-width: 385px) and (max-width: 400px) {
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 2.8rem;   
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 385px) {
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 2.2rem;   
     }
 }
 
@@ -1678,6 +2163,42 @@ body {
         padding: 8px 0px;
         font-size: 0.9rem;
     }
+
+    .slid-section .d-flex{
+        margin-left: 5.2rem;
+        margin-right: 0.1rem;
+        align-content: center;
+    }
+    
+    .slid-section .card{
+        height: 300px;
+        max-width: 235px; 
+          
+    }
+    
+    .slid-section .card img{
+        height: 132px;
+        width: 100%;
+       
+    }
+        
+   
+       
+    .slid-section .btn-primary{      
+        margin-left: 8rem;
+    }
+}
+
+@media only screen and (max-width: 375px) and (min-width: 350px) {
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 3.8rem;   
+    }
+}
+
+@media only screen and (max-width: 350px) and (min-width: 320px){
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 1.8rem;   
+    }
 }
 
 @media only screen and (max-width: 375px) and (min-width: 320px) {
@@ -1795,4 +2316,29 @@ body {
         padding: 8px 0px;
         font-size: 0.9rem;
     }
+
+    .slid-section .d-flex{
+        margin-left: 2.7rem;
+        margin-right: 0.1rem;
+    }
+    
+    .slid-section .card{
+        height: 300px;
+        max-width: 235px; 
+          
+    }
+    
+    .slid-section .card img{
+        height: 132px;
+        width: 100%;
+       
+    }
+        
+    
+       
+    .slid-section .btn-primary{      
+        margin-left: 6rem;
+    }
 }
+
+
