@@ -110,7 +110,6 @@ body {
 
 
 /*slid section*/
-
 .slid-section .carousel{
     display: flex;
 }
@@ -127,7 +126,11 @@ body {
     max-width: 260px;
     border-radius: 15px;
     text-align: center;
+
+    /* background-color: rgb(236, 235, 235); */
+
     background-color: rgb(236, 235, 235);   
+
 
 }
 
@@ -163,7 +166,6 @@ body {
 
 .price {
     font-size: 1rem;
-    
 }
 
 .slid-section h5{
@@ -173,7 +175,7 @@ body {
 
 .slid-section .carousel-control-next-icon{
     position: absolute;
-    bottom: 7px;
+    bottom: 0;
     right: 0;
     width: 2rem;
     height: 4.4rem;
@@ -200,9 +202,10 @@ text-decoration: none;
     margin-left: 37rem;
     display: block;
     text-align: center;
-    
-   
-    
+}
+
+.slid-section a {
+    text-decoration: none;
 }
 
 .slid-section .btn-primary:hover{
