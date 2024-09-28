@@ -62,7 +62,7 @@ body {
     padding-top: 2rem;
     font-family: "Buda", serif;
     font-size: 4.5rem;
-    letter-spacing: 1.5rem;
+    letter-spacing: 1.8rem;
     line-height: 7rem;
 }
 
@@ -93,7 +93,7 @@ body {
 
 .hero-section .details {
     margin-top: -1rem;
-    margin-left: 6rem;
+    margin-left: 5.5rem;
     display: flex;
     gap: 4rem;
 }
@@ -440,11 +440,11 @@ text-decoration: none;
 
 
 /* Media Queries */
-@media (min-width: 1440px) {
-    .row1 .card1 {
+/* @media (min-width: 1440px) {
+    .hero-section .row .card {
         margin-top: 6rem;
     }
-}
+} */
 
 @media only screen and (min-width: 1400px) and (max-width: 1440px) {
     .bg-image {
@@ -455,27 +455,13 @@ text-decoration: none;
         height: 68vh;
     }
 
-    .container1 h1{
+    .hero-section .container h1{
         font-size: 4rem;
         letter-spacing: 1.5rem;
     }
 
-    .card1 {
-        width: 33rem;
-        height: 11rem;
-    }
-
-    .row1 .card1 {
-        margin-top: 5.1rem;
-        margin-left: 28rem;
-    }
-
-    .card-body1 p {
-        font-size: 1.1rem;
-    }
-    .details {
-        margin-left: 5rem;
-        gap: 4rem;
+    .hero-section .row .card {
+        margin-top: 5.6rem;
     }
 
     
@@ -529,6 +515,8 @@ text-decoration: none;
         width: 40%;
     }
 
+
+
     .slid-section .d-flex{
         margin-left: 5rem;
         margin-right: 3rem;
@@ -540,12 +528,10 @@ text-decoration: none;
         max-width: 260px;       
     }
     
-    
     .slid-section .card img{
         height: 180px;
         width: 100%;
     }
-    
     
     .slid-section .carousel-control-next-icon{
         margin-right: 5rem;
@@ -555,8 +541,6 @@ text-decoration: none;
     .slid-section .btn-primary{
         margin-left: 37rem;
     }
-    
-    
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1400px) {
@@ -568,14 +552,15 @@ text-decoration: none;
         height: 65vh;
     }
 
-    .container1 h1 {
-        font-size: 4rem;
+    .hero-section .container h1 {
+        font-size: 3.8rem;
         letter-spacing: 1.5rem;
         line-height: 8rem;
     }
 
-    .card1 {
-        display: none;
+    .hero-section .row .card {
+        margin-top: 2.2rem;
+        margin-left: 18rem;
     }
 
 
@@ -635,6 +620,8 @@ text-decoration: none;
     }
 
 
+
+
     .slid-section .d-flex{
         margin-left: 0.8rem;
         margin-right: 0.6rem;
@@ -648,7 +635,6 @@ text-decoration: none;
     .slid-section .card img{
         height: 180px;
         width: 100%;
-       
     }
         
     .slid-section .carousel-control-next-icon{    
@@ -658,25 +644,24 @@ text-decoration: none;
     .slid-section .btn-primary{      
         margin-left: 31rem;
     }
-    
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1280px) {
     .bg-image {
-        height: 62vh;
+        height: 65vh;
     }
 
     .overlay {
-        height: 62vh;
+        height: 65vh;
     }
 
-    .container1 h1 {
-        font-size: 4rem;
+    .hero-section .container h1 {
+        font-size: 3.8rem;
         letter-spacing: 1.5rem;
         line-height: 8rem;
     }
 
-    .card1 {
+    .hero-section .row .card {
         display: none;
     }
 
@@ -748,6 +733,9 @@ text-decoration: none;
         width: 45%;
     }
 
+
+
+
     .slid-section .d-flex{
         margin-left: 0.5rem;
         margin-right: 0.6rem;
@@ -761,7 +749,6 @@ text-decoration: none;
     .slid-section .card img{
         height: 176px;
         width: 100%;
-       
     }
         
     .slid-section .carousel-control-next-icon{    
@@ -775,23 +762,24 @@ text-decoration: none;
 
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
     .bg-image {
-        height: 60vh;
+        height: 65vh;
     }
 
     .overlay {
-        height: 60vh;
+        height: 65vh;
     }
 
-    .container1 h1 {
-        font-size: 4rem;
-        letter-spacing: 1.3rem;
+    .hero-section .container h1 {
+        font-size: 3.5rem;
+        letter-spacing: 1.5rem;
         line-height: 7rem;
-        padding-top: 3rem;
     }
 
-    .row1 .card1 {
+    .hero-section .row .card {
         display: none;
     }
+
+
 
 
     .banner-section .row {
@@ -865,6 +853,9 @@ text-decoration: none;
         width: 52%;
     }
 
+
+
+
     .slid-section .d-flex{
         margin-left: 0.3rem;
         margin-right: 0.1rem;
@@ -878,7 +869,6 @@ text-decoration: none;
     .slid-section .card img{
         height: 144px;
         width: 100%;
-       
     }
         
     .slid-section .carousel-control-next-icon{    
@@ -892,20 +882,20 @@ text-decoration: none;
 
 @media only screen and (min-width:1000px) and (max-width: 1024px) {
     .bg-image {
-        height: 60vh;
+        height: 64vh;
     }
 
     .overlay {
-        height: 60vh;
+        height: 64vh;
     }
 
-    .container1 h1 {
+    .hero-section .container h1 {
         font-size: 3.5rem;
         letter-spacing: 1.3rem;
         line-height: 7rem;
     }
 
-    .row1 .card1 {
+    .hero-section .row .card {
         display: none;
     }
 
@@ -1007,6 +997,9 @@ text-decoration: none;
         letter-spacing: 1.1px;
     }
 
+
+
+
     .slid-section .d-flex{
         margin-left: 3rem;
         margin-right: 1.8rem;
@@ -1020,7 +1013,6 @@ text-decoration: none;
     .slid-section .card img{
         height: 132px;
         width: 100%;
-       
     }
         
     .slid-section .carousel-control-next-icon{    
@@ -1034,19 +1026,19 @@ text-decoration: none;
 
 @media only screen and (min-width: 990px) and (max-width: 1000px) {
     .bg-image {
-        height: 58vh;
+        height: 64vh;
     }
 
     .overlay {
-        height: 58vh;
+        height: 64vh;
     }
 
-    .container1 h1 {
-        font-size: 3.4rem;
-        letter-spacing: 1.2rem;
+    .hero-section .container h1 {
+        font-size: 3.5rem;
+        letter-spacing: 1.3rem;
     }
 
-    .row1 .card1 {
+    .hero-section .row .card {
         display: none;
     }
 
@@ -1157,6 +1149,9 @@ text-decoration: none;
         letter-spacing: 1.1px;
     }
 
+
+
+
     .slid-section .d-flex{
         margin-left: 4rem;
         margin-right: 3rem;
@@ -1170,7 +1165,6 @@ text-decoration: none;
     .slid-section .card img{
         height: 132px;
         width: 100%;
-       
     }
         
     .slid-section .carousel-control-next-icon{    
@@ -1184,19 +1178,19 @@ text-decoration: none;
 
 @media only screen and (min-width: 900px) and (max-width: 990px) {
     .bg-image {
-        height: 58vh;
+        height: 60vh;
     }
 
     .overlay {
-        height: 58vh;
+        height: 60vh;
     }
 
-    .container1 h1 {
-        font-size: 3.4rem;
-        letter-spacing: 1.5rem;
+    .hero-section .container h1 {
+        font-size: 3.3rem;
+        letter-spacing: 1.3rem;
     }
 
-    .row1 .card1 {
+    .hero-section .row .card {
         display: none;
     }
 
@@ -1310,6 +1304,9 @@ text-decoration: none;
         letter-spacing: 1.1px;
     }
 
+
+
+
     .slid-section .d-flex{
         margin-left: 2rem;
         margin-right: 1.8rem;
@@ -1318,7 +1315,6 @@ text-decoration: none;
     .slid-section .card{
         height: 290px;
         max-width: 200px; 
-          
     }
     
     .slid-section .card img{
@@ -1338,21 +1334,24 @@ text-decoration: none;
 
 @media only screen and (min-width: 767px) and (max-width: 900px) {
     .bg-image {
-        height: 55vh;
+        height: 58vh;
     }
 
     .overlay {
-        height: 55vh;
+        height: 58vh;
     }
 
-    .container1 h1 {
+    .hero-section .container h1 {
         font-size: 3.2rem;
         letter-spacing: 1.3rem;
     }
 
-    .row1 .card1 {
+    .hero-section .row .card {
         display: none;
     }
+
+
+
 
     .banner-section .row {
         margin-top: 3rem;
@@ -1468,6 +1467,9 @@ text-decoration: none;
         letter-spacing: 1px;
     }
 
+
+
+
     .slid-section .d-flex{
         margin-left: 2.4rem;
         margin-right: 0.1rem;
@@ -1476,13 +1478,11 @@ text-decoration: none;
     .slid-section .card{
         height: 290px;
         max-width: 210px; 
-          
     }
     
     .slid-section .card img{
         height: 132px;
         width: 100%;
-       
     }
         
     .slid-section .carousel-control-next-icon{    
@@ -1503,15 +1503,16 @@ text-decoration: none;
         height: 50vh;
     }
 
-    .container1 h1 {
-        font-size: 2.8rem;
+    .hero-section .container h1 {
+        font-size: 2.3rem;
         letter-spacing: 1rem;
         line-height: 6rem;
     }
 
-    .row1 .card1 {
+    .hero-section .row .card {
         display: none;
     }
+
 
 
     .banner-section .row {
@@ -1549,7 +1550,6 @@ text-decoration: none;
         margin-left: 1rem;
     }
 
-    
     .card-bottom2 .products-banner {
         top: -0.5rem;
     }
@@ -1632,6 +1632,9 @@ text-decoration: none;
         display: none;
     }
 
+
+
+
     .slid-section .d-flex{
         margin-left: 0.1rem;
         margin-right: 0rem;
@@ -1640,13 +1643,11 @@ text-decoration: none;
     .slid-section .card{
         height: 300px;
         max-width: 235px; 
-          
     }
     
     .slid-section .card img{
         height: 132px;
         width: 100%;
-       
     }
         
     .slid-section .carousel-control-next-icon{    
@@ -1714,13 +1715,11 @@ text-decoration: none;
     .slid-section .card{
         height: 300px;
         max-width: 220px; 
-          
     }
     
     .slid-section .card img{
         height: 132px;
         width: 100%;
-       
     }
         
    
@@ -1740,13 +1739,13 @@ text-decoration: none;
         height: 40vh;
     }
 
-    .container1 h1 {
+    .hero-section .container h1 {
         font-size: 2.2rem;
         letter-spacing: 0.8rem;
         line-height: 4.5rem;
     }
 
-    .row1 .card1 {
+    .hero-section .row .card {
         display: none;
     }
 
@@ -1755,7 +1754,7 @@ text-decoration: none;
     .banner-section .row {
         margin-top: 2rem;
         justify-content: space-around;
-        margin-left: -1rem;
+        margin-left: -0.8rem;
         gap: 1rem;
     }
 
@@ -1897,13 +1896,13 @@ text-decoration: none;
         height: 40vh;
     }   
 
-    .container1 h1 {
-        font-size: 2rem;
+    .hero-section .container h1 {
+        font-size: 1.8rem;
         letter-spacing: 0.8rem;
         line-height: 4rem;
     }
 
-    .row1 .card1 {
+    .hero-section .row .card {
         display: none;
     }
 
@@ -1911,7 +1910,7 @@ text-decoration: none;
     .banner-section .row {
         margin-top: 2rem;
         justify-content: space-around;
-        margin-left: -1rem;
+        margin-left: -0.8rem;
         gap: 0.5rem;
     }
 
@@ -2003,6 +2002,9 @@ text-decoration: none;
         font-size: 0.9rem;
     }
 
+
+
+
     .slid-section .d-flex{
         margin-left: 5rem;
         margin-right: 0.1rem;
@@ -2012,17 +2014,13 @@ text-decoration: none;
         height: 300px;
         max-width: 250px; 
         margin-left: 10px;
-          
     }
     
     .slid-section .card img{
         height: 135px;
         width: 100%;
-       
     }
         
-   
-       
     .slid-section .btn-primary{      
         margin-left: 9rem;
     }
@@ -2062,13 +2060,13 @@ text-decoration: none;
         height: 35vh;
     }
 
-    .container1 h1 {
-        font-size: 1.8rem;
+    .hero-section .container h1 {
+        font-size: 1.7rem;
         letter-spacing: 0.6rem;
         line-height: 3.5rem;
     }
 
-    .row1 .card1 {
+    .hero-section .row .card {
         display: none;
     }
 
@@ -2170,6 +2168,9 @@ text-decoration: none;
         font-size: 0.9rem;
     }
 
+
+
+
     .slid-section .d-flex{
         margin-left: 5.2rem;
         margin-right: 0.1rem;
@@ -2185,11 +2186,8 @@ text-decoration: none;
     .slid-section .card img{
         height: 132px;
         width: 100%;
-       
     }
         
-   
-       
     .slid-section .btn-primary{      
         margin-left: 8rem;
     }
@@ -2217,13 +2215,13 @@ text-decoration: none;
         height: 30vh;
     }
 
-    .container1 h1 {
+    .hero-section .container h1 {
         font-size: 1.4rem;
         letter-spacing: 0.5rem;
         line-height: 3rem;
     }
 
-    .row1 .card1 {
+    .hero-section .row .card {
         display: none;
     }
 
