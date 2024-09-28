@@ -54,7 +54,7 @@
                         <div class="card-body">
                           <h1>GET IN TOUCH</h1>
                           <p>We'd love to hear from you! If you have any questions, feedback, or need further assistance, feel free to reach out.</p>
-                          <form action="">
+                          <form action="" class="needs-validation" novalidate id="contactForm">
                             <div class="form-group">
                               <div class="mb-4">
                                 <label for="exampleFormControlInput1" class="form-label">Email</label>
@@ -63,15 +63,23 @@
                                   class="form-control"
                                   id="exampleFormControlInput1"
                                   placeholder="example@gmail.com"
+                                  required
                                 />
+                                <div class="invalid-feedback">
+                                  Please enter a valid email address.
+                                </div>
                               </div>
-                              <div class="mb-4">
+                              <div class="mb-4 message">
                                 <label for="exampleFormControlTextarea1" class="form-label">Message</label>
                                 <textarea
                                   class="form-control"
                                   id="exampleFormControlTextarea1"
                                   rows="5"
+                                  required
                                 ></textarea>
+                                <div class="invalid-feedback">
+                                  Please enter your message.
+                                </div>
                               </div>
                             </div>
 
@@ -103,6 +111,39 @@
     <script src="../../components/navbar/nav.js"></script>
     <script src="../../components/navbar/registration.js"></script>
     <script src="../../components/navbar/formValidation.js"></script>
+
+    <script>
+      (function () {
+        'use strict';
+
+        const form = document.getElementById('contactForm');
+
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add('was-validated');
+        }, false);
+
+        const inputs = form.querySelectorAll('input, textarea');
+
+        inputs.forEach(input => {
+          input.addEventListener('input', function () {
+            if (input.checkValidity()) {
+              input.classList.remove('is-invalid');
+              input.classList.add('is-valid');
+              input.nextElementSibling.style.display = 'none'; 
+            } else {
+              input.classList.remove('is-valid');
+              input.classList.add('is-invalid');
+              input.nextElementSibling.style.display = 'block';
+            }
+          });
+        });
+      })();
+    </script>
 
     <!-- Footer Component -->
     <script src="../../components/footer/footer.js"></script>
