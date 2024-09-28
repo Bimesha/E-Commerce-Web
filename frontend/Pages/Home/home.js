@@ -8,6 +8,6 @@ addReviewForm.addEventListener('shown.bs.collapse', function() {
 });
 
 addReviewForm.addEventListener('hidden.bs.collapse', function() {
-  plusIcon.classList.remove('bi-chevron-up');  // Remove the up icon
-  plusIcon.classList.add('bi-plus-lg');  // Add the plus icon
+  plusIcon.classList.remove('bi-chevron-up');  //
+  plusIcon.classList.add('bi-plus-lg'); 
 });

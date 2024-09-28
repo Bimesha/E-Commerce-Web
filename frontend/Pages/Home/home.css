@@ -44,10 +44,10 @@ body {
         background-image: url(../../assets/hero2.jpg);
     }
     50% {
-        background-image: url(../../assets/hero3.avif);
+        background-image: url(../../assets/hero3.jpg);
     }
     70% {
-        background-image: url(../../assets/hero3.avif);
+        background-image: url(../../assets/hero3.jpg);
     }
     75% {
         background-image: url(../../assets/hero4.jpg);
@@ -395,17 +395,19 @@ body {
     font-size: large;
 }
 
-.reviewmoreBtn{
-    border-radius: 0;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    font-size: 20px;
-}
-
 .btn-set{
     margin: 30px 0 20px;
     width: 300px;
   
+}
+
+/* visit review page*/
+.reviewmoreBtn{
+    border-radius: 0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    font-size: 15px;
+    width: 100%;
 }
 
 /*Add new review*/
@@ -414,9 +416,9 @@ body {
     color: black;
     border-radius: 0;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    font-size: 20px;
+    font-size: 15px;
     padding: 10px;
-    
+    width: 100%;
 }
 
 #addReviewform .area{
@@ -1227,7 +1229,7 @@ body {
     .card-body3 .title p {
         font-size: 0.8rem;
         letter-spacing: 1.1px;
-    }
+    }  
 
     .section-title h2{
         font-size: larger;
@@ -1301,6 +1303,7 @@ body {
         margin-left: -100px; /* To compensate for the added margin */
         margin-right: -100px;
     }
+    
 
     
 }
@@ -1436,6 +1439,8 @@ body {
         font-size: 12px;
         letter-spacing: 1px;
     }
+
+    /*
     .section-title h2{
         font-size: larger;
         font-weight: 600;
@@ -1504,12 +1509,12 @@ body {
     }
     
     .services .row {
-        margin-left: -25px; /* To compensate for the added margin */
+        margin-left: -25px; // To compensate for the added margin
         margin-right: -25px;
     }
     
     .serviceImg {
-        margin-bottom: 10px; /* Add space between the image and the text */
+        margin-bottom: 10px; // Add space between the image and the text
         width: 50px;
         height: 50px;
     }
@@ -1523,7 +1528,7 @@ body {
         font-size: 1.2rem;
         font-weight: 700;
         margin: 0;
-    }
+    } */
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
@@ -1664,6 +1669,8 @@ body {
         display: none;
     }
 
+    /*
+
     .section-title h2{
         font-size: larger;
         font-weight: 600;
@@ -1761,7 +1768,7 @@ body {
 
     .card .btn{
         font-size: .8rem;
-    }
+    } */
 }
 
 @media only screen and (min-width: 500px) and (max-width: 600px) {
@@ -1880,6 +1887,8 @@ body {
         margin-left: -1rem;
     }
 
+    /*
+
     #addReviewform .card{ 
         width: 150%;
         margin-left: -67px; 
@@ -1982,6 +1991,7 @@ body {
     .section-title{
         padding-bottom: 20px;
     }
+    */
 
 }
 
@@ -2100,11 +2110,11 @@ body {
         width: 30%;
         font-size: 0.9rem;
     }
-
+/*
     #addReviewform .card{ 
         width: 100%;
         margin-left: 0; 
-    }
+    } */
 }
 
 @media only screen and (min-width: 375px) and (max-width: 425px) {
@@ -2224,10 +2234,13 @@ body {
         padding: 8px 0px;
         font-size: 0.9rem;
     }
+
+    /*
     #addReviewform .card{ 
         width: 100%;
         margin-left: 0; 
     }
+    */
 }
 
 @media only screen and (max-width: 375px) and (min-width: 320px) {
@@ -2346,7 +2359,7 @@ body {
         font-size: 0.9rem;
     }
 
-    #addReviewform .card{ 
+    /*#addReviewform .card{ 
         border: none;
         width: 120%;
         margin-left: -20px; 
@@ -2368,5 +2381,5 @@ body {
         padding: 5px;
         font-weight: 600;   
     }
-    
+    */
 }
