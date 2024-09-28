@@ -57,7 +57,7 @@ body {
     }
 }
 
-.container1 h1{
+.hero-section .container h1{
     margin-left: 9px;
     padding-top: 2rem;
     font-family: "Buda", serif;
@@ -66,13 +66,13 @@ body {
     line-height: 7rem;
 }
 
-.row1 .card1 {
-    margin-left: 29rem;
-    margin-top: 5rem;
+.hero-section .row .card {
+    margin-left: 23rem;
+    margin-top: 5.4rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.card1 {
+.hero-section .card {
     background-color: rgba(241, 255, 255, 0.5);
     width: 35rem;
     height: 10rem;
@@ -83,26 +83,27 @@ body {
     border-radius: 3px;
 }
 
-.card-body1 p {
-    padding-top: 1.5rem;
+.hero-section .card-body p {
+    padding-top: 0.5rem;
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.1rem;
     word-spacing: 2px;
 }
 
-.details {
-    margin-left: 5rem;
+.hero-section .details {
+    margin-top: -1rem;
+    margin-left: 6rem;
     display: flex;
     gap: 4rem;
 }
 
-.detail h5 {
+.hero-section .detail h5 {
     font-weight: 700;
     font-size: 1.8rem;
 }
 
-.detail h6 {
+.hero-section .detail h6 {
     font-size: 0.9rem;
     text-align: left;
 }
