@@ -116,36 +116,29 @@
       (function () {
         'use strict';
 
-        // Fetch the form element
         const form = document.getElementById('contactForm');
 
-        // Add event listener to handle validation on form submission
         form.addEventListener('submit', function (event) {
-          // If form is invalid, prevent submission
           if (!form.checkValidity()) {
             event.preventDefault();
             event.stopPropagation();
           }
 
-          // Add Bootstrap's was-validated class to trigger validation styles
           form.classList.add('was-validated');
         }, false);
 
-        // Add real-time validation feedback for each input and textarea
         const inputs = form.querySelectorAll('input, textarea');
 
         inputs.forEach(input => {
           input.addEventListener('input', function () {
-            // If input is valid, remove invalid feedback and add valid feedback
             if (input.checkValidity()) {
               input.classList.remove('is-invalid');
               input.classList.add('is-valid');
-              input.nextElementSibling.style.display = 'none'; // Hide invalid-feedback
+              input.nextElementSibling.style.display = 'none'; 
             } else {
-              // If input is invalid, add invalid feedback and remove valid feedback
               input.classList.remove('is-valid');
               input.classList.add('is-invalid');
-              input.nextElementSibling.style.display = 'block'; // Show invalid-feedback
+              input.nextElementSibling.style.display = 'block';
             }
           });
         });
