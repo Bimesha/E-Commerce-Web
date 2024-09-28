@@ -126,7 +126,12 @@ body {
     max-width: 260px;
     border-radius: 15px;
     text-align: center;
+
     /* background-color: rgb(236, 235, 235); */
+
+    background-color: rgb(236, 235, 235);   
+
+
 }
 
 .slid-section .carousel-item .card{
@@ -181,6 +186,10 @@ body {
 
 .slid-section .carousel-control-next-icon:hover{
     background-color: #FFBA35;
+}
+
+.slid-section a{
+text-decoration: none;
 }
 
 .slid-section .btn-primary{
