@@ -440,12 +440,6 @@ text-decoration: none;
 
 
 /* Media Queries */
-/* @media (min-width: 1440px) {
-    .hero-section .row .card {
-        margin-top: 6rem;
-    }
-} */
-
 @media only screen and (min-width: 1400px) and (max-width: 1440px) {
     .bg-image {
         height: 68vh;
