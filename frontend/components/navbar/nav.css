@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    background-color: #fff;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -14,7 +23,7 @@
 .header-search {
     width: 150px;
     margin-top: -60px;
-    background-color: #D9D9D9;
+    background-color: rgb(243, 242, 242);
     border-radius: 20px;
     display: flex;  
     align-items: center;
@@ -28,7 +37,7 @@
 
 .header-search input {
     width: 100px;
-    background-color: #D9D9D9;
+    background-color: rgb(243, 242, 242);
     outline: none;
     border: none;
     padding: 2px 10px;
@@ -261,6 +270,10 @@ ul li {
 }
 
 @media only screen and (min-width: 425px) and (max-width: 600px) {
+    header {
+        height: 90px;
+    }
+
     .header-container {
         display: flex;
         align-items: center;
@@ -295,8 +308,8 @@ ul li {
     }
 
     #cart-count {
-        top: 28px;
-        right: 160px;
+        top: 37px;
+        right: 161px;
     }
 
     #drop-down {
@@ -361,6 +374,10 @@ ul li {
 }
 
 @media only screen and (min-width: 375px) and (max-width: 424px) {
+    header {
+        height: 90px;
+    }
+
     .header-container {
         display: flex;
         align-items: center;
@@ -396,8 +413,8 @@ ul li {
     }
 
     #cart-count {
-        top: 23px;
-        right: 150px;
+        top: 33px;
+        right: 151px;
     }
 
     #drop-down {
@@ -466,6 +483,10 @@ ul li {
 }
 
 @media only screen and (max-width: 375px) and (min-width: 320px) {
+    header {
+        height: 75px;
+    }
+
     .header-container {
         align-items: center;
         margin-top: -5px;
@@ -484,6 +505,7 @@ ul li {
 
     .header-user {
         gap: 10px;
+        margin-top: -40px;
         margin-right: -10px;
     }
 
@@ -497,7 +519,7 @@ ul li {
     }
 
     #cart-count {
-        top: 14px;
+        top: 23px;
         right: 137px;
     }
     
@@ -519,6 +541,7 @@ ul li {
         padding: 0px 30px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
+        z-index: 1;
     }
 
     #list {
