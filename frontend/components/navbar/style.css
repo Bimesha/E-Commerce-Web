@@ -3,28 +3,64 @@
     margin: 0 auto;
 }
 
-.modal-title{
-    text-align: center;
+.modal-header {
+    background-image: url(../../assets/reg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 0;
+    padding: 20px 0px 10px;
+}
+
+.modal-header .modal-title {
+    margin-left: 66px;
+    font-weight: 700;
+    color: white;
+    font-size: 2rem;
+}
+
+.modal-header .close-btn {
+    border: none;
+    padding: 18px 15px;
+    border-radius: 0;
+    margin-left: 135px;   
+}
+
+.modal-header .close-btn:hover {
+    background-color: red;
+    color: white;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center; /* Center the form horizontally */
+    align-items: center; /* Center the form vertically */
+    padding: 20px;
+}
+
+.modal-dialog {
+    max-width: 600px;
+    margin: 0 auto; 
 }
 
 .modal-body input[type="email"], .modal-body input[type="password"], .modal-body input[type="text"] {
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 10px;  
 }
 
-/* Invalid feedback */
-.invalid-feedback {
-    display: none;
-}
-
-.was-validated .invalid-feedback {
-    display: block;
-}
-
-button {
+.btn-submit {
     padding: 10px;
     font-size: 16px;
     width: 100%;
+}
+
+.btn-log{
+    width: 30%;
+}
+
+#registrationForm {
+    max-height: 600px;
+    padding: 0px 20px;
+    margin: 0px 20px;
 }
 
 #registrationForm .form-group {
@@ -37,4 +73,200 @@ button {
 
 button.btn-warning, button.btn-dark {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Invalid feedback */
+.invalid-feedback {
+    display: none;
+}
+
+.was-validated .invalid-feedback {
+    display: block;
+}
+
+
+
+/*media queries */
+
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+    .modal-header {
+        padding: 10px 0;
+    }
+    
+    .modal-header .modal-title {
+        font-size: 1.7rem;
+    }
+    .modal-header .close-btn {
+        padding: 18px 15px;
+        margin-left: 121px;  
+    }
+
+    #registrationForm .form-group {
+        margin-bottom: 10px;
+    }
+
+    #registrationForm {
+        max-height: 500px;
+    }
+
+    .modal-body{
+        padding-top: 2px;
+        padding-bottom: 44px;
+    }
+
+    .modal-body input[type="email"], .modal-body input[type="password"], .modal-body input[type="text"] {
+        font-size: .9rem;
+        padding: 8px;  
+    } 
+
+    .was-validated .invalid-feedback .modal-body{
+        padding-top: 30px;
+    }
+    
+
+}
+
+@media only screen and (min-width: 425px) and (max-width: 500px) {
+    
+    .modal-header .modal-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .modal-header .close-btn {
+        padding: 16px 13px;
+        margin-left: 121px;  
+    }
+
+    #registrationForm .form-group {
+        margin-bottom: 10px;
+    }
+
+    #registrationForm {
+        max-height: 500px;
+    }
+
+    .modal-body{
+        padding: 10px;
+        font-size: .9rem;
+    }
+
+    .modal-body input[type="email"], .modal-body input[type="password"], .modal-body input[type="text"] {
+        font-size: .8rem;
+        padding: 7px;  
+    } 
+
+    .was-validated .invalid-feedback .modal-body{
+        padding-top: 30px;
+    }
+
+    .btn-submit {
+        padding: 8px;
+        font-size: .9rem;
+    }
+    
+    .btn-log{
+        padding: 5px;
+        font-size: .9rem;
+    }
+    
+}
+
+@media only screen and (min-width: 375px) and (max-width: 425px) {
+    .modal-header .modal-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .modal-header .close-btn {
+        padding: 16px 13px;
+        margin-left: 121px;  
+    }
+
+    #registrationForm .form-group {
+        margin-bottom: 10px;
+    }
+
+    #registrationForm {
+       padding: 10px;
+    }
+
+    .modal-body{
+        padding: 10px;
+        font-size: .9rem;
+    }
+
+    .modal-body input[type="email"], .modal-body input[type="password"], .modal-body input[type="text"] {
+        font-size: .8rem;
+        padding: 7px;  
+    } 
+
+    .was-validated .invalid-feedback .modal-body{
+        padding-top: 30px;
+    }
+
+    .btn-submit {
+        padding: 8px;
+        font-size: .9rem;
+    }
+    
+    .btn-log{
+        padding: 5px;
+        font-size: .9rem;
+    }
+    
+}
+
+@media only screen and (max-width: 375px) and (min-width: 320px) {
+    .modal-header .modal-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-left: 37px;
+    }
+    .modal-header .close-btn {
+        padding: 16px 13px;
+        margin-left: 31px;  
+    }
+
+    #registrationForm .form-group {
+        margin-bottom: 10px;
+    }
+
+    #registrationForm {
+       padding: 10px;
+    }
+
+    .modal-body{
+        padding: 10px;
+        font-size: .9rem;
+    }
+
+    .modal-body input[type="email"], .modal-body input[type="password"], .modal-body input[type="text"] {
+        font-size: .8rem;
+        padding: 7px;  
+    } 
+
+    .was-validated .invalid-feedback .modal-body{
+        padding-top: 30px;
+    }
+
+    .btn-submit {
+        padding: 8px;
+        font-size: .9rem;
+    }
+    
+    .form-group .d-flex {
+        flex-direction: column; /* elements vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .form-group .text-muted {
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .btn-log {
+        padding: 8px;
+        font-size: .9rem;
+        width: 100%;
+    }
+    
 }
