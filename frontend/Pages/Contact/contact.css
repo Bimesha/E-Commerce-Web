@@ -57,6 +57,7 @@ input:-webkit-autofill {
 }
 
 .contact-section button {
+    width: 100%;
     background-color: #FFBA35;
     margin: 1rem 0;
     border: none;
