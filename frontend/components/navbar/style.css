@@ -43,6 +43,17 @@
     margin: 0 auto; 
 }
 
+.modal-backdrop {
+    z-index: 1;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-body {
+    background-color: white;
+    border-radius: 10px;
+}
+
 .modal-body input[type="email"], .modal-body input[type="password"], .modal-body input[type="text"] {
     padding: 10px;  
 }
@@ -175,6 +186,7 @@ button.btn-warning, button.btn-dark {
     .modal-header .modal-title {
         font-size: 1.5rem;
         font-weight: 500;
+        margin-left: 40px;
     }
     .modal-header .close-btn {
         padding: 16px 13px;
@@ -217,7 +229,7 @@ button.btn-warning, button.btn-dark {
 
 @media only screen and (max-width: 375px) and (min-width: 320px) {
     .modal-header .modal-title {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-weight: 600;
         margin-left: 37px;
     }
