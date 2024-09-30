@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    background-color: #fff;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;

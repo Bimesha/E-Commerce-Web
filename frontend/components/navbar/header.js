@@ -36,27 +36,28 @@ class SpecialHeader extends HTMLElement {
                     </div>
                 </div>
                 
+           
+
+                <div class="header-menu">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-link" id="list" style="display: none"><i class="bi bi-list"></i></li>
+                        <li class="nav-link"><a href="../../pages/Home/Home.html">Home</a></li>
+                        <li class="nav-link"><a href="#" onClick="toggleProductsDropdown()" id="products">Shop <i class="bi bi-caret-down-fill"></i></a>
+                            <ul id="products-dropdown" style="display:none;">
+                                <li id="chair-link"><a href="#">Chair Collection</a></li>
+                                <li id="table-link"><a href="#">Table Collection</a></li>
+                                <li id="sofa-link"><a href="#">Sofa Collection</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-link"><a href="../../pages/Story/Story.html">Our Story</a></li>
+                        <li class="nav-link"><a href="../../pages/Contact/Contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div id="modals-container">
+                    <registration-form></registration-form>
+                </div>
             </header>
-
-            <div class="header-menu">
-                <ul class="nav justify-content-center">
-                    <li class="nav-link" id="list" style="display: none"><i class="bi bi-list"></i></li>
-                    <li class="nav-link"><a href="../../pages/Home/Home.html">Home</a></li>
-                    <li class="nav-link"><a href="#" onClick="toggleProductsDropdown()" id="products">Shop <i class="bi bi-caret-down-fill"></i></a>
-                        <ul id="products-dropdown" style="display:none;">
-                            <li id="chair-link"><a href="#">Chair Collection</a></li>
-                            <li id="table-link"><a href="#">Table Collection</a></li>
-                            <li id="sofa-link"><a href="#">Sofa Collection</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-link"><a href="../../pages/Story/Story.html">Our Story</a></li>
-                    <li class="nav-link"><a href="../../pages/Contact/Contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <div id="modals-container">
-                <registration-form></registration-form>
-            </div>
 
         `;
     }
