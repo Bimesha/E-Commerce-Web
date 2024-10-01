@@ -25,7 +25,6 @@ class SpecialHeader extends HTMLElement {
                         <div id="search1" style="display: none"><i class="bi bi-search"></i></div>
                         <div id="list" style="display: none"><i class="bi bi-list" onClick="toggleSearchmenu()"></i></div>
                             <ul id="drop-down-list" style="display: none">
-                                <div class="box"></div>
                                 <li id="home-link"><a href="../../pages/Home/Home.html">Home</a></li>
                                 <li id="chair-link"><a href="#">Chair Collection</a></li>
                                 <li id="table-link"><a href="#">Table Collection</a></li>

@@ -73,6 +73,8 @@ window.onclick = function (event) {
 //   cart.addEventListener('click', () => setActive());
 // });
 
+
+
   
 
 
