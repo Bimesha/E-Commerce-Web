@@ -17,7 +17,7 @@ class SpecialHeader extends HTMLElement {
                         <div id="user"><i class="bi bi-person" onClick="togglemenu()"></i></div>
                             <ul id="drop-down">
                                 <div class="box"></div>
-                                <li id="login-link"><a href="#">Log In</a></li>
+                                <li id="login-link"><a href="#" data-bs-toggle="modal" data-bs-target="#login">Log In</a></li>
                                 <li id="signup-link"><a href="#" data-bs-toggle="modal" data-bs-target="#createAccount">Create Account</a></li>
                                 <li id="profile-link" style="display:none;"><a href="#" >My Profile</a></li>
                                 <li id="logout-link" style="display:none;"><a href="#">Logout</a></li>
@@ -56,9 +56,11 @@ class SpecialHeader extends HTMLElement {
 
             <div id="modals-container">
                 <registration-form></registration-form>
+                <login-form></login-form>
             </div>
 
         `;
+
     }
 }
 

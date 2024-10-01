@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Function to validate a single field
+    // Function to validate single fields
     function validateField(field) {
       if (!field.checkValidity()) {
         field.classList.add('is-invalid');
