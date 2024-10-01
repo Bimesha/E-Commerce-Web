@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .modal-body form {
     max-width: 500px;
     margin: 0 auto;
@@ -21,8 +27,8 @@
 
 .modal-header .close-btn {
     border: none;
-    padding: 18px 15px;
-    border-radius: 0;
+    padding: 15px 15px;
+    border-radius: 10px;
     margin-left: 135px;   
 }
 
@@ -33,8 +39,8 @@
 
 .modal-body {
     display: flex;
-    justify-content: center; /* Center the form horizontally */
-    align-items: center; /* Center the form vertically */
+    justify-content: center;
+    align-items: center; 
     padding: 20px;
 }
 
@@ -97,8 +103,8 @@ button.btn-warning, button.btn-dark {
 
 
 
-/*media queries */
 
+/*media queries */
 @media only screen and (min-width: 500px) and (max-width: 600px) {
     .modal-header {
         padding: 10px 0;
