@@ -427,12 +427,13 @@ text-decoration: none;
     margin-top: 1rem;
 }
 
-/*review section*/
 
+
+
+/*review section*/
 .reviews {
     min-height: 200px;
     padding: 0;
-    
 }
 
 .reviews .section-title{
@@ -442,7 +443,7 @@ text-decoration: none;
 
 .reviews .carousel-indicators button{
     width: 8px !important;
-    height: 8px !important;
+    height: 8.5px !important;
     border-radius: 50%;
     border: 1px solid !important;
 }
@@ -469,7 +470,7 @@ text-decoration: none;
     margin: 5px 10px;
     font-size: small;
     display: flex;
-    align-items: flex-start; /* Align image and text to the top */
+    align-items: flex-start;
     height: 100%;
 }
 
@@ -505,6 +506,8 @@ text-decoration: none;
   
 }
 
+
+
 /* visit review page*/
 .reviewmoreBtn{
     border-radius: 0;
@@ -513,6 +516,8 @@ text-decoration: none;
     font-size: 15px;
     width: 100%;
 }
+
+
 
 /*Add new review*/
 #addReviewBtn{
@@ -540,6 +545,8 @@ text-decoration: none;
 }
 
 /*end of review section*/
+
+
 
 
 /*service section*/
@@ -862,6 +869,9 @@ text-decoration: none;
         width: 45%;
     }
 
+
+
+
     #addReviewform .card{ 
         width: 300%;
         margin-left: -150%; 
@@ -871,6 +881,9 @@ text-decoration: none;
         width: 100%;
         height: 270px;
     }
+
+
+
 
     .slid-section .d-flex{
         margin-left: 0.5rem;
@@ -988,6 +1001,7 @@ text-decoration: none;
     }
 
 
+
     .slid-section .d-flex{
         margin-left: 0.3rem;
         margin-right: 0.1rem;
@@ -1010,6 +1024,8 @@ text-decoration: none;
     .slid-section .btn-primary{      
         margin-left: 25rem;
     }
+
+
 
     #addReviewform .card{ 
         width: 250%;
@@ -1139,6 +1155,8 @@ text-decoration: none;
         letter-spacing: 1.1px;
     }
 
+
+
     #addReviewform .card{ 
         width: 220%;
         margin-left: -115%; 
@@ -1148,6 +1166,8 @@ text-decoration: none;
         width: 100%;
         height: 310px;
     }
+
+
 
 
     .slid-section .d-flex{
@@ -1300,6 +1320,8 @@ text-decoration: none;
         letter-spacing: 1.1px;
     }
 
+
+
     #addReviewform .card{ 
         width: 200%;
         margin-left: -100%; 
@@ -1309,6 +1331,8 @@ text-decoration: none;
         width: 100%;
         height: 315px;
     }
+
+
 
 
     .slid-section .d-flex{
@@ -1463,6 +1487,9 @@ text-decoration: none;
         letter-spacing: 1.1px;
     }  
 
+
+
+
     .reviews .section-title h2{
         font-size: larger;
         font-weight: 600;
@@ -1485,7 +1512,6 @@ text-decoration: none;
 
     .reviews .review-text{
         font-size:1rem; 
-        
     }
 
     .reviews .carousel-caption{
@@ -1518,8 +1544,8 @@ text-decoration: none;
     }
 
     .reviews .carousel-indicators button{
-        width: 6px !important;
-        height: 6px !important;
+        width: 7px !important;
+        height: 8px !important;
     }
 
     .reviewmoreBtn{
@@ -1529,6 +1555,9 @@ text-decoration: none;
     #addReviewBtn{
         font-size: 1rem;    
     }
+
+
+
 
     .services .col{
         margin-right: -32px; 
@@ -1540,6 +1569,8 @@ text-decoration: none;
         margin-right: -100px;
     }
     
+
+
 
     .slid-section .d-flex{
         margin-left: 2rem;
@@ -1701,6 +1732,9 @@ text-decoration: none;
         letter-spacing: 1px;
     }
 
+
+
+
     .reviews .section-title{
         padding-bottom: 10px;
     }
@@ -1754,8 +1788,8 @@ text-decoration: none;
     }
 
     .reviews .carousel-indicators button{
-        width: 6px !important;
-        height: 6px !important;
+        width: 7px !important;
+        height: 7.5px !important;
     }
 
     .reviewmoreBtn{
@@ -1766,18 +1800,21 @@ text-decoration: none;
         font-size: 1rem;    
     }
 
+
+
+
     .services .col{
         margin-right: -32px; 
         margin-left: 32px;
     }
     
     .services .row {
-        margin-left: -25px; /* To compensate for the added margin */
+        margin-left: -25px; 
         margin-right: -25px;
     }
     
     .services .serviceImg {
-        margin-bottom: 10px; /* Add space between the image and the text */
+        margin-bottom: 10px; 
         width: 50px;
         height: 50px;
     }
@@ -1958,6 +1995,9 @@ text-decoration: none;
         display: none;
     }
 
+
+
+
     .reviews .section-title{
         padding-bottom: 10px;
     }
@@ -1983,7 +2023,6 @@ text-decoration: none;
         height: 325px;
     }
 
-
     .reviews .review-text{
         font-size:.9rem;    
     }
@@ -2005,7 +2044,6 @@ text-decoration: none;
         font-size: 1.1rem;
     }
     
-    
     .reviews .img-section{
         display: flex;
         justify-content: center;
@@ -2017,11 +2055,10 @@ text-decoration: none;
         margin: 20px 15px 0;
     }
 
-
-    .reviews .carousel-indicators button{
+    .reviews .carousel-indicators button {
         width: 6px !important;
         height: 6px !important;
-        margin: 20px 0;
+        margin: 20px 2px;
     }
 
     .reviewmoreBtn{
@@ -2034,8 +2071,12 @@ text-decoration: none;
     }
     
     #addReviewBtn{
-        font-size: .8rem;    
+        font-size: .8rem; 
+        margin-top: 30px;   
     }
+
+
+
 
     .services{
         padding-top: 20px;
@@ -2065,6 +2106,9 @@ text-decoration: none;
         font-size: .8rem;
     }
 
+
+
+
     .slid-section .d-flex{
         margin-left: 0.1rem;
         margin-right: 0rem;
@@ -2089,7 +2133,7 @@ text-decoration: none;
     }
 }
 
-@media only screen and (min-width:576px) and (max-width:600px){
+@media only screen and (min-width:575px) and (max-width:600px){
     .slid-section .d-flex{
         margin-left: 0.1rem;
         margin-right: 0rem;
@@ -2160,6 +2204,10 @@ text-decoration: none;
 }
 
 @media only screen and (min-width: 500px) and (max-width: 600px) {
+    .hero-section {
+        margin-top: 85px;
+    }
+
     .bg-image {
         height: 40vh;
         margin-top: -4rem;
@@ -2276,6 +2324,9 @@ text-decoration: none;
         margin-left: -1rem;
     }
 
+
+
+
     .reviews .section-title h2{
         font-size: larger;
         font-weight: 600;
@@ -2331,8 +2382,8 @@ text-decoration: none;
 
     .reviews .carousel-indicators button{
         width: 6px !important;
-        height: 6px !important;
-        margin: 20px 0;
+        height: 7px !important;
+        margin: 20px 2px;
     }
 
     .reviewmoreBtn{
@@ -2347,6 +2398,9 @@ text-decoration: none;
     #addReviewBtn{
         font-size: .8rem;    
     }
+
+
+
 
     .services{
         padding: 10px;
@@ -2412,6 +2466,10 @@ text-decoration: none;
 
 
 @media only screen and (min-width: 425px) and (max-width: 500px) {
+    .hero-section {
+        margin-top: 85px;
+    }
+
     .bg-image {
         margin-top: -4rem;
         height: 40vh;
@@ -2525,6 +2583,9 @@ text-decoration: none;
         font-size: 0.9rem;
     }
 
+
+
+
     .reviews .section-title{
         padding-bottom: 0;
     }
@@ -2581,8 +2642,8 @@ text-decoration: none;
 
     .reviews .carousel-indicators button{
         width: 6px !important;
-        height: 6px !important;
-        margin: 20px 0;
+        height: 7px !important;
+        margin: 20px 2px;
     }
 
     .reviewmoreBtn{
@@ -2597,6 +2658,9 @@ text-decoration: none;
     #addReviewBtn{
         font-size: .8rem;    
     }
+
+
+
 
     .services{
         padding: 10px;
@@ -2630,6 +2694,9 @@ text-decoration: none;
     .reviews .section-title{
         padding-bottom: 20px;
     }
+
+
+
 
     .slid-section .d-flex{
         margin-left: 5rem;
@@ -2677,6 +2744,10 @@ text-decoration: none;
 }
 
 @media only screen and (min-width: 375px) and (max-width: 425px) {
+    .hero-section {
+        margin-top: 75px;
+    }
+
     .bg-image {
         height: 35vh;
         margin-top: -4rem;
@@ -2794,6 +2865,9 @@ text-decoration: none;
         font-size: 0.9rem;
     }
 
+
+
+
     .reviews .carousel-item{
         width: 100%;
         height: 370px;
@@ -2827,8 +2901,8 @@ text-decoration: none;
 
     .reviews .carousel-indicators button{
         width: 6px !important;
-        height: 6px !important;
-        margin: 20px 0;
+        height: 7px !important;
+        margin: 20px 2px;
     }
 
     .reviewmoreBtn{
@@ -2843,6 +2917,9 @@ text-decoration: none;
     #addReviewBtn{
         font-size: .8rem;    
     }
+
+
+
 
     .services{
         padding: 10px;
@@ -2876,6 +2953,9 @@ text-decoration: none;
     .reviews .section-title{
         padding-bottom: 20px;
     }
+
+
+
 
     .slid-section .d-flex{
         margin-left: 5rem;
@@ -2934,6 +3014,10 @@ text-decoration: none;
 }
 
 @media only screen and (max-width: 375px) and (min-width: 320px) {
+    .hero-section {
+        margin-top: 54px;
+    }
+
     .bg-image {
         height: 30vh;
         margin-top: -3rem;
@@ -3049,6 +3133,9 @@ text-decoration: none;
         font-size: 0.9rem;
     }
 
+
+
+
     .reviews .section-title{
         padding-bottom: 0;
     }
@@ -3107,8 +3194,8 @@ text-decoration: none;
 
     .reviews .carousel-indicators button{
         width: 6px !important;
-        height: 6px !important;
-        margin: 20px 0;
+        height: 7px !important;
+        margin: 20px 2px;
     }
 
     .reviewmoreBtn{
@@ -3123,6 +3210,8 @@ text-decoration: none;
     #addReviewBtn{
         font-size: .8rem;    
     }
+
+
 
     .services{
         padding: 10px;
@@ -3156,6 +3245,9 @@ text-decoration: none;
     .reviews .section-title{
         padding-bottom: 20px;
     }
+
+
+    
 
     .slid-section .d-flex{
         margin-left: 5rem;

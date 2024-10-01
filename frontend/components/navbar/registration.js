@@ -83,6 +83,64 @@ class RegistrationForm extends HTMLElement {
     }
 }
 
-// Define custom element
 customElements.define('registration-form', RegistrationForm);
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Initialize modal
+    var createAccountModal = new bootstrap.Modal(document.getElementById('createAccount'), {
+        keyboard: false,
+        backdrop: 'static'
+    });
+    
+    // Open the modal on clicking 'Create Account'
+    document.getElementById('signup-link').addEventListener('click', function () {
+        createAccountModal.show();
+    });
+});
+  
+// Change background color when the modal is shown
+document.getElementById('createAccount').addEventListener('show.bs.modal', function () {
+    document.querySelector('header').classList.add('dark-background');
+});
+  
+// Revert background color when the modal is hidden
+document.getElementById('createAccount').addEventListener('hide.bs.modal', function () {
+    document.querySelector('header').classList.remove('dark-background');
+});
+  
+document.getElementById('createAccount').addEventListener('show.bs.modal', function () {
+    document.querySelector('.header-search').classList.add('change-background');
+});
+  
+document.getElementById('createAccount').addEventListener('hide.bs.modal', function () {
+    document.querySelector('.header-search').classList.remove('change-background');
+});
+  
+document.getElementById('createAccount').addEventListener('show.bs.modal', function () {
+    document.querySelector('.header-search input').classList.add('changeinput-background');
+});
+  
+document.getElementById('createAccount').addEventListener('hide.bs.modal', function () {
+    document.querySelector('.header-search input').classList.remove('changeinput-background');
+});
+  
+document.getElementById('createAccount').addEventListener('show.bs.modal', function () {
+    document.querySelector('#drop-down').classList.add('changemenu-background');
+});
+  
+document.getElementById('createAccount').addEventListener('hide.bs.modal', function () {
+    document.querySelector('#drop-down').classList.remove('changemenu-background');
+});
+  
+document.getElementById('createAccount').addEventListener('show.bs.modal', function () {
+    document.querySelector('.box').classList.add('changemenu-background');
+});
+  
+document.getElementById('createAccount').addEventListener('hide.bs.modal', function () {
+    document.querySelector('.box').classList.remove('changemenu-background');
+});
+
+
 

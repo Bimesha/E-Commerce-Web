@@ -4,6 +4,30 @@
     box-sizing: border-box;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: #fff;
+}
+
+.dark-background {
+    background-color: rgba(178, 174, 174, 0.1);
+}
+
+.change-background {
+    background-color: rgba(179, 176, 176, 0.1) !important;
+}
+
+.changeinput-background {
+    background-color: rgba(160, 158, 158, 0.1) !important;
+}
+
+.changemenu-background {
+    background-color: rgba(178, 174, 174, 0.8) !important;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -93,6 +117,7 @@ ul li {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    z-index: 0;
 }
 
 #login-link, #signup-link, #profile-link, #logout-link {
@@ -109,14 +134,14 @@ ul li {
     text-decoration: none;
 }
 
-.box {
+.box i{
     position: absolute;
-    top: -10px;
-    right: 84px;
+    top: 0px;
+    right: 80px;
     width: 20px;
-    height: 20px;
-    background-color: #fff;
-    transform: rotate(45deg);
+    background-color: white;
+    /* transform: rotate(45deg); */
+    color: black;
 }
 
 .header-menu {
@@ -210,7 +235,7 @@ ul li {
     }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+@media only screen and (min-width: 600.98px) and (max-width: 768px) {
     .header-container {
         padding: 10px 50px 10px 40px;
     }
@@ -260,7 +285,11 @@ ul li {
     }
 }
 
-@media only screen and (min-width: 425px) and (max-width: 600px) {
+@media only screen and (min-width: 425px) and (max-width: 600.98px) {
+    header {
+        height: 90px;
+    }
+
     .header-container {
         display: flex;
         align-items: center;
@@ -295,8 +324,8 @@ ul li {
     }
 
     #cart-count {
-        top: 28px;
-        right: 160px;
+        top: 37px;
+        right: 161px;
     }
 
     #drop-down {
@@ -355,12 +384,16 @@ ul li {
     }
 
     #home-link a, #story-link a, #contact-link a, #login-link a, #logout-link a, #signup-link a, #chair-link a, #table-link a, #sofa-link a, #contact-link a {
-        font-size: 14px;
+        font-size: 12px;
         color: #000;
     }
 }
 
 @media only screen and (min-width: 375px) and (max-width: 424px) {
+    header {
+        height: 90px;
+    }
+
     .header-container {
         display: flex;
         align-items: center;
@@ -396,8 +429,8 @@ ul li {
     }
 
     #cart-count {
-        top: 23px;
-        right: 150px;
+        top: 33px;
+        right: 151px;
     }
 
     #drop-down {
@@ -466,6 +499,10 @@ ul li {
 }
 
 @media only screen and (max-width: 375px) and (min-width: 320px) {
+    header {
+        height: 75px;
+    }
+
     .header-container {
         align-items: center;
         margin-top: -5px;
@@ -484,6 +521,7 @@ ul li {
 
     .header-user {
         gap: 10px;
+        margin-top: -40px;
         margin-right: -10px;
     }
 
@@ -497,7 +535,7 @@ ul li {
     }
 
     #cart-count {
-        top: 14px;
+        top: 23px;
         right: 137px;
     }
     
@@ -519,6 +557,7 @@ ul li {
         padding: 0px 30px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
+        z-index: 1;
     }
 
     #list {
