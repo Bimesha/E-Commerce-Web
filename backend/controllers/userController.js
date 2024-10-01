@@ -11,7 +11,7 @@ const createUser = async (req, res) => {
     // Check if the user already exists
     const existingUser = await User.findByEmail(email);
     if (existingUser) {
-      return res.status(400).send("Email already exists.");
+      return res.status(400).json({error: "Email already exists."});
     }
 
     // Encrypt the password
@@ -20,7 +20,7 @@ const createUser = async (req, res) => {
     // Create the user
   await User.createUser({ firstname, lastname, email, password: hashedPassword });
 
-  res.send("User created successfully!");
+  res.json("User created successfully!");
   } catch (err) {
       console.log("Error creating user:", err);
       res.status(500).send("Error creating user.");
