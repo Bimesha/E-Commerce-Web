@@ -41,7 +41,7 @@ class SpecialHeader extends HTMLElement {
                     <ul class="nav justify-content-center">
                         <li class="nav-link" id="list" style="display: none"><i class="bi bi-list"></i></li>
                         <li class="nav-link"><a href="../../pages/Home/Home.html">Home</a></li>
-                        <li class="nav-link"><a href="#" onClick="toggleProductsDropdown()" id="products">Shop <i class="bi bi-caret-down-fill"></i></a>
+                        <li class="nav-link"><a href="#" onClick="toggleProductsDropdown()" id="products">Shop <i class="bi bi-chevron-down"></i></a>
                             <ul id="products-dropdown" style="display:none;">
                                 <li id="chair-link"><a href="#">Chair Collection</a></li>
                                 <li id="table-link"><a href="#">Table Collection</a></li>
