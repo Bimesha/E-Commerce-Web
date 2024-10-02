@@ -11,7 +11,7 @@ const createUser = async (req, res) => {
     // Check if the user already exists
     const existingUser = await User.findByEmail(email);
     if (existingUser) {
-      return res.status(400).json({error: "Email already exists."});
+      return res.status(400).json({error: "Email already exists. Please use a different email."});
     }
 
     // Encrypt the password
