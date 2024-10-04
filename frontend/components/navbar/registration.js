@@ -8,7 +8,7 @@ class RegistrationForm extends HTMLElement {
         
                     <!-- Header -->
                     <div class="modal-header ">
-                        <h2 class="modal-title text-uppercase mt-3">Create An Account</h2>
+                        <h2 class="modal-title text-uppercase mt-2">Create An Account</h2>
                         <button type="button" class="btn btn-light close-btn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
                     </div>
   

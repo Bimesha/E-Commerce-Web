@@ -29,10 +29,10 @@ header {
 }
 
 .header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
 }
 
 .header-search {
@@ -70,15 +70,25 @@ header {
 
 .header-user {
     display: flex;
-    margin-top: -50px;
+    margin-top: -60px;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
 }
 
-#cart i, #user i, #search1 i, #list i {
+#cart i, #search1 i, #list i {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
-    padding: 10px 10px;
+    padding: 12px 12px;
+    color: #000;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+#user i {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    padding: 8.5px 8.5px;
     color: #000;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -90,13 +100,13 @@ header {
 } 
 
 #cart-count {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
     position: absolute;
-    top: 34px;
-    right: 185px;
-    font-size: 10px;
+    top: 24px;
+    right: 177px;
+    font-size: 15px;
     color: black;
-    width: 15px;
-    height: 15px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -111,7 +121,7 @@ ul li {
     text-align: center;
     display: none;
     position: absolute;
-    top: 105px;
+    top: 90px;
     padding: 10px;
     margin-right: 5px;
     border-radius: 5px;
@@ -132,16 +142,6 @@ ul li {
     color: #000;
     font-weight: 500;
     text-decoration: none;
-}
-
-.box i{
-    position: absolute;
-    top: 0px;
-    right: 80px;
-    width: 20px;
-    background-color: white;
-    /* transform: rotate(45deg); */
-    color: black;
 }
 
 .header-menu {
@@ -207,7 +207,7 @@ ul li {
 /* Media Queries */
 @media (min-width: 1440px) {
     #products-dropdown {
-        right: 730px;
+        right: 770px;
     }
 }
 
@@ -235,6 +235,18 @@ ul li {
     }
 }
 
+@media only screen and (min-width: 900px) and (max-width: 1023px) {
+    #products-dropdown {
+        right: 460px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 900px) {
+    #products-dropdown {
+        right: 410px;
+    }
+}
+
 @media only screen and (min-width: 600.98px) and (max-width: 768px) {
     .header-container {
         padding: 10px 50px 10px 40px;
@@ -251,9 +263,13 @@ ul li {
         height: 130px;
     }
 
+    .header-user {
+        margin-top: -40px;
+    }
+
     #cart-count {
-        top: 29px;
-        right: 135px;
+        top: 30px;
+        right: 128px;
     }
 
     .nav {
@@ -262,7 +278,7 @@ ul li {
     }
 
     #drop-down {
-        top: 110px;
+        top: 96px;
         margin-left: -30px;
         width: 180px;
     }
@@ -280,14 +296,14 @@ ul li {
     }
 
     #products-dropdown {
-        margin-top: 15px;
-        right: 370px;
+        margin-top: 6px;
+        right: 310px;
     }
 }
 
 @media only screen and (min-width: 425px) and (max-width: 600.98px) {
     header {
-        height: 90px;
+        height: 55px;
     }
 
     .header-container {
@@ -303,7 +319,9 @@ ul li {
 
     .header-logo img {
         width: 240px;
+        height: 150px;
         margin-left: -70px;
+        margin-top: -20px;
     }
 
     .header-menu {
@@ -314,9 +332,14 @@ ul li {
         gap: 10px;
     }
 
-    #cart i, #user i, #search1 i, #list i {
+    #cart i, #search1 i, #list i {
         font-size: 16px;
         padding: 9px 9px;
+    }
+
+    #user i {
+        font-size: 20px;
+        padding: 7.5px 7.5px;
     }
 
     #search1 {
@@ -324,13 +347,14 @@ ul li {
     }
 
     #cart-count {
-        top: 37px;
-        right: 161px;
+        font-size: 13px;
+        top: 15px;
+        right: 165px;
     }
 
     #drop-down {
-        top: 80px;
-        margin-left: -20px;
+        top: 65px;
+        margin-left: -14px;
         padding: 10px 18px;
     }
 
@@ -340,7 +364,7 @@ ul li {
 
     #drop-down-list {
         position: absolute;
-        top: 80px;
+        top: 65px;
         background-color: #fff;
         text-align: center;
         padding: 0px 30px;
@@ -391,7 +415,7 @@ ul li {
 
 @media only screen and (min-width: 375px) and (max-width: 424px) {
     header {
-        height: 90px;
+        height: 54px;
     }
 
     .header-container {
@@ -406,9 +430,10 @@ ul li {
     }
 
     .header-logo img {
-        width: 230px;
-        height: 150px;
+        width: 210px;
+        height: 135px;
         margin-left: -70px;
+        margin-top: -20px;
     }
 
     .header-menu {
@@ -419,9 +444,14 @@ ul li {
         gap: 10px;
     }
 
-    #cart i, #user i, #search1 i, #list i {
+    #cart i, #search1 i, #list i {
         font-size: 15px;
         padding: 8px 8px;
+    }
+
+    #user i {
+        font-size: 18px;
+        padding: 7px 7px;
     }
 
     #search1 {
@@ -429,13 +459,14 @@ ul li {
     }
 
     #cart-count {
-        top: 33px;
-        right: 151px;
+        top: 10px;
+        right: 155px;
+        font-size: 11px;
     }
 
     #drop-down {
-        top: 70px;
-        margin-left: -8px;
+        top: 55px;
+        margin-left: -12px;
     }
 
     #drop-down li:hover {
@@ -448,7 +479,7 @@ ul li {
 
     #drop-down-list {
         position: absolute;
-        top: 70px;
+        top: 55px;
         right: 10px;
         background-color: #fff;
         text-align: center;
@@ -500,7 +531,7 @@ ul li {
 
 @media only screen and (max-width: 375px) and (min-width: 320px) {
     header {
-        height: 75px;
+        height: 45px;
     }
 
     .header-container {
@@ -514,20 +545,26 @@ ul li {
     }
 
     .header-logo img {
-        width: 190px;
-        height: 120px;
+        width: 180px;
+        height: 110px;
         margin-left: -60px;
+        margin-top: -15px;
     }
 
     .header-user {
         gap: 10px;
-        margin-top: -40px;
+        margin-top: -50px;
         margin-right: -10px;
     }
 
-    #cart i, #user i, #search1 i, #list i {
+    #cart i, #search1 i, #list i {
         font-size: 14px;
         padding: 8px 8px;
+    }
+
+    #user i {
+        font-size: 18px;
+        padding: 6px 6px;
     }
 
     #search1 {
@@ -535,13 +572,14 @@ ul li {
     }
 
     #cart-count {
-        top: 23px;
-        right: 137px;
+        font-size: 11px;
+        top: 6px;
+        right: 141px;
     }
     
     #drop-down {
-        top: 59px;
-        margin-left: -3px;
+        top: 46px;
+        margin-left: -5px;
     }
 
     #drop-down li:hover {
@@ -550,7 +588,7 @@ ul li {
 
     #drop-down-list {
         position: absolute;
-        top: 60px;
+        top: 46px;
         right: 10px;
         background-color: #fff;
         text-align: center;

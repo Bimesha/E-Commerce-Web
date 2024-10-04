@@ -15,7 +15,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom: 0;
-    padding: 20px 0px 10px;
+    padding: 20px 0;
 }
 
 .modal-header .modal-title {
@@ -27,9 +27,8 @@
 
 .modal-header .close-btn {
     border: none;
-    padding: 15px 15px;
-    border-radius: 10px;
-    margin-left: 135px;   
+    padding: 8px 12px;
+    margin-left: 110px;   
 }
 
 .modal-header .close-btn:hover {
@@ -106,20 +105,18 @@ button.btn-warning, button.btn-dark {
 
 /*media queries */
 @media only screen and (min-width: 500px) and (max-width: 600px) {
-    .modal-header {
-        padding: 10px 0;
-    }
-    
     .modal-header .modal-title {
         font-size: 1.7rem;
     }
+
     .modal-header .close-btn {
-        padding: 18px 15px;
-        margin-left: 121px;  
+        position: absolute;
+        padding: 8px 12px;
+        right: 30px;
     }
 
     #registrationForm .form-group {
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
 
     #registrationForm {
@@ -127,7 +124,7 @@ button.btn-warning, button.btn-dark {
     }
 
     .modal-body{
-        padding-top: 2px;
+        padding-top: 10px;
         padding-bottom: 44px;
     }
 
@@ -139,31 +136,31 @@ button.btn-warning, button.btn-dark {
     .was-validated .invalid-feedback .modal-body{
         padding-top: 30px;
     }
-    
-
 }
 
 @media only screen and (min-width: 425px) and (max-width: 500px) {
-    
     .modal-header .modal-title {
         font-size: 1.5rem;
         font-weight: 500;
+        margin-left: 55px;
     }
+
     .modal-header .close-btn {
-        padding: 16px 13px;
-        margin-left: 121px;  
+        position: absolute;
+        padding: 8px 12px;
+        right: 25px; 
     }
 
     #registrationForm .form-group {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     #registrationForm {
         max-height: 500px;
+        margin-top: -40px;
     }
 
     .modal-body{
-        padding: 10px;
         font-size: .9rem;
     }
 
@@ -192,11 +189,12 @@ button.btn-warning, button.btn-dark {
     .modal-header .modal-title {
         font-size: 1.5rem;
         font-weight: 500;
-        margin-left: 40px;
+        margin-left: 45px;
     }
     .modal-header .close-btn {
-        padding: 16px 13px;
-        margin-left: 121px;  
+        position: absolute;
+        padding: 8px 12px;
+        right: 30px;
     }
 
     #registrationForm .form-group {
@@ -204,7 +202,7 @@ button.btn-warning, button.btn-dark {
     }
 
     #registrationForm {
-       padding: 10px;
+       margin-top: -30px;
     }
 
     .modal-body{
@@ -235,13 +233,14 @@ button.btn-warning, button.btn-dark {
 
 @media only screen and (max-width: 375px) and (min-width: 320px) {
     .modal-header .modal-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 600;
-        margin-left: 37px;
+        margin-left: 38px;
     }
     .modal-header .close-btn {
-        padding: 16px 13px;
-        margin-left: 31px;  
+        position: absolute;
+        padding: 4px 7px;
+        right: 15px;  
     }
 
     #registrationForm .form-group {
@@ -253,17 +252,21 @@ button.btn-warning, button.btn-dark {
     }
 
     .modal-body{
-        padding: 10px;
+        padding: 1px;
         font-size: .9rem;
     }
 
     .modal-body input[type="email"], .modal-body input[type="password"], .modal-body input[type="text"] {
         font-size: .8rem;
-        padding: 7px;  
+        padding: 5px;  
     } 
 
     .was-validated .invalid-feedback .modal-body{
         padding-top: 30px;
+    }
+
+    .was-validated .invalid-feedback {
+        font-size: 0.2rem;
     }
 
     .btn-submit {
