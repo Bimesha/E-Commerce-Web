@@ -48,6 +48,9 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!form.checkValidity()) {
           event.preventDefault();  // Prevent form submission if validation fails
           event.stopPropagation();
+        }else{
+          //prevent from multiple submission
+          document.querySelector('.btn-submit').disabled= true;
         }
       });
     }
