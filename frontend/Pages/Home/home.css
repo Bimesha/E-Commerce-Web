@@ -2113,6 +2113,14 @@ text-decoration: none;
         margin-left: 0.1rem;
         margin-right: 0rem;
     }
+
+    .slid-section h3 {
+        margin-top: -2rem;
+    }
+
+    .slid-section .sub-title2 {
+        margin-top: 1rem;
+    }
     
     .slid-section .card{
         height: 300px;
