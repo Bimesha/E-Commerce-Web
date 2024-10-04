@@ -86,6 +86,7 @@ footer .facebook i:hover, footer .twitter i:hover, footer .instagram i:hover, fo
 /* Media Queries */
 @media (max-width: 1440px) {
     footer {
+        margin-top: 30px;
         padding: 10px 10px 30px 130px;
     }
 }
@@ -98,6 +99,7 @@ footer .facebook i:hover, footer .twitter i:hover, footer .instagram i:hover, fo
 
 @media only screen and (min-width: 767px) and (max-width: 991px) {
     footer {
+        margin-top: 30px;
         padding: 10px;
         text-align: center;
     }
@@ -114,6 +116,7 @@ footer .facebook i:hover, footer .twitter i:hover, footer .instagram i:hover, fo
 
 @media (max-width: 767px) {
     footer {
+        margin-top: 20px;
         padding: 10px;
         text-align: center;
     }

@@ -102,12 +102,12 @@ document.addEventListener('DOMContentLoaded', function () {
   
 // Change background color when the modal is shown
 document.getElementById('createAccount').addEventListener('show.bs.modal', function () {
-    document.querySelector('header').classList.add('dark-background');
+    document.querySelector('.header-container').classList.add('dark-background');
 });
   
 // Revert background color when the modal is hidden
 document.getElementById('createAccount').addEventListener('hide.bs.modal', function () {
-    document.querySelector('header').classList.remove('dark-background');
+    document.querySelector('.header-container').classList.remove('dark-background');
 });
   
 document.getElementById('createAccount').addEventListener('show.bs.modal', function () {
@@ -132,14 +132,6 @@ document.getElementById('createAccount').addEventListener('show.bs.modal', funct
   
 document.getElementById('createAccount').addEventListener('hide.bs.modal', function () {
     document.querySelector('#drop-down').classList.remove('changemenu-background');
-});
-  
-document.getElementById('createAccount').addEventListener('show.bs.modal', function () {
-    document.querySelector('.box').classList.add('changemenu-background');
-});
-  
-document.getElementById('createAccount').addEventListener('hide.bs.modal', function () {
-    document.querySelector('.box').classList.remove('changemenu-background');
 });
 
 
