@@ -553,33 +553,6 @@ text-decoration: none;
 
 
 
-/*service section*/
-
-.services{
-    padding: 30px;
-}
-
-.services .serviceText{
-    font-size:larger;
-    padding: 20px;
-}
-
-.services .serviceText span{
-    font-size: x-large;
-    font-weight: 400;
-    display: block;
-}
-
-.services .serviceImg{
-    width: 50px;
-    height: 50px;
-}
-
-/*end of service section*/
-
-
-
-
 
 
 
@@ -1535,7 +1508,6 @@ text-decoration: none;
         font-size: 1.3rem;
     }
     
-    
     .reviews .img-section{
         display: flex;
         justify-content: center;
@@ -1558,19 +1530,6 @@ text-decoration: none;
     
     #addReviewBtn{
         font-size: 1rem;    
-    }
-
-
-
-
-    .services .col{
-        margin-right: -32px; 
-        margin-left: 32px;
-    }
-    
-    .services .row {
-        margin-left: -100px; /* To compensate for the added margin */
-        margin-right: -100px;
     }
     
 
@@ -2079,33 +2038,6 @@ text-decoration: none;
         margin-top: 30px;   
     }
 
-
-
-
-    .services{
-        padding-top: 20px;
-        padding-bottom: 5px;
-    }
-    
-    .services .row {
-        margin: 0 auto;
-    }
-    
-    .services .serviceImg {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .services .serviceText {
-        font-size: .8rem;
-    }
-    
-    .services .serviceText span{
-        font-size: .9rem;
-        font-weight: 700;
-        
-    }
-
     #addReviewform .card .btn{
         font-size: .8rem;
     }
@@ -2160,7 +2092,6 @@ text-decoration: none;
     .slid-section .card img{
         height: 132px;
         width: 100%;
-       
     }
         
     .slid-section .carousel-control-next-icon{    
@@ -2339,6 +2270,10 @@ text-decoration: none;
 
 
 
+    .reviews {
+        margin-bottom: -1rem;
+    }
+
     .reviews .section-title h2{
         font-size: larger;
         font-weight: 600;
@@ -2409,26 +2344,6 @@ text-decoration: none;
     
     #addReviewBtn{
         font-size: .8rem;    
-    }
-
-
-
-
-    .services{
-        padding: 10px;
-    }
-    .services .col{
-        margin: 0;
-    }
-    
-    .services .serviceText {
-        font-size: .8rem;
-    }
-    
-    .services .serviceText span{
-        font-size: .9rem;
-        font-weight: 700;
-        margin: 0;
     }
 
     #addReviewform .card .btn{
@@ -2597,6 +2512,9 @@ text-decoration: none;
 
 
 
+    .reviews {
+        margin-bottom: -1rem;
+    }
 
     .reviews .section-title{
         padding-bottom: 0;
@@ -2669,34 +2587,6 @@ text-decoration: none;
     
     #addReviewBtn{
         font-size: .8rem;    
-    }
-
-
-
-
-    .services{
-        padding: 10px;
-    }
-
-    .services .col-sm-6{
-        height: 55px;
-        width: 50%;
-    }
-    
-    .services .serviceText {
-        font-size: .8rem;
-        text-align: center;
-    }
-
-    .services .serviceImg {
-        display: none;
-    }
-    
-    .services .serviceText span{
-        font-size: .9rem;
-        font-weight: 700;
-        margin: 0;
-        text-align: center;
     }
 
     #addReviewform .card .btn{
@@ -2880,6 +2770,10 @@ text-decoration: none;
 
 
 
+    .reviews {
+        margin-bottom: -1rem;
+    }
+
     .review-section .sub-title1 {
         font-size: 0.8rem;
     }
@@ -2932,34 +2826,6 @@ text-decoration: none;
     
     #addReviewBtn{
         font-size: .8rem;    
-    }
-
-
-
-
-    .services{
-        padding: 10px;
-    }
-
-    .services .col-sm-6{
-        height: 50px;
-        width: 50%;
-    }
-    
-    .services .serviceText {
-        font-size: .8rem;
-        text-align: center;
-    }
-
-    .services .serviceImg {
-        display: none;
-    }
-    
-    .services .serviceText span{
-        font-size: .9rem;
-        font-weight: 700;
-        margin: 0;
-        text-align: center;
     }
 
     #addReviewform .card .btn{
@@ -3165,6 +3031,10 @@ text-decoration: none;
 
 
 
+    .reviews {
+        margin-bottom: -1rem;
+    }
+
     .review-section .sub-title1 {
         font-size: 0.8rem;
     }
@@ -3242,33 +3112,6 @@ text-decoration: none;
     
     #addReviewBtn{
         font-size: .8rem;    
-    }
-
-
-
-    .services{
-        padding: 10px;
-    }
-    
-    .services .col-sm-6{
-        height: 50px;
-        width: 50%;
-    }
-
-    .services .serviceText {
-        font-size: .8rem;
-        text-align: center;
-    }
-
-    .services .serviceImg {
-        display: none;
-    }
-    
-    .services .serviceText span{
-        font-size: .9rem;
-        font-weight: 700;
-        margin: 0;
-        text-align: center;
     }
 
     #addReviewform .card .btn{
