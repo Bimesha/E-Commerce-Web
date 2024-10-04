@@ -247,7 +247,7 @@ text-decoration: none;
 }
 
 .banner-section .card-bottom {
-    background-image: url(../../assets/home1.jpg);
+    background-image: url(../../assets/chair.avif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -258,7 +258,7 @@ text-decoration: none;
 }
 
 .banner-section .card-bottom1 {
-    background-image: url(../../assets/home2.png);
+    background-image: url(../../assets/sofa.avif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -269,7 +269,7 @@ text-decoration: none;
 }
 
 .banner-section .card-bottom2 {
-    background-image: url(../../assets/home3.png);
+    background-image: url(../../assets/table.avif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
