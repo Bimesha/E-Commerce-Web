@@ -13,11 +13,12 @@ header {
 }
 
 .dark-background {
-    background-color: rgba(178, 174, 174, 0.1);
+    background-color: rgba(160, 158, 158, 0.8);
+    padding-top: -540px;
 }
 
 .change-background {
-    background-color: rgba(179, 176, 176, 0.1) !important;
+    background-color: rgba(165, 162, 162, 0.8) !important;
 }
 
 .changeinput-background {
@@ -309,7 +310,7 @@ ul li {
     .header-container {
         display: flex;
         align-items: center;
-        margin-top: -10px;
+        margin-top: -20px;
         padding: 0px 20px;
     }
 
@@ -321,7 +322,7 @@ ul li {
         width: 240px;
         height: 150px;
         margin-left: -70px;
-        margin-top: -20px;
+        margin-top: -25px;
     }
 
     .header-menu {
@@ -330,6 +331,7 @@ ul li {
 
     .header-user {
         gap: 10px;
+        margin-top: -65px;
     }
 
     #cart i, #search1 i, #list i {
@@ -348,7 +350,7 @@ ul li {
 
     #cart-count {
         font-size: 13px;
-        top: 15px;
+        top: 10px;
         right: 165px;
     }
 

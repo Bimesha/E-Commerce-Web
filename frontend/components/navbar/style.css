@@ -10,7 +10,7 @@
 }
 
 .modal-header {
-    background-image: url(../../assets/reg.jpg);
+    background-image: url(../../assets/nav-img/reg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,6 +41,8 @@
     justify-content: center;
     align-items: center; 
     padding: 20px;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .modal-dialog {
@@ -52,11 +54,6 @@
     z-index: 1;
     pointer-events: none;
     background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-body {
-    background-color: white;
-    border-radius: 10px;
 }
 
 .modal-body input[type="email"], .modal-body input[type="password"], .modal-body input[type="text"] {

@@ -3,7 +3,7 @@ document.body.insertAdjacentHTML("beforeend", `
         <div class="container">
             <div class="row mt-5">
                 <div class="col-lg-4 col-md-6 md-4 mb-lg-0 footer-logo">
-                    <img src="../../assets/oakly.png" alt="logo">
+                    <img src="../../assets/nav-img/oakly.png" alt="logo">
 
                 </div>
                 <div class="col-lg-4 col-md-6 md-4 mb-lg-0">
