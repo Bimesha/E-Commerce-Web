@@ -1,10 +1,10 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
-
 const userRoutes = require("./routes/userRoutes");
 const contactRoutes = require('./routes/contactRoutes');
 const errorHandler = require("./middleware/errorHandler");
+const { authenticateUser, authorizeAdmin } = require('./middleware/authMiddleware');
 
 
 dotenv.config();
@@ -18,6 +18,16 @@ app.use(express.urlencoded({ extended: true }));
 
 // Register routes
 app.use("/api/users", userRoutes); 
+
+// Example protected route (Admin Dashboard)
+app.get('/api/admin/dashboard', authenticateUser, authorizeAdmin, (req, res) => {
+  res.json({ message: 'Welcome to the admin dashboard!' });
+});
+
+// Example protected route (Home Page for logged-in users)
+app.get('/api/home', authenticateUser, (req, res) => {
+  res.json({ message: 'Welcome to your home page!', user: req.user });
+});
 
 // Use the contact routes
 app.use('/api', contactRoutes);
