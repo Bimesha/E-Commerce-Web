@@ -309,7 +309,7 @@ ul li {
     .header-container {
         display: flex;
         align-items: center;
-        margin-top: -10px;
+        margin-top: -20px;
         padding: 0px 20px;
     }
 
@@ -321,7 +321,7 @@ ul li {
         width: 240px;
         height: 150px;
         margin-left: -70px;
-        margin-top: -20px;
+        margin-top: -25px;
     }
 
     .header-menu {
@@ -330,6 +330,7 @@ ul li {
 
     .header-user {
         gap: 10px;
+        margin-top: -65px;
     }
 
     #cart i, #search1 i, #list i {
@@ -348,7 +349,7 @@ ul li {
 
     #cart-count {
         font-size: 13px;
-        top: 15px;
+        top: 10px;
         right: 165px;
     }
 
