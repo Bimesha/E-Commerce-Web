@@ -20,24 +20,30 @@ class LoginForm extends HTMLElement {
                                 <div class="row">
                                     <div class="col-12">
                                         <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="emaillog" name="email" placeholder="johndoe@gmail.com" required>
+                                        <input type="email" class="form-control" id="emaillog" name="email" placeholder="johnnyman@gmail.com" required>
                                         <div class="invalid-feedback">Please enter a valid email</div>
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="form-group">
                                 <div class="row">
-                                    <div class="col">
-                                        <label for="password" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="passwordlog" name="password" minlength="6" placeholder="Create Password" required>
-                                        <div class="invalid-feedback">Password must be at least 6 characters</div>
+                                    <label for="passwordlog" class="form-label">Password</label>
+                                    <div class="input-group flex-nowrap">
+                                        <input type="password" class="form-control" id="passwordlog" name="password" minlength="6" 
+                                            placeholder="Enter your Password" spellcheck="false" autocorrect="off" autocapitalize="off" 
+                                            autocomplete="current-password" required aria-describedby="addon-wrapping">
+                                        <span class="input-group-text" id="addon-wrapping">
+                                            <i class="bi bi-eye-fill" id="togglePassword" style="cursor: pointer;"></i>
+                                        </span>
                                     </div>
+                                    <div class="invalid-feedback">Password must be at least 6 characters</div>
                                 </div>
                             </div>
 
+
                             <!-- Forgot Password Link -->
-                            <div class="form-group">
+                            <div class="form-group mutedText">
                                 <div class="row">
                                     <div class="col mb-2 text-end">
                                         <a href="#" class="text-muted">Forgot Password?</a>
@@ -53,10 +59,16 @@ class LoginForm extends HTMLElement {
     
                             <!-- Don't have an account? -->
                             <div class="form-group mt-4">
-                                <div class="d-flex">
-                                    <p class="text-muted">Don't have an account?</p><button type="button" class="btn btn-log shadow-lg btn-dark ms-auto" data-bs-toggle="modal" data-bs-target="#createAccount">Create an Account</button>
+                                <div class="row d-flex">
+                                    <div class="col-7">
+                                        <p class="mutedText">Don't have an account?</p>
+                                    </div>
+                                    <div class="col-5">
+                                        <button type="button" class="btn btn-createAcc shadow-lg btn-dark ms-auto" data-bs-toggle="modal" data-bs-target="#createAccount">Create Account</button>
+                                    </div>
                                 </div>
-                            </div>  
+                            </div> 
+                            
                         </form>
                     </div>
   
@@ -71,14 +83,70 @@ class LoginForm extends HTMLElement {
 customElements.define('login-form', LoginForm);
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Initialize modal for login
-    var loginModal = new bootstrap.Modal(document.getElementById('login'), {
+
+    // Initialize modal
+    var createAccountModal = new bootstrap.Modal(document.getElementById('login'), {
         keyboard: false,
         backdrop: 'static'
     });
     
-    // Open the modal on clicking 'Log In'
+    // Open the modal on clicking 'Create Account'
     document.getElementById('login-link').addEventListener('click', function () {
         loginModal.show();
     });
+
+    // password visibility by toggle icon
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('passwordlog');
+
+    if (togglePassword && passwordInput) {
+        togglePassword.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.classList.toggle('bi-eye-fill');
+            this.classList.toggle('bi-eye-slash-fill');
+        });
+    }
+});
+  
+// Change background color when the modal is shown
+document.getElementById('login').addEventListener('show.bs.modal', function () {
+    document.querySelector('header').classList.add('dark-background');
+});
+  
+// Revert background color when the modal is hidden
+document.getElementById('login').addEventListener('hide.bs.modal', function () {
+    document.querySelector('header').classList.remove('dark-background');
+});
+  
+document.getElementById('login').addEventListener('show.bs.modal', function () {
+    document.querySelector('.header-search').classList.add('change-background');
+});
+  
+document.getElementById('login').addEventListener('hide.bs.modal', function () {
+    document.querySelector('.header-search').classList.remove('change-background');
+});
+  
+document.getElementById('login').addEventListener('show.bs.modal', function () {
+    document.querySelector('.header-search input').classList.add('changeinput-background');
+});
+  
+document.getElementById('login').addEventListener('hide.bs.modal', function () {
+    document.querySelector('.header-search input').classList.remove('changeinput-background');
+});
+  
+document.getElementById('login').addEventListener('show.bs.modal', function () {
+    document.querySelector('#drop-down').classList.add('changemenu-background');
+});
+  
+document.getElementById('login').addEventListener('hide.bs.modal', function () {
+    document.querySelector('#drop-down').classList.remove('changemenu-background');
+});
+  
+document.getElementById('login').addEventListener('show.bs.modal', function () {
+    document.querySelector('.box').classList.add('changemenu-background');
+});
+  
+document.getElementById('login').addEventListener('hide.bs.modal', function () {
+    document.querySelector('.box').classList.remove('changemenu-background');
 });

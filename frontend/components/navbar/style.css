@@ -4,6 +4,23 @@
     box-sizing: border-box;
 }
 
+#registrationForm {
+    max-height: 600px;
+    padding: 0px 20px;
+    margin: 0px 20px;
+}
+
+#loginForm {
+    max-height: 600px;
+    width: 100%;
+    padding: 0px 5px;
+    margin: 0 auto;
+}
+
+#login .mutedText{
+    font-size: .8rem;
+}
+
 .modal-body form {
     max-width: 500px;
     margin: 0 auto;
@@ -18,18 +35,26 @@
     padding: 20px 0px 10px;
 }
 
+#login .modal-header .modal-title {
+    margin-left: 115px;
+}
+
+#login .modal-header .close-btn {
+    margin-left: 300px;   
+}
+
 .modal-header .modal-title {
     margin-left: 66px;
-    font-weight: 700;
+    font-weight: 600;
     color: white;
     font-size: 2rem;
 }
 
 .modal-header .close-btn {
     border: none;
-    padding: 15px 15px;
+    padding: 8px 12px;
     border-radius: 10px;
-    margin-left: 135px;   
+    margin-left: 110px;   
 }
 
 .modal-header .close-btn:hover {
@@ -42,7 +67,14 @@
     justify-content: center;
     align-items: center; 
     padding: 20px;
+    background-color: white;
+    border-radius: 10px;
 }
+
+#login .modal-body {
+    display: block;
+}
+
 
 .modal-dialog {
     max-width: 600px;
@@ -53,11 +85,6 @@
     z-index: 1;
     pointer-events: none;
     background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-body {
-    background-color: white;
-    border-radius: 10px;
 }
 
 .modal-body input[type="email"], .modal-body input[type="password"], .modal-body input[type="text"] {
@@ -74,13 +101,11 @@
     width: 30%;
 }
 
-#registrationForm {
-    max-height: 600px;
-    padding: 0px 20px;
-    margin: 0px 20px;
+.btn-createAcc{
+    width: 100%;
 }
 
-#registrationForm .form-group {
+.form-group {
     margin-bottom: 20px;
 }
 
@@ -97,17 +122,6 @@ button.btn-warning, button.btn-dark {
     display: block;
 }
 
-#loginForm {
-    max-height: 600px;
-    padding: 0px 20px;
-    margin: 0px 20px;
-}
-
-#login .form-group {
-    margin-bottom: 20px;
-}
-
-
 
 
 /*media queries */
@@ -120,7 +134,6 @@ button.btn-warning, button.btn-dark {
         font-size: 1.7rem;
     }
     .modal-header .close-btn {
-        padding: 18px 15px;
         margin-left: 121px;  
     }
 
@@ -135,6 +148,20 @@ button.btn-warning, button.btn-dark {
     .modal-body{
         padding-top: 2px;
         padding-bottom: 44px;
+    }
+
+    #login .modal-body{
+        max-height: 450px;
+        padding-top: 10px;
+        padding-bottom: 44px;
+    }
+
+    #login .modal-header .modal-title {
+        margin-left: 78px;
+    }
+    
+    #login .modal-header .close-btn {
+        margin-left: 250px;   
     }
 
     .modal-body input[type="email"], .modal-body input[type="password"], .modal-body input[type="text"] {
@@ -156,7 +183,7 @@ button.btn-warning, button.btn-dark {
         font-weight: 500;
     }
     .modal-header .close-btn {
-        padding: 16px 13px;
+        padding: 5px 8px;
         margin-left: 121px;  
     }
 
@@ -171,6 +198,20 @@ button.btn-warning, button.btn-dark {
     .modal-body{
         padding: 10px;
         font-size: .9rem;
+    }
+
+    #login .modal-body{
+        max-height: 450px;
+        padding-top: 10px;
+        padding-bottom: 44px;
+    }
+
+    #login .modal-header .modal-title {
+        margin-left: 85px;
+    }
+    
+    #login .modal-header .close-btn {
+        margin-left: 250px;   
     }
 
     .modal-body input[type="email"], .modal-body input[type="password"], .modal-body input[type="text"] {
@@ -188,6 +229,11 @@ button.btn-warning, button.btn-dark {
     }
     
     .btn-log{
+        padding: 5px;
+        font-size: .9rem;
+    }
+
+    .btn-createAcc{
         padding: 5px;
         font-size: .9rem;
     }
@@ -216,6 +262,20 @@ button.btn-warning, button.btn-dark {
     .modal-body{
         padding: 10px;
         font-size: .9rem;
+    }
+
+    #login .modal-body{
+        max-height: 450px;
+        padding-top: 10px;
+        padding-bottom: 44px;
+    }
+
+    #login .modal-header .modal-title {
+        margin-left: 85px;
+    }
+    
+    #login .modal-header .close-btn {
+        margin-left: 250px;   
     }
 
     .modal-body input[type="email"], .modal-body input[type="password"], .modal-body input[type="text"] {

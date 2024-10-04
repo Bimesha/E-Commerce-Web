@@ -1,57 +1,96 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Function to validate single fields
-    function validateField(field) {
-      if (!field.checkValidity()) {
-        field.classList.add('is-invalid');
-        field.classList.remove('is-valid');
-      } else {
-        field.classList.remove('is-invalid');
-        field.classList.add('is-valid');
-      }
+  
+  // Function to validate individual fields
+  function validateField(field) {
+    if (!field.checkValidity()) {
+      field.classList.add('is-invalid');
+      field.classList.remove('is-valid');
+    } else {
+      field.classList.remove('is-invalid');
+      field.classList.add('is-valid');
     }
+  }
+
+  // Password matching validation in real-time (used in registration form)
+  function validatePasswordMatch(passwordField, confirmPasswordField) {
+    if (passwordField.value !== confirmPasswordField.value) {
+      confirmPasswordField.setCustomValidity("Passwords do not match");
+      confirmPasswordField.classList.add('is-invalid');
+      confirmPasswordField.classList.remove('is-valid');
+    } else {
+      confirmPasswordField.setCustomValidity('');
+      confirmPasswordField.classList.remove('is-invalid');
+      confirmPasswordField.classList.add('is-valid');
+    }
+  }
+
+  // REGISTRATION FORM VALIDATIONS
+
+  const registrationForm = document.getElementById('registrationForm');
   
-    // Real-time validation for each input field
-    const form = document.getElementById('registrationForm');
-    
-    if (form) {
-      const fields = form.querySelectorAll('input');
-  
-      // loop for Validate each field on input
-      fields.forEach(function (field) {
-        field.addEventListener('input', function () {
-          validateField(field);
-        });
+  if (registrationForm) {
+    const registrationFields = registrationForm.querySelectorAll('input');
+
+    // Real-time validation for each field in the registration form
+    registrationFields.forEach(function (field) {
+      field.addEventListener('input', function () {
+        validateField(field);
       });
-  
-      // Password matching validation in real-time
-      const password = document.getElementById('password');
-      const confirmPassword = document.getElementById('confirmPassword');
-  
+    });
+
+    // Password matching validation in real-time
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirmPassword');
+
+    if (confirmPassword) {
       confirmPassword.addEventListener('input', function () {
-        if (password.value !== confirmPassword.value) {
-          confirmPassword.setCustomValidity("Passwords do not match");
-          confirmPassword.classList.add('is-invalid');
-          confirmPassword.classList.remove('is-valid');
-        } else {
-          confirmPassword.setCustomValidity('');
-          confirmPassword.classList.remove('is-invalid');
-          confirmPassword.classList.add('is-valid');
-        }
-      });
-  
-      // Validate the entire form on submission
-      form.addEventListener('submit', function (event) {
-        fields.forEach(function (field) {
-          validateField(field);
-        });
-  
-        if (!form.checkValidity()) {
-          event.preventDefault();  // Prevent form submission if validation fails
-          event.stopPropagation();
-        }else{
-          //prevent from multiple submission
-          document.querySelector('.btn-submit').disabled= true;
-        }
+        validatePasswordMatch(password, confirmPassword);
       });
     }
-  });
+
+    // Validate the registration form on submission
+    registrationForm.addEventListener('submit', function (event) {
+      registrationFields.forEach(function (field) {
+        validateField(field);
+      });
+
+      if (!registrationForm.checkValidity()) {
+        event.preventDefault();  // Prevent form submission if validation fails
+        event.stopPropagation();
+      } else {
+        // Prevent multiple submissions
+        document.querySelector('.btn-submit').disabled = true;
+      }
+    });
+  }
+
+  // LOGIN FORM VALIDATIONS
+
+  const loginForm = document.getElementById('loginForm');
+  
+  if (loginForm) {
+    const loginFields = loginForm.querySelectorAll('input');
+
+    // Real-time validation for each field in the login form
+    loginFields.forEach(function (field) {
+      field.addEventListener('input', function () {
+        validateField(field);
+      });
+    });
+
+    // Validate the login form on submission
+    loginForm.addEventListener('submit', function (event) {
+      loginFields.forEach(function (field) {
+        validateField(field);
+      });
+
+      if (!loginForm.checkValidity()) {
+        event.preventDefault();  // Prevent form submission if validation fails
+        event.stopPropagation();
+      } else {
+        // Prevent multiple submissions
+        document.querySelector('.btn-submit').disabled = true;
+      }
+    });
+  }
+});

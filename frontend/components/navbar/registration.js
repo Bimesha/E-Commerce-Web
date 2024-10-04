@@ -143,4 +143,3 @@ document.getElementById('createAccount').addEventListener('hide.bs.modal', funct
 });
 
 
-
