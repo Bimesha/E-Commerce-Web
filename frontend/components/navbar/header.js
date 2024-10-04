@@ -4,12 +4,12 @@ class SpecialHeader extends HTMLElement {
             <header>
                 <div class="header-container">
                     <div class="header-search">
-                        <img id="search" src="../../assets/search.png">
+                        <img id="search" src="../../assets/nav-img/search.png">
                         <input type="text" placeholder="Search">
                     </div>
 
                     <div class="header-logo">
-                        <img id="logo" src="../../assets/logo.png">
+                        <img id="logo" src="../../assets/nav-img/logo.png">
                     </div>
 
                     <div class="header-user">
