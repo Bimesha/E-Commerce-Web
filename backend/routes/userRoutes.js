@@ -9,5 +9,5 @@ router.post("/create-account", validateUserCreation, userController.createUser);
 // Add the login route
 router.post("/login", userController.loginUser);
 
-module.exports = router;
+module.exports = router;     
 
