@@ -431,6 +431,10 @@ text-decoration: none;
 
 
 /*review section*/
+.review-section {
+    margin-top: 2rem;
+}
+
 .reviews {
     min-height: 200px;
     padding: 0;
