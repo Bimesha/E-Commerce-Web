@@ -54,14 +54,15 @@
                         <div class="card-body">
                           <h1>GET IN TOUCH</h1>
                           <p>We'd love to hear from you! If you have any questions, feedback, or need further assistance, feel free to reach out.</p>
-                          <form action="" class="needs-validation" novalidate id="contactForm">
+                          <form  method="POST" action="/api/contact" class="needs-validation" novalidate id="contactForm">
                             <div class="form-group">
                               <div class="mb-4">
                                 <label for="exampleFormControlInput1" class="form-label">Email</label>
                                 <input
                                   type="email"
                                   class="form-control"
-                                  id="exampleFormControlInput1"
+                                  id="contactEmail"
+                                  name="contactEmail"
                                   placeholder="example@gmail.com"
                                   required
                                 />
@@ -73,7 +74,8 @@
                                 <label for="exampleFormControlTextarea1" class="form-label">Message</label>
                                 <textarea
                                   class="form-control"
-                                  id="exampleFormControlTextarea1"
+                                  id="contactMessage"
+                                  name="contactMessage"
                                   rows="5"
                                   required
                                 ></textarea>
@@ -82,7 +84,6 @@
                                 </div>
                               </div>
                             </div>
-
                             <button type="submit" class="btn btn-primary">Submit</button>
                           </form>
                         </div>
@@ -111,6 +112,7 @@
     <script src="../../components/navbar/nav.js"></script>
     <script src="../../components/navbar/registration.js"></script>
     <script src="../../components/navbar/formValidation.js"></script>
+    <script src="./contact.js"></script>
 
     <script>
       (function () {
