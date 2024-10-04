@@ -2,7 +2,7 @@ class LoginForm extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <!-- Modal -->
-        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginForm" aria-hidden="true">
+        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-fullscreen-sm-down modal-dialog-centered">
                 <div class="modal-content">
         

@@ -19,7 +19,7 @@ class SpecialHeader extends HTMLElement {
                                 <div class="box"></div>
                                 <li id="login-link"><a href="#" data-bs-toggle="modal" data-bs-target="#login">Log In</a></li>
                                 <li id="signup-link"><a href="#" data-bs-toggle="modal" data-bs-target="#createAccount">Create Account</a></li>
-                                <li id="profile-link" style="display:none;"><a href="#" >My Profile</a></li>
+                                <li id="profile-link" style="display:none"><a href="#">My Profile</a></li>
                                 <li id="logout-link" style="display:none;"><a href="#">Logout</a></li>
                             </ul>
                         <div id="search1" style="display: none"><i class="bi bi-search"></i></div>
@@ -56,6 +56,7 @@ class SpecialHeader extends HTMLElement {
                 <div id="modals-container">
                     <registration-form></registration-form>
                     <login-form></login-form>
+                    <my-profile></my-profile>
                 </div>
             </header>
 

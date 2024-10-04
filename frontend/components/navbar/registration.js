@@ -1,7 +1,7 @@
 class RegistrationForm extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <!-- Modal -->
+        <!--registration Modal -->
         <div class="modal fade" id="createAccount" tabindex="-1" aria-labelledby="createAccountForm" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-fullscreen-sm-down modal-dialog-centered">
                 <div class="modal-content">
