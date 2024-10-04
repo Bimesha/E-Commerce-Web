@@ -14,7 +14,7 @@ class RegistrationForm extends HTMLElement {
   
                     <!-- Body -->
                     <div class="modal-body">
-                        <form id="registrationForm" action="" class="needs-validation" novalidate>
+                        <form id="registrationForm" method="POST" action="/create-account" class="needs-validation" novalidate>
 
                             <div class="form-group">
                                 <div class="row">

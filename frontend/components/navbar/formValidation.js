@@ -40,15 +40,82 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   
       // Validate the entire form on submission
-      form.addEventListener('submit', function (event) {
+      form.addEventListener('submit', async function (event) {
+        // Prevent default form submission
+        event.preventDefault();
+
+        let isValid = true;
+         
+         // Validate each field and check validity
         fields.forEach(function (field) {
           validateField(field);
+          if (!field.checkValidity()) {
+            isValid = false;
+          }
         });
   
-        if (!form.checkValidity()) {
-          event.preventDefault();  // Prevent form submission if validation fails
-          event.stopPropagation();
+        // If the form is valid, proceed with form submission
+      if (isValid) {
+        const formData = {
+          firstname: document.getElementById('firstName').value,
+          lastname: document.getElementById('lastName').value,
+          email: document.getElementById('email').value,
+          password: document.getElementById('password').value,
+          confirmPassword: document.getElementById('confirmPassword').value,
+        };
+
+        try {
+          const response = await fetch('http://localhost:5500/api/users/create-account', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          });
+
+          if (!response.ok) {
+            // // If response is not ok, throw an error
+            // throw new Error(`HTTP error! Status: ${response.status}`);
+            const result = await response.json();
+
+            // Check if the error is due to email already existing
+        if (result.error === 'Email already exists') {
+          const emailField = document.getElementById('email');
+          emailField.classList.add('is-invalid');
+          emailField.classList.remove('is-valid');
+
+          // Display the error message below the email field
+          let errorElement = document.getElementById('emailError');
+          if (!errorElement) {
+            errorElement = document.createElement('div');
+            errorElement.id = 'emailError';
+            errorElement.className = 'invalid-feedback';
+            emailField.parentNode.appendChild(errorElement);
+          }
+          errorElement.textContent = 'Email already exists. Please use a different email.';
+
+          // Redirect to error page
+          // window.location.href = 'error.html';
+        } else {
+          // If some other error occurred
+          throw new Error(result.error || 'Unknown error');
         }
+        } else {
+            const result = await response.json();
+            console.log(result);
+            // Proceed with success flow (e.g., redirect user, show success message)
+
+            // Redirect to success page when account is created successfully
+            // window.location.href = 'successAccount.html';
+          }
+        } catch (err) {
+          console.error('Error submitting form:', err.message);
+          alert(err.message);
+        }
+      }
       });
     }
-  });
+});
+
+
+
