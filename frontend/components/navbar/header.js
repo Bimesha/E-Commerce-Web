@@ -1,7 +1,7 @@
 class SpecialHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <header>
+            <header id="nav-header">
                 <div class="header-container">
                     <div class="header-search">
                         <img id="search" src="../../assets/nav-img/search.png">
@@ -59,6 +59,38 @@ class SpecialHeader extends HTMLElement {
             </header>
 
         `;
+
+        this.initScrollBehavior();
+    }
+
+    initScrollBehavior() {
+        let lastScrollY = window.scrollY;
+        let timeoutId;
+
+        window.addEventListener('scroll', () => {
+            // Clear the timeout if the user is still scrolling
+            clearTimeout(timeoutId);
+            
+            // Check if the user is scrolling down
+            if (window.scrollY > lastScrollY) {
+                document.getElementById('nav-header').classList.add('hide-nav');
+            // Check if the user is scrolling up
+            } else if (window.scrollY < lastScrollY) {
+                document.getElementById('nav-header').classList.add('hide-nav');
+            } else {
+                // Show the navbar when scrolling upwards
+                document.getElementById('nav-header').classList.remove('hide-nav');
+            }
+
+            // Set timeout to detect when the user stops scrolling
+            timeoutId = setTimeout(() => {
+                // Show the navbar after scrolling stops
+                document.getElementById('nav-header').classList.remove('hide-nav');
+            }, 200);
+
+            // Update last scroll position
+            lastScrollY = window.scrollY;
+        });
     }
 }
 
