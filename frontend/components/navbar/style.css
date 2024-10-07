@@ -4,6 +4,23 @@
     box-sizing: border-box;
 }
 
+#registrationForm {
+    max-height: 600px;
+    padding: 0px 20px;
+    margin: 0px 20px;
+}
+
+#loginForm {
+    max-height: 600px;
+    width: 100%;
+    padding: 0px 5px;
+    margin: 0 auto;
+}
+
+#login .mutedText{
+    font-size: .8rem;
+}
+
 .modal-body form {
     max-width: 500px;
     margin: 0 auto;
@@ -18,9 +35,17 @@
     padding: 20px 0;
 }
 
+#login .modal-header .modal-title {
+    margin-left: 115px;
+}
+
+#login .modal-header .close-btn {
+    margin-left: 300px;   
+}
+
 .modal-header .modal-title {
     margin-left: 66px;
-    font-weight: 700;
+    font-weight: 600;
     color: white;
     font-size: 2rem;
 }
@@ -44,6 +69,11 @@
     background-color: white;
     border-radius: 10px;
 }
+
+#login .modal-body {
+    display: block;
+}
+
 
 .modal-dialog {
     max-width: 600px;
@@ -70,18 +100,12 @@
     width: 30%;
 }
 
-#registrationForm {
-    max-height: 600px;
-    padding: 0px 20px;
-    margin: 0px 20px;
+.btn-createAcc{
+    width: 100%;
 }
 
-#registrationForm .form-group {
+.form-group {
     margin-bottom: 20px;
-}
-
-#loginForm .form-group {
-    margin-bottom: 15px;
 }
 
 button.btn-warning, button.btn-dark {
@@ -96,7 +120,6 @@ button.btn-warning, button.btn-dark {
 .was-validated .invalid-feedback {
     display: block;
 }
-
 
 
 
@@ -123,6 +146,20 @@ button.btn-warning, button.btn-dark {
     .modal-body{
         padding-top: 10px;
         padding-bottom: 44px;
+    }
+
+    #login .modal-body{
+        max-height: 450px;
+        padding-top: 10px;
+        padding-bottom: 44px;
+    }
+
+    #login .modal-header .modal-title {
+        margin-left: 78px;
+    }
+    
+    #login .modal-header .close-btn {
+        margin-left: 250px;   
     }
 
     .modal-body input[type="email"], .modal-body input[type="password"], .modal-body input[type="text"] {
@@ -161,6 +198,20 @@ button.btn-warning, button.btn-dark {
         font-size: .9rem;
     }
 
+    #login .modal-body{
+        max-height: 450px;
+        padding-top: 10px;
+        padding-bottom: 44px;
+    }
+
+    #login .modal-header .modal-title {
+        margin-left: 85px;
+    }
+    
+    #login .modal-header .close-btn {
+        margin-left: 250px;   
+    }
+
     .modal-body input[type="email"], .modal-body input[type="password"], .modal-body input[type="text"] {
         font-size: .8rem;
         padding: 7px;  
@@ -176,6 +227,11 @@ button.btn-warning, button.btn-dark {
     }
     
     .btn-log{
+        padding: 5px;
+        font-size: .9rem;
+    }
+
+    .btn-createAcc{
         padding: 5px;
         font-size: .9rem;
     }
@@ -205,6 +261,20 @@ button.btn-warning, button.btn-dark {
     .modal-body{
         padding: 10px;
         font-size: .9rem;
+    }
+
+    #login .modal-body{
+        max-height: 450px;
+        padding-top: 10px;
+        padding-bottom: 44px;
+    }
+
+    #login .modal-header .modal-title {
+        margin-left: 85px;
+    }
+    
+    #login .modal-header .close-btn {
+        margin-left: 250px;   
     }
 
     .modal-body input[type="email"], .modal-body input[type="password"], .modal-body input[type="text"] {

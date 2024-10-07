@@ -17,9 +17,9 @@ class SpecialHeader extends HTMLElement {
                         <div id="user"><i class="bi bi-person" onClick="togglemenu()"></i></div>
                             <ul id="drop-down">
                                 <div class="box"></div>
-                                <li id="login-link"><a href="#">Log In</a></li>
+                                <li id="login-link"><a href="#" data-bs-toggle="modal" data-bs-target="#login">Log In</a></li>
                                 <li id="signup-link"><a href="#" data-bs-toggle="modal" data-bs-target="#createAccount">Create Account</a></li>
-                                <li id="profile-link" style="display:none;"><a href="#" >My Profile</a></li>
+                                <li id="profile-link" style="display:none"><a href="#">My Profile</a></li>
                                 <li id="logout-link" style="display:none;"><a href="#">Logout</a></li>
                             </ul>
                         <div id="search1" style="display: none"><i class="bi bi-search"></i></div>
@@ -41,7 +41,7 @@ class SpecialHeader extends HTMLElement {
                     <ul class="nav justify-content-center">
                         <li class="nav-link" id="list" style="display: none"><i class="bi bi-list"></i></li>
                         <li class="nav-link"><a href="../../pages/Home/Home.html">Home</a></li>
-                        <li class="nav-link"><a href="#" onClick="toggleProductsDropdown()" id="products">Shop <i class="bi bi-caret-down-fill"></i></a>
+                        <li class="nav-link"><a href="#" onClick="toggleProductsDropdown()" id="products">Shop <i class="bi bi-chevron-down"></i></a>
                             <ul id="products-dropdown" style="display:none;">
                                 <li id="chair-link"><a href="#">Chair Collection</a></li>
                                 <li id="table-link"><a href="#">Table Collection</a></li>
@@ -55,6 +55,8 @@ class SpecialHeader extends HTMLElement {
 
                 <div id="modals-container">
                     <registration-form></registration-form>
+                    <login-form></login-form>
+                    <my-profile></my-profile>
                 </div>
             </header>
 
