@@ -43,9 +43,6 @@
     <special-header></special-header>
     <script src="../../components/navbar/header.js"></script>
 
-    <!-- Modal Container for dynamically loaded modals -->
-    <div id="modals-container"></div>
-
     <section class="contact-section">
         <div class="container">
             <div class="row">
@@ -118,31 +115,84 @@
       (function () {
         'use strict';
 
+        // Fetch the form and its fields
         const form = document.getElementById('contactForm');
+        const emailInput = document.getElementById('contactEmail');
+        const messageInput = document.getElementById('contactMessage');
 
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
+        // Regex for validating that the email ends with "@gmail.com"
+        const gmailRegex = /^[^\s@]+@gmail\.com$/;
 
-          form.classList.add('was-validated');
-        }, false);
+        // Email validation function
+        function validateGmail(email) {
+          return gmailRegex.test(email);
+        }
 
-        const inputs = form.querySelectorAll('input, textarea');
-
-        inputs.forEach(input => {
+        // Reset validation state on new input
+        function resetValidationOnInput(input) {
           input.addEventListener('input', function () {
-            if (input.checkValidity()) {
+            // Reset only if it was previously invalid
+            if (input.classList.contains('is-invalid')) {
               input.classList.remove('is-invalid');
-              input.classList.add('is-valid');
-              input.nextElementSibling.style.display = 'none'; 
-            } else {
+            }
+            // Optionally remove valid state if needed
+            if (input.classList.contains('is-valid')) {
               input.classList.remove('is-valid');
-              input.classList.add('is-invalid');
-              input.nextElementSibling.style.display = 'block';
             }
           });
+        }
+
+        // Apply reset behavior for both email and message
+        resetValidationOnInput(emailInput);
+        resetValidationOnInput(messageInput);
+
+        // Form submit event listener
+        form.addEventListener('submit', function (event) {
+          // Reset validation flags
+          let isEmailValid = validateGmail(emailInput.value); 
+          let isMessageValid = messageInput.value.trim() !== "";
+
+          // Validate email
+          if (!isEmailValid) {
+            emailInput.classList.remove('is-valid');
+            emailInput.classList.add('is-invalid');
+          } else {
+            emailInput.classList.remove('is-invalid');
+            emailInput.classList.add('is-valid');
+          }
+
+          // Validate message
+          if (!isMessageValid) {
+            messageInput.classList.add('is-invalid');
+          } else {
+            messageInput.classList.remove('is-invalid');
+            messageInput.classList.add('is-valid');
+          }
+        });
+
+        // Real-time validation for email and message fields
+        emailInput.addEventListener('input', function () {
+          if (validateGmail(emailInput.value)) {
+            emailInput.classList.remove('is-invalid');
+            emailInput.classList.add('is-valid');
+            emailInput.nextElementSibling.style.display = 'none';
+          } else {
+            emailInput.classList.remove('is-valid');
+            emailInput.classList.add('is-invalid');
+            emailInput.nextElementSibling.style.display = 'block';
+          }
+        });
+
+        messageInput.addEventListener('input', function () {
+          if (messageInput.value.trim()) {
+            messageInput.classList.remove('is-invalid');
+            messageInput.classList.add('is-valid');
+            messageInput.nextElementSibling.style.display = 'none';
+          } else {
+            messageInput.classList.remove('is-valid');
+            messageInput.classList.add('is-invalid');
+            messageInput.nextElementSibling.style.display = 'block';
+          }
         });
       })();
     </script>
