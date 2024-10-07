@@ -458,7 +458,7 @@ text-decoration: none;
 
 .reviews .carousel-item{
     width: 100%;
-    height: 210px;
+    height: 250px;
 }
 
 .reviews .review-img{
@@ -481,7 +481,6 @@ text-decoration: none;
 .reviews .carousel-caption .row {
     display: flex;    
     align-items: center; 
-    padding-top: 20px;
 }
 
 .reviews .quote{
@@ -489,7 +488,6 @@ text-decoration: none;
     padding: 20px;
     margin: 0;
 }
-
 .reviews .quote i{
     font-size: 20px;
 }
@@ -551,6 +549,7 @@ text-decoration: none;
 }
 
 /*end of review section*/
+
 
 
 
