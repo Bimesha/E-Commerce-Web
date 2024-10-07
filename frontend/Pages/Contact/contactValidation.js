@@ -38,67 +38,62 @@
     resetValidationOnInput(emailInput);
     resetValidationOnInput(messageInput);
 
+    // Function to validate the email field
+    function validateEmail() {
+        let startsWithNum = startsWithNumber(emailInput.value);
+        let containsInvalidEmail = containsInvalidEmailPart(emailInput.value);
+
+        if (startsWithNum) {
+            startWithNumberError.style.display = 'block';
+            emailError.style.display = 'none';
+            emailInput.classList.add('is-invalid');
+            emailInput.classList.remove('is-valid');
+            return false;
+        } else if (containsInvalidEmail || !validateGmail(emailInput.value)) {
+            emailError.style.display = 'block';
+            startWithNumberError.style.display = 'none';
+            emailInput.classList.add('is-invalid');
+            emailInput.classList.remove('is-valid');
+        return false;
+        } else {
+            emailError.style.display = 'none';
+            startWithNumberError.style.display = 'none';
+            emailInput.classList.add('is-valid');
+            emailInput.classList.remove('is-invalid');
+            return true;
+        }
+    }
+
+    // Function to validate the message field
+    function validateMessage() {
+        if (messageInput.value.trim()) {
+            messageInput.classList.add('is-valid');
+            messageInput.classList.remove('is-invalid');
+            return true;
+        } else {
+            messageInput.classList.add('is-invalid');
+            messageInput.classList.remove('is-valid');
+            return false;
+        }
+    }
+
     // Form submit event listener
     form.addEventListener('submit', function (event) {
-      // Reset validation flags
-      let isUsernameValid = usernameRegex.test(emailInput.value); 
-      let startsWithNum = startsWithNumber(emailInput.value);
-      let containsInvalidEmail = containsInvalidEmailPart(emailInput.value);
-      let isMessageValid = messageInput.value.trim() !== "";
+        let isEmailValid = validateEmail();
+        let isMessageValid = validateMessage();
 
-      // Check if the username starts with a number
-      if (startsWithNum) {
-        startWithNumberError.style.display = 'block';
-        emailInput.classList.add('is-invalid');
+        // Prevent form submission if any field is invalid
+        if (!isEmailValid || !isMessageValid) {
         event.preventDefault();
-      } else if (containsInvalidEmail || !isUsernameValid) {
-        emailError.style.display = 'block';
-        emailInput.classList.add('is-invalid');
-        event.preventDefault(); 
-      } else {
-        emailInput.classList.remove('is-invalid');
-        emailInput.classList.add('is-valid');
-      }
-
-      // Validate message
-      if (!isMessageValid) {
-        messageInput.classList.add('is-invalid');
-        event.preventDefault();
-      } else {
-        messageInput.classList.add('is-valid');
-      }
+        }
     });
 
-    // Real-time validation for email and message fields
-    emailInput.addEventListener('input', function () {
-    let startsWithNum = startsWithNumber(emailInput.value);
-    let containsInvalidEmail = containsInvalidEmailPart(emailInput.value);
+    // Real-time validation for email input
+    emailInput.addEventListener('input', validateEmail);
 
-    if (startsWithNum) {
-      startWithNumberError.style.display = 'block';
-      emailError.style.display = 'none';
-      emailInput.classList.add('is-invalid');
-      emailInput.classList.remove('is-valid');
-    } else if (containsInvalidEmail || !usernameRegex.test(emailInput.value)) {
-      emailError.style.display = 'block';
-      startWithNumberError.style.display = 'none';
-      emailInput.classList.add('is-invalid');
-      emailInput.classList.remove('is-valid');
-    } else {
-      emailError.style.display = 'none';
-      startWithNumberError.style.display = 'none';
-      emailInput.classList.add('is-valid');
-      emailInput.classList.remove('is-invalid');
-    }
-  });
-
+    // Real-time validation for the message field
     messageInput.addEventListener('input', function () {
-      if (messageInput.value.trim()) {
-        messageInput.classList.remove('is-invalid');
-        messageInput.classList.add('is-valid');
-      } else {
-        messageInput.classList.remove('is-valid');
-        messageInput.classList.add('is-invalid');
-      }
+        validateMessage();
+        validateEmail(); // Also validate email whenever message input is being updated
     });
   })();
