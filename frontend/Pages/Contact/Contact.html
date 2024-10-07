@@ -43,9 +43,6 @@
     <special-header></special-header>
     <script src="../../components/navbar/header.js"></script>
 
-    <!-- Modal Container for dynamically loaded modals -->
-    <div id="modals-container"></div>
-
     <section class="contact-section">
         <div class="container">
             <div class="row">
@@ -58,16 +55,15 @@
                             <div class="form-group">
                               <div class="mb-4">
                                 <label for="exampleFormControlInput1" class="form-label">Email</label>
-                                <input
-                                  type="email"
-                                  class="form-control"
-                                  id="contactEmail"
-                                  name="contactEmail"
-                                  placeholder="example@gmail.com"
-                                  required
-                                />
-                                <div class="invalid-feedback">
-                                  Please enter a valid email address.
+                                <div class="input-group">
+                                  <input type="text" class="form-control" id="contactEmail" aria-describedby="inputGroupPrepend" required />
+                                  <span class="input-group-text" id="emailAddon">@gmail.com</span>
+                                  <div class="invalid-feedback" id="emailError">
+                                    Please enter a valid email address.
+                                  </div>
+                                  <div class="invalid-feedback" id="startWithNumberError" style="display: none;">
+                                    Username can not start with a number.
+                                  </div>
                                 </div>
                               </div>
                               <div class="mb-4 message">
@@ -115,38 +111,7 @@
     <script src="../../components/navbar/formValidation.js"></script>
     <script src="./contact.js"></script>
 
-    <script>
-      (function () {
-        'use strict';
-
-        const form = document.getElementById('contactForm');
-
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-
-          form.classList.add('was-validated');
-        }, false);
-
-        const inputs = form.querySelectorAll('input, textarea');
-
-        inputs.forEach(input => {
-          input.addEventListener('input', function () {
-            if (input.checkValidity()) {
-              input.classList.remove('is-invalid');
-              input.classList.add('is-valid');
-              input.nextElementSibling.style.display = 'none'; 
-            } else {
-              input.classList.remove('is-valid');
-              input.classList.add('is-invalid');
-              input.nextElementSibling.style.display = 'block';
-            }
-          });
-        });
-      })();
-    </script>
+    <script src="contactValidation.js"></script>
 
     <!-- Footer Component -->
     <script src="../../components/footer/footer.js"></script>
