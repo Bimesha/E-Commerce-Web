@@ -95,5 +95,19 @@ document.addEventListener('DOMContentLoaded', function () {
         loginModal.show();
     });
 
+    // password visibility by toggle icon
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('passwordlog');
+
+    if (togglePassword && passwordInput) {
+        togglePassword.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.classList.toggle('bi-eye-fill');
+            this.classList.toggle('bi-eye-slash-fill');
+        });
+    }
+
+
 });
   
