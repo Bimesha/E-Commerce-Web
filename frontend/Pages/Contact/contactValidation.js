@@ -54,7 +54,7 @@
             startWithNumberError.style.display = 'none';
             emailInput.classList.add('is-invalid');
             emailInput.classList.remove('is-valid');
-        return false;
+            return false;
         } else {
             emailError.style.display = 'none';
             startWithNumberError.style.display = 'none';
