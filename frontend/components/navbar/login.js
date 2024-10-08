@@ -82,3 +82,18 @@ class LoginForm extends HTMLElement {
 // Define custom element
 customElements.define('login-form', LoginForm);
 
+document.addEventListener('DOMContentLoaded', function () {
+
+    // Initialize modal
+    var loginModal = new bootstrap.Modal(document.getElementById('login'), {
+        keyboard: false,
+        backdrop: 'static'
+    });
+    
+    // Open the modal on clicking 'Login'
+    document.getElementById('login-link').addEventListener('click', function () {
+        loginModal.show();
+    });
+
+});
+  
