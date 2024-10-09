@@ -380,7 +380,7 @@ input:-webkit-autofill {
 
 @media only screen and (min-width: 500px) and (max-width: 600px) {
     .contact-section {
-        margin: 1.5rem 0 2rem 0;
+        margin: 3.3rem 0 2rem 0;
     }
 
     .contact-section .card1 {
@@ -414,7 +414,7 @@ input:-webkit-autofill {
 
 @media only screen and (min-width: 425px) and (max-width: 500px) {
     .contact-section {
-        margin: 1.5rem 0 2rem 0;
+        margin: 3.3rem 0 2rem 0;
     }
 
     .contact-section .card1 {
@@ -464,7 +464,7 @@ input:-webkit-autofill {
 
 @media only screen and (min-width: 375px) and (max-width: 425px) {
     .contact-section {
-        margin: 1.5rem 0 2rem 0;
+        margin: 2.8rem 0 2rem 0;
     }
 
     .contact-section .card1 {
