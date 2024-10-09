@@ -8,6 +8,7 @@
     max-height: 600px;
     padding: 0px 20px;
     margin: 0px 20px;
+    z-index: 1;
 }
 
 #loginForm {
@@ -15,6 +16,7 @@
     width: 100%;
     padding: 0px 5px;
     margin: 0 auto;
+    z-index: 1;
 }
 
 #login .mutedText{
