@@ -116,13 +116,50 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 200);
   });
 
-  
+
 
   document.getElementById('failureModal').addEventListener('show.bs.modal', function () {
     document.querySelector('.header-search input').classList.add('contact-input-dark-background');
   });
 
   document.getElementById('failureModal').addEventListener('hide.bs.modal', function () {
+    setTimeout(() => {
+      document.querySelector('.header-search input').classList.remove('contact-input-dark-background');
+    }, 200);
+  });
+
+
+
+
+  document.getElementById('successModal').addEventListener('show.bs.modal', function () {
+    document.querySelector('.header-container').classList.add('contact-dark-background');
+  });
+
+  document.getElementById('successModal').addEventListener('hide.bs.modal', function () {
+    setTimeout(() => {
+      document.querySelector('.header-container').classList.remove('contact-dark-background');
+    }, 200);
+  });
+
+
+
+  document.getElementById('successModal').addEventListener('show.bs.modal', function () {
+    document.querySelector('.header-search').classList.add('contact-search-dark-background');
+  });
+
+  document.getElementById('successModal').addEventListener('hide.bs.modal', function () {
+    setTimeout(() => {
+      document.querySelector('.header-search').classList.remove('contact-search-dark-background');
+    }, 200);
+  });
+
+  
+
+  document.getElementById('successModal').addEventListener('show.bs.modal', function () {
+    document.querySelector('.header-search input').classList.add('contact-input-dark-background');
+  });
+
+  document.getElementById('successModal').addEventListener('hide.bs.modal', function () {
     setTimeout(() => {
       document.querySelector('.header-search input').classList.remove('contact-input-dark-background');
     }, 200);
