@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Real-time validation for each input field
+  // ------------------------ REGISTRATION FORM VALIDATION ------------------------
+
+  // Real-time validation for each input field in registration form
   const form = document.getElementById('registrationForm');
   
   if (form) {
@@ -113,6 +115,47 @@ document.addEventListener('DOMContentLoaded', function () {
         alert(err.message);
       }
     }
+    });
+  }
+
+  // ------------------------ LOGIN FORM VALIDATION ------------------------
+
+  // Real-time validation for the login form
+  const loginForm = document.getElementById('loginForm');
+  
+  if (loginForm) {
+    const loginEmail = document.getElementById('loginEmail');
+    const loginPassword = document.getElementById('loginPassword');
+    
+    // Validate email on input
+    loginEmail.addEventListener('input', function () {
+      validateField(loginEmail);
+    });
+
+    // Validate password on input
+    loginPassword.addEventListener('input', function () {
+      validateField(loginPassword);
+    });
+
+    // Validate login form on submission
+    loginForm.addEventListener('submit', function (event) {
+      // Prevent default form submission
+      event.preventDefault();
+
+      let isValid = true;
+
+      // Validate email and password fields
+      if (!loginEmail.checkValidity()) {
+        validateField(loginEmail);
+        isValid = false;
+      }
+      
+      if (!loginPassword.checkValidity()) {
+        validateField(loginPassword);
+        isValid = false;
+      }
+
+      
     });
   }
 });
