@@ -32,7 +32,7 @@ class LoginForm extends HTMLElement {
                                     <div class="input-group flex-nowrap">
                                         <input type="password" class="form-control" id="passwordlog" name="password" minlength="6" 
                                             placeholder="Enter your Password" spellcheck="false" autocorrect="off" autocapitalize="off" 
-                                            autocomplete="current-password" required aria-describedby="addon-wrapping">
+                                            autocomplete="current-password" aria-label="show password as" aria-describedby="addon-wrapping" required>
                                         <span class="input-group-text" id="addon-wrapping">
                                             <i class="bi bi-eye-fill" id="togglePassword" style="cursor: pointer;"></i>
                                         </span>
