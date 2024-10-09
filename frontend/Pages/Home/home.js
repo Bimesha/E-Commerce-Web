@@ -21,6 +21,7 @@ const reviewTextarea = document.getElementById('reviewTextarea');
 clearButton.addEventListener('click', () => {
     // Clear the textarea by setting its value to be empty
     reviewTextarea.value = '';
+  });
 
 //carousel freeze
     const carousel = document.querySelector('#testimonial');
@@ -35,6 +36,3 @@ clearButton.addEventListener('click', () => {
     carousel.addEventListener('mouseleave', function () {
       carouselInstance.cycle();
     });
-
-
-  });
