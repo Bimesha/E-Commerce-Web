@@ -115,6 +115,10 @@ body {
     display: flex;
 }
 
+.slid-section .carousel-inner{
+    overflow: hidden;
+}
+
 .slid-section .d-flex{
     margin-left: 5rem;
     margin-right: 3rem;
@@ -139,6 +143,7 @@ body {
     height: 180px;
     width: 100%;
     object-fit: cover;
+    padding-top: 30px;
 }
 
 .slid-section .status-badge{
@@ -162,11 +167,13 @@ body {
 
 .price {
     font-size: 1rem;
+    
 }
 
 .slid-section h5{
     font-size: 1rem;
     font-weight: bold;
+    padding-top: 10px;
 }
 
 .slid-section .carousel-control-next-icon{
@@ -2699,7 +2706,7 @@ text-decoration: none;
 
 
     .slid-section .d-flex{
-        margin-left: 5rem;
+        margin-left: 5.6rem;
         margin-right: 0.1rem;
     }
     
@@ -2715,13 +2722,13 @@ text-decoration: none;
     }
         
     .slid-section .btn-primary{      
-        margin-left: 9rem;
+        margin-left: 10rem;
     }
 }
 
 @media only screen and (min-width: 415px) and (max-width: 425px) {
     .slid-section .carousel-control-next-icon{    
-        margin-right: 4.9rem;   
+        margin-right: 5.5rem;   
     }
 }
 
@@ -2733,13 +2740,13 @@ text-decoration: none;
 
 @media only screen and (min-width: 385px) and (max-width: 400px) {
     .slid-section .carousel-control-next-icon{    
-        margin-right: 3rem;   
+        margin-right: 4.6rem;   
     }
 }
 
 @media only screen and (min-width: 375px) and (max-width: 385px) {
     .slid-section .carousel-control-next-icon{    
-        margin-right: 2.2rem;   
+        margin-right: 3.3rem;   
     }
 }
 
@@ -2954,62 +2961,61 @@ text-decoration: none;
         padding-bottom: 20px;
     }
 
-
-
-
     .slid-section .d-flex{
-        margin-left: 5rem;
-        margin-right: 0.1rem;
-    }
-    
-    .slid-section .card{
-        height: 300px;
-        max-width: 250px; 
-        margin-left: 10px;
-    }
-    
-    .slid-section .card img{
-        height: 135px;
-        width: 100%;
-    }
-        
-    .slid-section .btn-primary{      
-        margin-left: 9rem;
-    }
-
-
-
-    .slid-section .d-flex{
-        margin-left: 5.2rem;
+        margin-left: 4rem;
         margin-right: 0.1rem;
         align-content: center;
     }
     
     .slid-section .card{
-        height: 300px;
-        max-width: 235px; 
+        height: 285px;
+        max-width: 234px; 
+        margin-right: 10px;
           
     }
     
     .slid-section .card img{
-        height: 132px;
+        height: 138px;
         width: 100%;
     }
         
     .slid-section .btn-primary{      
-        margin-left: 8rem;
+        margin-left: 7.4rem;
     }
 }
 
-@media only screen and (max-width: 375px) and (min-width: 350px) {
+@media only screen and (max-width: 380px) and (min-width: 365px) {
+    
     .slid-section .carousel-control-next-icon{    
-        margin-right: 3.8rem;   
+        margin-right: 4.8rem;
+        height: 4rem;   
+    }
+
+    .slid-section .btn-primary{      
+        margin-left: 6.4rem;
+    }
+}
+
+@media only screen and (max-width: 365px) and (min-width: 350px) {
+    .slid-section .carousel-control-next-icon{    
+        margin-right: 4rem;
+        height: 4rem;   
+    }
+
+    .slid-section .btn-primary{      
+        margin-left: 6.4rem;
     }
 }
 
 @media only screen and (max-width: 350px) and (min-width: 320px){
     .slid-section .carousel-control-next-icon{    
-        margin-right: 1.2rem;   
+        margin-right: 1.3rem; 
+        height: 4rem; 
+        width: 1.8rem; 
+    }
+
+    .slid-section .btn-primary{      
+        margin-left: 5.5rem;
     }
 }
 
@@ -3246,46 +3252,21 @@ text-decoration: none;
         padding-bottom: 20px;
     }
 
-
-    
-
     .slid-section .d-flex{
-        margin-left: 5rem;
-        margin-right: 0.1rem;
+        margin-left: 2.4rem;
+        margin-right: 0.3rem;
     }
     
     .slid-section .card{
-        height: 300px;
-        max-width: 250px; 
-        margin-left: 10px;
-    }
-    
-    .slid-section .card img{
-        height: 135px;
-        width: 100%;
-    }
-        
-    .slid-section .btn-primary{      
-        margin-left: 9rem;
-    }
-    .slid-section .d-flex{
-        margin-left: 2.7rem;
-        margin-right: 0.1rem;
-    }
-    
-    .slid-section .card{
-        height: 300px;
-        max-width: 235px; 
+        height: 280px;
+        max-width: 238px; 
           
     }
     
     .slid-section .card img{
-        height: 132px;
+        height: 150px;
         width: 100%;
        
     }
-        
-    .slid-section .btn-primary{      
-        margin-left: 6rem;
-    }
+   
 }
