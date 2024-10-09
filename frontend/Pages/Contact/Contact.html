@@ -56,7 +56,7 @@
                               <div class="mb-4">
                                 <label for="exampleFormControlInput1" class="form-label">Email</label>
                                 <div class="input-group">
-                                  <input type="text" class="form-control" id="contactEmail" aria-describedby="inputGroupPrepend" required />
+                                  <input type="text" class="form-control" id="contactEmail" aria-describedby="inputGroupPrepend" autocomplete="off" required />
                                   <span class="input-group-text" id="emailAddon">@gmail.com</span>
                                   <div class="invalid-feedback" id="emailError">
                                     Please enter a valid email address.
@@ -98,6 +98,47 @@
             </div>
         </div>
     </section>
+
+    <section class="popup-section">
+        <!-- Success Modal -->
+        <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <i class="bi bi-check-circle icon-success"></i>
+                  </div>
+
+                  <div class="modal-para">
+                    <p>Your message has been sent successfully!</p>
+                  </div>
+
+                  <div class="modal-footer justify-content-center">
+                      <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <!-- Failure Modal -->
+        <div class="modal fade" id="failureModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <i class="bi bi-x-circle icon-error"></i>
+                    </div>
+
+                    <div class="modal-para">
+                        <p>Failed to send your message. Please try again later.</p>
+                    </div>
+                    
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

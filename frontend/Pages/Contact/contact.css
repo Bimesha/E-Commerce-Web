@@ -18,6 +18,10 @@ body {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 }
 
+.contact-section input {
+    z-index: 0;
+}
+
 .contact-section input::placeholder {
     font-size: 0.9rem;
 }
@@ -87,6 +91,59 @@ input:-webkit-autofill {
 
 .contact-section .contact-info p i {
     font-size: 18px;
+}
+
+
+
+
+/* Popup CSS */
+.popup-section .modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.popup-section .modal-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.popup-section .icon-success {
+    margin-top: -20px;
+    margin-bottom: -10px;
+    color: green;
+    font-size: 60px;
+}
+
+.popup-section .icon-error {
+    margin-top: -20px;
+    margin-bottom: -10px;
+    color: red;
+    font-size: 60px;
+}
+
+.popup-section .modal-para {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.popup-section .modal-dialog {
+    max-width: 500px;
+}
+
+.blurred-transition {
+    transition: background-color 0.1s ease; 
+}
+
+.unblurred-transition {
+    transition: background-color 0.8s ease-in-out; 
+}
+
+.contact-dark-background {
+    background-color: rgba(158, 152, 152, 0.8);
+    padding-top: -540px;
+    transition: background-color 0.2s ease-in-out; 
 }
 
 

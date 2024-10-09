@@ -47,12 +47,14 @@
             startWithNumberError.style.display = 'block';
             emailError.style.display = 'none';
             emailInput.classList.add('is-invalid');
+            emailInput.style.borderColor = 'rgba(164, 4, 4, 0.8)';
             emailInput.classList.remove('is-valid');
             return false;
         } else if (containsInvalidEmail || !validateGmail(emailInput.value)) {
             emailError.style.display = 'block';
             startWithNumberError.style.display = 'none';
             emailInput.classList.add('is-invalid');
+            emailInput.style.borderColor = 'rgba(164, 4, 4, 0.8)';
             emailInput.classList.remove('is-valid');
             return false;
         } else {
@@ -94,6 +96,6 @@
     // Real-time validation for the message field
     messageInput.addEventListener('input', function () {
         validateMessage();
-        validateEmail(); // Also validate email whenever message input is being updated
+        validateEmail(); 
     });
   })();
