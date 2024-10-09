@@ -15,8 +15,8 @@ header {
 }
 
 .dark-background {
-    background-color: rgba(160, 158, 158, 0.8);
     padding-top: -540px;
+    background-color: rgba(154, 152, 152, 0.8);
 }
 
 .change-background {
