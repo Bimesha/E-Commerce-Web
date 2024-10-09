@@ -43,9 +43,6 @@
     <special-header></special-header>
     <script src="../../components/navbar/header.js"></script>
 
-    <!-- Modal Container for dynamically loaded modals -->
-    <div id="modals-container"></div>
-
     <section class="contact-section">
         <div class="container">
             <div class="row">
@@ -54,26 +51,27 @@
                         <div class="card-body">
                           <h1>GET IN TOUCH</h1>
                           <p>We'd love to hear from you! If you have any questions, feedback, or need further assistance, feel free to reach out.</p>
-                          <form action="" class="needs-validation" novalidate id="contactForm">
+                          <form  method="POST" action="/api/contact" class="needs-validation" novalidate id="contactForm">
                             <div class="form-group">
                               <div class="mb-4">
                                 <label for="exampleFormControlInput1" class="form-label">Email</label>
-                                <input
-                                  type="email"
-                                  class="form-control"
-                                  id="exampleFormControlInput1"
-                                  placeholder="example@gmail.com"
-                                  required
-                                />
-                                <div class="invalid-feedback">
-                                  Please enter a valid email address.
+                                <div class="input-group">
+                                  <input type="text" class="form-control" id="contactEmail" aria-describedby="inputGroupPrepend" required />
+                                  <span class="input-group-text" id="emailAddon">@gmail.com</span>
+                                  <div class="invalid-feedback" id="emailError">
+                                    Please enter a valid email address.
+                                  </div>
+                                  <div class="invalid-feedback" id="startWithNumberError" style="display: none;">
+                                    Username can not start with a number.
+                                  </div>
                                 </div>
                               </div>
                               <div class="mb-4 message">
                                 <label for="exampleFormControlTextarea1" class="form-label">Message</label>
                                 <textarea
                                   class="form-control"
-                                  id="exampleFormControlTextarea1"
+                                  id="contactMessage"
+                                  name="contactMessage"
                                   rows="5"
                                   required
                                 ></textarea>
@@ -82,7 +80,6 @@
                                 </div>
                               </div>
                             </div>
-
                             <button type="submit" class="btn btn-primary">Submit</button>
                           </form>
                         </div>
@@ -110,40 +107,11 @@
 
     <script src="../../components/navbar/nav.js"></script>
     <script src="../../components/navbar/registration.js"></script>
+    <script src="../../components/navbar/login.js"></script>
     <script src="../../components/navbar/formValidation.js"></script>
+    <script src="./contact.js"></script>
 
-    <script>
-      (function () {
-        'use strict';
-
-        const form = document.getElementById('contactForm');
-
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-
-          form.classList.add('was-validated');
-        }, false);
-
-        const inputs = form.querySelectorAll('input, textarea');
-
-        inputs.forEach(input => {
-          input.addEventListener('input', function () {
-            if (input.checkValidity()) {
-              input.classList.remove('is-invalid');
-              input.classList.add('is-valid');
-              input.nextElementSibling.style.display = 'none'; 
-            } else {
-              input.classList.remove('is-valid');
-              input.classList.add('is-invalid');
-              input.nextElementSibling.style.display = 'block';
-            }
-          });
-        });
-      })();
-    </script>
+    <script src="contactValidation.js"></script>
 
     <!-- Footer Component -->
     <script src="../../components/footer/footer.js"></script>

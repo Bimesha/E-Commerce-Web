@@ -56,16 +56,17 @@ input:-webkit-autofill {
     text-align: justify;
 }
 
-.contact-section button {
+.contact-section button.btn-primary {
     width: 100%;
     background-color: #FFBA35;
     margin: 1rem 0;
     border: none;
     color: black;
+    width: 100%;
 }
 
-.contact-section button:hover {
-    background-color: #FFBA35;
+.contact-section button.btn-primary:hover {
+    background-color: #FFBA35; 
     color: black;
 }
 

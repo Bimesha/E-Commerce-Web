@@ -81,7 +81,7 @@ body {
 }
 
 .features2-section .card {
-    height: 15rem;
+    height: 13rem;
     border-radius: 40px;
 }
 
@@ -89,18 +89,8 @@ body {
     padding: 35px 25px;
 }
 
-.features2-section .image1 {
-    height: 31rem;
-    border: none;
-}
-
-.features2-section .image1 img {
-    height: 31rem;
-    border-radius: 40px;
-}
-
 .features2-section .second-line {
-    margin-top: -14.5rem;
+    margin-top: 1.5rem;
 }
 
 .features2-section .title {
@@ -112,12 +102,12 @@ body {
 }
 
 .features2-section .image2 img {
-    height: 15rem;
+    height: 13rem;
     border-radius: 40px;
 }
 
 .features2-section .card-title {
-    font-size: 34px;
+    font-size: 32px;
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -129,10 +119,10 @@ body {
 }
 
 .features2-section .title h5 {
-    font-size: 55px;
-    letter-spacing: 1px;
+    font-size: 68px;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     text-align: center;
 }
 
@@ -189,12 +179,24 @@ body {
 
 
 
+    .service-section {
+        margin-top: -1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+
+
+
     .features2-section .row {
         margin: 0 1.2rem;
     }
 
+    .features2-section .card {
+        height: 12rem;
+    }
+
     .features2-section .second-line {
-        margin-top: -14.5rem;
+        margin-top: 1.5rem;
     }
 
     .features2-section .third-line {
@@ -202,11 +204,15 @@ body {
     }
     
     .features2-section .card-title {
-        font-size: 30px;
+        font-size: 28px;
+    }
+    
+    .features2-section .card-text {
+        font-size: 15px;
     }
     
     .features2-section .title h5 {
-        font-size: 50px;
+        font-size: 60px;
     }
 }
 
@@ -221,12 +227,26 @@ body {
 
 
 
+
+    .service-section {
+        margin-top: -1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+
+
+
+
     .features2-section .row {
         margin: 0 1.2rem;
     }
 
+    .features2-section .card {
+        height: 12rem;
+    }
+
     .features2-section .second-line {
-        margin-top: -14.5rem;
+        margin-top: 1.5rem;
     }
 
     .features2-section .third-line {
@@ -234,11 +254,15 @@ body {
     }
     
     .features2-section .card-title {
-        font-size: 30px;
+        font-size: 28px;
+    }
+    
+    .features2-section .card-text {
+        font-size: 15px;
     }
     
     .features2-section .title h5 {
-        font-size: 50px;
+        font-size: 60px;
     }
 }
 
@@ -258,14 +282,34 @@ body {
         margin-bottom: 1.5rem;
     }
 
+    .service-section img {
+        width: 70px;
+    }
+
+    .service-section .card-image2 img {
+        height: 70px;
+    }
+
+    .service-section h4 {
+        font-size: 17px;
+    }
+
+    .service-section span {
+        font-size: 22px;
+    }
+
 
 
     .features2-section .row {
         margin: 0 -0.5rem;
     }
 
+    .features2-section .card {
+        height: 12rem;
+    }
+
     .features2-section .second-line {
-        margin-top: -14.5rem;
+        margin-top: 1.5rem;
     }
 
     .features2-section .third-line {
@@ -273,11 +317,15 @@ body {
     }
     
     .features2-section .card-title {
-        font-size: 26px;
+        font-size: 25px;
+    }
+    
+    .features2-section .card-text {
+        font-size: 15px;
     }
     
     .features2-section .title h5 {
-        font-size: 50px;
+        font-size: 52px;
     }
 }
 
@@ -293,8 +341,24 @@ body {
 
 
     .service-section {
-        margin-top: -1.5rem;
+        margin-top: -2rem;
         margin-bottom: 1.5rem;
+    }
+
+    .service-section img {
+        width: 70px;
+    }
+
+    .service-section .card-image2 img {
+        height: 70px;
+    }
+
+    .service-section h4 {
+        font-size: 17px;
+    }
+
+    .service-section span {
+        font-size: 22px;
     }
 
 
@@ -303,8 +367,12 @@ body {
         margin: 0 -0.5rem;
     }
 
+    .features2-section .card {
+        height: 12rem;
+    }
+
     .features2-section .second-line {
-        margin-top: -14.5rem;
+        margin-top: 1.5rem;
     }
 
     .features2-section .third-line {
@@ -312,13 +380,16 @@ body {
     }
     
     .features2-section .card-title {
-        font-size: 26px;
+        font-size: 25px;
+    }
+    
+    .features2-section .card-text {
+        font-size: 15px;
     }
     
     .features2-section .title h5 {
-        font-size: 50px;
+        font-size: 52px;
     }
-
 
 
 
@@ -347,14 +418,34 @@ body {
         margin-bottom: 1.5rem;
     }
 
+    .service-section img {
+        width: 65px;
+    }
+
+    .service-section .card-image2 img {
+        height: 65px;
+    }
+
+    .service-section h4 {
+        font-size: 17px;
+    }
+
+    .service-section span {
+        font-size: 22px;
+    }
+
 
 
     .features2-section .row {
         margin: 0 -0.5rem;
     }
 
+    .features2-section .card {
+        height: 12rem;
+    }
+
     .features2-section .second-line {
-        margin-top: -14.5rem;
+        margin-top: 1.5rem;
     }
 
     .features2-section .third-line {
@@ -362,11 +453,15 @@ body {
     }
     
     .features2-section .card-title {
-        font-size: 26px;
+        font-size: 24px;
+    }
+
+    .features2-section .card-text {
+        font-size: 15px;
     }
     
     .features2-section .title h5 {
-        font-size: 50px;
+        font-size: 52px;
     }
 
 
@@ -407,11 +502,11 @@ body {
     }
 
     .service-section img {
-        width: 70px;
+        width: 60px;
     }
 
     .service-section .card-image2 img {
-        height: 70px;
+        height: 60px;
     }
 
     .service-section h4 {
@@ -430,23 +525,15 @@ body {
     }
 
     .features2-section .card {
-        height: 12rem;
+        height: 11rem;
     }
 
     .features2-section .card-body {
-        padding: 30px 12px;
-    }
-
-    .features2-section .image1 {
-        height: 25rem;
-    }
-    
-    .features2-section .image1 img {
-        height: 25rem;
+        padding: 20px 12px;
     }
 
     .features2-section .second-line {
-        margin-top: -11.5rem;
+        margin-top: 1.5rem;
     }
 
     .features2-section .third-line {
@@ -454,7 +541,7 @@ body {
     }
     
     .features2-section .card-title {
-        font-size: 20px;
+        font-size: 18px;
     }
     
     .features2-section .card-text {
@@ -462,7 +549,7 @@ body {
     }
     
     .features2-section .title h5 {
-        font-size: 38px;
+        font-size: 40px;
     }
 
 
@@ -525,23 +612,15 @@ body {
     }
 
     .features2-section .card {
-        height: 12rem;
+        height: 11rem;
     }
 
     .features2-section .card-body {
-        padding: 30px 12px;
-    }
-
-    .features2-section .image1 {
-        height: 25rem;
-    }
-    
-    .features2-section .image1 img {
-        height: 25rem;
+        padding: 20px 12px;
     }
 
     .features2-section .second-line {
-        margin-top: -11.5rem;
+        margin-top: 1.5rem;
     }
 
     .features2-section .third-line {
@@ -549,7 +628,7 @@ body {
     }
     
     .features2-section .card-title {
-        font-size: 20px;
+        font-size: 19px;
     }
     
     .features2-section .card-text {
@@ -557,7 +636,7 @@ body {
     }
     
     .features2-section .title h5 {
-        font-size: 38px;
+        font-size: 40px;
     }
 
 
@@ -1022,7 +1101,7 @@ body {
 
 @media only screen and (max-width: 375px) and (min-width: 320px) {
     .about-section {
-        margin-top: -30px;
+        margin-top: -20px;
     }
 
     .about-section .story {
@@ -1067,7 +1146,7 @@ body {
     }
     
     .features2-section .card-title {
-        font-size: 20px;
+        font-size: 18px;
     }
     
     .features2-section .card-text {

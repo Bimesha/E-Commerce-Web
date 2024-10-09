@@ -1,20 +1,20 @@
 class RegistrationForm extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <!-- Modal -->
+        <!--registration Modal -->
         <div class="modal fade" id="createAccount" tabindex="-1" aria-labelledby="createAccountForm" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-fullscreen-sm-down modal-dialog-centered">
                 <div class="modal-content">
         
                     <!-- Header -->
                     <div class="modal-header ">
-                        <h2 class="modal-title text-uppercase mt-3">Create An Account</h2>
+                        <h2 class="modal-title text-uppercase mt-2">Create An Account</h2>
                         <button type="button" class="btn btn-light close-btn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
                     </div>
   
                     <!-- Body -->
                     <div class="modal-body">
-                        <form id="registrationForm" action="" class="needs-validation" novalidate>
+                        <form id="registrationForm" method="POST" action="/create-account" class="needs-validation" novalidate>
 
                             <div class="form-group">
                                 <div class="row">
@@ -102,12 +102,12 @@ document.addEventListener('DOMContentLoaded', function () {
   
 // Change background color when the modal is shown
 document.getElementById('createAccount').addEventListener('show.bs.modal', function () {
-    document.querySelector('header').classList.add('dark-background');
+    document.querySelector('.header-container').classList.add('dark-background');
 });
   
 // Revert background color when the modal is hidden
 document.getElementById('createAccount').addEventListener('hide.bs.modal', function () {
-    document.querySelector('header').classList.remove('dark-background');
+    document.querySelector('.header-container').classList.remove('dark-background');
 });
   
 document.getElementById('createAccount').addEventListener('show.bs.modal', function () {
@@ -133,14 +133,5 @@ document.getElementById('createAccount').addEventListener('show.bs.modal', funct
 document.getElementById('createAccount').addEventListener('hide.bs.modal', function () {
     document.querySelector('#drop-down').classList.remove('changemenu-background');
 });
-  
-document.getElementById('createAccount').addEventListener('show.bs.modal', function () {
-    document.querySelector('.box').classList.add('changemenu-background');
-});
-  
-document.getElementById('createAccount').addEventListener('hide.bs.modal', function () {
-    document.querySelector('.box').classList.remove('changemenu-background');
-});
-
 
 
