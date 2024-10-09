@@ -146,6 +146,14 @@ input:-webkit-autofill {
     transition: background-color 0.2s ease-in-out; 
 }
 
+.contact-search-dark-background {
+    background-color: rgba(158, 152, 152, 0.8);
+}
+
+.contact-input-dark-background {
+    background-color: rgba(158, 152, 152, 0.3) !important;
+}
+
 
 
 
