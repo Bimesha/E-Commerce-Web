@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contactForm");
-  const emailInput = document.getElementById('contactEmail');
 
   const successModal = new bootstrap.Modal(document.getElementById('successModal'));
   const failureModal = new bootstrap.Modal(document.getElementById('failureModal'));
@@ -8,8 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
   contactForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    const email = document.getElementById("contactEmail").value + "@gmail.com";
+    const email = document.getElementById("contactEmail").value;
     const message = document.getElementById("contactMessage").value;
+
+    console.log(email);
 
     try {
       const response = await fetch("http://127.0.0.1:5500/api/contact", {
@@ -32,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
         contactForm.reset();
         for (let input of contactForm.elements) {
           input.classList.remove("is-valid", "is-invalid");
-          emailInput.style.borderColor = '';
         }
       } else {
         failureModal.show();
@@ -41,55 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
     } catch (error) {
       console.error("Error:", error);
       failureModal.show();
-    }
-  });
-
-
-  // When the failure modal is shown, apply blur to the email input
-  document.getElementById('failureModal').addEventListener('show.bs.modal', function () {
-    if (emailInput.classList.contains('is-valid')) {
-      emailInput.style.backgroundColor = 'rgba(158, 157, 157, 0.1)';
-      emailInput.style.borderColor = 'rgb(53, 94, 59)';
-      emailInput.classList.add('blurred-transition')
-      emailInput.classList.remove('unblurred-transition')
-    } else {
-      emailInput.style.borderColor = 'rgba(139, 0, 0, 1)';
-      emailInput.style.backgroundColor = 'rgba(158, 157, 157, 0.1)';
-      emailInput.classList.add('blurred-transition')
-      emailInput.classList.remove('unblurred-transition')
-    }
-  });
-
-  // When the modal is hidden, remove the blur effect
-  document.getElementById('failureModal').addEventListener('hide.bs.modal', function () {
-    if (emailInput.classList.contains('is-valid')) {
-      emailInput.style.backgroundColor = '';
-      emailInput.style.borderColor = 'rgba(25, 135, 84, 1)';
-      emailInput.classList.remove('blurred-transition')
-      emailInput.classList.add('unblurred-transition')
-    } else {
-      emailInput.style.backgroundColor = '';
-      emailInput.style.borderColor = '';
-      emailInput.classList.remove('blurred-transition')
-      emailInput.classList.add('unblurred-transition')
-    }
-  });
-
-
-  document.getElementById('createAccount').addEventListener('show.bs.modal', function () {
-    if (emailInput.classList.contains('is-valid')) {
-      emailInput.style.zIndex = '0';
-    } else {
-      emailInput.style.zIndex = '0'; 
-    }
-  });
-
-
-  document.getElementById('login').addEventListener('show.bs.modal', function () {
-    if (emailInput.classList.contains('is-valid')) {
-      emailInput.style.zIndex = '0';
-    } else {
-      emailInput.style.zIndex = '0'; 
     }
   });
 
@@ -130,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
   document.getElementById('successModal').addEventListener('show.bs.modal', function () {
     document.querySelector('.header-container').classList.add('contact-dark-background');
   });
@@ -153,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 200);
   });
 
-  
+    
 
   document.getElementById('successModal').addEventListener('show.bs.modal', function () {
     document.querySelector('.header-search input').classList.add('contact-input-dark-background');
