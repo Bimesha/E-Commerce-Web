@@ -13,17 +13,17 @@ body {
     border: none;
     margin-left: -15px;
     display: flex;
-    gap: 10px;
+    gap: 12px;
 }
 
 .review-page-section img {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
 }
 
 .review-page-section .card-header h5 {
-    margin-top: 20px;
+    margin-top: 25px;
     font-size: 1.2rem;
     font-weight: 600;
 }
