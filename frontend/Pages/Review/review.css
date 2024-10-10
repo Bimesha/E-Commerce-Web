@@ -7,3 +7,30 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+
+.review-page-section .card-header {
+    background-color: #fff;
+    border: none;
+    margin-left: -15px;
+    display: flex;
+    gap: 10px;
+}
+
+.review-page-section img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.review-page-section .card-header h5 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.review-page-section p {
+    text-align: justify;
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+}
