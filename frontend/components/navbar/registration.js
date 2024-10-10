@@ -45,8 +45,14 @@ class RegistrationForm extends HTMLElement {
                                 <div class="row">
                                     <div class="col">
                                         <label for="password" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="password" name="password" minlength="6" placeholder="Create Password" required>
-                                        <div class="invalid-feedback">Password must be at least 6 characters</div>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" id="password" name="password" minlength="6"
+                                                placeholder="Create Password" required>
+                                            <span class="input-group-text">
+                                                <i class="bi bi-eye-fill" id="toggleRegPassword" aria-label="Show password as plain text" style="cursor: pointer;"></i>
+                                            </span>
+                                            <div class="invalid-feedback">Password must be at least 6 characters</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -55,8 +61,13 @@ class RegistrationForm extends HTMLElement {
                                 <div class="row">
                                     <div class="col">
                                         <label for="confirmPassword" class="form-label">Confirm Password</label>
-                                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" minlength="6" placeholder="Re-Enter Password" required>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" minlength="6" placeholder="Re-Enter Password" required>
+                                            <span class="input-group-text">
+                                                <i class="bi bi-eye-fill" id="toggleConfirmPassword" aria-label="Show password as plain text" style="cursor: pointer;"></i>
+                                            </span>
                                         <div class="invalid-feedback">Passwords do not match</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -99,6 +110,31 @@ document.addEventListener('DOMContentLoaded', function () {
         createAccountModal.show();
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Toggle visibility for the first password field
+    const toggleRegPassword = document.querySelector('#toggleRegPassword');
+    const passwordField = document.querySelector('#password');
+  
+    toggleRegPassword.addEventListener('click', function () {
+      const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordField.setAttribute('type', type);
+      this.classList.toggle('bi-eye-fill');
+      this.classList.toggle('bi-eye-slash-fill');
+    });
+  
+    // Toggle visibility for the second confirm password field
+    const toggleConfirmPassword = document.querySelector('#toggleConfirmPassword');
+    const confirmPasswordField = document.querySelector('#confirmPassword');
+  
+    toggleConfirmPassword.addEventListener('click', function () {
+      const type = confirmPasswordField.getAttribute('type') === 'password' ? 'text' : 'password';
+      confirmPasswordField.setAttribute('type', type);
+      this.classList.toggle('bi-eye-fill');
+      this.classList.toggle('bi-eye-slash-fill');
+    });
+  });
+  
   
 // Change background color when the modal is shown
 document.getElementById('createAccount').addEventListener('show.bs.modal', function () {
