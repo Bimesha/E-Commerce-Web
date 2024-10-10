@@ -8,6 +8,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.review-page-section .card {
+    border: none;
+}
+
 .review-page-section .card-header {
     background-color: #fff;
     border: none;
@@ -33,4 +37,8 @@ body {
     margin-top: 20px;
     font-size: 15px;
     line-height: 1.5;
+}
+
+.review-page-section hr {
+    margin-top: -25px;
 }
