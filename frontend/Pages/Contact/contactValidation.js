@@ -61,6 +61,7 @@
             emailError.style.display = 'none';
             startWithNumberError.style.display = 'none';
             emailInput.classList.add('is-valid');
+            emailInput.style.borderColor = 'rgba(25, 135, 84, 1)';
             emailInput.classList.remove('is-invalid');
             return true;
         }
