@@ -132,14 +132,6 @@ input:-webkit-autofill {
     max-width: 500px;
 }
 
-.blurred-transition {
-    transition: background-color 0.1s ease; 
-}
-
-.unblurred-transition {
-    transition: background-color 0.8s ease-in-out; 
-}
-
 .contact-dark-background {
     background-color: rgba(158, 152, 152, 0.8);
     padding-top: -540px;
