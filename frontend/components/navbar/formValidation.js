@@ -110,8 +110,8 @@ function validateField(field) {
         }
         errorElement.textContent = 'Email already exists. Please use a different email.';
 
-        // Redirect to error page
-        // window.location.href = 'error.html';
+        // Show failure modal with error message
+        regFailureModal.show();
       } else {
         // If some other error occurred
         throw new Error(result.error || 'Unknown error');
@@ -119,14 +119,13 @@ function validateField(field) {
       } else {
           const result = await response.json();
           console.log(result);
-          // Proceed with success flow (e.g., redirect user, show success message)
-
-          // Redirect to success page when account is created successfully
-          // window.location.href = 'successAccount.html';
+            // Show success modal when account is created successfully
+            regSuccessModal.show();
         }
       } catch (err) {
         console.error('Error submitting form:', err.message);
-        alert(err.message);
+        // Show failure modal with the error message
+        regFailureModal.show();
       }
     }
     });
