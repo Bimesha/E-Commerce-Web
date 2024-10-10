@@ -55,15 +55,9 @@
                             <div class="form-group">
                               <div class="mb-4">
                                 <label for="exampleFormControlInput1" class="form-label">Email</label>
-                                <div class="input-group">
-                                  <input type="text" class="form-control" id="contactEmail" aria-describedby="inputGroupPrepend" autocomplete="off" required />
-                                  <span class="input-group-text" id="emailAddon">@gmail.com</span>
-                                  <div class="invalid-feedback" id="emailError">
-                                    Please enter a valid username.
-                                  </div>
-                                  <div class="invalid-feedback" id="startWithNumberError" style="display: none;">
-                                    Username can not start with a number.
-                                  </div>
+                                <input type="email" class="form-control" id="contactEmail" placeholder="example@gmail.com" autocomplete="off" required />
+                                <div class="invalid-feedback">
+                                  Please enter a valid email address.
                                 </div>
                               </div>
                               <div class="mb-4 message">
