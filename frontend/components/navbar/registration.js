@@ -210,4 +210,5 @@ document.getElementById('createAccount').addEventListener('hide.bs.modal', funct
     document.querySelector('#drop-down').classList.remove('changemenu-background');
 });
 
-
+const regSuccessModal = new bootstrap.Modal(document.getElementById('regSuccessModal'));
+const regFailureModal = new bootstrap.Modal(document.getElementById('regFailureModal'));
