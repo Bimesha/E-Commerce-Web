@@ -14,7 +14,7 @@ class LoginForm extends HTMLElement {
   
                     <!-- Body -->
                     <div class="modal-body">
-                        <form id="loginForm" action="" class="needs-validation" novalidate>
+                        <form id="loginForm" method="POST" action="/login" class="needs-validation" novalidate>
     
                             <div class="form-group">
                                 <div class="row">
