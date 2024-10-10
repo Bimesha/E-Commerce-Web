@@ -7,7 +7,7 @@ function validateEmail(email) {
 
 // Function to validate a single field
 function validateField(field) {
-  if (field.id === 'email') {
+  if (field.id === 'email'|| field.id === 'loginEmail') {
       if (!validateEmail(field.value)) {
           field.classList.add('is-invalid');
           field.classList.remove('is-valid');
