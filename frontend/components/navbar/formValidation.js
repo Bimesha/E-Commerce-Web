@@ -1,14 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Function to validate a single field
-  function validateField(field) {
-    if (!field.checkValidity()) {
+  // Function to validate email format using regex
+function validateEmail(email) {
+  const emailPattern = /^(?!\.)(?!.*\.{2})[A-Za-z0-9!#$%&'*+/=?^_`{|}~.-]{1,64}@[A-Za-z0-9.-]{1,253}\.[A-Za-z]{2,}$/;
+  return emailPattern.test(email);
+}
+
+// Function to validate a single field
+function validateField(field) {
+  if (field.id === 'email') {
+      if (!validateEmail(field.value)) {
+          field.classList.add('is-invalid');
+          field.classList.remove('is-valid');
+      } else {
+          field.classList.remove('is-invalid');
+          field.classList.add('is-valid');
+      }
+  } else if (!field.checkValidity()) {
       field.classList.add('is-invalid');
       field.classList.remove('is-valid');
-    } else {
+  } else {
       field.classList.remove('is-invalid');
       field.classList.add('is-valid');
-    }
   }
+}
 
   // ------------------------ REGISTRATION FORM VALIDATION ------------------------
 
