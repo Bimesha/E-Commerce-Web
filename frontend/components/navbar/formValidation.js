@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Real-time validation for each input field
+  // ------------------------ REGISTRATION FORM VALIDATION ------------------------
+
+  // Real-time validation for each input field in registration form
   const form = document.getElementById('registrationForm');
   
   if (form) {
@@ -115,4 +117,80 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     });
   }
+
+
+
+  // ------------------------ LOGIN FORM VALIDATION ------------------------
+
+  // Real-time validation for the login form
+  const loginForm = document.getElementById('loginForm');
+  
+  if (loginForm) {
+    const loginEmail = document.getElementById('loginEmail');
+    const loginPassword = document.getElementById('loginPassword');
+    
+    // Validate email on input
+    loginEmail.addEventListener('input', function () {
+      validateField(loginEmail);
+    });
+
+    // Validate password on input
+    loginPassword.addEventListener('input', function () {
+      validateField(loginPassword);
+    });
+
+    // Validate login form on submission
+    loginForm.addEventListener('submit', async function (event) {
+      // Prevent default form submission
+      event.preventDefault();
+
+      let isValid = true;
+
+      // Validate email and password fields
+      if (!loginEmail.checkValidity()) {
+        validateField(loginEmail);
+        isValid = false;
+      }
+      
+      if (!loginPassword.checkValidity()) {
+        validateField(loginPassword);
+        isValid = false;
+      }
+
+      // If the form is valid, proceed with the API call
+      if (isValid) {
+        const loginData = {
+            email: document.getElementById('loginEmail').value,
+            password: document.getElementById('loginPassword').value
+        };
+
+        try {
+            // Send a POST request to the login API
+            const response = await fetch('http://localhost:5500/api/users/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(loginData)
+            });
+
+            // Handle the response from the server
+            if (response.ok) {
+                const result = await response.json();
+                console.log(result); // Handle successful login
+
+                // Redirect or perform actions on successful login
+                // window.location.href = '/dashboard'; // Example redirect
+            } else {
+                const error = await response.json();
+                // Handle errors, such as invalid credentials
+                alert(error.message || 'Login failed. Please try again.');
+            }
+        } catch (err) {
+            console.error('Error during login:', err);
+            alert('An error occurred. Please try again later.');
+        }
+      }
+    });
+  }     
 });

@@ -14,13 +14,13 @@ class LoginForm extends HTMLElement {
   
                     <!-- Body -->
                     <div class="modal-body">
-                        <form id="loginForm" action="" class="needs-validation" novalidate>
+                        <form id="loginForm" method="POST" action="/login" class="needs-validation" novalidate>
     
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-12">
                                         <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="emaillog" name="email" placeholder="johnnyman@gmail.com" required>
+                                        <input type="email" class="form-control" id="loginEmail" name="email" placeholder="johnnyman@gmail.com" required>
                                         <div class="invalid-feedback">Please enter a valid email</div>
                                     </div>
                                 </div>
@@ -30,7 +30,7 @@ class LoginForm extends HTMLElement {
                                 <div class="row">
                                     <label for="passwordlog" class="form-label">Password</label>
                                     <div class="input-group flex-nowrap">
-                                        <input type="password" class="form-control" id="passwordlog" name="password" minlength="6" 
+                                        <input type="password" class="form-control" id="loginPassword" name="password" minlength="6" 
                                             placeholder="Enter your Password" spellcheck="false" autocorrect="off" autocapitalize="off" 
                                             autocomplete="current-password" aria-describedby="addon-wrapping" required>
                                         <span class="input-group-text" id="addon-wrapping">
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // password visibility by toggle icon
     const togglePassword = document.getElementById('togglePassword');
-    const passwordInput = document.getElementById('passwordlog');
+    const passwordInput = document.getElementById('loginPassword');
 
     if (togglePassword && passwordInput) {
         togglePassword.addEventListener('click', function () {
