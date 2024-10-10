@@ -21,4 +21,18 @@ const reviewTextarea = document.getElementById('reviewTextarea');
 clearButton.addEventListener('click', () => {
     // Clear the textarea by setting its value to be empty
     reviewTextarea.value = '';
-});
+  });
+
+//carousel freeze
+    const carousel = document.querySelector('#testimonial');
+    const carouselInstance = new bootstrap.Carousel(carousel);
+  
+    // Pause carousel on hover
+    carousel.addEventListener('mouseenter', function () {
+      carouselInstance.pause();
+    });
+  
+    // Resume carousel when hover ends
+    carousel.addEventListener('mouseleave', function () {
+      carouselInstance.cycle();
+    });

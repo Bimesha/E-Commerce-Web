@@ -43,9 +43,6 @@
     <special-header></special-header>
     <script src="../../components/navbar/header.js"></script>
 
-    <!-- Modal Container for dynamically loaded modals -->
-    <div id="modals-container"></div>
-
     <section class="contact-section">
         <div class="container">
             <div class="row">
@@ -58,16 +55,15 @@
                             <div class="form-group">
                               <div class="mb-4">
                                 <label for="exampleFormControlInput1" class="form-label">Email</label>
-                                <input
-                                  type="email"
-                                  class="form-control"
-                                  id="contactEmail"
-                                  name="contactEmail"
-                                  placeholder="example@gmail.com"
-                                  required
-                                />
-                                <div class="invalid-feedback">
-                                  Please enter a valid email address.
+                                <div class="input-group">
+                                  <input type="text" class="form-control" id="contactEmail" aria-describedby="inputGroupPrepend" autocomplete="off" required />
+                                  <span class="input-group-text" id="emailAddon">@gmail.com</span>
+                                  <div class="invalid-feedback" id="emailError">
+                                    Please enter a valid username.
+                                  </div>
+                                  <div class="invalid-feedback" id="startWithNumberError" style="display: none;">
+                                    Username can not start with a number.
+                                  </div>
                                 </div>
                               </div>
                               <div class="mb-4 message">
@@ -94,7 +90,7 @@
                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.7760572894636!2d79.85245757475701!3d6.917355393082236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596b1c2ae5b1%3A0x872e9262f485d782!2sColombo%20City%20Centre%20Mall%20and%20Residences!5e0!3m2!1sen!2slk!4v1727332669867!5m2!1sen!2slk" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <div class="contact-info">
                           <p><i class="bi bi-geo-alt"></i>&nbsp; 8502 Prestone Rd, Inglewood, Sri Lanka</p>
-                          <p><i class="bi bi-envelope"></i>&nbsp; Oakly@gmail.com</p>
+                          <p><i class="bi bi-envelope"></i>&nbsp; oaklyweb@gmail.com</p>
                           <p><i class="bi bi-telephone"></i>&nbsp; (319) 555-0115</p>
                         </div>
                     </div>
@@ -102,6 +98,47 @@
             </div>
         </div>
     </section>
+
+    <section class="popup-section">
+        <!-- Success Modal -->
+        <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <i class="bi bi-check-circle icon-success"></i>
+                  </div>
+
+                  <div class="modal-para">
+                    <p>Your message has been sent successfully!</p>
+                  </div>
+
+                  <div class="modal-footer justify-content-center">
+                      <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <!-- Failure Modal -->
+        <div class="modal fade" id="failureModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <i class="bi bi-x-circle icon-error"></i>
+                    </div>
+
+                    <div class="modal-para">
+                        <p>Failed to send your message. Please try again.</p>
+                    </div>
+                    
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -111,41 +148,11 @@
 
     <script src="../../components/navbar/nav.js"></script>
     <script src="../../components/navbar/registration.js"></script>
+    <script src="../../components/navbar/login.js"></script>
     <script src="../../components/navbar/formValidation.js"></script>
     <script src="./contact.js"></script>
 
-    <script>
-      (function () {
-        'use strict';
-
-        const form = document.getElementById('contactForm');
-
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-
-          form.classList.add('was-validated');
-        }, false);
-
-        const inputs = form.querySelectorAll('input, textarea');
-
-        inputs.forEach(input => {
-          input.addEventListener('input', function () {
-            if (input.checkValidity()) {
-              input.classList.remove('is-invalid');
-              input.classList.add('is-valid');
-              input.nextElementSibling.style.display = 'none'; 
-            } else {
-              input.classList.remove('is-valid');
-              input.classList.add('is-invalid');
-              input.nextElementSibling.style.display = 'block';
-            }
-          });
-        });
-      })();
-    </script>
+    <script src="contactValidation.js"></script>
 
     <!-- Footer Component -->
     <script src="../../components/footer/footer.js"></script>
