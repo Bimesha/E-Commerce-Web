@@ -29,7 +29,7 @@
 }
 
 .modal-header {
-    background-image: url(../../assets/nav-img/reg.jpg);
+    background-image: url(../assets/nav-img/reg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -122,45 +122,6 @@ button.btn-warning, button.btn-dark {
 .was-validated .invalid-feedback {
     display: block;
 }
-
-/* success modal and failure modal */
-
-.popup-section .modal-dialog-centered {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-}
-
-.popup-section .modal-content {
-    text-align: center;
-    padding: 20px;
-}
-
-.popup-section .icon-success {
-    margin-top: -20px;
-    margin-bottom: -10px;
-    color: green;
-    font-size: 60px;
-}
-
-.popup-section .icon-error {
-    margin-top: -20px;
-    margin-bottom: -10px;
-    color: red;
-    font-size: 60px;
-}
-
-.popup-section .modal-para {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.popup-section .modal-dialog {
-    max-width: 500px;
-}
-
-
 
 /*media queries */
 @media only screen and (min-width: 500px) and (max-width: 600px) {
