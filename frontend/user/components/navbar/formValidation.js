@@ -31,6 +31,7 @@ function validateField(field) {
   
   if (form) {
     const fields = form.querySelectorAll('input');
+    let confirmPasswordTouched = false;  // Flag to check if confirmPassword has been touched
 
     // loop for Validate each field on input
     fields.forEach(function (field) {
@@ -43,16 +44,30 @@ function validateField(field) {
     const password = document.getElementById('password');
     const confirmPassword = document.getElementById('confirmPassword');
 
-    confirmPassword.addEventListener('input', function () {
-      if (password.value !== confirmPassword.value) {
-        confirmPassword.setCustomValidity("Passwords do not match");
-        confirmPassword.classList.add('is-invalid');
-        confirmPassword.classList.remove('is-valid');
-      } else {
-        confirmPassword.setCustomValidity('');
-        confirmPassword.classList.remove('is-invalid');
-        confirmPassword.classList.add('is-valid');
+    // Function to validate password match
+    function validatePasswordMatch() {
+      if (confirmPasswordTouched) {  // Only validate if confirmPassword has been touched
+        if (password.value !== confirmPassword.value){
+          confirmPassword.setCustomValidity("Passwords do not match");
+          confirmPassword.classList.add('is-invalid');
+          confirmPassword.classList.remove('is-valid');
+        } else {
+          confirmPassword.setCustomValidity('');
+          confirmPassword.classList.remove('is-invalid');
+          confirmPassword.classList.add('is-valid');
+        }
       }
+    }
+
+    // Mark confirmPassword as touched once user interacts with it
+    confirmPassword.addEventListener('input', function () {
+      confirmPasswordTouched = true;
+      validatePasswordMatch();
+    });
+
+    // Validate the password match when the password is changed
+    password.addEventListener('input', function () {
+      validatePasswordMatch();
     });
 
     // Validate the entire form on submission
