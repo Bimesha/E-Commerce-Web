@@ -1,14 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Function to validate a single field
-  function validateField(field) {
-    if (!field.checkValidity()) {
+  // Function to validate email format using regex
+function validateEmail(email) {
+  const emailPattern = /^(?!\.)(?!.*\.{2})[A-Za-z0-9!#$%&'*+/=?^_`{|}~.-]{1,64}@[A-Za-z0-9.-]{1,253}\.[A-Za-z]{2,}$/;
+  return emailPattern.test(email);
+}
+
+// Function to validate a single field
+function validateField(field) {
+  if (field.id === 'email'|| field.id === 'loginEmail') {
+      if (!validateEmail(field.value)) {
+          field.classList.add('is-invalid');
+          field.classList.remove('is-valid');
+      } else {
+          field.classList.remove('is-invalid');
+          field.classList.add('is-valid');
+      }
+  } else if (!field.checkValidity()) {
       field.classList.add('is-invalid');
       field.classList.remove('is-valid');
-    } else {
+  } else {
       field.classList.remove('is-invalid');
       field.classList.add('is-valid');
-    }
   }
+}
 
   // ------------------------ REGISTRATION FORM VALIDATION ------------------------
 
@@ -96,8 +110,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         errorElement.textContent = 'Email already exists. Please use a different email.';
 
-        // Redirect to error page
-        // window.location.href = 'error.html';
+        // Show failure modal with error message
+        regFailureModal.show();
       } else {
         // If some other error occurred
         throw new Error(result.error || 'Unknown error');
@@ -105,14 +119,13 @@ document.addEventListener('DOMContentLoaded', function () {
       } else {
           const result = await response.json();
           console.log(result);
-          // Proceed with success flow (e.g., redirect user, show success message)
-
-          // Redirect to success page when account is created successfully
-          // window.location.href = 'successAccount.html';
+            // Show success modal when account is created successfully
+            regSuccessModal.show();
         }
       } catch (err) {
         console.error('Error submitting form:', err.message);
-        alert(err.message);
+        // Show failure modal with the error message
+        regFailureModal.show();
       }
     }
     });
