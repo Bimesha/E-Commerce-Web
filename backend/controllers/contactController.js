@@ -1,6 +1,7 @@
 // controllers/contactController.js
 const nodemailer = require('nodemailer');
 const { validationResult } = require('express-validator');
+const dns = require('dns');
 
 const sendContactMessage = async (req, res) => {
   const errors = validationResult(req);
@@ -10,6 +11,16 @@ const sendContactMessage = async (req, res) => {
 
   const { contactEmail, contactMessage } = req.body;
 
+  // 1. Extract domain from the contactEmail
+  const emailDomain = contactEmail.split('@')[1];
+
+  // 2. Validate the email domain using DNS MX records
+  dns.resolveMx(emailDomain, async (err, addresses) => {
+    if (err || addresses.length === 0) {
+      return res.status(400).json({ message: "Invalid email domain" });
+    }
+
+    // 3. Proceed with sending the email if the domain is valid
   try {
     // Create a transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
@@ -35,6 +46,7 @@ const sendContactMessage = async (req, res) => {
     console.error('Error while sending email:', error);
     res.status(500).json({ error: 'Failed to send email: ${error.message}' });
   }
+});
 };
 
 
