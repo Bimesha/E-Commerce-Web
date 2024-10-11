@@ -33,11 +33,11 @@ class LoginForm extends HTMLElement {
                                         <div class="input-group">
                                             <input type="password" class="form-control" id="loginPassword" name="password" minlength="6" 
                                             placeholder="Enter your Password" spellcheck="false" autocorrect="off" autocapitalize="off" 
-                                            autocomplete="current-password" aria-describedby="addon-wrapping" required>
+                                            autocomplete="current-password"  required>
                                             <span class="input-group-text" id="addon-wrapping">
                                                 <i class="bi bi-eye-fill" id="togglePassword" aria-label="Show password as plain text" style="cursor: pointer;"></i>
                                             </span>
-                                            <div class="invalid-feedback">Password must be at least 6 characters</div>
+                                            <div class="invalid-feedback">Enter valid Password</div>
                                         </div>
                                     </div>
                                 </div>

@@ -47,7 +47,7 @@ class RegistrationForm extends HTMLElement {
                                         <label for="password" class="form-label">Password</label>
                                         <div class="input-group">
                                             <input type="password" class="form-control" id="password" name="password" minlength="6"
-                                                placeholder="Create Password" required>
+                                                placeholder="Create Password" autocomplete="new-password" required>
                                             <span class="input-group-text">
                                                 <i class="bi bi-eye-fill" id="toggleRegPassword" aria-label="Show password as plain text" style="cursor: pointer;"></i>
                                             </span>
@@ -62,7 +62,7 @@ class RegistrationForm extends HTMLElement {
                                     <div class="col">
                                         <label for="confirmPassword" class="form-label">Confirm Password</label>
                                         <div class="input-group">
-                                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" minlength="6" placeholder="Re-Enter Password" required>
+                                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" minlength="6"  placeholder="Re-Enter Password" required>
                                             <span class="input-group-text">
                                                 <i class="bi bi-eye-fill" id="toggleConfirmPassword" aria-label="Show password as plain text" style="cursor: pointer;"></i>
                                             </span>
