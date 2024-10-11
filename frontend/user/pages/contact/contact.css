@@ -18,6 +18,10 @@ body {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 }
 
+.contact-section input {
+    z-index: 0;
+}
+
 .contact-section input::placeholder {
     font-size: 0.9rem;
 }
@@ -87,6 +91,59 @@ input:-webkit-autofill {
 
 .contact-section .contact-info p i {
     font-size: 18px;
+}
+
+
+
+
+/* Popup CSS */
+.popup-section .modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.popup-section .modal-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.popup-section .icon-success {
+    margin-top: -20px;
+    margin-bottom: -10px;
+    color: green;
+    font-size: 60px;
+}
+
+.popup-section .icon-error {
+    margin-top: -20px;
+    margin-bottom: -10px;
+    color: red;
+    font-size: 60px;
+}
+
+.popup-section .modal-para {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.popup-section .modal-dialog {
+    max-width: 500px;
+}
+
+.contact-dark-background {
+    background-color: rgba(158, 152, 152, 0.8);
+    padding-top: -540px;
+    transition: background-color 0.2s ease-in-out; 
+}
+
+.contact-search-dark-background {
+    background-color: rgba(158, 152, 152, 0.8);
+}
+
+.contact-input-dark-background {
+    background-color: rgba(158, 152, 152, 0.3) !important;
 }
 
 
@@ -315,7 +372,7 @@ input:-webkit-autofill {
 
 @media only screen and (min-width: 500px) and (max-width: 600px) {
     .contact-section {
-        margin: 1.5rem 0 2rem 0;
+        margin: 3.3rem 0 2rem 0;
     }
 
     .contact-section .card1 {
@@ -329,11 +386,27 @@ input:-webkit-autofill {
     .contact-section label {
         font-size: 0.9rem;
     }
+
+
+
+    .popup-section .modal-dialog-centered {
+        width: 450px;
+    }
+
+    .popup-section .icon-success {
+        margin-top: -10px;
+        margin-bottom: -30px;
+    }
+    
+    .popup-section .icon-error {
+        margin-top: -10px;
+        margin-bottom: -30px;
+    }
 }
 
 @media only screen and (min-width: 425px) and (max-width: 500px) {
     .contact-section {
-        margin: 1.5rem 0 2rem 0;
+        margin: 3.3rem 0 2rem 0;
     }
 
     .contact-section .card1 {
@@ -359,11 +432,31 @@ input:-webkit-autofill {
     .contact-section .card-body {
         padding: 2rem 2rem;
     }
+
+
+
+    .popup-section .modal-dialog-centered {
+        width: 400px;
+    }
+
+    .popup-section .icon-success {
+        margin-top: -25px;
+        margin-bottom: -15px;
+    }
+    
+    .popup-section .icon-error {
+        margin-top: -25px;
+        margin-bottom: -15px;
+    }
+
+    .popup-section .modal-para {
+        font-size: 16px;
+    }
 }
 
 @media only screen and (min-width: 375px) and (max-width: 425px) {
     .contact-section {
-        margin: 1.5rem 0 2rem 0;
+        margin: 2.8rem 0 2rem 0;
     }
 
     .contact-section .card1 {
@@ -401,11 +494,34 @@ input:-webkit-autofill {
     .contact-section button {
         margin: 0.4rem 0;
     }
+
+
+
+
+    .popup-section .modal-dialog-centered {
+        width: 350px;
+    }
+
+    .popup-section .icon-success {
+        margin-top: -25px;
+        margin-bottom: -15px;
+        font-size: 50px;
+    }
+    
+    .popup-section .icon-error {
+        margin-top: -25px;
+        margin-bottom: -15px;
+        font-size: 50px;
+    }
+
+    .popup-section .modal-para {
+        font-size: 16px;
+    }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 375px) {
     .contact-section {
-        margin: 1.2rem 0 2rem 0;
+        margin: 1.9rem 0 2rem 0;
     }
 
     .contact-section .form-group {
@@ -446,6 +562,29 @@ input:-webkit-autofill {
 
     .contact-section button {
         margin: 0.4rem 0;
+    }
+
+
+
+
+    .popup-section .modal-dialog-centered {
+        width: 300px;
+    }
+
+    .popup-section .icon-success {
+        margin-top: -12px;
+        margin-bottom: -2px;
+        font-size: 45px;
+    }
+    
+    .popup-section .icon-error {
+        margin-top: -12px;
+        margin-bottom: -2px;
+        font-size: 45px;
+    }
+
+    .popup-section .modal-para {
+        font-size: 15px;
     }
 }
 

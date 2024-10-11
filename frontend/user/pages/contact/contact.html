@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="./contact.css" />
     <link rel="stylesheet" href="../../components/navbar/style.css" />
     <link rel="stylesheet" href="../../components/footer/footer.css" />
+    <link rel="stylesheet" href="../../pages/Contact/contact.css" />
 
     <title>Contact Us</title>
   </head>
@@ -55,15 +56,9 @@
                             <div class="form-group">
                               <div class="mb-4">
                                 <label for="exampleFormControlInput1" class="form-label">Email</label>
-                                <div class="input-group">
-                                  <input type="text" class="form-control" id="contactEmail" aria-describedby="inputGroupPrepend" required />
-                                  <span class="input-group-text" id="emailAddon">@gmail.com</span>
-                                  <div class="invalid-feedback" id="emailError">
-                                    Please enter a valid email address.
-                                  </div>
-                                  <div class="invalid-feedback" id="startWithNumberError" style="display: none;">
-                                    Username can not start with a number.
-                                  </div>
+                                <input type="email" class="form-control" id="contactEmail" placeholder="example@gmail.com" autocomplete="off" required />
+                                <div class="invalid-feedback">
+                                  Please enter a valid email address.
                                 </div>
                               </div>
                               <div class="mb-4 message">
@@ -90,7 +85,7 @@
                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.7760572894636!2d79.85245757475701!3d6.917355393082236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596b1c2ae5b1%3A0x872e9262f485d782!2sColombo%20City%20Centre%20Mall%20and%20Residences!5e0!3m2!1sen!2slk!4v1727332669867!5m2!1sen!2slk" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <div class="contact-info">
                           <p><i class="bi bi-geo-alt"></i>&nbsp; 8502 Prestone Rd, Inglewood, Sri Lanka</p>
-                          <p><i class="bi bi-envelope"></i>&nbsp; Oakly@gmail.com</p>
+                          <p><i class="bi bi-envelope"></i>&nbsp; oaklyweb@gmail.com</p>
                           <p><i class="bi bi-telephone"></i>&nbsp; (319) 555-0115</p>
                         </div>
                     </div>
@@ -98,6 +93,47 @@
             </div>
         </div>
     </section>
+
+    <section class="popup-section">
+        <!-- Success Modal -->
+        <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <i class="bi bi-check-circle icon-success"></i>
+                  </div>
+
+                  <div class="modal-para">
+                    <p>Your message has been sent successfully!</p>
+                  </div>
+
+                  <div class="modal-footer justify-content-center">
+                      <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <!-- Failure Modal -->
+        <div class="modal fade" id="failureModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <i class="bi bi-x-circle icon-error"></i>
+                    </div>
+
+                    <div class="modal-para">
+                        <p>Failed to send your message. Please try again.</p>
+                    </div>
+                    
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

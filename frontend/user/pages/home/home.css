@@ -9,7 +9,7 @@ body {
 }
 
 /* Hero Section */
-.bg-image {
+.hero-section .container-fuild {
     margin-top: 1.5rem;
     background-image: url(../../assets/home-img/hero-1.png);
     background-size: cover;
@@ -66,19 +66,16 @@ body {
     line-height: 7rem;
 }
 
-.hero-section .row .card {
-    margin-left: 23rem;
-    margin-top: 5.4rem;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 .hero-section .card {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: rgba(241, 255, 255, 0.5);
     width: 35rem;
     height: 10rem;
     text-align: center;
     color: black;
-    margin-top: 2rem;
+    left: 31.5%;
+    top: 69%;   
     border: none;
     border-radius: 3px;
 }
@@ -347,6 +344,11 @@ text-decoration: none;
     width: 99.2%;
 }
 
+.banner2-section a {
+    text-decoration: none;
+    color: black;
+}
+
 .banner2-section .card {
     border: none;
     width: 33.3%;
@@ -442,6 +444,10 @@ text-decoration: none;
     margin-top: 2rem;
 }
 
+.review-section a {
+    text-decoration: none;
+}
+
 .reviews {
     min-height: 200px;
     padding: 0;
@@ -528,6 +534,14 @@ text-decoration: none;
     width: 100%;
 }
 
+.reviewmoreBtn a{
+    color: #fff;
+}
+
+.reviewmoreBtn:hover{
+    background-color: black;
+}
+
 
 
 /*Add new review*/
@@ -565,8 +579,22 @@ text-decoration: none;
 
 
 /* Media Queries */
+@media screen and (min-width: 1441px) {
+    .hero-section .container-fuild {
+        height: 70vh;
+    }
+
+    .overlay {
+        height: 70vh;
+    }
+
+    .hero-section .card {
+        top: 69%;
+    }
+}
+
 @media only screen and (min-width: 1400px) and (max-width: 1440px) {
-    .bg-image {
+    .hero-section .container-fuild {
         height: 68vh;
     }
 
@@ -577,10 +605,6 @@ text-decoration: none;
     .hero-section .container h1{
         font-size: 4rem;
         letter-spacing: 1.5rem;
-    }
-
-    .hero-section .row .card {
-        margin-top: 5.6rem;
     }
 
     
@@ -663,7 +687,7 @@ text-decoration: none;
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1400px) {
-    .bg-image {
+    .hero-section .container-fuild {
         height: 65vh;
     }
 
@@ -675,11 +699,6 @@ text-decoration: none;
         font-size: 3.8rem;
         letter-spacing: 1.5rem;
         line-height: 8rem;
-    }
-
-    .hero-section .row .card {
-        margin-top: 2.2rem;
-        margin-left: 18rem;
     }
 
 
@@ -768,7 +787,7 @@ text-decoration: none;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1280px) {
-    .bg-image {
+    .hero-section .container-fuild {
         height: 65vh;
     }
 
@@ -782,7 +801,7 @@ text-decoration: none;
         line-height: 8rem;
     }
 
-    .hero-section .row .card {
+    .hero-section .card {
         display: none;
     }
 
@@ -895,7 +914,7 @@ text-decoration: none;
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
-    .bg-image {
+    .hero-section .container-fuild {
         height: 65vh;
     }
 
@@ -909,9 +928,10 @@ text-decoration: none;
         line-height: 7rem;
     }
 
-    .hero-section .row .card {
+    .hero-section .card {
         display: none;
     }
+
 
 
     .banner-section .row {
@@ -1024,7 +1044,7 @@ text-decoration: none;
 }
 
 @media only screen and (min-width:1000px) and (max-width: 1024px) {
-    .bg-image {
+    .hero-section .container-fuild {
         height: 64vh;
     }
 
@@ -1038,9 +1058,10 @@ text-decoration: none;
         line-height: 7rem;
     }
 
-    .hero-section .row .card {
+    .hero-section .card {
         display: none;
     }
+
 
 
     .banner-section .row {
@@ -1181,7 +1202,7 @@ text-decoration: none;
 
 
 @media only screen and (min-width: 990px) and (max-width: 1000px) {
-    .bg-image {
+    .hero-section .container-fuild {
         height: 64vh;
     }
 
@@ -1194,7 +1215,7 @@ text-decoration: none;
         letter-spacing: 1.3rem;
     }
 
-    .hero-section .row .card {
+    .hero-section .card {
         display: none;
     }
 
@@ -1345,7 +1366,7 @@ text-decoration: none;
 }
 
 @media only screen and (min-width: 900px) and (max-width: 990px) {
-    .bg-image {
+    .hero-section .container-fuild {
         height: 60vh;
     }
 
@@ -1358,7 +1379,7 @@ text-decoration: none;
         letter-spacing: 1.3rem;
     }
 
-    .hero-section .row .card {
+    .hero-section .card {
         display: none;
     }
 
@@ -1569,7 +1590,7 @@ text-decoration: none;
 }
 
 @media only screen and (min-width: 767px) and (max-width: 900px) {
-    .bg-image {
+    .hero-section .container-fuild {
         height: 58vh;
     }
 
@@ -1582,7 +1603,7 @@ text-decoration: none;
         letter-spacing: 1.3rem;
     }
 
-    .hero-section .row .card {
+    .hero-section .card {
         display: none;
     }
 
@@ -1797,7 +1818,7 @@ text-decoration: none;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
-    .bg-image {
+    .hero-section .container-fuild {
         height: 50vh;
     }
 
@@ -1811,7 +1832,7 @@ text-decoration: none;
         line-height: 6rem;
     }
 
-    .hero-section .row .card {
+    .hero-section .card {
         display: none;
     }
 
@@ -2127,7 +2148,7 @@ text-decoration: none;
         margin-top: 85px;
     }
 
-    .bg-image {
+    .hero-section .container-fuild {
         height: 40vh;
         margin-top: -4rem;
     }
@@ -2142,7 +2163,7 @@ text-decoration: none;
         line-height: 4.5rem;
     }
 
-    .hero-section .row .card {
+    .hero-section .card {
         display: none;
     }
 
@@ -2373,7 +2394,7 @@ text-decoration: none;
         margin-top: 85px;
     }
 
-    .bg-image {
+    .hero-section .container-fuild {
         margin-top: -4rem;
         height: 40vh;
     }
@@ -2388,7 +2409,7 @@ text-decoration: none;
         line-height: 4rem;
     }
 
-    .hero-section .row .card {
+    .hero-section .card {
         display: none;
     }
 
@@ -2626,7 +2647,7 @@ text-decoration: none;
         margin-top: 75px;
     }
 
-    .bg-image {
+    .hero-section .container-fuild {
         height: 35vh;
         margin-top: -4rem;
     }
@@ -2641,7 +2662,7 @@ text-decoration: none;
         line-height: 3.5rem;
     }
 
-    .hero-section .row .card {
+    .hero-section .card {
         display: none;
     }
 
@@ -2898,7 +2919,7 @@ text-decoration: none;
         margin-top: 54px;
     }
 
-    .bg-image {
+    .hero-section .container-fuild {
         height: 30vh;
         margin-top: -3rem;
     }
@@ -2913,7 +2934,7 @@ text-decoration: none;
         line-height: 3rem;
     }
 
-    .hero-section .row .card {
+    .hero-section .card {
         display: none;
     }
 
