@@ -63,7 +63,7 @@ class LoginForm extends HTMLElement {
                             <div class="form-group mt-4">
                                 <div class="row d-flex">
                                     <div class="col-7">
-                                        <p class="mutedText">Don't have an account?</p>
+                                        <p class="small-text">Don't have an account?</p>
                                     </div>
                                     <div class="col-5">
                                         <button type="button" class="btn btn-createAcc shadow-lg btn-dark ms-auto" data-bs-toggle="modal" data-bs-target="#createAccount">Create Account</button>

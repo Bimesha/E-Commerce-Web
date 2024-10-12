@@ -81,7 +81,7 @@ class RegistrationForm extends HTMLElement {
                             <!-- Already have an account? -->
                             <div class="form-group mt-4">
                                 <div class="d-flex">
-                                    <p class="text-muted">Already have an account?</p><button type="button" class="btn btn-log shadow-lg btn-dark ms-auto" data-bs-toggle="modal" data-bs-target="#login">Log In</button>
+                                    <p class="small-text">Already have an account?</p><button type="button" class="btn btn-log shadow-lg btn-dark ms-auto" data-bs-toggle="modal" data-bs-target="#login">Log In</button>
                                 </div>
                             </div>  
                         </form>
