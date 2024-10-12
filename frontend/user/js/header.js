@@ -43,9 +43,9 @@ class SpecialHeader extends HTMLElement {
                         <li class="nav-link"><a href="../html/home.html">Home</a></li>
                         <li class="nav-link"><a href="#" onClick="toggleProductsDropdown()" id="products">Shop <i class="bi bi-chevron-down"></i></a>
                             <ul id="products-dropdown" style="display:none;">
-                                <li id="chair-link"><a href="#">Chair Collection</a></li>
-                                <li id="table-link"><a href="#">Table Collection</a></li>
-                                <li id="sofa-link"><a href="#">Sofa Collection</a></li>
+                                <li id="chair-link"><a href="../../pages/Product/product.html#chair">Chair Collection</a></li>
+                                <li id="table-link"><a href="../../pages/Product/product.html#table">Table Collection</a></li>
+                                <li id="sofa-link"><a href="../../pages/Product/product.html#sofa">Sofa Collection</a></li>
                             </ul>
                         </li>
                         <li class="nav-link"><a href="../html/story.html">Our Story</a></li>
