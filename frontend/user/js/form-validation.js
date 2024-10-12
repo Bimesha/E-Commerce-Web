@@ -144,6 +144,20 @@ function validateField(field) {
 
             // Show success modal when account is created successfully
             regSuccessModal.show();
+
+            // After the success modal is closed, close the registration modal and reload the page
+            regSuccessModal._element.addEventListener('hidden.bs.modal', function () {
+              // Close the registration form modal
+              const registrationModal = document.getElementById('registrationModal'); // Replace with the correct ID
+              const bootstrapModal = bootstrap.Modal.getInstance(registrationModal);
+              if (bootstrapModal) {
+                bootstrapModal.hide();
+
+              }
+              // Redirect to the current page to refresh it
+              window.location.reload();
+            });
+
               }
 
       } catch (err) {
