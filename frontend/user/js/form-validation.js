@@ -134,9 +134,18 @@ function validateField(field) {
       } else {
           const result = await response.json();
           console.log(result);
+            // Reset the form and validation states after a slight delay
+            setTimeout(() => {
+              form.reset();
+              for (let input of form.elements) {
+                input.classList.remove("is-valid", "is-invalid");
+              }
+            }, 100); // 100ms delay to ensure reset happens after modal actions
+
             // Show success modal when account is created successfully
             regSuccessModal.show();
-        }
+              }
+
       } catch (err) {
         console.error('Error submitting form:', err.message);
         // Show failure modal with the error message
