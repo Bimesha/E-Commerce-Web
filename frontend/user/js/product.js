@@ -2,21 +2,21 @@ const categories = {
     chair:{
         title: "CHAIR COLLECTION",
         description: "hvghvhv hvuvgkjvhgjbvhjvghv hgv ghvkv bggvbyuvbghu ugvuigv",
-        image1: "../../assets/product img/Chair collection.png",
-        image2: "../../assets/product img/Product1.png"
+        image1: "../assets/product-img/chair-collection.png",
+        image2: "../assets/product-img/product1.png"
 
     },
     table:{
         title: "TABLE COLLECTION",
         description: "hvghvhv hvuvgkjvhgjbvhjvghv hgv ghvkv bggvbyuvbghu ugvuigv",
-        image1: "../../assets/product img/Table collection.png",
-        image2: "../../assets/product img/Product1.png"
+        image1: "../assets/product-img/table-collection.png",
+        image2: "../assets/product-img/product1.png"
     },
     sofa:{
         title: "SOFA COLLECTION",
         description: "hvghvhv hvuvgkjvhgjbvhjvghv hgv ghvkv bggvbyuvbghu ugvuigv",
-        image1: "../../assets/product img/Sofa collection.png",
-        image2: "../../assets/product img/Product1.png"
+        image1: "../assets/product-img/sofa-collection.png",
+        image2: "../assets/product-img/product1.png"
     }
 };
 
@@ -31,7 +31,7 @@ function updateProductPage(){
         document.getElementById('product-image2').src = product.image2;
     } else {
         document.getElementById('product-page').textContent = product.chair.title;
-        document.getElementById('productPage-image').src= "../../assets/product img/Chair collection.png";
+        document.getElementById('productPage-image').src= "../assets/product-img/chair-collection.png";
         
         document.getElementById('product-image2').src = product.image2;
     }
