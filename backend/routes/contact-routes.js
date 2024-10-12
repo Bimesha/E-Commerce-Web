@@ -1,7 +1,7 @@
 // routes/contactRoutes.js
 const express = require('express');
 const { check } = require('express-validator');
-const { sendContactMessage } = require('../controllers/contactController');
+const { sendContactMessage } = require('../controllers/contact-controller');
 const router = express.Router();
 
 // Route to handle contact form submission

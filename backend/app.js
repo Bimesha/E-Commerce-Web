@@ -1,10 +1,10 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const userRoutes = require("./routes/userRoutes");
-const contactRoutes = require('./routes/contactRoutes');
-const errorHandler = require("./middleware/errorHandler");
-const { authenticateUser, authorizeAdmin } = require('./middleware/authMiddleware');
+const userRoutes = require("./routes/user-routes");
+const contactRoutes = require('./routes/contact-routes');
+const errorHandler = require("./middleware/error-handler");
+const { authenticateUser, authorizeAdmin } = require('./middleware/auth-middleware');
 
 
 dotenv.config();
