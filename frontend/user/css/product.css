@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.product-container{
+    text-align: center;
+}
+
+h1{
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    color: white;
+}
+
+p{
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    color: white;
+    padding: 1rem;  
+}
+
+.image2{
+    max-width: 500px;
+    height: auto;
+    padding-right: 10px;
+}
+
