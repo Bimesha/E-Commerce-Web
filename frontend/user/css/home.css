@@ -594,7 +594,19 @@ text-decoration: none;
     }
 
     .hero-section .card {
-        top: 69%;
+        top: 70%;
+    }
+
+
+
+
+    .card-body1 button.btn-primary {
+        width: 30%;
+    }
+
+    .card-body3 button.btn-primary {
+        margin-top: 1.1rem;
+        width: 38%;
     }
 }
 
@@ -654,13 +666,13 @@ text-decoration: none;
         width: 33.33%;
     }
 
-    .card-body1 .btn-primary {
+    .card-body1 button.btn-primary {
         width: 30%;
     }
 
-    .card-body3 .btn-primary {
+    .card-body3 button.btn-primary {
         margin-top: 1.1rem;
-        width: 40%;
+        width: 38%;
     }
 
 
@@ -753,19 +765,25 @@ text-decoration: none;
         padding: 60px 0px 30px 55px;
     }
 
-    .card-body1 .btn-primary {
+    .card-body1 button.btn-primary {
         width: 30%;
     }
 
-    .card-body3 .btn-primary {
+    .card-body3 button.btn-primary {
         margin-top: 1.1rem;
         width: 42%;
     }
+
+
+
 
     .reviews .carousel-item{
         width: 100%;
         height: 220px;
     }
+
+
+
 
     .slid-section .d-flex{
         margin-left: 0.8rem;
@@ -869,12 +887,12 @@ text-decoration: none;
         font-size: 2.4rem;
     }
 
-    .card-body1 .btn-primary {
+    .card-body1 button.btn-primary {
         width: 30%;
     }
 
-    .card-body3 .btn-primary {
-        margin-top: 1.4rem;
+    .card-body3 button.btn-primary {
+        margin-top: 1.5rem;
         width: 45%;
     }
 
@@ -918,7 +936,7 @@ text-decoration: none;
     }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+@media only screen and (min-width: 1024.98px) and (max-width: 1200px) {
     .hero-section .container-fuild {
         height: 65vh;
     }
@@ -1001,11 +1019,11 @@ text-decoration: none;
         font-size: 2.1rem;
     }
 
-    .card-body1 .btn-primary {
+    .card-body1 button.btn-primary {
         width: 35%;
     }
 
-    .card-body3 .btn-primary {
+    .card-body3 button.btn-primary {
         margin-top: 2.2rem;
         width: 52%;
     }
@@ -1048,7 +1066,7 @@ text-decoration: none;
     }
 }
 
-@media only screen and (min-width:1000px) and (max-width: 1024px) {
+@media only screen and (min-width:1000px) and (max-width: 1024.98px) {
     .hero-section .container-fuild {
         height: 64vh;
     }
@@ -1139,12 +1157,12 @@ text-decoration: none;
         font-size: 0.8rem;
     }
 
-    .card-body1 .btn-primary {
+    .card-body1 button.btn-primary {
         width: 38%;
         margin-bottom: 15px;
     }
 
-    .card-body3 .btn-primary {
+    .card-body3 button.btn-primary {
         margin-top: 2.5rem;
         width: 52%;
     }
@@ -1305,12 +1323,12 @@ text-decoration: none;
         font-size: 0.8rem;
     }
 
-    .card-body1 .btn-primary {
+    .card-body1 button.btn-primary {
         width: 38%;
     }
 
-    .card-body3 .btn-primary {
-        margin-top: 0.4rem;
+    .card-body3 button.btn-primary {
+        margin-top: 0.5rem;
         width: 54%;
     }
 
@@ -1471,11 +1489,11 @@ text-decoration: none;
         font-size: 0.8rem;
     }
 
-    .card-body1 .btn-primary {
+    .card-body1 button.btn-primary {
         width: 42%;
     }
 
-    .card-body3 .btn-primary {
+    .card-body3 button.btn-primary {
         margin-left: 4rem;
         margin-top: -0.3rem;
         width: 58%;
@@ -1698,18 +1716,18 @@ text-decoration: none;
         font-size: 12px;
     }
 
-    .card-body1 .btn-primary {
+    .card-body1 button.btn-primary {
         font-size: 0.9rem;
         margin-left: 4rem;
-        width: 48%;
+        width: 45%;
     }
 
-    .card-body3 .btn-primary {
+    .card-body3 button.btn-primary {
         font-size: 0.9rem;
         margin-top: -0.5rem;
         margin-left: 2.5rem;
         padding: 13px 0px;
-        width: 65%;
+        width: 60%;
     }
 
     .card-body3 .title {
@@ -1930,13 +1948,13 @@ text-decoration: none;
         display: none;
     }
 
-    .card-body1 .btn-primary {
+    .card-body1 button.btn-primary {
         font-size: 0.9rem;
         margin-left: 3rem;
         width: 58%;
     }
 
-    .card-body3 .btn-primary {
+    .card-body3 button.btn-primary {
         font-size: 0.9rem;
         margin-top: -0.7rem;
         padding: 12px 10px;
@@ -2243,7 +2261,7 @@ text-decoration: none;
         margin-bottom: 2rem;
         display: block !important;
         width: 100.8%;
-        height: 40vh;
+        height: 38vh;
         background-color: black;
         position: relative;
         z-index: -1;
@@ -2258,15 +2276,15 @@ text-decoration: none;
         font-size: 1.6rem;
         font-weight: 500;
         color: #fff;
-        padding-top: 2rem;
+        padding-top: 2.5rem;
         line-height: 3.2rem;
         letter-spacing: 1.5px;
     }
 
-    .content .btn-primary {
+    .content button.btn-primary {
         width: 28%;
-        margin-top: 1.5rem;
-        margin-left: -1rem;
+        margin-top: 2rem;
+        margin-left: 0rem;
     }
 
 
@@ -2500,14 +2518,14 @@ text-decoration: none;
         font-size: 1.3rem;
         font-weight: 500;
         color: #fff;
-        padding-top: 1.2rem;
+        padding-top: 2rem;
         line-height: 3rem;
         letter-spacing: 1.5px;
     }
 
-    .content .btn-primary {
-        margin-top: 1.5rem;
-        margin-left: -1rem;
+    .content button.btn-primary {
+        margin-top: 2rem;
+        margin-left: 0rem;
         width: 30%;
         font-size: 0.9rem;
     }
@@ -2755,14 +2773,14 @@ text-decoration: none;
         font-size: 1.1rem;
         font-weight: 500;
         color: #fff;
-        padding-top: 1.2rem;
+        padding-top: 2rem;
         line-height: 2.5rem;
         letter-spacing: 1.5px;
     }
 
-    .content .btn-primary {
-        margin-top: 1rem;
-        margin-left: -1rem;
+    .content button.btn-primary {
+        margin-top: 2rem;
+        margin-left: 0rem;
         width: 30%;
         padding: 8px 0px;
         font-size: 0.9rem;
@@ -3029,9 +3047,9 @@ text-decoration: none;
         letter-spacing: 1.5px;
     }
 
-    .content .btn-primary {
+    .content button.btn-primary {
         margin-top: 1rem;
-        margin-left: -1rem;
+        margin-left: 0rem;
         width: 30%;
         padding: 8px 0px;
         font-size: 0.9rem;
