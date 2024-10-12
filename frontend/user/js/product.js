@@ -3,20 +3,20 @@ const categories = {
         title: "CHAIR COLLECTION",
         description: "hvghvhv hvuvgkjvhgjbvhjvghv hgv ghvkv bggvbyuvbghu ugvuigv",
         image1: "../assets/product-img/chair-collection.png",
-        image2: "../assets/product-img/product1.png"
+        image2: "../assets/product-img/product-1.png"
 
     },
     table:{
         title: "TABLE COLLECTION",
         description: "hvghvhv hvuvgkjvhgjbvhjvghv hgv ghvkv bggvbyuvbghu ugvuigv",
         image1: "../assets/product-img/table-collection.png",
-        image2: "../assets/product-img/product1.png"
+        image2: "../assets/product-img/product-1.png"
     },
     sofa:{
         title: "SOFA COLLECTION",
         description: "hvghvhv hvuvgkjvhgjbvhjvghv hgv ghvkv bggvbyuvbghu ugvuigv",
         image1: "../assets/product-img/sofa-collection.png",
-        image2: "../assets/product-img/product1.png"
+        image2: "../assets/product-img/product-1.png"
     }
 };
 
