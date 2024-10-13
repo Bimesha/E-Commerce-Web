@@ -77,6 +77,46 @@ class LoginForm extends HTMLElement {
                 </div>
             </div>
         </div>
+
+        <section class="popup-section">
+        <!-- Success Modal -->
+        <div class="modal fade" id="loginSuccessModal" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <i class="bi bi-check-circle icon-success"></i>
+                  </div>
+
+                  <div class="modal-para">
+                    <p>Account created successfully!</p>
+                  </div>
+
+                  <div class="modal-footer justify-content-center">
+                      <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <!-- Failure Modal -->
+        <div class="modal fade" id="loginFailureModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <i class="bi bi-x-circle icon-error"></i>
+                    </div>
+
+                    <div class="modal-para">
+                        <p id="regFailureMsg">Login Failed! Please try again.</p>
+                    </div>
+                    
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
         `;
     }
 }
@@ -155,4 +195,7 @@ document.getElementById('login').addEventListener('hide.bs.modal', function () {
     document.querySelector('.box').classList.remove('changemenu-background');
 });
 
+
+const loginSuccessModal = new bootstrap.Modal(document.getElementById('loginSuccessModal'));
+const loginFailureModal = new bootstrap.Modal(document.getElementById('loginFailureModal'));
   
