@@ -120,7 +120,7 @@ class RegistrationForm extends HTMLElement {
                     </div>
 
                     <div class="modal-para">
-                        <p>Registration Failed! Please try again.</p>
+                        <p id="regFailureMsg">Registration Failed! Please try again.</p>
                     </div>
                     
                     <div class="modal-footer justify-content-center">
