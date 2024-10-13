@@ -199,3 +199,13 @@ document.getElementById('login').addEventListener('hide.bs.modal', function () {
 const loginSuccessModal = new bootstrap.Modal(document.getElementById('loginSuccessModal'));
 const loginFailureModal = new bootstrap.Modal(document.getElementById('loginFailureModal'));
   
+// For failure modal background color change
+document.getElementById('loginFailureModal').addEventListener('show.bs.modal', function () {
+    document.querySelector('#login .modal-dialog').classList.add('form-dark-background');
+  });
+  
+  document.getElementById('loginFailureModal').addEventListener('hide.bs.modal', function () {
+    setTimeout(() => {
+      document.querySelector('#login .modal-dialog').classList.remove('form-dark-background');
+    }, 200);
+  });
