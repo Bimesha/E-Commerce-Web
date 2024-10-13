@@ -237,19 +237,46 @@ function validateField(field) {
 
             // Handle the response from the server
             if (response.ok) {
-                const result = await response.json();
-                console.log(result); // Handle successful login
+              const result = await response.json();
+              console.log(result); // Handle successful login
+            
+              // Show success modal
+              const loginSuccessModal = new bootstrap.Modal(document.getElementById('loginSuccessModal'));
+              loginSuccessModal.show();
+            
+              // Immediately close the login modal when the success modal is displayed
+              const loginModal = document.getElementById('login');
+              const bootstrapLoginModal = bootstrap.Modal.getInstance(loginModal);
+              if (bootstrapLoginModal) {
+                bootstrapLoginModal.hide();
+              }
 
-                // Redirect or perform actions on successful login
-                // window.location.href = '/dashboard'; // Example redirect
+              // Automatically fade out the success modal after seconds
+              setTimeout(() => {
+                loginSuccessModal.hide();
+              }, 1700);
+            
+              // After the success modal is closed, reload the page
+              loginSuccessModal._element.addEventListener('hidden.bs.modal', function () {
+                // Redirect to the current page to refresh it
+                window.location.reload();
+              });
+
             } else {
-                const error = await response.json();
-                // Handle errors, such as invalid credentials
-                alert(error.message || 'Login failed. Please try again.');
+                // Show failure modal with dynamic error message
+                const failureMessageElement = document.getElementById('regFailureMsg');
+                failureMessageElement.textContent = error.message || 'Login failed. Please try again.';
+                const failureModal = new bootstrap.Modal(document.getElementById('loginFailureModal'));
+                failureModal.show();
             }
         } catch (err) {
             console.error('Error during login:', err);
-            alert('An error occurred. Please try again later.');
+
+            // Show failure modal for any server error
+            const failureMessageElement = document.getElementById('regFailureMsg');
+            failureMessageElement.textContent = 'An error occurred. Please try again later.';
+            const failureModal = new bootstrap.Modal(document.getElementById('loginFailureModal'));
+            failureModal.show();
         }
       }
     });

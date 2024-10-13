@@ -88,7 +88,7 @@ class LoginForm extends HTMLElement {
                   </div>
 
                   <div class="modal-para">
-                    <p>Account created successfully!</p>
+                    <p>Login successfully!</p>
                   </div>
 
                   <div class="modal-footer justify-content-center">
