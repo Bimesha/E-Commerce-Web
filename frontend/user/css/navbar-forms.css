@@ -114,6 +114,48 @@ button.btn-warning, button.btn-dark {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
+/* Apply dark background and text color to entire modal after failure and success modal open*/
+.form-dark-background .modal-body{
+    background-color: rgba(21, 19, 19, 0.541) !important;
+    color: rgba(27, 25, 25, 0.693) !important;
+    transition: background-color 0.3s ease;
+}
+
+.form-dark-background input,
+.form-dark-background .input-group-text {
+    background-color: rgba(26, 24, 24, 0.1) !important;
+    color: rgba(43, 40, 40, 0.559) !important;
+    border-color: rgba(45, 44, 44, 0.24) !important;
+}
+
+.form-dark-background input::placeholder {
+    color: rgba(128, 128, 128, 0.311) !important;
+}
+
+.form-dark-background .btn{
+    background-color: rgba(26, 25, 25, 0.382) !important;
+    color: rgba(30, 28, 28, 0.707) !important;
+    border-color: rgba(45, 44, 44, 0.24) !important;
+}
+
+.form-dark-background .close-btn{
+    background-color: rgba(26, 25, 25, 0.678) !important;
+    color: rgba(201, 196, 196, 0.781) !important;
+    border-color: rgba(45, 44, 44, 0.24) !important;
+}
+
+.form-dark-background .modal-title{
+    
+    color: rgba(214, 208, 208, 0.677) !important;
+    transition: background-color 0.3s ease;
+}
+
+.form-dark-background .modal-header {
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
+}
+  
 /* Invalid feedback */
 .invalid-feedback {
     display: none;
