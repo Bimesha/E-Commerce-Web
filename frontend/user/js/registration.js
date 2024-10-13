@@ -7,7 +7,7 @@ class RegistrationForm extends HTMLElement {
                 <div class="modal-content">
         
                     <!-- Header -->
-                    <div class="modal-header ">
+                    <div class="modal-header">
                         <h2 class="modal-title text-uppercase mt-2">Create An Account</h2>
                         <button type="button" class="btn btn-light close-btn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
                     </div>
@@ -210,5 +210,30 @@ document.getElementById('createAccount').addEventListener('hide.bs.modal', funct
     document.querySelector('#drop-down').classList.remove('changemenu-background');
 });
 
+
+
 const regSuccessModal = new bootstrap.Modal(document.getElementById('regSuccessModal'));
 const regFailureModal = new bootstrap.Modal(document.getElementById('regFailureModal'));
+
+// For failure modal background color change
+document.getElementById('regFailureModal').addEventListener('show.bs.modal', function () {
+    document.querySelector('#createAccount .modal-dialog').classList.add('form-dark-background');
+  });
+  
+  document.getElementById('regFailureModal').addEventListener('hide.bs.modal', function () {
+    setTimeout(() => {
+      document.querySelector('#createAccount .modal-dialog').classList.remove('form-dark-background');
+    }, 200);
+  });
+  
+  // For success modal background color change
+  document.getElementById('regSuccessModal').addEventListener('show.bs.modal', function () {
+    document.querySelector('#createAccount .modal-dialog').classList.add('form-dark-background');
+  });
+  
+  document.getElementById('regSuccessModal').addEventListener('hide.bs.modal', function () {
+    setTimeout(() => {
+      document.querySelector('#createAccount .modal-dialog').classList.remove('form-dark-background');
+    }, 200);
+  });
+
