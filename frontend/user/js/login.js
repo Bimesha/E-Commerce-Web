@@ -107,7 +107,7 @@ class LoginForm extends HTMLElement {
                     </div>
 
                     <div class="modal-para">
-                        <p id="regFailureMsg">Login Failed! Please try again.</p>
+                        <p id="loginFailureMsg">Login Failed! Please try again.</p>
                     </div>
                     
                     <div class="modal-footer justify-content-center">

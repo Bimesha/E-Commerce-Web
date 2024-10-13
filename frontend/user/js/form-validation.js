@@ -264,7 +264,7 @@ function validateField(field) {
 
             } else {
                 // Show failure modal with dynamic error message
-                const failureMessageElement = document.getElementById('regFailureMsg');
+                const failureMessageElement = document.getElementById('loginFailureMsg');
                 failureMessageElement.textContent = error.message || 'Login failed. Please try again.';
                 const failureModal = new bootstrap.Modal(document.getElementById('loginFailureModal'));
                 failureModal.show();
@@ -273,7 +273,7 @@ function validateField(field) {
             console.error('Error during login:', err);
 
             // Show failure modal for any server error
-            const failureMessageElement = document.getElementById('regFailureMsg');
+            const failureMessageElement = document.getElementById('loginFailureMsg');
             failureMessageElement.textContent = 'An error occurred. Please try again later.';
             const failureModal = new bootstrap.Modal(document.getElementById('loginFailureModal'));
             failureModal.show();
