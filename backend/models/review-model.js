@@ -2,19 +2,27 @@ const db = require('../config/db');
 
 // review model 
 const Review = {
-    addReview: (UserID,Comment, callback) => {
+    addReview: (userId,comment, callback) => {
         const query = 'INSERT INTO review (UserID, Comment) VALUES (?, ?)';
-        db.query(query, [UserID,Comment], (err,result)=> {
+        db.query(query, [userId,comment], (err,result)=> {
             if (err) return callback(err);
             callback(null, result);
         });
     },
 
-    getReviewsByUserId: (UserID, callback) => {
-        const query = 'INSERT INTO review WHERE UserID = ?';
-        db.query(query, [UserID], (err,result)=> {
+    getAllReviews: (callback) => {
+        const query = 'SELECT * FROM review';
+        db.query(query, (err,results)=> {
             if (err) return callback(err);
-            callback(null, result);
+            callback(null, results);
+        });
+    },
+
+    getReviewsByUserId: (userId, callback) => {
+        const query = 'SELECT * FROM review WHERE UserID = ?';
+        db.query(query, [userId], (err, results) => {
+          if (err) return callback(err);
+          callback(null, results);
         });
     }
 }
