@@ -110,37 +110,46 @@ function validateField(field) {
           const result = await response.json();
 
           // Check if the error is due to email already existing
-      if (result.error === 'Email already exists') {
-        const emailField = document.getElementById('email');
-        emailField.classList.add('is-invalid');
-        emailField.classList.remove('is-valid');
+          if (result.error === 'Email already exists. Please use a different email.') {
+              const emailField = document.getElementById('email');
+              emailField.classList.add('is-invalid');
+              emailField.classList.remove('is-valid');
 
-        // Display the error message below the email field
-        let errorElement = document.getElementById('emailError');
-        if (!errorElement) {
-          errorElement = document.createElement('div');
-          errorElement.id = 'emailError';
-          errorElement.className = 'invalid-feedback';
-          emailField.parentNode.appendChild(errorElement);
-        }
-        errorElement.textContent = 'Email already exists. Please use a different email.';
+              // Clear any existing error messages
+              const existingErrorElement = emailField.parentNode.querySelector('.invalid-feedback');
+              if (existingErrorElement) {
+                existingErrorElement.remove(); // Remove the existing feedback message
+              }
 
-        // Show failure modal with error message
-        regFailureModal.show();
-      } else {
-        // If some other error occurred
-        throw new Error(result.error || 'Unknown error');
-      }
+              // Create and display the new error message below the email field
+              const errorElement = document.createElement('div');
+              errorElement.id = 'emailError';
+              errorElement.className = 'invalid-feedback';
+              errorElement.textContent = result.error; // Use the error from the response
+              emailField.parentNode.appendChild(errorElement); // Append it below the email field
+
+              // Update the failure message in the modal
+              const failureMessageElement = document.getElementById('regFailureMsg');
+              failureMessageElement.textContent = result.error;
+              regFailureModal.show();
+
+              // Return early to prevent executing the success logic
+              return;
+          } else {
+            // If some other error occurred
+            throw new Error(result.error || 'Unknown error');
+          }
       } else {
           const result = await response.json();
           console.log(result);
+
             // Reset the form and validation states after a slight delay
             setTimeout(() => {
               form.reset();
               for (let input of form.elements) {
                 input.classList.remove("is-valid", "is-invalid");
               }
-            }, 100); // 100ms delay to ensure reset happens after modal actions
+            }, 100);
 
             // Show success modal when account is created successfully
             regSuccessModal.show();
@@ -148,20 +157,21 @@ function validateField(field) {
             // After the success modal is closed, close the registration modal and reload the page
             regSuccessModal._element.addEventListener('hidden.bs.modal', function () {
               // Close the registration form modal
-              const registrationModal = document.getElementById('registrationModal'); // Replace with the correct ID
+              const registrationModal = document.getElementById('createAccount');
               const bootstrapModal = bootstrap.Modal.getInstance(registrationModal);
               if (bootstrapModal) {
                 bootstrapModal.hide();
-
               }
               // Redirect to the current page to refresh it
               window.location.reload();
             });
-
-              }
-
+          }
       } catch (err) {
         console.error('Error submitting form:', err.message);
+        // Update the failure message in the modal
+        const failureMessageElement = document.getElementById('regFailureMsg');
+        failureMessageElement.textContent = 'An error occurred while processing your request. Please try again later.';
+
         // Show failure modal with the error message
         regFailureModal.show();
       }
@@ -227,19 +237,47 @@ function validateField(field) {
 
             // Handle the response from the server
             if (response.ok) {
-                const result = await response.json();
-                console.log(result); // Handle successful login
+              const result = await response.json();
+              console.log(result); // Handle successful login
+            
+              // Show success modal
+              const loginSuccessModal = new bootstrap.Modal(document.getElementById('loginSuccessModal'));
+              loginSuccessModal.show();
+            
+              // Immediately close the login modal when the success modal is displayed
+              const loginModal = document.getElementById('login');
+              const bootstrapLoginModal = bootstrap.Modal.getInstance(loginModal);
+              if (bootstrapLoginModal) {
+                bootstrapLoginModal.hide();
+              }
 
-                // Redirect or perform actions on successful login
-                // window.location.href = '/dashboard'; // Example redirect
+              // Automatically fade out the success modal after seconds
+              setTimeout(() => {
+                loginSuccessModal.hide();
+              }, 1700);
+            
+              // After the success modal is closed, reload the page
+              loginSuccessModal._element.addEventListener('hidden.bs.modal', function () {
+                // Redirect to the current page to refresh it
+                window.location.reload();
+              });
+
             } else {
+                // Fetch the error message from the response
                 const error = await response.json();
-                // Handle errors, such as invalid credentials
-                alert(error.message || 'Login failed. Please try again.');
+
+                // Show failure modal with the error message
+                const failureMessageElement = document.getElementById('loginFailureMsg');
+                failureMessageElement.textContent = error.message || 'Login failed. Please try again.';
+                loginFailureModal.show();
             }
         } catch (err) {
             console.error('Error during login:', err);
-            alert('An error occurred. Please try again later.');
+
+            // Show failure modal for any server error
+            const failureMessageElement = document.getElementById('loginFailureMsg');
+            failureMessageElement.textContent = 'An error occurred. Please try again later.';
+            loginFailureModal.show();
         }
       }
     });
