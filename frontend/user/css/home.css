@@ -447,6 +447,7 @@ text-decoration: none;
 /*review section*/
 .review-section {
     margin-top: 2rem;
+    position: relative;
 }
 
 .review-section a {
@@ -464,10 +465,12 @@ text-decoration: none;
 }
 
 .reviews .carousel-indicators button{
+    position: relative;
     width: 8px !important;
     height: 8.5px !important;
     border-radius: 50%;
     border: 1px solid !important;
+    z-index: 0;
 }
 
 .reviews .carousel-indicators .active{
