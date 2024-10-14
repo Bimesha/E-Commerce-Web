@@ -5,6 +5,7 @@ const userRoutes = require("./routes/user-routes");
 const contactRoutes = require('./routes/contact-routes');
 const errorHandler = require("./middleware/error-handler");
 const { authenticateUser, authorizeAdmin } = require('./middleware/auth-middleware');
+const reviewRoutes = require('./routes/review-routes');
 
 
 dotenv.config();
@@ -29,11 +30,14 @@ app.get('/api/home', authenticateUser, (req, res) => {
   res.json({ message: 'Welcome to your home page!', user: req.user });
 });
 
+// Error handler middleware
+app.use(errorHandler);
+
 // Use the contact routes
 app.use('/api', contactRoutes);
 
-// Error handler middleware
-app.use(errorHandler);
+// Add this after other route imports
+app.use('/reviews', reviewRoutes);
 
 
 const PORT = process.env.PORT || 5500;
