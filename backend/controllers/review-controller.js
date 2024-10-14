@@ -17,4 +17,12 @@ exports.addReview = (req, res) => {
     });    
 }
 
-//get all 
+//get all reviews
+exports.getAllReviews = (req, res) => {
+    Review.getAll((err, results) => {
+        if (err) {
+          return res.status(500).json({ error: 'Failed to fetch reviews.' });
+        }
+        res.json(results);
+    });
+} 
