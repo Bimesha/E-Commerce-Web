@@ -102,6 +102,11 @@
     width: 30%;
 }
 
+#forgotPasswordLink {
+    color: black;
+    font-size: .8rem;
+}
+
 .btn-createAcc{
     width: 100%;
 }

@@ -48,7 +48,7 @@ class LoginForm extends HTMLElement {
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col mb-2 text-end">
-                                        <a href="#" class="text-muted">Forgot Password?</a>
+                                        <a href="#" id="forgotPasswordLink">Forgot Password?</a>
                                     </div>
                                 </div>
                             </div>
