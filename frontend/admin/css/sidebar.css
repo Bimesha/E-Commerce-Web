@@ -1,0 +1,23 @@
+.admin-home {
+    display: flex;
+    margin-top: 10px;
+}
+  
+.sidebar-container {
+    width: 250px;
+}
+  
+.content-section {
+    background-color: aqua;
+    width: 100%;
+}
+  
+  
+  
+  
+/* Media Queries */
+@media screen and (max-width: 600px) {
+    .sidebar-container {
+      display: none;
+    }
+}
