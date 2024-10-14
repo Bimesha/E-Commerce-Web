@@ -5,7 +5,7 @@
 }
 
 .header-container {
-    padding: 0 100px;
+    padding: 0 100px 0 0;
 }
 
 .header-container a {
@@ -77,11 +77,26 @@
     }
 
     .header-container ul {
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     .header-container ul li {
         margin-right: -25px;
+    }
+
+    .header-container .mobile-logo {
+        display: block !important;
+        margin-top: -15px;
+    }
+
+    .header-container img {
+        width: 200px;
+        height: 120px;
+        margin-left: -85px;
+    }
+
+    .header-container .justify-content-end {
+        margin-top: -105px;
     }
 
     .header-container li .bi-search {
@@ -97,6 +112,20 @@
     .header-container li .bi-person {
         font-size: 22px;
         padding: 2px 5.5px;
+    }
+
+    .header-container #list {
+        display: block !important;
+        margin-top: 10px;
+    }
+
+    .header-container .bi-list {
+        font-size: 20px;
+        padding: 3.5px 7px;
+        border-radius: 20%;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-left: 20px;
     }
 }
 
