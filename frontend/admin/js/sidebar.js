@@ -5,8 +5,10 @@ class SpecialSidebar extends HTMLElement {
                 <div class="sidebar-logo">
                     <img src="../assets/sidebar-img/logo.png" alt="Logo" />
                 </div>
-                <div id="sidebar" class="bg-dark text-white p-3">
-                    <h4>My Sidebar</h4>
+                <div id="sidebar" class="bg-dark text-white text-center">
+                    <div class="sidebar-image">
+                        <img src="../assets/sidebar-img/man.avif" alt="User" />
+                    </div>
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#">Home</a>
