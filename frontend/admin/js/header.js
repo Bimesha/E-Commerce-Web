@@ -18,7 +18,7 @@ class SpecialHeader extends HTMLElement {
                             </li>
                             <li id="list" style="display: none"><i class="bi bi-list" onClick="toggleMenu()"></i>
                                 <ul id="drop-down" style="display: none">
-                                    <li id="home-link"><a href="../html/index.html">Dashboard</a></li>
+                                    <li id="home-link"><a href="#">Dashboard</a></li>
                                     <li id="products-link"><a href="#">Products</a></li>
                                     <li id="orders-link"><a href="#">Orders</a></li>
                                     <li id="customers-link"><a href="#">Customers</a></li>

@@ -1,23 +1,22 @@
 .admin-home {
     display: flex;
     margin-top: 10px;
-}
+  }
   
-.sidebar-container {
+  .sidebar-container {
     width: 250px;
-}
+  }
   
-.content-section {
-    background-color: aqua;
+  .content-section {
     width: 100%;
-}
+  }
   
   
   
   
-/* Media Queries */
-@media screen and (max-width: 600px) {
+  /* Media Queries */
+  @media screen and (max-width: 600px) {
     .sidebar-container {
       display: none;
     }
-}
+  }
