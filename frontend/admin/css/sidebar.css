@@ -17,7 +17,7 @@
   
   #sidebar {
     margin-top: -80px;
-    height: 450px;
+    height: 480px;
     border-radius: 0 5px 5px 0;
   }
   
@@ -42,6 +42,7 @@
   
   #sidebar .nav {
     margin-top: 20px;
+    text-align: left;
   }
   
   #sidebar .nav-item a {
@@ -51,6 +52,16 @@
     color: #fff;
     border: 1px solid  rgb(190, 188, 188);
     border-radius: 10px;
+  }
+  
+  #sidebar .nav-item i {
+    margin-right: 15px;
+    font-size: 20px;
+  }
+  
+  #sidebar .nav-item a:hover, #sidebar .nav-item i:hover {
+    background-color: #FFBA35;
+    color: black;
   }
   
   

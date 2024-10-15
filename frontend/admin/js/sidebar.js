@@ -16,22 +16,22 @@ class SpecialSidebar extends HTMLElement {
                     </div>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Dashboard</a>
+                            <a class="nav-link" href="../html/index.html"><i class="bi bi-house-door"></i>Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Products</a>
+                            <a class="nav-link" href="#"><i class="bi bi-bag-dash"></i>Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Orders</a>
+                            <a class="nav-link" href="#"><i class="bi bi-truck"></i>Orders</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Customers</a>
+                            <a class="nav-link" href="#"><i class="bi bi-people"></i>Customers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Reviews</a>
+                            <a class="nav-link" href="#"><i class="bi bi-quote"></i>Reviews</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Profile</a>
+                            <a class="nav-link" href="#"><i class="bi bi-person"></i>Profile</a>
                         </li>
                     </ul>
                 </div>
