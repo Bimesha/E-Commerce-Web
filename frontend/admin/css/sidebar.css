@@ -68,6 +68,49 @@
   
   
   /* Media Queries */
+  @media screen and (max-width: 767px) {
+    .sidebar-container {
+      width: 200px;
+    }
+  
+    .sidebar-logo img {
+      width: 250px;
+      height: 150px;
+      margin-top: -28px;
+      margin-left: -25px;
+    }
+  
+    #sidebar {
+      margin-top: -68px;
+      height: 400px;
+    }
+  
+    .sidebar-header {
+      gap: 15px;
+      padding-top: 10px;
+    }
+  
+    .sidebar-image img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .sidebar-title h4 {
+      margin-top: 6px;
+      font-size: 20px;
+    }
+  
+    #sidebar .nav-item a {
+      margin:  0 25px;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  
+    #sidebar .nav-item i {
+      font-size: 17px;
+      margin-right: 10px;
+    }
+  }
   @media screen and (max-width: 600px) {
     .sidebar-container {
       display: none;
