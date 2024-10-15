@@ -19,7 +19,7 @@ class SpecialSidebar extends HTMLElement {
                             <a class="nav-link" href="../html/index.html"><i class="bi bi-house-door"></i>Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="bi bi-bag-dash"></i>Products</a>
+                            <a class="nav-link" href="../html/products.html"><i class="bi bi-bag-dash"></i>Products</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="bi bi-truck"></i>Orders</a>
