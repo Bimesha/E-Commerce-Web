@@ -1,22 +1,30 @@
-.admin-home {
-    display: flex;
-    margin-top: 10px;
-  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
   
-  .sidebar-container {
+.sidebar-container {
     width: 250px;
-  }
+}
   
-  .content-section {
-    width: 100%;
-  }
+.sidebar-logo {
+  background-color: royalblue;
+}
+  
+.sidebar-logo img {
+    width: 280px;
+    height: 180px;
+    margin-top: -35px;
+    margin-left: -20px;
+ }
   
   
   
   
-  /* Media Queries */
-  @media screen and (max-width: 600px) {
+/* Media Queries */
+@media screen and (max-width: 600px) {
     .sidebar-container {
       display: none;
     }
-  }
+}
