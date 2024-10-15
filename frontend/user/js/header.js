@@ -25,7 +25,7 @@ class SpecialHeader extends HTMLElement {
                         <div id="search1" style="display: none"><i class="bi bi-search"></i></div>
                         <div id="list" style="display: none"><i class="bi bi-list" onClick="toggleSearchmenu()"></i></div>
                             <ul id="drop-down-list" style="display: none">
-                                <li id="home-link"><a href="../html/home.html">Home</a></li>
+                                <li id="home-link"><a href="../html/index.html">Home</a></li>
                                 <li id="chair-link"><a href="#">Chair Collection</a></li>
                                 <li id="table-link"><a href="#">Table Collection</a></li>
                                 <li id="sofa-link"><a href="#">Sofa Collection</a></li>
@@ -40,12 +40,12 @@ class SpecialHeader extends HTMLElement {
                 <div class="header-menu">
                     <ul class="nav justify-content-center">
                         <li class="nav-link" id="list" style="display: none"><i class="bi bi-list"></i></li>
-                        <li class="nav-link"><a href="../html/home.html">Home</a></li>
+                        <li class="nav-link"><a href="../html/index.html">Home</a></li>
                         <li class="nav-link"><a href="#" onClick="toggleProductsDropdown()" id="products">Shop <i class="bi bi-chevron-down"></i></a>
                             <ul id="products-dropdown" style="display:none;">
-                                <li id="chair-link"><a href="../../pages/Product/product.html#chair">Chair Collection</a></li>
-                                <li id="table-link"><a href="../../pages/Product/product.html#table">Table Collection</a></li>
-                                <li id="sofa-link"><a href="../../pages/Product/product.html#sofa">Sofa Collection</a></li>
+                                <li id="chair-link"><a href="../html/product.html#chair">Chair Collection</a></li>
+                                <li id="table-link"><a href="../html/product.html#table">Table Collection</a></li>
+                                <li id="sofa-link"><a href="../html/product.html#sofa">Sofa Collection</a></li>
                             </ul>
                         </li>
                         <li class="nav-link"><a href="../html/story.html">Our Story</a></li>

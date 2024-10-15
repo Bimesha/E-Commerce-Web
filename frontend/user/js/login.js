@@ -45,10 +45,10 @@ class LoginForm extends HTMLElement {
 
 
                             <!-- Forgot Password Link -->
-                            <div class="form-group mutedText">
+                            <div class="form-group">
                                 <div class="row">
                                     <div class="col mb-2 text-end">
-                                        <a href="#" class="text-muted">Forgot Password?</a>
+                                        <a href="#" id="forgotPasswordLink">Forgot Password?</a>
                                     </div>
                                 </div>
                             </div>
@@ -63,7 +63,7 @@ class LoginForm extends HTMLElement {
                             <div class="form-group mt-4">
                                 <div class="row d-flex">
                                     <div class="col-7">
-                                        <p class="mutedText">Don't have an account?</p>
+                                        <p class="small-text">Don't have an account?</p>
                                     </div>
                                     <div class="col-5">
                                         <button type="button" class="btn btn-createAcc shadow-lg btn-dark ms-auto" data-bs-toggle="modal" data-bs-target="#createAccount">Create Account</button>
@@ -77,6 +77,46 @@ class LoginForm extends HTMLElement {
                 </div>
             </div>
         </div>
+
+        <section class="popup-section">
+        <!-- Success Modal -->
+        <div class="modal fade" id="loginSuccessModal" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <i class="bi bi-check-circle icon-success"></i>
+                  </div>
+
+                  <div class="modal-para">
+                    <p>Login successfully!</p>
+                  </div>
+
+                  <div class="modal-footer justify-content-center">
+                      <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <!-- Failure Modal -->
+        <div class="modal fade" id="loginFailureModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <i class="bi bi-x-circle icon-error"></i>
+                    </div>
+
+                    <div class="modal-para">
+                        <p id="loginFailureMsg">Login Failed! Please try again.</p>
+                    </div>
+                    
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
         `;
     }
 }
@@ -115,12 +155,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Change background color when the modal is shown
 document.getElementById('login').addEventListener('show.bs.modal', function () {
-    document.querySelector('header').classList.add('dark-background');
+    document.querySelector('.header-container').classList.add('dark-background');
 });
   
 // Revert background color when the modal is hidden
 document.getElementById('login').addEventListener('hide.bs.modal', function () {
-    document.querySelector('header').classList.remove('dark-background');
+    document.querySelector('.header-container').classList.remove('dark-background');
 });
   
 document.getElementById('login').addEventListener('show.bs.modal', function () {
@@ -155,4 +195,17 @@ document.getElementById('login').addEventListener('hide.bs.modal', function () {
     document.querySelector('.box').classList.remove('changemenu-background');
 });
 
+
+const loginSuccessModal = new bootstrap.Modal(document.getElementById('loginSuccessModal'));
+const loginFailureModal = new bootstrap.Modal(document.getElementById('loginFailureModal'));
   
+// For failure modal background color change
+document.getElementById('loginFailureModal').addEventListener('show.bs.modal', function () {
+    document.querySelector('#login .modal-dialog').classList.add('form-dark-background');
+  });
+  
+  document.getElementById('loginFailureModal').addEventListener('hide.bs.modal', function () {
+    setTimeout(() => {
+      document.querySelector('#login .modal-dialog').classList.remove('form-dark-background');
+    }, 200);
+  });
