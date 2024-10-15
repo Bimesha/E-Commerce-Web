@@ -8,16 +8,16 @@
     width: 250px;
 }
   
-.sidebar-logo {
-  background-color: royalblue;
-}
-  
 .sidebar-logo img {
     width: 280px;
     height: 180px;
     margin-top: -35px;
     margin-left: -20px;
- }
+}
+  
+#sidebar {
+    margin-top: -80px;
+}
   
   
   
