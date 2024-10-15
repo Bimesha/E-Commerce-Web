@@ -20,6 +20,11 @@ app.use(express.urlencoded({ extended: true }));
 // Register routes
 app.use("/api/users", userRoutes); 
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the e-commerce backend API!');
+});
+
+
 // Example protected route (Admin Dashboard)
 app.get('/api/admin/dashboard', authenticateUser, authorizeAdmin, (req, res) => {
   res.json({ message: 'Welcome to the admin dashboard!' });

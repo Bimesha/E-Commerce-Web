@@ -55,7 +55,7 @@ const loginUser = async (req, res) => {
     message: "Login successful",
     token: token,
     role: user.Role,  // Include role in response
-    user: { email: user.Email, name: user.FirstName } 
+    user: { userId: user.UserID, email: user.Email, name: user.FirstName } 
   });
 } catch (err) {
   console.error("Error logging in:", err);
