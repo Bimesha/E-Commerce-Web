@@ -19,6 +19,8 @@ body {
     margin-right: 150px;
 }
 
+
+/* Add New Product */
 .content-section .add-product {
     margin-top: 18px;
     display: flex;
@@ -45,4 +47,18 @@ body {
 .add-title p {
     font-size: 18px;
     font-weight: 500;
+}
+
+
+/* Table */
+.table {
+    text-align: center;
+}
+
+.table thead th {
+    background-color: black;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 12px 0;
 }
