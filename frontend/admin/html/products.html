@@ -50,7 +50,33 @@
             </div>
 
             <div class="content-section">
-                <h1>Welcome to the Products Page</h1>
+                <h1>PRODUCTS</h1>
+
+                <div class="add-product">
+                    <div class="add-title">
+                        <p>Add New Product</p>
+                    </div>
+                    <div class="add-icon">
+                        <i class="bi bi-plus"></i>
+                    </div>
+                </div>
+
+                <div class="my-5">
+                    <table class="table">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th>Product</th>
+                          <th>Category</th>
+                          <th>In Stock</th>
+                          <th>Price</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody id="productTable">
+                        <!-- Data will be dynamically loaded here -->
+                      </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
@@ -61,6 +87,7 @@
             crossorigin="anonymous"
         ></script>
 
-        <script src="../js/nav.js"></script>    
+        <script src="../js/nav.js"></script>   
+        <script src="../js/products.js"></script> 
     </body>
 </html>
