@@ -1,0 +1,8 @@
+INSERT INTO `Product` (`Name`, `Description`, `Price`, `Quantity`, `CategoryID`, `ImagePath`)
+VALUES ('Office Chair', 'Comfortable ergonomic office chair', 129.99, 50, 1, '/images/chair_01.jpg');
+
+INSERT INTO `Product` (`Name`, `Description`, `Price`, `Quantity`, `CategoryID`, `ImagePath`)
+VALUES ('Dining Table', 'Wooden dining table for 6 people', 349.99, 20, 2, '/images/table_01.jpg');
+
+INSERT INTO `Product` (`Name`, `Description`, `Price`, `Quantity`, `CategoryID`, `ImagePath`)
+VALUES ('Leather Sofa', 'Luxurious 3-seater leather sofa', 799.99, 10, 3, '/images/sofa_01.jpg');
