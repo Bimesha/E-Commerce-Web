@@ -56,7 +56,7 @@
                     <div class="add-title">
                         <p>Add New Product</p>
                     </div>
-                    <div class="add-icon">
+                    <div class="add-icon" data-bs-toggle="modal" data-bs-target="#addProductModal">
                         <i class="bi bi-plus"></i>
                     </div>
                 </div>
@@ -76,6 +76,58 @@
                         <!-- Data will be dynamically loaded here -->
                       </tbody>
                     </table>
+                </div>
+
+                <!-- Modal for Adding New Product -->
+                <div class="add-new-product">
+                    <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="addProductForm">
+                                        <div class="mb-3">
+                                            <label for="category" class="form-label">Category</label>
+                                            <select class="form-select" id="category" required>
+                                                <option value="" disabled selected>Select Category</option>
+                                                <option value="chair">Chair</option>
+                                                <option value="table">Table</option>
+                                                <option value="sofa">Sofa</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="productName" class="form-label">Product Name</label>
+                                            <input type="text" class="form-control" id="productName" placeholder="Enter product name" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="price" class="form-label">Price</label>
+                                            <input type="number" class="form-control" id="price" placeholder="Enter product price" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="quantity" class="form-label">Quantity</label>
+                                            <input type="number" class="form-control" id="quantity" placeholder="Enter product quantity" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="description" class="form-label">Product Description</label>
+                                            <textarea class="form-control" id="description" rows="3" placeholder="Enter product description"></textarea>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="productImage" class="form-label">Product Image</label>
+                                            <input type="file" class="form-control" id="productImage" required>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" id="clearForm">Clear</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Discard</button>
+                                    <button type="submit" class="btn btn-primary" form="addProductForm">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
