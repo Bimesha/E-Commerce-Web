@@ -25,10 +25,10 @@ function updateProductPage(){
     const product = categories[hash];
 
     if (product) {
-        document.getElementById('product-page').textContent = product.title;
-        document.getElementById('page-description').textContent = product.description;
-        document.getElementById('productPage-image').src = product.image1;
-        document.getElementById('product-image2').src = product.image2;
+        document.getElementById('productPage').textContent = product.title;
+        document.getElementById('pageDescription').textContent = product.description;
+        document.getElementById('productPageImage').src = product.image1;
+        document.getElementById('productImage2').src = product.image2;
     } else {
         
     }
