@@ -18,6 +18,10 @@ body {
     margin-left: 30px;
 }
 
+.content-section .first-analyze, .content-section .second-analyze {
+    width: 100%;
+}
+
 #summary1, #summary2 {
     margin: 10px 10px 10px;
 }
