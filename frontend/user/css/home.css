@@ -140,7 +140,7 @@ body {
     height: 180px;
     width: 100%;
     object-fit: cover;
-    padding-top: 30px;
+    margin: 10px 5px;
 }
 
 .slid-section .status-badge{
