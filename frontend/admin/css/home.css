@@ -417,7 +417,11 @@ body {
     }
 
     #summary1, #summary2 {
-        margin: 18px 5px 10px;
+        margin: 10px 10px 5px 10px;
+    }
+
+    #summary3, #summary4 {
+        margin: 15px 10px 5px 10px;
     }
 
     #summary1, #summary3 {
@@ -433,7 +437,7 @@ body {
     #chart {
         position: absolute;
         right: 70%;
-        left: 36.5%;
+        left: 30%;
         margin-top: 280px;
         display: inline-block;
         width: 450px;
