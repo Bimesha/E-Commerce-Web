@@ -95,3 +95,32 @@ body {
 #recent-order-table th, #top-selling-product-table th {
     font-weight: 400;
 }
+
+
+
+
+
+/* Media Queries */
+@media only screen and (min-width: 1400px) and (max-width: 1440px) {
+    #chart {
+        top: 18%;
+        right: 9%;
+    }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1400px) {
+    #chart {
+        width: 500px;
+        height: 260px;
+        top: 140px;
+        right: 10%;
+    }
+
+    #recent-order-table {
+        width: 540px;
+    }
+
+    #top-selling-product-table {
+        width: 300px;
+    }
+}
