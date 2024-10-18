@@ -1,20 +1,20 @@
 const categories = {
     chair:{
         title: "CHAIR COLLECTION",
-        description: "hvghvhv hvuvgkjvhgjbvhjvghv hgv ghvkv bggvbyuvbghu ugvuigv",
+        description: "Explore our stylish and comfortable chairs designed to complement any space",
         image1: "../assets/product-img/chair-collection.png",
         image2: "../assets/product-img/product-1.png"
 
     },
     table:{
         title: "TABLE COLLECTION",
-        description: "hvghvhv hvuvgkjvhgjbvhjvghv hgv ghvkv bggvbyuvbghu ugvuigv",
+        description: "Discover functional and elegant tables and add versatility and charm to your home or office",
         image1: "../assets/product-img/table-collection.png",
         image2: "../assets/product-img/product-1.png"
     },
     sofa:{
         title: "SOFA COLLECTION",
-        description: "hvghvhv hvuvgkjvhgjbvhjvghv hgv ghvkv bggvbyuvbghu ugvuigv",
+        description: "Browse through our luxurious sofas, perfect for relaxing and enhancing your living space",
         image1: "../assets/product-img/sofa-collection.png",
         image2: "../assets/product-img/product-1.png"
     }
@@ -30,12 +30,10 @@ function updateProductPage(){
         document.getElementById('productPage-image').src = product.image1;
         document.getElementById('product-image2').src = product.image2;
     } else {
-        document.getElementById('product-page').textContent = product.chair.title;
-        document.getElementById('productPage-image').src= "../assets/product-img/chair-collection.png";
         
-        document.getElementById('product-image2').src = product.image2;
     }
 }
+
 
 window.onload = updateProductPage;
 
