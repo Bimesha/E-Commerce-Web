@@ -1,28 +1,36 @@
-//handle adding reviews
 const Review = require('../models/review-model');
 
-//add a new review
-exports.addReview = (req, res) => {
-    const {userId,comment} = req.body;
+exports.addReview = async (req, res) => {
+    const { comment } = req.body;
+    const userId = req.user.userId; // Extracted from JWT token
 
-    if (!comment || comment.trim() === '') {
-        return res.status(400).json({ error: 'Review comment cannot be empty.' });
+    // Check if the comment is provided
+    if (!comment) {
+        return res.status(400).json({ message: 'Comment is required' });
     }
 
-    Review.addReview(userId, comment, (err, result) => {
-        if (err) {
-          return res.status(500).json({ error: 'Failed to add review' });
-        }
-        res.status(201).json({ message: 'Review added successfully' });
-    });    
-}
+    try {
+        // Add review to the database
+        const result = await Review.create(userId, comment);
 
-//get all reviews
-exports.getAllReviews = (req, res) => {
-    Review.getAll((err, results) => {
-        if (err) {
-          return res.status(500).json({ error: 'Failed to fetch reviews.' });
-        }
-        res.json(results);
-    });
-} 
+        // Send success response with the insertId
+        return res.status(201).json({ message: 'Review added successfully', reviewId: result.insertId });
+    } catch (err) {
+        console.error('Error adding review:', err);
+        return res.status(500).json({ message: 'Failed to add review', error: err });
+    }
+};
+
+// Function to get all reviews
+exports.getAllReviews = async (req, res) => {
+    try {
+        const reviews = await Review.findAll();
+        res.status(200).json(reviews);
+    } catch (err) {
+        console.error('Error fetching reviews:', err);
+        res.status(500).json({ message: 'Failed to fetch reviews' });
+    }
+};
+
+
+
