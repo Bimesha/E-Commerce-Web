@@ -650,3 +650,71 @@ body {
         margin-left: 10px;
     }
 }
+
+@media only screen and (min-width: 375px) and (max-width: 424.98px) {
+    .content-section {
+        margin-left: 0px;
+        margin-top: -5px;
+    }
+
+    .content-section h1 {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .content-section .first-analyze {
+        display: block;
+    }
+
+    #summary1, #summary2, #summary3, #summary4{
+        width: 150px;
+        height: 110px;
+        z-index: -1;
+    }
+
+    #summary1, #summary3{
+        margin-left: 40px;
+    }
+
+    .summary p {
+        font-size: 15px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    #chart {
+        position: absolute;
+        right: 70%;
+        left: 5%;
+        margin-top: 280px;
+        display: inline-block;
+        width: 340px;
+        height: 200px;
+    }
+
+    .content-section .recent-orders {
+        margin-top: 210px;
+        margin-left: 18px;
+    }
+
+    #recent-order-table {
+        width: 340px;
+    }
+
+    #recent-order-table th, #recent-order-table td, #top-selling-product-table th, #top-selling-product-table td {
+        font-size: 10px;
+    }
+
+    .content-section .selling-products {
+        margin-top: 20px;
+    }
+
+    .content-section .selling-products h3 {
+        margin-left: 20px;
+    }
+
+    #top-selling-product-table {
+        width: 250px;
+        margin-left: 20px;
+    }
+}
