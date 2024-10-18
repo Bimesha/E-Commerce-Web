@@ -234,3 +234,58 @@ body {
         width: 210px;
     }
 }
+
+@media only screen and (min-width: 1000px) and (max-width: 1024px) {
+    #summary1, #summary2, #summary3, #summary4 {
+        width: 120px;
+        height: 100px;
+        font-size: 12px;
+    }
+
+    #summary1, #summary2 {
+        margin: 10px 5px 10px;
+    }
+    
+    #summary3, #summary4 {
+        margin: 3px 5px 10px;
+    }
+
+    #summary1, #summary3 {
+        margin-left: 20px;
+    }
+
+    .summary h2 {
+        font-size: 1.5rem;
+    }
+
+    .summary p {
+        font-size: 13px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    #chart {
+        width: 410px;
+        height: 215px;
+        top: 138px;
+        right: 3.5%;
+    }
+
+    .content-section h3 {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .content-section .second-analyze {
+        gap: 0px;
+    }
+
+    #recent-order-table {
+        margin: 10px 5px 10px 0px;
+        width: 430px;
+    }
+
+    #top-selling-product-table {
+        width: 200px;
+    }
+}
