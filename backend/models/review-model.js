@@ -1,30 +1,28 @@
 const db = require('../config/db');
 
-// review model 
 const Review = {
-    addReview: (userId,comment, callback) => {
+
+    // Function to create a review
+    create: async (userId, comment) => {
         const query = 'INSERT INTO review (UserID, Comment) VALUES (?, ?)';
-        db.query(query, [userId,comment], (err,result)=> {
-            if (err) return callback(err);
-            callback(null, result);
-        });
+        // Destructure the first element of the result array which contains the actual result
+        const [result] = await db.query(query, [userId, comment]);
+        return result;  // Return the result which contains the insertId
     },
 
-    getAllReviews: (callback) => {
-        const query = 'SELECT * FROM review';
-        db.query(query, (err,results)=> {
-            if (err) return callback(err);
-            callback(null, results);
-        });
-    },
-
-    getReviewsByUserId: (userId, callback) => {
-        const query = 'SELECT * FROM review WHERE UserID = ?';
-        db.query(query, [userId], (err, results) => {
-          if (err) return callback(err);
-          callback(null, results);
-        });
+    // Function to get all reviews
+    findAll: async () => {
+        const query = 'SELECT r.ReviewID, r.Comment, u.FirstName, u.LastName FROM review r JOIN user u ON r.UserID = u.UserID';
+        const [reviews] = await db.query(query);
+        return reviews;
     }
-}
+};
 
 module.exports = Review;
+
+
+
+
+
+
+
