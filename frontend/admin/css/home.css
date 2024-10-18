@@ -343,3 +343,65 @@ body {
         width: 170px;
     }
 }
+
+@media only screen and (min-width: 800px) and (max-width: 899.98px) {
+    #summary1, #summary2, #summary3, #summary4 {
+        width: 110px;
+        height: 90px;
+    }
+
+    #summary1, #summary2 {
+        margin: 8px 5px 10px;
+    }
+    
+    #summary3, #summary4 {
+        margin: 3px 5px 10px;
+    }
+
+    #summary1, #summary3 {
+        margin-left: 10px;
+    }
+
+    .summary h2 {
+        font-size: 1.5rem;
+    }
+
+    .summary p {
+        font-size: 12px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    #chart {
+        width: 315px;
+        height: 195px;
+        top: 132px;
+        right: 40%;
+        left: 59%;
+    }
+
+    .content-section h3 {
+        margin-left: 10px;
+    }
+
+    .content-section .second-analyze {
+        gap: 0px;
+    }
+
+    #recent-order-table {
+        margin: 10px 5px 10px 0px;
+        width: 340px;
+    }
+
+    #top-selling-product-table {
+        width: 150px;
+    }
+
+    #recent-order-table th, #recent-order-table td, #top-selling-product-table th, #top-selling-product-table td {
+        font-size: 12px;
+    }
+
+    .content-section .selling-products h3, .content-section .recent-orders h3 {
+        font-size: 16px;
+    }
+}
