@@ -460,3 +460,60 @@ body {
         margin-left: 0px;
     }
 }
+
+@media only screen and (min-width: 601px) and (max-width: 767.98px) {
+    .content-section .first-analyze {
+        display: block;
+    }
+
+    #summary1, #summary2, #summary3, #summary4{
+        width: 130px;
+        height: 100px;
+    }
+
+    #summary1, #summary3{
+        margin-left: 12px;
+          
+    }
+
+    .summary p {
+        font-size: 13px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    #chart {
+        position: absolute;
+        left: 40%;
+        margin-top: 250px;
+        display: inline-block;
+        width: 350px;
+        height: 200px;
+    }
+
+    .content-section .recent-orders {
+        margin-top: 230px;
+        margin-left: -2px;
+    }
+
+    #recent-order-table {
+        width: 300px;
+    }
+
+    .content-section #recent-order-table th {
+        font-size: 12px;
+    }
+
+    .content-section .selling-products {
+        margin-top: 10px;
+    }
+
+    .content-section .selling-products h3 {
+        margin-left: 0px;
+    }
+
+    #top-selling-product-table {
+        width: 200px;
+        margin-left: 0px;
+    }
+}
