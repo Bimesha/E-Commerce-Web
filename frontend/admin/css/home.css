@@ -17,3 +17,72 @@ body {
     width: 100%;
     margin-left: 30px;
 }
+
+#summary1, #summary2 {
+    margin: 10px 10px 10px;
+}
+
+#summary3, #summary4 {
+    margin: 10px 10px 10px;
+}
+
+#summary1, #summary2, #summary3, #summary4 {
+    width: 170px;
+    height: 120px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+#chart {
+    position: absolute;
+    top: 19.3%;
+    right: 10%;
+    padding: 10px;
+    width: 520px;
+    height: 262px;
+    border-radius: 15px;
+}
+
+#salesChart {
+    align-items: center;
+    padding: 10px 10px 20px 10px;
+}
+
+.content-section .second-analyze {
+    display: flex;
+    gap: 80px;
+}
+
+.content-section .card-title {
+    font-weight: bold; 
+}
+
+#recent-order-table {
+    width: 580px;
+    margin: 10px 10px 10px 0px;
+    font-size: 14px;
+}
+
+#top-selling-product-table {
+    width: 320px;
+    margin: 10px;
+    font-size: 14px;
+}
+
+.content-section h3 {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.content-section .recent-orders h3 {
+    margin-left: 0px;
+}
+
+#recent-order-table th, #recent-order-table td, #top-selling-product-table th, #top-selling-product-table td {
+    text-align: center;
+}
+
+#recent-order-table th, #top-selling-product-table th {
+    font-weight: 400;
+}
