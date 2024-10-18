@@ -188,3 +188,49 @@ body {
         width: 240px;
     }
 }
+
+@media only screen and (min-width: 1024.98px) and (max-width: 1100px) {
+    #summary1, #summary2, #summary3, #summary4 {
+        width: 135px;
+        height: 105px;
+        font-size: 10px;
+    }
+
+    #summary1, #summary2 {
+        margin: 10px 5px 10px;
+          
+    }
+    
+    #summary3, #summary4 {
+        margin: 3px 5px 10px;
+    }
+
+    #summary1, #summary3 {
+        margin-left: 20px;
+    }
+
+    .summary p {
+        font-size: 14px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    #chart {
+        width: 400px;
+        height: 225px;
+        top: 140px;
+        right: 3.5%;
+    }
+
+    .content-section .second-analyze {
+        gap: 28px;
+    }
+
+    #recent-order-table {
+        width: 420px;
+    }
+
+    #top-selling-product-table {
+        width: 210px;
+    }
+}
