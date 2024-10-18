@@ -14,22 +14,77 @@ body {
 
 h1{
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 35%;
     color: white;
 }
 
-p{
+#page-description{
     position: absolute;
-    top: 50%;
-    left: 27%;
+    text-align: center;
+    top: 45%;
+    left: 24%;
     color: white;
     padding: 1rem;  
 }
 
 .image2{
-    max-width: 500px;
-    height: auto;
-    padding-right: 10px;
+    height: 350px;
+    max-width: 100%;
+}
+
+.card{
+    border: none;
+    height: 280px;
+    max-width: 260px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: rgb(236, 235, 235);
+    margin: 10px;
+}
+
+
+.card img{
+    border-radius: 15px 15px 15px 15px;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: rgb(236, 235, 235);
+}
+
+.status-badge{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 12px;
+    padding: 5px 10px;
+    font-size: 0.5rem;
+}
+
+.in-stock{
+    background-color: green;
+}
+
+.out-of-stock{
+    background-color: red;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.title{
+    font-size: 1rem; 
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+.price {
+    font-size: 1rem;
+    color: black;   
 }
 
