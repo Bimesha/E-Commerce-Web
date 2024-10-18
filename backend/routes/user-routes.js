@@ -9,5 +9,8 @@ router.post("/create-account", validateUserCreation, userController.createUser);
 // Add the login route
 router.post("/login", userController.loginUser);
 
+router.get('/login', (req, res) => {
+    res.send("Log in route is working");
+});
 module.exports = router;     
 
