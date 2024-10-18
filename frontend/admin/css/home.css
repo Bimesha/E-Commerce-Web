@@ -405,3 +405,58 @@ body {
         font-size: 16px;
     }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 799.98px) {
+    .content-section .first-analyze {
+        display: block;
+    }
+
+    #summary1, #summary2, #summary3, #summary4 {
+        width: 150px;
+        height: 110px;
+    }
+
+    #summary1, #summary2 {
+        margin: 18px 5px 10px;
+    }
+
+    #summary1, #summary3 {
+        margin-left: 12px;
+    }
+
+    .summary p {
+        font-size: 15px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    #chart {
+        position: absolute;
+        right: 70%;
+        left: 36.5%;
+        margin-top: 280px;
+        display: inline-block;
+        width: 450px;
+    }
+
+    .content-section .recent-orders {
+        margin-top: 300px;
+    }
+
+    #recent-order-table {
+        width: 470px;
+    }
+
+    .content-section .selling-products {
+        margin-top: 20px;
+    }
+
+    .content-section .selling-products h3 {
+        margin-left: 0px;
+    }
+
+    #top-selling-product-table {
+        width: 350px;
+        margin-left: 0px;
+    }
+}
