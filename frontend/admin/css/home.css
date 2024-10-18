@@ -124,3 +124,35 @@ body {
         width: 300px;
     }
 }
+
+@media only screen and (min-width: 1200px) and (max-width: 1280px) {
+    #summary1, #summary2, #summary3, #summary4 {
+        width: 150px;
+        font-size: 12px;
+    }
+
+    .summary p {
+        font-size: 14px;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    #chart {
+        width: 480px;
+        height: 262px;
+        top: 140px;
+        right: 5%;
+    }
+
+    .content-section .second-analyze {
+        gap: 42px;
+    }
+
+    #recent-order-table {
+        width: 520px;
+    }
+
+    #top-selling-product-table {
+        width: 280px;
+    }
+}
