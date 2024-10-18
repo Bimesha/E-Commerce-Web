@@ -62,3 +62,38 @@ body {
     font-weight: 400;
     padding: 12px 0;
 }
+
+.table tbody td {
+    background-color: rgb(243, 242, 242);
+}
+
+.table tbody tr {
+    border-bottom: 3px solid #fff;
+}
+
+.edit i, .delete i {
+    font-size: 20px;
+}
+
+.edit {
+    background-color: #ffc756;
+    border: none;
+    padding: 2px 0;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.delete {
+    background-color: rgb(246, 131, 131);
+    border: none;
+    padding: 2px 0;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
