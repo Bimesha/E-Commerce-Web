@@ -140,6 +140,41 @@ body {
     gap: 30px;
 }
 
+.add-new-product .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    margin:  0 1.5rem;
+}
+
+.add-new-product .clear-btn {
+    background-color: rgb(225, 223, 223);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.add-new-product .discard-btn {
+    background-color: black;
+    border: none;
+    color: #fff;
+    margin-right: 20px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.add-new-product .submit-btn {
+    background-color: #FFBA35;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
 
 
 
