@@ -127,6 +127,10 @@ body {
     width: 60%;
 }
 
+.add-new-product option {
+    font-size: 14px;
+}
+
 .add-new-product .form-select {
     width: 60%;
 }
