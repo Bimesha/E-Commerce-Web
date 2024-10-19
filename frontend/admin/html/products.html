@@ -88,7 +88,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form id="addProductForm" class="needs-validation" novalidate>
+                                    <form id="addProductForm" class="needs-validation" novalidate autocomplete="off">
                                         <div class="form">
                                             <div class="mb-3">
                                                 <label for="category" class="form-label">Category</label>
@@ -109,7 +109,7 @@
                                                 <div class="mb-3">
                                                     <label for="price" class="form-label">Price</label>
                                                     <input type="number" class="form-control" id="price" required>
-                                                    <div class="invalid-feedback">Please provide a valid price.</div>
+                                                    <div class="invalid-feedback">Price is required.</div>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="quantity" class="form-label">Quantity</label>
@@ -119,7 +119,7 @@
                                             </div>
                                             <div class="mb-3">
                                                 <label for="description" class="form-label">Product Description</label>
-                                                <textarea class="form-control" id="description" rows="3"></textarea>
+                                                <textarea class="form-control" id="description" rows="3" required></textarea>
                                                 <div class="invalid-feedback">Product description is required.</div>
                                             </div>
                                         </div>
