@@ -88,7 +88,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form id="addProductForm">
+                                    <form id="addProductForm" class="needs-validation" novalidate>
                                         <div class="form">
                                             <div class="mb-3">
                                                 <label for="category" class="form-label">Category</label>
@@ -98,24 +98,29 @@
                                                     <option value="table">Table</option>
                                                     <option value="sofa">Sofa</option>
                                                 </select>
+                                                <div class="invalid-feedback">Please select a category.</div>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="productName" class="form-label">Product Name</label>
                                                 <input type="text" class="form-control" id="productName" required>
+                                                <div class="invalid-feedback">Product name is required.</div>
                                             </div>
                                             <div class="price-quantity">
                                                 <div class="mb-3">
                                                     <label for="price" class="form-label">Price</label>
                                                     <input type="number" class="form-control" id="price" required>
+                                                    <div class="invalid-feedback">Please provide a valid price.</div>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="quantity" class="form-label">Quantity</label>
                                                     <input type="number" class="form-control" id="quantity" required>
+                                                    <div class="invalid-feedback">Quantity is required.</div>
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="description" class="form-label">Product Description</label>
                                                 <textarea class="form-control" id="description" rows="3"></textarea>
+                                                <div class="invalid-feedback">Product description is required.</div>
                                             </div>
                                         </div>
                                         <div class="product-image">
@@ -125,6 +130,7 @@
                                             <div class="mb-3">
                                                 <label for="productImage" class="form-label">Upload Product Image</label>
                                                 <input type="file" class="form-control" id="productImage" required>
+                                                <div class="invalid-feedback">Please select a product image.</div>
                                             </div>
                                         </div>
                                     </form>
