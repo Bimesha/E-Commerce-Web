@@ -101,6 +101,44 @@ body {
 
 
 
+/* Add New Product Modal */
+.add-new-product .modal-dialog {
+    max-width: 900px;
+}
+
+.add-new-product .modal-title {
+    margin: 0 1.5rem;
+}
+
+.add-new-product .btn-close {
+    margin-right: 1.5rem;
+}
+
+.add-new-product .modal-body {
+    margin: 0 1.5rem;
+}
+
+.add-new-product form {
+    display: flex;
+    gap: 100px;
+}
+
+.add-new-product .form {
+    width: 60%;
+}
+
+.add-new-product .form-select {
+    width: 60%;
+}
+
+.add-new-product .price-quantity {
+    display: flex;
+    gap: 30px;
+}
+
+
+
+
 /* Media Queries */
 @media only screen and (min-width: 1024px) and (max-width: 1279.98px) {
     .content-section {
