@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <td>${product.quantity}</td>
           <td>Rs ${product.price}</td>
           <td class="actions-buttons">
-            <button class="edit" data-id="${product.id}"><i class="bi bi-pencil"></i></button>
+            <button class="edit" data-id="${product.id}"><i class="bi bi-pencil" data-bs-toggle="modal" data-bs-target="#editProductModal"></i></button>
             <button class="delete" data-id="${product.id}"><i class="bi bi-trash3"></i></button>
           </td>
         `;
@@ -35,7 +35,7 @@ document.getElementById('productImage').addEventListener('change', function(even
             imagePreview.src = e.target.result;
             imagePreview.style.display = 'block'; 
         }
-        reader.readAsDataURL(file);
+        reader.readAsDataURL(file); 
     }
 });
 

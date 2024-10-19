@@ -101,52 +101,52 @@ body {
 
 
 
-/* Add New Product Modal */
-.add-new-product .modal-dialog {
+/* Add New Product Modal and Update Product Modal */
+.add-new-product .modal-dialog, .edit-product .modal-dialog {
     max-width: 900px;
 }
 
-.add-new-product .modal-title {
+.add-new-product .modal-title, .edit-product .modal-title {
     margin: 0 1.5rem;
 }
 
-.add-new-product .btn-close {
+.add-new-product .btn-close, .edit-product .btn-close {
     margin-right: 1.5rem;
 }
 
-.add-new-product .modal-body {
+.add-new-product .modal-body, .edit-product .modal-body {
     margin: 0 1.5rem;
 }
 
-.add-new-product form {
+.add-new-product form, .edit-product form {
     display: flex;
     gap: 100px;
 }
 
-.add-new-product .form {
+.add-new-product .form, .edit-product .form {
     width: 60%;
 }
 
-.add-new-product option {
+.add-new-product option, .edit-product option {
     font-size: 14px;
 }
 
-.add-new-product .form-select {
+.add-new-product .form-select, .edit-product .form-select {
     width: 60%;
 }
 
-.add-new-product .price-quantity {
+.add-new-product .price-quantity, .edit-product .price-quantity {
     display: flex;
     gap: 30px;
 }
 
-.add-new-product .modal-footer {
+.add-new-product .modal-footer, .edit-product .modal-footer {
     display: flex;
     justify-content: space-between;
     margin:  0 1.5rem;
 }
 
-.add-new-product .clear-btn {
+.add-new-product .clear-btn, .edit-product .clear-btn {
     background-color: rgb(225, 223, 223);
     border: none;
     padding: 10px 25px;
@@ -155,7 +155,7 @@ body {
     text-decoration: none;
 }
 
-.add-new-product .discard-btn {
+.add-new-product .discard-btn, .edit-product .discard-btn {
     background-color: black;
     border: none;
     color: #fff;
@@ -166,7 +166,7 @@ body {
     text-decoration: none;
 }
 
-.add-new-product .submit-btn {
+.add-new-product .submit-btn, .edit-product .save-btn {
     background-color: #FFBA35;
     border: none;
     padding: 10px 25px;
