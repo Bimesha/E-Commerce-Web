@@ -13,4 +13,9 @@ router.post(
     ],
     sendContactMessage);
 
+router.get('/contact', (req, res) => {
+    res.send("Contact route is working");
+});
+    
+
 module.exports = router;

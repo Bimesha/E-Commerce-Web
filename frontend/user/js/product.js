@@ -16,7 +16,7 @@ const categories = {
         title: "SOFA COLLECTION",
         description: "Browse through our luxurious sofas, perfect for relaxing and enhancing your living space",
         image1: "../assets/product-img/sofa-collection.png",
-        image2: "../assets/product-img/product-1.png"
+        image2: "../assets/product-img/page-image-1.png"
     }
 };
 
@@ -25,13 +25,18 @@ function updateProductPage(){
     const product = categories[hash];
 
     if (product) {
-        document.getElementById('productPage').textContent = product.title;
+        document.getElementById('pageTitle').textContent = product.title;
         document.getElementById('pageDescription').textContent = product.description;
-        document.getElementById('productPageImage').src = product.image1;
-        document.getElementById('productImage2').src = product.image2;
+        document.getElementById('productPageImage1').src = product.image1;
+        document.getElementById('productPageImage2').src = product.image2;
     } else {
         
     }
+}
+
+async function fetchProduct() {
+    const response = await fetch('');
+    
 }
 
 
