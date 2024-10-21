@@ -140,9 +140,11 @@ body {
     gap: 30px;
 }
 
-.add-new-product img {
+.add-new-product img, .edit-product img {
     margin-top: 10px;
     margin-bottom: 12px;
+    width: 350px;
+    height: 200px;
 }
 
 .add-new-product .modal-footer, .edit-product .modal-footer {
@@ -459,6 +461,10 @@ body {
 
     .add-new-product .product-image, .edit-product .product-image {
         margin-top: -100px;
+    }
+
+    .add-new-product .product-image img {
+        width: 10%;
     }
 
     .add-new-product .modal-footer, .edit-product .modal-footer {
