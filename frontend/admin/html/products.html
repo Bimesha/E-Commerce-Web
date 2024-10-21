@@ -124,10 +124,10 @@
                                             </div>
                                         </div>
                                         <div class="product-image">
-                                            <div class="mb-3">
+                                            <div class="preview">
                                                 <img id="imagePreview" src="#" alt="Image Preview" style="display:none; width: 300px; height: 200px; border-radius: 15px;" />
                                             </div>
-                                            <div class="mb-3">
+                                            <div class="image">
                                                 <label for="productImage" class="form-label">Upload Product Image</label>
                                                 <input type="file" class="form-control" id="productImage" required>
                                                 <div class="invalid-feedback">Please select a product image.</div>
@@ -141,6 +141,17 @@
                                     </div>
                                     <div class="discard-submit">
                                         <button type="button" class="btn discard-btn" data-bs-dismiss="modal">Discard</button>
+                                        <button type="submit" class="btn submit-btn" form="addProductForm">Submit</button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer1" style="display: none;">
+                                    <div class="clear">
+                                        <button type="button" class="btn clear-btn" id="clearForm">Clear</button>
+                                    </div>
+                                    <div class="discard">
+                                        <button type="button" class="btn discard-btn" data-bs-dismiss="modal">Discard</button>
+                                    </div>
+                                    <div class="submit">
                                         <button type="submit" class="btn submit-btn" form="addProductForm">Submit</button>
                                     </div>
                                 </div>
@@ -195,10 +206,10 @@
                                             </div>
                                         </div>
                                         <div class="product-image">
-                                            <div class="mb-3">
+                                            <div class="preview">
                                                 <img id="imageChangePreview" src="#" alt="Image Preview" style="display:none; width: 300px; height: 200px; border-radius: 15px;" />
                                             </div>
-                                            <div class="mb-3">
+                                            <div class="image">
                                                 <label for="productChangeImage" class="form-label">Upload Product Image</label>
                                                 <input type="file" class="form-control" id="productChangeImage" required>
                                                 <div class="invalid-feedback">Please select a product image.</div>
@@ -213,6 +224,17 @@
                                     <div class="discard-submit">
                                         <button type="button" class="btn discard-btn" data-bs-dismiss="modal">Discard</button>
                                         <button type="submit" class="btn save-btn" form="editProductForm">Save Changes</button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer1" style="display: none;">
+                                    <div class="clear">
+                                        <button type="button" class="btn clear-btn" id="clearEditForm">Clear</button>
+                                    </div>
+                                    <div class="discard">
+                                        <button type="button" class="btn discard-btn" data-bs-dismiss="modal">Discard</button>
+                                    </div>
+                                    <div class="submit">
+                                        <button type="submit" class="btn save-btn" form="editProductForm">Save</button>
                                     </div>
                                 </div>
                             </div>
