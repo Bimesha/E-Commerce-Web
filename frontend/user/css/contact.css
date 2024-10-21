@@ -27,8 +27,8 @@ body {
 }
 
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px white inset !important; 
-    -webkit-text-fill-color: #000 !important; 
+    -webkit-box-shadow: 0 0 0 1000px #fff inset !important; 
+    -webkit-text-fill-color: #000000 !important; 
 }
 
 .contact-section .card2 {
@@ -56,7 +56,7 @@ input:-webkit-autofill {
 .contact-section .card-body p {
     font-size: 0.8rem;
     margin-bottom: 1rem;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.01rem;
     text-align: justify;
 }
 
@@ -65,13 +65,12 @@ input:-webkit-autofill {
     background-color: #FFBA35;
     margin: 1rem 0;
     border: none;
-    color: black;
-    width: 100%;
+    color: #000000;
 }
 
 .contact-section button.btn-primary:hover {
     background-color: #FFBA35; 
-    color: black;
+    color: #000000;
 }
 
 .contact-section .contact-info {
@@ -81,7 +80,7 @@ input:-webkit-autofill {
 
 .contact-section .contact-info p {
     width: 100%;
-    background-color: black;
+    background-color: #000000;
     padding: 8px 0;
     margin-bottom: 0.5rem;
     border-radius: 10px;
@@ -387,8 +386,6 @@ input:-webkit-autofill {
         font-size: 0.9rem;
     }
 
-
-
     .popup-section .modal-dialog-centered {
         width: 450px;
     }
@@ -432,8 +429,6 @@ input:-webkit-autofill {
     .contact-section .card-body {
         padding: 2rem 2rem;
     }
-
-
 
     .popup-section .modal-dialog-centered {
         width: 400px;
@@ -494,9 +489,6 @@ input:-webkit-autofill {
     .contact-section button {
         margin: 0.4rem 0;
     }
-
-
-
 
     .popup-section .modal-dialog-centered {
         width: 350px;
@@ -563,9 +555,6 @@ input:-webkit-autofill {
     .contact-section button {
         margin: 0.4rem 0;
     }
-
-
-
 
     .popup-section .modal-dialog-centered {
         width: 300px;
