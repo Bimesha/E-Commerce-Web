@@ -189,7 +189,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 1024.98px) and (max-width: 1100px) {
+@media only screen and (min-width: 1025px) and (max-width: 1100px) {
     #summary1, #summary2, #summary3, #summary4 {
         width: 135px;
         height: 105px;
@@ -290,7 +290,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 900px) and (max-width: 999.98px) {
+@media only screen and (min-width: 900px) and (max-width: 999px) {
     #summary1, #summary2, #summary3, #summary4 {
         width: 120px;
         height: 100px;
@@ -344,7 +344,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 800px) and (max-width: 899.98px) {
+@media only screen and (min-width: 800px) and (max-width: 899px) {
     #summary1, #summary2, #summary3, #summary4 {
         width: 110px;
         height: 90px;
@@ -406,7 +406,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 799.98px) {
+@media only screen and (min-width: 768px) and (max-width: 799px) {
     .content-section .first-analyze {
         display: block;
     }
@@ -465,7 +465,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 767.98px) {
+@media only screen and (min-width: 601px) and (max-width: 767px) {
     .content-section .first-analyze {
         display: block;
     }
@@ -582,7 +582,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 425px) and (max-width: 499.98px) {
+@media only screen and (min-width: 425px) and (max-width: 499px) {
     .content-section {
         margin-left: 0px;
         margin-top: -10px;
@@ -655,7 +655,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 375px) and (max-width: 424.98px) {
+@media only screen and (min-width: 375px) and (max-width: 424px) {
     .content-section {
         margin-left: 0px;
         margin-top: -5px;
@@ -723,7 +723,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 374.98px) {
+@media only screen and (min-width: 320px) and (max-width: 374px) {
     .content-section {
         margin-left: 0px;
         margin-top: -5px;

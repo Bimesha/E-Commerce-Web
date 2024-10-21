@@ -140,6 +140,13 @@ body {
     gap: 30px;
 }
 
+.add-new-product img, .edit-product img {
+    margin-top: 10px;
+    margin-bottom: 12px;
+    width: 350px;
+    height: 200px;
+}
+
 .add-new-product .modal-footer, .edit-product .modal-footer {
     display: flex;
     justify-content: space-between;
@@ -179,7 +186,7 @@ body {
 
 
 /* Media Queries */
-@media only screen and (min-width: 1024px) and (max-width: 1279.98px) {
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
     .content-section {
         margin-right: 85px;
     } 
@@ -212,7 +219,7 @@ body {
     }
 }
 
-@media only screen and (min-Width: 850px) and (max-width: 999.98px) {
+@media only screen and (min-Width: 850px) and (max-width: 999px) {
     .content-section {
         margin-right: 50px;
     }
@@ -243,7 +250,7 @@ body {
     }
 }
 
-@media only screen and (min-Width: 768px) and (max-width: 849.98px) {
+@media only screen and (min-Width: 768px) and (max-width: 849px) {
     .content-section {
         margin-right: 35px;
     }
@@ -278,7 +285,7 @@ body {
     }
 }
 
-@media only screen and (min-Width: 600px) and (max-width: 767.98px) {
+@media only screen and (min-Width: 600px) and (max-width: 767px) {
     .content-section {
         margin-right: 15px;
         margin-left: 15px;
@@ -308,9 +315,17 @@ body {
     .edit i, .delete i {
         font-size: 12px;
     }
+
+    .add-new-product form, .edit-product form {
+        gap: 60px;
+    }
+
+    .add-new-product .form-select, .edit-product .form-select {
+        width: 85%;
+    }
 }
 
-@media only screen and (min-Width: 425px) and (max-width: 599.98px) {
+@media only screen and (min-Width: 425px) and (max-width: 599px) {
     .content-section {
         margin-right: 12px;
         margin-left: 12px;
@@ -351,6 +366,41 @@ body {
 
     .edit {
         margin-right: 4px;
+    }
+
+    .add-new-product form, .edit-product form {
+        flex-direction: column;
+    }
+
+    .add-new-product .form, .edit-product .form {
+        width: 100%;
+    }
+
+    .add-new-product .form-select, .edit-product .form-select {
+        width: 100%;
+    }
+
+    .add-new-product .product-image, .edit-product .product-image {
+        margin-top: -100px;
+    }
+
+    .add-new-product .modal-footer, .edit-product .modal-footer {
+        display: none;
+    }
+
+    .add-new-product .modal-footer1, .edit-product .modal-footer1 {
+        display: flex !important;
+        justify-content: space-between;
+        margin:  0 2.5rem;
+    }
+
+    .add-new-product .modal-footer1 button, .edit-product .modal-footer1 button {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .add-new-product .discard-btn, .edit-product .discard-btn {
+        margin-right: 0px;   
     }
 }
 
@@ -396,9 +446,49 @@ body {
     .edit {
         margin-right: 4px;
     }
+
+    .add-new-product form, .edit-product form {
+        flex-direction: column;
+    }
+
+    .add-new-product .form, .edit-product .form {
+        width: 100%;
+    }
+
+    .add-new-product .form-select, .edit-product .form-select {
+        width: 100%;
+    }
+
+    .add-new-product .product-image, .edit-product .product-image {
+        margin-top: -100px;
+    }
+
+    .add-new-product .product-image img {
+        width: 10%;
+    }
+
+    .add-new-product .modal-footer, .edit-product .modal-footer {
+        display: none;
+    }
+
+    .add-new-product .modal-footer1, .edit-product .modal-footer1 {
+        display: flex !important;
+        justify-content: space-between;
+        margin:  0 2.5rem;
+    }
+
+    .add-new-product .modal-footer1 button, .edit-product .modal-footer1 button {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding: 10px 15px;
+    }
+
+    .add-new-product .discard-btn, .edit-product .discard-btn {
+        margin-right: 0px;   
+    }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 374.98px) {
+@media only screen and (min-width: 320px) and (max-width: 374px) {
     .content-section {
         margin-right: 8px;
         margin-left: 8px;
@@ -439,5 +529,66 @@ body {
 
     .edit {
         margin-right: 3px;
+    }
+    
+    .add-new-product .modal-title, .edit-product .modal-title {
+        margin: 0 0.5rem;
+    }
+    
+    .add-new-product .btn-close, .edit-product .btn-close {
+        margin-right: 0.5rem;
+    }
+    
+    .add-new-product .modal-body, .edit-product .modal-body {
+        margin: 0 0.5rem;
+    }
+
+    .add-new-product h5, .edit-product h5 {
+        font-size: 17px;
+    }
+
+    .add-new-product .btn-close, .edit-product .btn-close {
+        font-size: 15px;
+    }
+
+    .add-new-product label, .edit-product label {
+        font-size: 14px;
+    }
+
+    .add-new-product form, .edit-product form {
+        flex-direction: column;
+    }
+
+    .add-new-product .form, .edit-product .form {
+        width: 100%;
+    }
+
+    .add-new-product .form-select, .edit-product .form-select {
+        width: 100%;
+    }
+
+    .add-new-product .product-image, .edit-product .product-image {
+        margin-top: -100px;
+    }
+
+    .add-new-product .modal-footer, .edit-product .modal-footer {
+        display: none;
+    }
+
+    .add-new-product .modal-footer1, .edit-product .modal-footer1 {
+        display: flex !important;
+        justify-content: space-between;
+        margin:  0 1.5rem;
+    }
+
+    .add-new-product .modal-footer1 button, .edit-product .modal-footer1 button {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+
+    .add-new-product .discard-btn, .edit-product .discard-btn {
+        margin-right: 0px;   
     }
 }

@@ -39,6 +39,20 @@ document.getElementById('productImage').addEventListener('change', function(even
     }
 });
 
+// Image Preview for Product Image in Edit Product Form
+document.getElementById('productChangeImage').addEventListener('change', function(event) {
+  const file = event.target.files[0];
+  if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+          const imageChangePreview = document.getElementById('imageChangePreview');
+          imageChangePreview.src = e.target.result;
+          imageChangePreview.style.display = 'block'; 
+      }
+      reader.readAsDataURL(file); 
+  }
+});
+
 
 
 // Real-time validation function
@@ -52,14 +66,21 @@ function realTimeValidation(input) {
   }
 }
 
-// Apply real-time validation to all fields
+// Apply real-time validation to all fields in the Add Product Form
 document.querySelectorAll('#addProductForm input, #addProductForm select, #addProductForm textarea').forEach(function (input) {
     input.addEventListener('input', function () {
         realTimeValidation(input);
     });
 });
 
-// Clear form event listener to reset image preview and form
+// Apply real-time validation to all fields in the Edit Product Form
+document.querySelectorAll('#editProductForm input, #editProductForm select, #editProductForm textarea').forEach(function (input) {
+  input.addEventListener('input', function () {
+      realTimeValidation(input);
+  });
+});
+
+// Clear form event listener to reset image preview and form in Add Product Form
 document.getElementById('clearForm').addEventListener('click', function() {
   document.getElementById('addProductForm').reset();
   document.getElementById('imagePreview').style.display = 'none';
@@ -68,11 +89,52 @@ document.getElementById('clearForm').addEventListener('click', function() {
   });
 });
 
-// Bootstrap form submission validation
+document.getElementById('clearMobileAddForm').addEventListener('click', function() {
+  document.getElementById('addProductForm').reset();
+  document.getElementById('imagePreview').style.display = 'none';
+  document.querySelectorAll('#addProductForm input, #addProductForm select, #addProductForm textarea').forEach(function (input) {
+      input.classList.remove('is-valid', 'is-invalid');
+  });
+});
+
+// Clear form event listener to reset image preview and form in Edit Product Form
+document.getElementById('clearEditForm').addEventListener('click', function() {
+  document.getElementById('editProductForm').reset();
+  document.getElementById('imageChangePreview').style.display = 'none';
+  document.querySelectorAll('#editProductForm input, #editProductForm select, #editProductForm textarea').forEach(function (input) {
+      input.classList.remove('is-valid', 'is-invalid');
+  });
+});
+
+document.getElementById('clearMobileEditForm').addEventListener('click', function() {
+  document.getElementById('editProductForm').reset();
+  document.getElementById('imageChangePreview').style.display = 'none';
+  document.querySelectorAll('#editProductForm input, #editProductForm select, #editProductForm textarea').forEach(function (input) {
+      input.classList.remove('is-valid', 'is-invalid');
+  });
+});
+
+// Bootstrap form submission validation for Add Product Form
 (function () {
   'use strict'
 
   const form = document.getElementById('addProductForm');
+
+  form.addEventListener('submit', function (event) {
+      if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+      }
+
+      form.classList.add('was-validated');
+  }, false);
+})();
+
+// Bootstrap form submission validation for Edit Product Form
+(function () {
+  'use strict'
+
+  const form = document.getElementById('editProductForm');
 
   form.addEventListener('submit', function (event) {
       if (!form.checkValidity()) {
