@@ -80,11 +80,20 @@ document.querySelectorAll('#editProductForm input, #editProductForm select, #edi
   });
 });
 
-// Clear form event listener to reset image preview and form
+// Clear form event listener to reset image preview and form in Add Product Form
 document.getElementById('clearForm').addEventListener('click', function() {
   document.getElementById('addProductForm').reset();
   document.getElementById('imagePreview').style.display = 'none';
   document.querySelectorAll('#addProductForm input, #addProductForm select, #addProductForm textarea').forEach(function (input) {
+      input.classList.remove('is-valid', 'is-invalid');
+  });
+});
+
+// Clear form event listener to reset image preview and form in Edit Product Form
+document.getElementById('clearEditForm').addEventListener('click', function() {
+  document.getElementById('editProductForm').reset();
+  document.getElementById('imageChangePreview').style.display = 'none';
+  document.querySelectorAll('#editProductForm input, #editProductForm select, #editProductForm textarea').forEach(function (input) {
       input.classList.remove('is-valid', 'is-invalid');
   });
 });
