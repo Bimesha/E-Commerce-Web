@@ -66,11 +66,18 @@ function realTimeValidation(input) {
   }
 }
 
-// Apply real-time validation to all fields
+// Apply real-time validation to all fields in the Add Product Form
 document.querySelectorAll('#addProductForm input, #addProductForm select, #addProductForm textarea').forEach(function (input) {
     input.addEventListener('input', function () {
         realTimeValidation(input);
     });
+});
+
+// Apply real-time validation to all fields in the Edit Product Form
+document.querySelectorAll('#editProductForm input, #editProductForm select, #editProductForm textarea').forEach(function (input) {
+  input.addEventListener('input', function () {
+      realTimeValidation(input);
+  });
 });
 
 // Clear form event listener to reset image preview and form
@@ -82,11 +89,27 @@ document.getElementById('clearForm').addEventListener('click', function() {
   });
 });
 
-// Bootstrap form submission validation
+// Bootstrap form submission validation for Add Product Form
 (function () {
   'use strict'
 
   const form = document.getElementById('addProductForm');
+
+  form.addEventListener('submit', function (event) {
+      if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+      }
+
+      form.classList.add('was-validated');
+  }, false);
+})();
+
+// Bootstrap form submission validation for Edit Product Form
+(function () {
+  'use strict'
+
+  const form = document.getElementById('editProductForm');
 
   form.addEventListener('submit', function (event) {
       if (!form.checkValidity()) {
