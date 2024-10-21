@@ -39,6 +39,20 @@ document.getElementById('productImage').addEventListener('change', function(even
     }
 });
 
+// Image Preview for Product Image in Edit Product Form
+document.getElementById('productChangeImage').addEventListener('change', function(event) {
+  const file = event.target.files[0];
+  if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+          const imageChangePreview = document.getElementById('imageChangePreview');
+          imageChangePreview.src = e.target.result;
+          imageChangePreview.style.display = 'block'; 
+      }
+      reader.readAsDataURL(file); 
+  }
+});
+
 
 
 // Real-time validation function
