@@ -19,12 +19,11 @@ function toggleSearchmenu() {
 function toggleProductsDropdown() {
   let dropdown = document.getElementById("products-dropdown");
   if (dropdown.style.display === "none" || dropdown.style.display === "") {
-      dropdown.style.display = "block";
+    dropdown.style.display = "block";
   } else {
-      dropdown.style.display = "none";
+    dropdown.style.display = "none";
   }
 }
-
 
 // Close the drop-down menu if the user clicks outside of it
 window.onclick = function (event) {
@@ -36,13 +35,19 @@ window.onclick = function (event) {
 
   var productsDropdown = document.getElementById("products-dropdown");
   var products = document.getElementById("products");
-  if (!products.contains(event.target) && !productsDropdown.contains(event.target)) {
-      productsDropdown.style.display = "none";
+  if (
+    !products.contains(event.target) &&
+    !productsDropdown.contains(event.target)
+  ) {
+    productsDropdown.style.display = "none";
   }
 
   var searchDropdown = document.getElementById("drop-down-list");
   var search = document.getElementById("list");
-  if (!search.contains(event.target) && !searchDropdown.contains(event.target)) {
+  if (
+    !search.contains(event.target) &&
+    !searchDropdown.contains(event.target)
+  ) {
     searchDropdown.style.display = "none";
   }
 };
@@ -61,7 +66,7 @@ window.onclick = function (event) {
 //   }
 
 //   const isStoryPage = window.location.pathname.includes('');
-  
+
 //   if (isStoryPage) {
 //     if (localStorage.getItem('cartActive') === 'true') {
 //       cart.classList.add('active');
@@ -72,8 +77,3 @@ window.onclick = function (event) {
 
 //   cart.addEventListener('click', () => setActive());
 // });
-  
-
-
-
-
