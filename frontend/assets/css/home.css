@@ -9,7 +9,7 @@ body {
 }
 
 /* Hero Section */
-.hero-section .container-fuild {
+.hero-section .container-hero {
   margin-top: 1.5rem;
   background-image: url(./assets/images/home-img/hero-1.png);
   background-size: cover;
@@ -563,9 +563,10 @@ body {
   margin-left: -200%;
 }
 
+
 /* Media Queries */
 @media screen and (min-width: 1441px) {
-  .hero-section .container-fuild {
+  .hero-section .container-hero {
     height: 70vh;
   }
 
@@ -574,7 +575,7 @@ body {
   }
 
   .hero-section .card {
-    top: 70%;
+    top: 69%;
   }
 
   .card-body1 button.btn-primary {
@@ -587,8 +588,8 @@ body {
   }
 }
 
-@media only screen and (min-width: 1400px) and (max-width: 1440px) {
-  .hero-section .container-fuild {
+@media only screen and (min-width: 1367px) and (max-width: 1440px) {
+  .hero-section .container-hero {
     height: 68vh;
   }
 
@@ -673,13 +674,17 @@ body {
   }
 }
 
-@media only screen and (min-width: 1280px) and (max-width: 1400px) {
-  .hero-section .container-fuild {
+@media only screen and (min-width: 1200px) and (max-width: 1366px) {
+  .hero-section .container-hero {
     height: 65vh;
   }
 
   .overlay {
     height: 65vh;
+  }
+
+  .hero-section .card {
+    margin-left: -2rem;
   }
 
   .hero-section .container h1 {
@@ -689,7 +694,7 @@ body {
   }
 
   .banner-section .row {
-    margin-left: 1rem;
+    margin-left: 0.8rem;
     gap: 1.5rem;
   }
 
@@ -772,133 +777,13 @@ body {
   }
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1280px) {
-  .hero-section .container-fuild {
-    height: 65vh;
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .hero-section .container-hero {
+    height: 62vh;
   }
 
   .overlay {
-    height: 65vh;
-  }
-
-  .hero-section .container h1 {
-    font-size: 3.8rem;
-    letter-spacing: 1.5rem;
-    line-height: 8rem;
-  }
-
-  .hero-section .card {
-    display: none;
-  }
-
-  .banner-section .row {
-    margin-left: 1rem;
-    gap: 1rem;
-  }
-
-  .banner-section .card {
-    width: 350px;
-    height: 350px;
-  }
-
-  .banner-section .card-top {
-    display: none;
-  }
-
-  .banner-section .card-bottom {
-    margin-top: -1rem;
-  }
-
-  .banner-section .card-top,
-  .banner-section .card-bottom,
-  .banner-section .card-bottom1,
-  .banner-section .card-bottom2 {
-    width: 350px;
-    height: 350px;
-  }
-
-  .card-bottom .products-banner {
-    top: 2.2rem;
-  }
-
-  .banner2-section {
-    width: 99%;
-  }
-
-  .banner2-section .card {
-    width: 33.33%;
-  }
-
-  .card-body1 .title {
-    padding: 30px 0px 30px 40px;
-  }
-
-  .banner2-section .title h2 {
-    font-size: 2.1rem;
-  }
-
-  .banner2-section .title h1 {
-    font-size: 2.4rem;
-  }
-
-  .card-body3 .title {
-    padding: 60px 0px 30px 40px;
-  }
-
-  .card-body3 span {
-    font-size: 2.4rem;
-  }
-
-  .card-body1 button.btn-primary {
-    width: 30%;
-  }
-
-  .card-body3 button.btn-primary {
-    margin-top: 1.5rem;
-    width: 45%;
-  }
-
-  #addReviewform .card {
-    width: 300%;
-    margin-left: -150%;
-  }
-
-  .reviews .carousel-item {
-    width: 100%;
-    height: 270px;
-  }
-
-  .slid-section .d-flex {
-    margin-left: 0.5rem;
-    margin-right: 0.6rem;
-  }
-
-  .slid-section .card {
-    height: 322px;
-    max-width: 256px;
-  }
-
-  .slid-section .card img {
-    height: 176px;
-    width: 100%;
-  }
-
-  .slid-section .carousel-control-next-icon {
-    margin-right: 1.8rem;
-  }
-
-  .slid-section .btn-primary {
-    margin-left: 31rem;
-  }
-}
-
-@media only screen and (min-width: 1024.98px) and (max-width: 1200px) {
-  .hero-section .container-fuild {
-    height: 65vh;
-  }
-
-  .overlay {
-    height: 65vh;
+    height: 62vh;
   }
 
   .hero-section .container h1 {
@@ -1017,8 +902,8 @@ body {
   }
 }
 
-@media only screen and (min-width: 1000px) and (max-width: 1024.98px) {
-  .hero-section .container-fuild {
+@media only screen and (min-width: 991px) and (max-width: 1024px) {
+  .hero-section .container-hero {
     height: 64vh;
   }
 
@@ -1167,167 +1052,8 @@ body {
   }
 }
 
-@media only screen and (min-width: 990px) and (max-width: 1000px) {
-  .hero-section .container-fuild {
-    height: 64vh;
-  }
-
-  .overlay {
-    height: 64vh;
-  }
-
-  .hero-section .container h1 {
-    font-size: 3.5rem;
-    letter-spacing: 1.3rem;
-  }
-
-  .hero-section .card {
-    display: none;
-  }
-
-  .banner-section .row {
-    margin-top: 3rem;
-    margin-left: 8rem;
-    gap: 2rem;
-  }
-
-  .banner-section .card {
-    width: 200px;
-    height: 200px;
-  }
-
-  .banner-section .card-top {
-    display: none;
-  }
-
-  .banner-section .card-bottom {
-    margin-top: -1rem;
-  }
-
-  .banner-section .card-top,
-  .banner-section .card-bottom,
-  .banner-section .card-bottom1,
-  .banner-section .card-bottom2 {
-    width: 200px;
-    height: 200px;
-  }
-
-  .banner-section .products-banner {
-    top: 1rem;
-    width: 150px;
-    margin-left: 1rem;
-  }
-
-  .banner-details h5 {
-    font-size: 0.9rem;
-  }
-
-  .banner-details h2 {
-    font-size: 1.8rem;
-  }
-
-  .banner-section .btn-primary {
-    font-size: 0.9rem;
-    padding: 6px 0px;
-  }
-
-  .banner-section .btn-primary i {
-    font-size: 15px;
-  }
-
-  .banner2-section {
-    width: 98.8%;
-  }
-
-  .banner2-section .card {
-    width: 33.33%;
-  }
-
-  .banner2-section .card-body1,
-  .banner2-section .card-body2,
-  .banner2-section .card-body3 {
-    height: 22rem;
-  }
-
-  .card-body1 .title {
-    padding: 30px 0px 30px 30px;
-  }
-
-  .card-body1 .title h2 {
-    font-size: 1.5rem;
-  }
-
-  .card-body1 .title h1 {
-    font-size: 2rem;
-    margin-bottom: 5px;
-  }
-
-  .card-body1 .title p {
-    font-size: 0.8rem;
-  }
-
-  .card-body1 button.btn-primary {
-    width: 38%;
-  }
-
-  .card-body3 button.btn-primary {
-    margin-top: 0.5rem;
-    width: 54%;
-  }
-
-  .card-body3 .title {
-    padding: 60px 0px 30px 30px;
-  }
-
-  .card-body3 h4 {
-    font-size: 1.2rem;
-  }
-
-  .card-body3 span {
-    font-size: 2rem;
-  }
-
-  .card-body3 .title p {
-    font-size: 0.8rem;
-    letter-spacing: 1.1px;
-  }
-
-  #addReviewform .card {
-    width: 200%;
-    margin-left: -100%;
-  }
-
-  .reviews .carousel-item {
-    width: 100%;
-    height: 315px;
-  }
-
-  .slid-section .d-flex {
-    margin-left: 4rem;
-    margin-right: 3rem;
-  }
-
-  .slid-section .card {
-    height: 290px;
-    max-width: 190px;
-  }
-
-  .slid-section .card img {
-    height: 132px;
-    width: 100%;
-  }
-
-  .slid-section .carousel-control-next-icon {
-    margin-right: 4rem;
-  }
-
-  .slid-section .btn-primary {
-    margin-left: 25rem;
-  }
-}
-
-@media only screen and (min-width: 900px) and (max-width: 990px) {
-  .hero-section .container-fuild {
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  .hero-section .container-hero {
     height: 60vh;
   }
 
@@ -1409,7 +1135,7 @@ body {
   .banner2-section .card-body1,
   .banner2-section .card-body2,
   .banner2-section .card-body3 {
-    height: 20rem;
+    height: 22rem;
   }
 
   .card-body1 .title {
@@ -1430,13 +1156,14 @@ body {
   }
 
   .card-body1 button.btn-primary {
-    width: 42%;
+    width: 50%;
+    margin-left: 2rem;
   }
 
   .card-body3 button.btn-primary {
-    margin-left: 4rem;
-    margin-top: -0.3rem;
-    width: 58%;
+    margin-left: 3rem;
+    margin-top: -1rem;
+    width: 70%;
   }
 
   .card-body3 .title {
@@ -1466,7 +1193,7 @@ body {
     font-weight: 300;
   }
 
-  #addReviewform .card {
+  #addReviewForm .card {
     width: 209%;
     margin-left: -109%;
   }
@@ -1545,231 +1272,8 @@ body {
   }
 }
 
-@media only screen and (min-width: 767px) and (max-width: 900px) {
-  .hero-section .container-fuild {
-    height: 58vh;
-  }
-
-  .overlay {
-    height: 58vh;
-  }
-
-  .hero-section .container h1 {
-    font-size: 3.2rem;
-    letter-spacing: 1.3rem;
-  }
-
-  .hero-section .card {
-    display: none;
-  }
-
-  .banner-section .row {
-    margin-top: 3rem;
-    margin-left: 1.3rem;
-    gap: 1.5rem;
-  }
-
-  .banner-section .card {
-    width: 200px;
-    height: 200px;
-  }
-
-  .banner-section .card-top {
-    display: none;
-  }
-
-  .banner-section .card-bottom {
-    margin-top: -1rem;
-  }
-
-  .banner-section .card-top,
-  .banner-section .card-bottom,
-  .banner-section .card-bottom1,
-  .banner-section .card-bottom2 {
-    width: 200px;
-    height: 200px;
-  }
-
-  .card-bottom2 .products-banner {
-    top: 0.8rem;
-  }
-
-  .banner-section .products-banner {
-    top: 1rem;
-    width: 150px;
-    margin-left: 1rem;
-  }
-
-  .banner-details h5 {
-    font-size: 0.9rem;
-  }
-
-  .banner-details h2 {
-    font-size: 1.8rem;
-  }
-
-  .banner-section .btn-primary {
-    font-size: 0.8rem;
-    padding: 5px 0px;
-  }
-
-  .banner-section .btn-primary i {
-    font-size: 15px;
-  }
-
-  .banner2-section {
-    width: 98.4%;
-  }
-
-  .banner2-section .card {
-    width: 33.33%;
-  }
-
-  .banner2-section .card-body1,
-  .banner2-section .card-body2,
-  .banner2-section .card-body3 {
-    height: 18rem;
-  }
-
-  .card-body1 .title {
-    padding: 30px 0px 30px 20px;
-  }
-
-  .card-body1 .title h2 {
-    font-size: 1.2rem;
-  }
-
-  .card-body1 .title h1 {
-    font-size: 1.7rem;
-    margin-bottom: 3px;
-  }
-
-  .card-body1 .title p {
-    font-size: 12px;
-  }
-
-  .card-body1 button.btn-primary {
-    font-size: 0.9rem;
-    margin-left: 4rem;
-    width: 45%;
-  }
-
-  .card-body3 button.btn-primary {
-    font-size: 0.9rem;
-    margin-top: -0.5rem;
-    margin-left: 2.5rem;
-    padding: 13px 0px;
-    width: 60%;
-  }
-
-  .card-body3 .title {
-    padding: 40px 0px 30px 10px;
-  }
-
-  .card-body3 .title h4 {
-    font-size: 0.9rem;
-  }
-
-  .card-body3 span {
-    font-size: 1.7rem;
-  }
-
-  .card-body3 .title p {
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-
-  .reviews .section-title {
-    padding-bottom: 10px;
-  }
-
-  .reviews .section-title h2 {
-    font-size: larger;
-    font-weight: 600;
-  }
-
-  .reviews .section-title p {
-    font-size: small;
-    font-weight: 300;
-  }
-
-  #addReviewform .card {
-    width: 209%;
-    margin-left: -109%;
-  }
-
-  .reviews .carousel-item {
-    width: 100%;
-    height: 320px;
-  }
-
-  .reviews .review-text {
-    font-size: 0.9rem;
-  }
-
-  .reviews .quote {
-    width: 100%;
-  }
-
-  .reviews .quote i {
-    font-size: 1.2rem;
-  }
-
-  .reviews .review-name {
-    font-weight: 300;
-    font-size: 1rem;
-  }
-
-  .reviews .img-section {
-    display: flex;
-    justify-content: center;
-  }
-
-  .reviews .review-img {
-    width: 80px;
-    height: 80px;
-    margin: 20px 15px 0;
-  }
-
-  .reviews .carousel-indicators button {
-    width: 7px !important;
-    height: 7.5px !important;
-  }
-
-  .reviewmoreBtn {
-    font-size: 1rem;
-  }
-
-  #addReviewBtn {
-    font-size: 1rem;
-  }
-
-  .slid-section .d-flex {
-    margin-left: 2.4rem;
-    margin-right: 0.1rem;
-  }
-
-  .slid-section .card {
-    height: 290px;
-    max-width: 210px;
-  }
-
-  .slid-section .card img {
-    height: 132px;
-    width: 100%;
-  }
-
-  .slid-section .carousel-control-next-icon {
-    margin-right: 0.7rem;
-  }
-
-  .slid-section .btn-primary {
-    margin-left: 18rem;
-  }
-}
-
 @media only screen and (min-width: 600px) and (max-width: 767px) {
-  .hero-section .container-fuild {
+  .hero-section .container-hero {
     height: 50vh;
   }
 
@@ -2020,318 +1524,12 @@ body {
   }
 }
 
-@media only screen and (min-width: 575px) and (max-width: 600px) {
-  .slid-section .d-flex {
-    margin-left: 0.1rem;
-    margin-right: 0rem;
-  }
-
-  .slid-section .card {
-    height: 300px;
-    max-width: 235px;
-  }
-
-  .slid-section .card img {
-    height: 132px;
-    width: 100%;
-  }
-
-  .slid-section .carousel-control-next-icon {
-    margin-right: 1.5rem;
-  }
-
-  .slid-section .btn-primary {
-    margin-left: 12rem;
-  }
-}
-
-@media only screen and (min-width: 550px) and (max-width: 575px) {
-  .slid-section .carousel-control-next-icon {
-    margin-right: 11rem;
-  }
-}
-
-@media only screen and (min-width: 525px) and (max-width: 550px) {
-  .slid-section .carousel-control-next-icon {
-    margin-right: 8.7rem;
-  }
-}
-
-@media only screen and (min-width: 500px) and (max-width: 525px) {
-  .slid-section .carousel-control-next-icon {
-    margin-right: 7.4rem;
-  }
-}
-
-@media only screen and (min-width: 500px) and (max-width: 575px) {
-  .slid-section .d-flex {
-    margin-left: 9rem;
-    margin-right: 0.2rem;
-    justify-content: center;
-  }
-
-  .slid-section .card {
-    height: 300px;
-    max-width: 220px;
-  }
-
-  .slid-section .card img {
-    height: 132px;
-    width: 100%;
-  }
-
-  .slid-section .btn-primary {
-    margin-left: 12rem;
-  }
-}
-
-@media only screen and (min-width: 500px) and (max-width: 600px) {
+@media only screen and (min-width: 425px) and (max-width: 600px) {
   .hero-section {
     margin-top: 85px;
   }
 
-  .hero-section .container-fuild {
-    height: 40vh;
-    margin-top: -4rem;
-  }
-
-  .overlay {
-    height: 40vh;
-  }
-
-  .hero-section .container h1 {
-    font-size: 2.2rem;
-    letter-spacing: 0.8rem;
-    line-height: 4.5rem;
-  }
-
-  .hero-section .card {
-    display: none;
-  }
-
-  .banner-section .row {
-    margin-top: 2rem;
-    justify-content: space-around;
-    margin-left: -0.8rem;
-    gap: 1rem;
-  }
-
-  .banner-section .card {
-    width: 230px;
-    height: 200px;
-  }
-
-  .banner-section .card-top {
-    display: none;
-  }
-
-  .banner-section .card-bottom {
-    margin-top: -1rem;
-  }
-
-  .banner-section .card-top,
-  .banner-section .card-bottom,
-  .banner-section .card-bottom1,
-  .banner-section .card-bottom2 {
-    width: 230px;
-    height: 200px;
-  }
-
-  .card-bottom .products-banner {
-    top: 1rem;
-    width: 140px;
-    margin-left: 1rem;
-  }
-
-  .card-bottom1 .products-banner,
-  .card-bottom2 .products-banner {
-    top: 1rem;
-    width: 140px;
-    margin-left: 1rem;
-  }
-
-  .banner-section .card-bottom2 {
-    margin-left: -1.8rem;
-  }
-
-  .banner-details h5 {
-    font-size: 0.8rem;
-  }
-
-  .banner-details h2 {
-    font-size: 1.5rem;
-  }
-
-  .banner-section .btn-primary {
-    padding: 8px 10px;
-    font-size: 0.8rem;
-  }
-
-  .banner-section .btn-primary i {
-    font-size: 15px;
-  }
-
-  .banner2-section .row {
-    display: none;
-  }
-
-  .banner2-section .img {
-    margin-top: -1.5rem;
-    margin-bottom: 2rem;
-    display: block !important;
-    width: 100.8%;
-    height: 38vh;
-    background-color: black;
-    position: relative;
-    z-index: -1;
-  }
-
-  .img .content {
-    text-align: center;
-    align-items: center;
-  }
-
-  .content h2 {
-    font-size: 1.6rem;
-    font-weight: 500;
-    color: #fff;
-    padding-top: 2.5rem;
-    line-height: 3.2rem;
-    letter-spacing: 1.5px;
-  }
-
-  .content button.btn-primary {
-    width: 28%;
-    margin-top: 2rem;
-    margin-left: 0rem;
-  }
-
-  .reviews {
-    margin-bottom: -1rem;
-  }
-
-  .reviews .section-title h2 {
-    font-size: larger;
-    font-weight: 600;
-  }
-
-  .reviews .section-title p {
-    font-size: small;
-    font-weight: 300;
-  }
-
-  #addReviewform .card {
-    width: 100%;
-    margin: 16px 0;
-  }
-
-  .reviews .carousel-item {
-    width: 100%;
-    height: 320px;
-  }
-
-  .reviews .review-text {
-    font-size: 0.9rem;
-  }
-
-  .reviews .carousel-caption {
-    margin-left: -70px;
-  }
-
-  .reviews .quote {
-    width: 500px;
-  }
-
-  .reviews .quote i {
-    font-size: 1.7rem;
-  }
-
-  .reviews .review-name {
-    font-weight: 300;
-    font-size: 1.1rem;
-  }
-
-  .reviews .img-section {
-    display: flex;
-    justify-content: center;
-  }
-
-  .reviews .review-img {
-    width: 80px;
-    height: 80px;
-    margin: 20px 15px 0;
-  }
-
-  .reviews .carousel-indicators button {
-    width: 6px !important;
-    height: 7px !important;
-    margin: 20px 2px;
-  }
-
-  .reviewmoreBtn {
-    font-size: 0.8rem;
-  }
-
-  .btn-set {
-    margin: 0;
-    padding-bottom: 10px;
-  }
-
-  #addReviewBtn {
-    font-size: 0.8rem;
-  }
-
-  #addReviewform .card .btn {
-    font-size: 0.8rem;
-  }
-
-  .reviews .section-title {
-    padding-bottom: 20px;
-  }
-}
-
-@media only screen and (min-width: 485px) and (max-width: 500px) {
-  .slid-section .carousel-control-next-icon {
-    margin-right: 7.7rem;
-  }
-}
-
-@media only screen and (min-width: 475px) and (max-width: 485px) {
-  .slid-section .carousel-control-next-icon {
-    margin-right: 7.1rem;
-  }
-}
-
-@media only screen and (min-width: 460px) and (max-width: 475px) {
-  .slid-section .carousel-control-next-icon {
-    margin-right: 6.2rem;
-  }
-}
-
-@media only screen and (min-width: 450px) and (max-width: 460px) {
-  .slid-section .carousel-control-next-icon {
-    margin-right: 5.5rem;
-  }
-}
-
-@media only screen and (min-width: 435px) and (max-width: 450px) {
-  .slid-section .carousel-control-next-icon {
-    margin-right: 4.5rem;
-  }
-}
-
-@media only screen and (min-width: 425px) and (max-width: 435px) {
-  .slid-section .carousel-control-next-icon {
-    margin-right: 4rem;
-  }
-}
-
-@media only screen and (min-width: 425px) and (max-width: 500px) {
-  .hero-section {
-    margin-top: 85px;
-  }
-
-  .hero-section .container-fuild {
+  .hero-section .container-hero {
     margin-top: -4rem;
     height: 40vh;
   }
@@ -2439,7 +1637,7 @@ body {
   }
 
   .content button.btn-primary {
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-left: 0rem;
     width: 30%;
     font-size: 0.9rem;
@@ -2549,29 +1747,9 @@ body {
   .slid-section .btn-primary {
     margin-left: 10rem;
   }
-}
 
-@media only screen and (min-width: 415px) and (max-width: 425px) {
   .slid-section .carousel-control-next-icon {
-    margin-right: 5.5rem;
-  }
-}
-
-@media only screen and (min-width: 400px) and (max-width: 415px) {
-  .slid-section .carousel-control-next-icon {
-    margin-right: 4.5rem;
-  }
-}
-
-@media only screen and (min-width: 385px) and (max-width: 400px) {
-  .slid-section .carousel-control-next-icon {
-    margin-right: 4.6rem;
-  }
-}
-
-@media only screen and (min-width: 375px) and (max-width: 385px) {
-  .slid-section .carousel-control-next-icon {
-    margin-right: 3.3rem;
+    margin-right: 4rem;
   }
 }
 
@@ -2580,7 +1758,7 @@ body {
     margin-top: 75px;
   }
 
-  .hero-section .container-fuild {
+  .hero-section .container-hero {
     height: 35vh;
     margin-top: -4rem;
   }
@@ -2688,7 +1866,7 @@ body {
   }
 
   .content button.btn-primary {
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-left: 0rem;
     width: 30%;
     padding: 8px 0px;
@@ -2804,6 +1982,7 @@ body {
   .slid-section .card {
     height: 300px;
     max-width: 235px;
+    margin-left: 10px;
   }
 
   .slid-section .card img {
@@ -2812,30 +1991,11 @@ body {
   }
 
   .slid-section .btn-primary {
-    margin-left: 6.4rem;
+    margin-left: 6.6rem;
   }
-}
 
-@media only screen and (max-width: 365px) and (min-width: 350px) {
   .slid-section .carousel-control-next-icon {
-    margin-right: 4rem;
-    height: 4rem;
-  }
-
-  .slid-section .btn-primary {
-    margin-left: 6.4rem;
-  }
-}
-
-@media only screen and (max-width: 350px) and (min-width: 320px) {
-  .slid-section .carousel-control-next-icon {
-    margin-right: 1.3rem;
-    height: 4rem;
-    width: 1.8rem;
-  }
-
-  .slid-section .btn-primary {
-    margin-left: 5.5rem;
+    margin-right: 3.4rem;
   }
 }
 
@@ -2844,7 +2004,7 @@ body {
     margin-top: 54px;
   }
 
-  .hero-section .container-fuild {
+  .hero-section .container-hero {
     height: 30vh;
     margin-top: -3rem;
   }
@@ -3078,5 +2238,15 @@ body {
   .slid-section .card img {
     height: 150px;
     width: 100%;
+  }
+
+  .slid-section .carousel-control-next-icon {
+    margin-right: 1.3rem;
+    height: 4rem;
+    width: 1.8rem;
+  }
+
+  .slid-section .btn-primary {
+    margin-left: 5.5rem;
   }
 }
