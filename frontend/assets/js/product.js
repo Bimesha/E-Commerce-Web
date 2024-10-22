@@ -2,21 +2,21 @@ const categories = {
     chair:{
         title: "CHAIR COLLECTION",
         description: "Explore our stylish and comfortable chairs designed to complement any space",
-        image1: "../assets/product-img/chair-collection.png",
-        image2: "../assets/product-img/product-1.png"
+        image1: "./assets/images/product-img/chair-collection.png",
+        image2: "./assets/images/product-img/product-1.png"
 
     },
     table:{
         title: "TABLE COLLECTION",
         description: "Discover functional and elegant tables and add versatility and charm to your home or office",
-        image1: "../assets/product-img/table-collection.png",
-        image2: "../assets/product-img/product-1.png"
+        image1: "./assets/images/product-img/table-collection.png",
+        image2: "./assets/images/product-img/product-1.png"
     },
     sofa:{
         title: "SOFA COLLECTION",
         description: "Browse through our luxurious sofas, perfect for relaxing and enhancing your living space",
-        image1: "../assets/product-img/sofa-collection.png",
-        image2: "../assets/product-img/page-image-1.png"
+        image1: "./assets/images/product-img/sofa-collection.png",
+        image2: "./assets/images/product-img/page-image-1.png"
     }
 };
 
