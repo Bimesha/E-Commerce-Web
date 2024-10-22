@@ -1,0 +1,657 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.admin-products {
+  display: flex;
+  margin-top: 10px;
+}
+
+.content-section {
+  width: 100%;
+  margin-left: 30px;
+  margin-right: 150px;
+}
+
+/* Add New Product */
+.content-section .add-product {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(190, 188, 188);
+  border-radius: 8px;
+}
+
+.content-section .add-title {
+  padding: 16px 0 0 30px;
+}
+
+.content-section .add-icon {
+  padding: 11px 30px 0 0;
+  cursor: pointer;
+}
+
+.content-section i {
+  font-size: 25px;
+  padding: 3px 7px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.add-title p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Table */
+.table {
+  text-align: center;
+}
+
+.table thead th {
+  background-color: black;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 12px 0;
+}
+
+.table tbody td {
+  background-color: rgb(243, 242, 242);
+}
+
+.table tbody tr {
+  border-bottom: 3px solid #fff;
+}
+
+.edit i,
+.delete i {
+  font-size: 20px;
+}
+
+.edit {
+  background-color: #ffc756;
+  border: none;
+  padding: 2px 0;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.delete {
+  background-color: rgb(246, 131, 131);
+  border: none;
+  padding: 2px 0;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Add New Product Modal and Update Product Modal */
+.add-new-product .modal-dialog,
+.edit-product .modal-dialog {
+  max-width: 900px;
+}
+
+.add-new-product .modal-title,
+.edit-product .modal-title {
+  margin: 0 1.5rem;
+}
+
+.add-new-product .btn-close,
+.edit-product .btn-close {
+  margin-right: 1.5rem;
+}
+
+.add-new-product .modal-body,
+.edit-product .modal-body {
+  margin: 0 1.5rem;
+}
+
+.add-new-product form,
+.edit-product form {
+  display: flex;
+  gap: 100px;
+}
+
+.add-new-product .form,
+.edit-product .form {
+  width: 60%;
+}
+
+.add-new-product option,
+.edit-product option {
+  font-size: 14px;
+}
+
+.add-new-product .form-select,
+.edit-product .form-select {
+  width: 60%;
+}
+
+.add-new-product .price-quantity,
+.edit-product .price-quantity {
+  display: flex;
+  gap: 30px;
+}
+
+.add-new-product img,
+.edit-product img {
+  margin-top: 10px;
+  margin-bottom: 12px;
+  width: 350px;
+  height: 200px;
+}
+
+.add-new-product .modal-footer,
+.edit-product .modal-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1.5rem;
+}
+
+.add-new-product .clear-btn,
+.edit-product .clear-btn {
+  background-color: rgb(225, 223, 223);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.add-new-product .discard-btn,
+.edit-product .discard-btn {
+  background-color: black;
+  border: none;
+  color: #fff;
+  margin-right: 20px;
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.add-new-product .submit-btn,
+.edit-product .save-btn {
+  background-color: #ffba35;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+/* Media Queries */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  .content-section {
+    margin-right: 85px;
+  }
+}
+
+@media only screen and (min-width: 990px) and (max-width: 1024px) {
+  .content-section {
+    margin-right: 50px;
+  }
+
+  .content-section i {
+    font-size: 23px;
+    padding: 2px 6px;
+  }
+
+  .content-section .add-title {
+    padding: 14px 0 0 30px;
+  }
+
+  .add-title p {
+    font-size: 16px;
+  }
+
+  .table thead th,
+  .table tbody td {
+    font-size: 13px;
+  }
+
+  .edit i,
+  .delete i {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  .content-section {
+    margin-right: 50px;
+  }
+
+  .content-section .add-icon {
+    margin-top: -2px;
+  }
+
+  .content-section i {
+    font-size: 20px;
+    padding: 2px 5px;
+  }
+
+  .content-section .add-title {
+    padding: 10px 0 0 30px;
+  }
+
+  .add-title p {
+    font-size: 14px;
+  }
+
+  .table thead th,
+  .table tbody td {
+    font-size: 12px;
+  }
+
+  .edit i,
+  .delete i {
+    font-size: 16px;
+  }
+
+  .add-new-product form,
+  .edit-product form {
+    gap: 70px;
+  }
+
+  .add-new-product .form,
+  .edit-product .form {
+    width: 70%;
+  }
+  .add-new-product img,
+  .edit-product img {
+    width: 320px;
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .content-section {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  .content-section .add-icon {
+    margin-top: -3px;
+  }
+
+  .content-section i {
+    font-size: 16px;
+    padding: 2px 5px;
+  }
+
+  .content-section .add-title {
+    padding: 10px 0 0 25px;
+  }
+
+  .add-title p {
+    font-size: 10px;
+  }
+
+  .table thead th,
+  .table tbody td {
+    font-size: 9px;
+  }
+
+  .edit i,
+  .delete i {
+    font-size: 12px;
+  }
+
+  .add-new-product form,
+  .edit-product form {
+    gap: 50px;
+  }
+
+  .add-new-product .form-select,
+  .edit-product .form-select {
+    width: 88%;
+  }
+
+  .add-new-product form,
+  .edit-product form {
+    gap: 70px;
+  }
+
+  .add-new-product .form,
+  .edit-product .form {
+    width: 80%;
+  }
+
+  .add-new-product img,
+  .edit-product img {
+    width: 250px;
+    height: 180px;
+  }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 600px) {
+  .content-section {
+    margin-right: 12px;
+    margin-left: 12px;
+  }
+
+  .content-section h1 {
+    margin-top: 20px;
+  }
+
+  .content-section .add-icon {
+    margin-top: -3px;
+  }
+
+  .content-section i {
+    font-size: 20px;
+    padding: 2px 5px;
+  }
+
+  .content-section .add-title {
+    padding: 10px 0 0 25px;
+  }
+
+  .add-title p {
+    font-size: 14px;
+  }
+
+  .content-section .table {
+    margin-top: -5px;
+  }
+
+  .table thead th,
+  .table tbody td {
+    font-size: 10px;
+  }
+
+  .edit i,
+  .delete i {
+    font-size: 12px;
+  }
+
+  .edit {
+    margin-right: 4px;
+  }
+
+  .add-new-product form,
+  .edit-product form {
+    flex-direction: column;
+  }
+
+  .add-new-product .form,
+  .edit-product .form {
+    width: 100%;
+  }
+
+  .add-new-product .form-select,
+  .edit-product .form-select {
+    width: 100%;
+  }
+
+  .add-new-product .product-image,
+  .edit-product .product-image {
+    margin-top: -100px;
+  }
+
+  .add-new-product img,
+  .edit-product img {
+    width: 330px;
+    height: 200px;
+  }
+
+  .add-new-product .modal-footer,
+  .edit-product .modal-footer {
+    display: none;
+  }
+
+  .add-new-product .modal-footer1,
+  .edit-product .modal-footer1 {
+    display: flex !important;
+    justify-content: space-between;
+    margin: 0 2.5rem;
+  }
+
+  .add-new-product .modal-footer1 button,
+  .edit-product .modal-footer1 button {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .add-new-product .discard-btn,
+  .edit-product .discard-btn {
+    margin-right: 0px;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+  .content-section {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .content-section h1 {
+    margin-top: 20px;
+  }
+
+  .content-section .add-icon {
+    margin-top: -3px;
+  }
+
+  .content-section i {
+    font-size: 20px;
+    padding: 2px 5px;
+  }
+
+  .content-section .add-title {
+    padding: 10px 0 0 25px;
+  }
+
+  .add-title p {
+    font-size: 14px;
+  }
+
+  .content-section .table {
+    margin-top: -10px;
+  }
+
+  .table thead th,
+  .table tbody td {
+    font-size: 9px;
+  }
+
+  .edit i,
+  .delete i {
+    font-size: 12px;
+  }
+
+  .edit {
+    margin-right: 4px;
+  }
+
+  .add-new-product form,
+  .edit-product form {
+    flex-direction: column;
+  }
+
+  .add-new-product .form,
+  .edit-product .form {
+    width: 100%;
+  }
+
+  .add-new-product .form-select,
+  .edit-product .form-select {
+    width: 100%;
+  }
+
+  .add-new-product .product-image,
+  .edit-product .product-image {
+    margin-top: -100px;
+  }
+
+  .add-new-product img,
+  .edit-product img {
+    width: 280px;
+    height: 180px;
+  }
+
+  .add-new-product .modal-footer,
+  .edit-product .modal-footer {
+    display: none;
+  }
+
+  .add-new-product .modal-footer1,
+  .edit-product .modal-footer1 {
+    display: flex !important;
+    justify-content: space-between;
+    margin: 0 2.5rem;
+  }
+
+  .add-new-product .modal-footer1 button,
+  .edit-product .modal-footer1 button {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 10px 15px;
+  }
+
+  .add-new-product .discard-btn,
+  .edit-product .discard-btn {
+    margin-right: 0px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  .content-section {
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  .content-section h1 {
+    margin-top: 20px;
+  }
+
+  .content-section .add-icon {
+    margin-top: -3px;
+  }
+
+  .content-section i {
+    font-size: 20px;
+    padding: 2px 5px;
+  }
+
+  .content-section .add-title {
+    padding: 10px 0 0 25px;
+  }
+
+  .add-title p {
+    font-size: 14px;
+  }
+
+  .content-section .table {
+    margin-top: -15px;
+  }
+
+  .table thead th,
+  .table tbody td {
+    font-size: 8px;
+  }
+
+  .edit i,
+  .delete i {
+    font-size: 11px;
+  }
+
+  .edit {
+    margin-right: 3px;
+  }
+
+  .add-new-product .modal-title,
+  .edit-product .modal-title {
+    margin: 0 0.5rem;
+  }
+
+  .add-new-product .btn-close,
+  .edit-product .btn-close {
+    margin-right: 0.5rem;
+  }
+
+  .add-new-product .modal-body,
+  .edit-product .modal-body {
+    margin: 0 0.5rem;
+  }
+
+  .add-new-product h5,
+  .edit-product h5 {
+    font-size: 17px;
+  }
+
+  .add-new-product .btn-close,
+  .edit-product .btn-close {
+    font-size: 15px;
+  }
+
+  .add-new-product label,
+  .edit-product label {
+    font-size: 14px;
+  }
+
+  .add-new-product form,
+  .edit-product form {
+    flex-direction: column;
+  }
+
+  .add-new-product .form,
+  .edit-product .form {
+    width: 100%;
+  }
+
+  .add-new-product .form-select,
+  .edit-product .form-select {
+    width: 100%;
+  }
+
+  .add-new-product .product-image,
+  .edit-product .product-image {
+    margin-top: -100px;
+  }
+
+  .add-new-product img,
+  .edit-product img {
+    width: 250px;
+    height: 160px;
+  }
+
+  .add-new-product .modal-footer,
+  .edit-product .modal-footer {
+    display: none;
+  }
+
+  .add-new-product .modal-footer1,
+  .edit-product .modal-footer1 {
+    display: flex !important;
+    justify-content: space-between;
+    margin: 0 1.5rem;
+  }
+
+  .add-new-product .modal-footer1 button,
+  .edit-product .modal-footer1 button {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+
+  .add-new-product .discard-btn,
+  .edit-product .discard-btn {
+    margin-right: 0px;
+  }
+}
