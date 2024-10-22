@@ -1,6 +1,6 @@
 class RegistrationForm extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
         <!--registration Modal -->
         <div class="modal fade" id="createAccount" tabindex="-1" aria-labelledby="createAccountForm" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-fullscreen-sm-down modal-dialog-centered">
@@ -131,109 +131,160 @@ class RegistrationForm extends HTMLElement {
         </div>
     </section>
         `;
-    }
+  }
 }
 
-customElements.define('registration-form', RegistrationForm);
+customElements.define("registration-form", RegistrationForm);
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize modal
+  var createAccountModal = new bootstrap.Modal(
+    document.getElementById("createAccount"),
+    {
+      keyboard: false,
+      backdrop: "static",
+    }
+  );
 
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Initialize modal
-    var createAccountModal = new bootstrap.Modal(document.getElementById('createAccount'), {
-        keyboard: false,
-        backdrop: 'static'
-    });
-    
-    // Open the modal on clicking 'Create Account'
-    document.getElementById('signup-link').addEventListener('click', function () {
-        createAccountModal.show();
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Toggle visibility for the first password field
-    const toggleRegPassword = document.querySelector('#toggleRegPassword');
-    const passwordField = document.querySelector('#password');
-  
-    toggleRegPassword.addEventListener('click', function () {
-      const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
-      passwordField.setAttribute('type', type);
-      this.classList.toggle('bi-eye-fill');
-      this.classList.toggle('bi-eye-slash-fill');
-    });
-  
-    // Toggle visibility for the second confirm password field
-    const toggleConfirmPassword = document.querySelector('#toggleConfirmPassword');
-    const confirmPasswordField = document.querySelector('#confirmPassword');
-  
-    toggleConfirmPassword.addEventListener('click', function () {
-      const type = confirmPasswordField.getAttribute('type') === 'password' ? 'text' : 'password';
-      confirmPasswordField.setAttribute('type', type);
-      this.classList.toggle('bi-eye-fill');
-      this.classList.toggle('bi-eye-slash-fill');
-    });
+  // Open the modal on clicking 'Create Account'
+  document.getElementById("signup-link").addEventListener("click", function () {
+    createAccountModal.show();
   });
-  
-  
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Toggle visibility for the first password field
+  const toggleRegPassword = document.querySelector("#toggleRegPassword");
+  const passwordField = document.querySelector("#password");
+
+  toggleRegPassword.addEventListener("click", function () {
+    const type =
+      passwordField.getAttribute("type") === "password" ? "text" : "password";
+    passwordField.setAttribute("type", type);
+    this.classList.toggle("bi-eye-fill");
+    this.classList.toggle("bi-eye-slash-fill");
+  });
+
+  // Toggle visibility for the second confirm password field
+  const toggleConfirmPassword = document.querySelector(
+    "#toggleConfirmPassword"
+  );
+  const confirmPasswordField = document.querySelector("#confirmPassword");
+
+  toggleConfirmPassword.addEventListener("click", function () {
+    const type =
+      confirmPasswordField.getAttribute("type") === "password"
+        ? "text"
+        : "password";
+    confirmPasswordField.setAttribute("type", type);
+    this.classList.toggle("bi-eye-fill");
+    this.classList.toggle("bi-eye-slash-fill");
+  });
+});
+
 // Change background color when the modal is shown
-document.getElementById('createAccount').addEventListener('show.bs.modal', function () {
-    document.querySelector('.header-container').classList.add('dark-background');
-});
-  
+document
+  .getElementById("createAccount")
+  .addEventListener("show.bs.modal", function () {
+    document
+      .querySelector(".header-container")
+      .classList.add("dark-background");
+  });
+
 // Revert background color when the modal is hidden
-document.getElementById('createAccount').addEventListener('hide.bs.modal', function () {
-    document.querySelector('.header-container').classList.remove('dark-background');
-});
-  
-document.getElementById('createAccount').addEventListener('show.bs.modal', function () {
-    document.querySelector('.header-search').classList.add('change-background');
-});
-  
-document.getElementById('createAccount').addEventListener('hide.bs.modal', function () {
-    document.querySelector('.header-search').classList.remove('change-background');
-});
-  
-document.getElementById('createAccount').addEventListener('show.bs.modal', function () {
-    document.querySelector('.header-search input').classList.add('changeinput-background');
-});
-  
-document.getElementById('createAccount').addEventListener('hide.bs.modal', function () {
-    document.querySelector('.header-search input').classList.remove('changeinput-background');
-});
-  
-document.getElementById('createAccount').addEventListener('show.bs.modal', function () {
-    document.querySelector('#drop-down').classList.add('changemenu-background');
-});
-  
-document.getElementById('createAccount').addEventListener('hide.bs.modal', function () {
-    document.querySelector('#drop-down').classList.remove('changemenu-background');
-});
+document
+  .getElementById("createAccount")
+  .addEventListener("hide.bs.modal", function () {
+    document
+      .querySelector(".header-container")
+      .classList.remove("dark-background");
+  });
 
+document
+  .getElementById("createAccount")
+  .addEventListener("show.bs.modal", function () {
+    document.querySelector(".header-search").classList.add("change-background");
+  });
 
+document
+  .getElementById("createAccount")
+  .addEventListener("hide.bs.modal", function () {
+    document
+      .querySelector(".header-search")
+      .classList.remove("change-background");
+  });
 
-const regSuccessModal = new bootstrap.Modal(document.getElementById('regSuccessModal'));
-const regFailureModal = new bootstrap.Modal(document.getElementById('regFailureModal'));
+document
+  .getElementById("createAccount")
+  .addEventListener("show.bs.modal", function () {
+    document
+      .querySelector(".header-search input")
+      .classList.add("changeinput-background");
+  });
+
+document
+  .getElementById("createAccount")
+  .addEventListener("hide.bs.modal", function () {
+    document
+      .querySelector(".header-search input")
+      .classList.remove("changeinput-background");
+  });
+
+document
+  .getElementById("createAccount")
+  .addEventListener("show.bs.modal", function () {
+    document.querySelector("#drop-down").classList.add("changemenu-background");
+  });
+
+document
+  .getElementById("createAccount")
+  .addEventListener("hide.bs.modal", function () {
+    document
+      .querySelector("#drop-down")
+      .classList.remove("changemenu-background");
+  });
+
+const regSuccessModal = new bootstrap.Modal(
+  document.getElementById("regSuccessModal")
+);
+const regFailureModal = new bootstrap.Modal(
+  document.getElementById("regFailureModal")
+);
 
 // For failure modal background color change
-document.getElementById('regFailureModal').addEventListener('show.bs.modal', function () {
-    document.querySelector('#createAccount .modal-dialog').classList.add('form-dark-background');
+document
+  .getElementById("regFailureModal")
+  .addEventListener("show.bs.modal", function () {
+    document
+      .querySelector("#createAccount .modal-dialog")
+      .classList.add("form-dark-background");
   });
-  
-  document.getElementById('regFailureModal').addEventListener('hide.bs.modal', function () {
+
+document
+  .getElementById("regFailureModal")
+  .addEventListener("hide.bs.modal", function () {
     setTimeout(() => {
-      document.querySelector('#createAccount .modal-dialog').classList.remove('form-dark-background');
-    }, 200);
-  });
-  
-  // For success modal background color change
-  document.getElementById('regSuccessModal').addEventListener('show.bs.modal', function () {
-    document.querySelector('#createAccount .modal-dialog').classList.add('form-dark-background');
-  });
-  
-  document.getElementById('regSuccessModal').addEventListener('hide.bs.modal', function () {
-    setTimeout(() => {
-      document.querySelector('#createAccount .modal-dialog').classList.remove('form-dark-background');
+      document
+        .querySelector("#createAccount .modal-dialog")
+        .classList.remove("form-dark-background");
     }, 200);
   });
 
+// For success modal background color change
+document
+  .getElementById("regSuccessModal")
+  .addEventListener("show.bs.modal", function () {
+    document
+      .querySelector("#createAccount .modal-dialog")
+      .classList.add("form-dark-background");
+  });
+
+document
+  .getElementById("regSuccessModal")
+  .addEventListener("hide.bs.modal", function () {
+    setTimeout(() => {
+      document
+        .querySelector("#createAccount .modal-dialog")
+        .classList.remove("form-dark-background");
+    }, 200);
+  });

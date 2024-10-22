@@ -1,6 +1,6 @@
 class LoginForm extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
         <!-- Modal -->
         <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-fullscreen-sm-down modal-dialog-centered">
@@ -118,94 +118,113 @@ class LoginForm extends HTMLElement {
         </div>
     </section>
         `;
-    }
+  }
 }
 
 // Define custom element
-customElements.define('login-form', LoginForm);
+customElements.define("login-form", LoginForm);
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize modal
+  var loginModal = new bootstrap.Modal(document.getElementById("login"), {
+    keyboard: false,
+    backdrop: "static",
+  });
 
-    // Initialize modal
-    var loginModal = new bootstrap.Modal(document.getElementById('login'), {
-        keyboard: false,
-        backdrop: 'static'
+  // Open the modal on clicking 'Login'
+  document.getElementById("login-link").addEventListener("click", function () {
+    loginModal.show();
+  });
+
+  // password visibility by toggle icon
+  const togglePassword = document.getElementById("togglePassword");
+  const passwordInput = document.getElementById("loginPassword");
+
+  if (togglePassword && passwordInput) {
+    togglePassword.addEventListener("click", function () {
+      const type =
+        passwordInput.getAttribute("type") === "password" ? "text" : "password";
+      passwordInput.setAttribute("type", type);
+      this.classList.toggle("bi-eye-fill");
+      this.classList.toggle("bi-eye-slash-fill");
     });
-    
-    // Open the modal on clicking 'Login'
-    document.getElementById('login-link').addEventListener('click', function () {
-        loginModal.show();
-    });
-
-    // password visibility by toggle icon
-    const togglePassword = document.getElementById('togglePassword');
-    const passwordInput = document.getElementById('loginPassword');
-
-    if (togglePassword && passwordInput) {
-        togglePassword.addEventListener('click', function () {
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-            this.classList.toggle('bi-eye-fill');
-            this.classList.toggle('bi-eye-slash-fill');
-        });
-    }
-
-
+  }
 });
 
 // Change background color when the modal is shown
-document.getElementById('login').addEventListener('show.bs.modal', function () {
-    document.querySelector('.header-container').classList.add('dark-background');
+document.getElementById("login").addEventListener("show.bs.modal", function () {
+  document.querySelector(".header-container").classList.add("dark-background");
 });
-  
+
 // Revert background color when the modal is hidden
-document.getElementById('login').addEventListener('hide.bs.modal', function () {
-    document.querySelector('.header-container').classList.remove('dark-background');
-});
-  
-document.getElementById('login').addEventListener('show.bs.modal', function () {
-    document.querySelector('.header-search').classList.add('change-background');
-});
-  
-document.getElementById('login').addEventListener('hide.bs.modal', function () {
-    document.querySelector('.header-search').classList.remove('change-background');
-});
-  
-document.getElementById('login').addEventListener('show.bs.modal', function () {
-    document.querySelector('.header-search input').classList.add('changeinput-background');
-});
-  
-document.getElementById('login').addEventListener('hide.bs.modal', function () {
-    document.querySelector('.header-search input').classList.remove('changeinput-background');
-});
-  
-document.getElementById('login').addEventListener('show.bs.modal', function () {
-    document.querySelector('#drop-down').classList.add('changemenu-background');
-});
-  
-document.getElementById('login').addEventListener('hide.bs.modal', function () {
-    document.querySelector('#drop-down').classList.remove('changemenu-background');
-});
-  
-document.getElementById('login').addEventListener('show.bs.modal', function () {
-    document.querySelector('.box').classList.add('changemenu-background');
-});
-  
-document.getElementById('login').addEventListener('hide.bs.modal', function () {
-    document.querySelector('.box').classList.remove('changemenu-background');
+document.getElementById("login").addEventListener("hide.bs.modal", function () {
+  document
+    .querySelector(".header-container")
+    .classList.remove("dark-background");
 });
 
+document.getElementById("login").addEventListener("show.bs.modal", function () {
+  document.querySelector(".header-search").classList.add("change-background");
+});
 
-const loginSuccessModal = new bootstrap.Modal(document.getElementById('loginSuccessModal'));
-const loginFailureModal = new bootstrap.Modal(document.getElementById('loginFailureModal'));
-  
+document.getElementById("login").addEventListener("hide.bs.modal", function () {
+  document
+    .querySelector(".header-search")
+    .classList.remove("change-background");
+});
+
+document.getElementById("login").addEventListener("show.bs.modal", function () {
+  document
+    .querySelector(".header-search input")
+    .classList.add("changeinput-background");
+});
+
+document.getElementById("login").addEventListener("hide.bs.modal", function () {
+  document
+    .querySelector(".header-search input")
+    .classList.remove("changeinput-background");
+});
+
+document.getElementById("login").addEventListener("show.bs.modal", function () {
+  document.querySelector("#drop-down").classList.add("changemenu-background");
+});
+
+document.getElementById("login").addEventListener("hide.bs.modal", function () {
+  document
+    .querySelector("#drop-down")
+    .classList.remove("changemenu-background");
+});
+
+document.getElementById("login").addEventListener("show.bs.modal", function () {
+  document.querySelector(".box").classList.add("changemenu-background");
+});
+
+document.getElementById("login").addEventListener("hide.bs.modal", function () {
+  document.querySelector(".box").classList.remove("changemenu-background");
+});
+
+const loginSuccessModal = new bootstrap.Modal(
+  document.getElementById("loginSuccessModal")
+);
+const loginFailureModal = new bootstrap.Modal(
+  document.getElementById("loginFailureModal")
+);
+
 // For failure modal background color change
-document.getElementById('loginFailureModal').addEventListener('show.bs.modal', function () {
-    document.querySelector('#login .modal-dialog').classList.add('form-dark-background');
+document
+  .getElementById("loginFailureModal")
+  .addEventListener("show.bs.modal", function () {
+    document
+      .querySelector("#login .modal-dialog")
+      .classList.add("form-dark-background");
   });
-  
-  document.getElementById('loginFailureModal').addEventListener('hide.bs.modal', function () {
+
+document
+  .getElementById("loginFailureModal")
+  .addEventListener("hide.bs.modal", function () {
     setTimeout(() => {
-      document.querySelector('#login .modal-dialog').classList.remove('form-dark-background');
+      document
+        .querySelector("#login .modal-dialog")
+        .classList.remove("form-dark-background");
     }, 200);
   });
