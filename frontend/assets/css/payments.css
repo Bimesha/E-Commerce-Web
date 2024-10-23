@@ -1,9 +1,44 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.step {
+  text-align: center;
+}
+
+.step .step-icon {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  color: #6c757d;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.step.completed .step-icon {
+  background-color: #28a745;
+  color: white;
+}
+
+.step.active .step-icon {
+  background-color: #ffba35;
+  color: white;
+}
+
+.step span {
+  display: block;
 }
