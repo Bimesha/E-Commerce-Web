@@ -8,15 +8,11 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.steps-section {
-  margin-left: 9px;
-}
-
-.stepper {
+.steps-section .stepper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 20px 100px 20px 110px;
   position: relative;
 }
 
