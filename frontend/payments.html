@@ -73,54 +73,49 @@
     <div class="payment-methods-section">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="col-lg-4 col-md-4 col-sm-4 first">
             <div class="payment-method">
               <h3>Payment Method</h3>
               <div>
-                <button id="creditCard" class="btn btn-primary">
-                  Credit Card
-                </button>
+                  <button id="creditCard" class="btn btn-primary">Credit Card</button>
               </div>
               <div>
-                <button id="cashOnDelivery" class="btn btn-primary">
-                  Cash on Delivery
-                </button>
+                  <button id="cashOnDelivery" class="btn btn-primary">Cash on Delivery</button>
               </div>
             </div>
 
             <div class="order-summary" id="orderSummary">
-              <h1>Order Summary</h1>
+              <h4>Order Summary</h4>
+              <hr class="line1"/>
               <table id="orderSummaryTable">
-                <tbody id="orderItems">
-                  <tr>
-                    <td>Items</td>
-                    <td>3</td>
-                  </tr>
-                  <tr>
-                    <td>Sub Total</td>
-                    <td>Rs 5000.00</td>
-                  </tr>
-                  <tr>
-                    <td>Delivery Fee</td>
-                    <td>Rs 200.00</td>
-                  </tr>
-                  <hr class="line" />
-                  <tr id="orderTotal">
-                    <td>Total</td>
-                    <td>Rs 5200.00</td>
-                  </tr>
-                </tbody>
+                  <tbody id="orderItems">
+                    <tr>
+                      <td>Items</td>
+                      <td class="second-data">3</td>
+                    </tr>
+                    <tr>
+                      <td>Sub Total</td>
+                      <td class="second-data">Rs 5200.00</td>
+                    </tr>
+                    <tr>
+                      <td>Delivery Fee</td>
+                      <td class="second-data">Rs 2000.00</td>
+                    </tr>
+                    <tr id = "orderTotal">
+                      <td class="total">Total</td>
+                      <td class="second-data">Rs 7200.00</td>
+                    </tr>
+                  </tbody>
               </table>
               <div id="orderTotal">
-                <!-- Total will be inserted here -->
+                  <!-- Total will be inserted here -->
               </div>
             </div>
           </div>
 
-          
-          <div class="col-lg-6 col-md-6 col-sm-6" id="paymentDetails">
+          <div class="col-lg-5 col-md-5 col-sm-5" id="paymentDetails">
             <div class="credit-card">
-              <h3>Credit Card Details</h3>
+              <h3>Card Details</h3>
               <form id="creditCardForm">
                 <div class="form-group">
                   <label for="cardNumber" class="form-label">Card Number</label>
