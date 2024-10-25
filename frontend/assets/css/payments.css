@@ -8,15 +8,12 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.steps-section {
-  margin-left: 9px;
-}
-
-.stepper {
+/* Steps Section */
+.steps-section .stepper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 20px 180px 20px 190px;
   position: relative;
 }
 
@@ -65,4 +62,92 @@ body {
 
 .step span {
   display: block;
+}
+
+/* Payment Section */
+.payment-methods-section {
+  margin: 60px 180px 60px 180px;
+}
+
+.payment-methods-section .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-methods-section h3 {
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.payment-methods-section button.btn-primary {
+  background-color: #e9ecef;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.payment-methods-section button.btn-primary:hover {
+  background-color: #e9ecef;
+}
+
+.payment-methods-section #creditCard,
+.payment-methods-section #cashOnDelivery {
+  margin-bottom: 10px;
+}
+
+.payment-methods-section .order-summary {
+  margin-top: 20px;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 100%;
+}
+
+.payment-methods-section .order-summary h4 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.payment-methods-section hr {
+  border: 1px solid black;
+}
+
+.payment-methods-section #orderSummaryTable {
+  width: 100%;
+  margin-top: -10px;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  font-size: 15px;
+}
+
+.payment-methods-section #orderSummaryTable td:nth-child(2) {
+  text-align: right;
+}
+
+.payment-methods-section #orderTotal td {
+  border-top: 1px solid rgb(155, 153, 153);
+  font-weight: 500;
+  padding: 12px 0 0 0;
+}
+
+.payment-methods-section #paymentDetails {
+  margin-top: 25px;
+}
+
+.payment-methods-section .expiry-date-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.payment-methods-section #paymentDetails button {
+  margin-top: 30px;
+  width: 100%;
+  background-color: #ffba35;
+  color: #000000;
 }
