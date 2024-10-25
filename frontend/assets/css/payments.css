@@ -74,23 +74,23 @@ body {
   justify-content: space-between;
 }
 
-.payment-methods-section .first {
-  border: 1px solid #cb3636;
-}
-
 .payment-methods-section h3 {
   font-weight: 500;
   margin-bottom: 25px;
 }
 
-.payment-methods-section button {
-  background-color: black;
-  color: white;
+.payment-methods-section button.btn-primary {
+  background-color: #e9ecef;
+  color: #000000;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 80%;
+  width: 100%;
+}
+
+.payment-methods-section button.btn-primary:hover {
+  background-color: #e9ecef;
 }
 
 .payment-methods-section #creditCard,
@@ -103,7 +103,7 @@ body {
   padding: 10px 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-  width: 80%;
+  width: 100%;
 }
 
 .payment-methods-section .order-summary h4 {
@@ -133,4 +133,21 @@ body {
   border-top: 1px solid rgb(155, 153, 153);
   font-weight: 500;
   padding: 12px 0 0 0;
+}
+
+.payment-methods-section #paymentDetails {
+  margin-top: 25px;
+}
+
+.payment-methods-section .expiry-date-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.payment-methods-section #paymentDetails button {
+  margin-top: 30px;
+  width: 100%;
+  background-color: #ffba35;
+  color: #000000;
 }
