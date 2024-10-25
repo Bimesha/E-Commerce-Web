@@ -89,13 +89,18 @@ body {
   width: 100%;
 }
 
-.payment-methods-section button.btn-primary:hover {
-  background-color: #e9ecef;
-}
-
 .payment-methods-section #creditCard,
 .payment-methods-section #cashOnDelivery {
   margin-bottom: 10px;
+}
+
+.payment-methods-section .payment-button.active {
+  background-color: #000000;
+  color: #fff;
+}
+
+.payment-methods-section .payment-button.inactive {
+  background-color: #e9ecef;
 }
 
 .payment-methods-section .order-summary {

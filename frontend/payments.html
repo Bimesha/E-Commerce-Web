@@ -82,12 +82,15 @@
             <div class="payment-method">
               <h3>Payment Method</h3>
               <div>
-                <button id="creditCard" class="btn btn-primary">
+                <button id="creditCard" class="btn btn-primary payment-button">
                   Credit Card
                 </button>
               </div>
               <div>
-                <button id="cashOnDelivery" class="btn btn-primary">
+                <button
+                  id="cashOnDelivery"
+                  class="btn btn-primary payment-button"
+                >
                   Cash on Delivery
                 </button>
               </div>
@@ -124,7 +127,7 @@
 
           <div class="col-lg-5 col-md-5 col-sm-5" id="paymentDetails">
             <div class="credit-card">
-              <h3>Card Details</h3>
+              <h3 id="cardTitle">Card Details</h3>
               <form id="creditCardForm">
                 <div class="form-group">
                   <label for="cardNumber" class="form-label">Card Number</label>
@@ -229,6 +232,7 @@
     <script src="./assets/widgets/login.js"></script>
     <script src="./assets/widgets/profile.js"></script>
     <script src="./assets/js/form-validation.js"></script>
+    <script src="./assets/js/payments.js"></script>
 
     <!-- Footer Component -->
     <script src="./assets/widgets/footer.js"></script>
