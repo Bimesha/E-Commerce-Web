@@ -89,13 +89,18 @@ body {
   width: 100%;
 }
 
-.payment-methods-section button.btn-primary:hover {
-  background-color: #e9ecef;
-}
-
 .payment-methods-section #creditCard,
 .payment-methods-section #cashOnDelivery {
   margin-bottom: 10px;
+}
+
+.payment-methods-section .payment-button.active {
+  background-color: #000000;
+  color: #fff;
+}
+
+.payment-methods-section .payment-button.inactive {
+  background-color: #e9ecef;
 }
 
 .payment-methods-section .order-summary {
@@ -150,4 +155,231 @@ body {
   width: 100%;
   background-color: #ffba35;
   color: #000000;
+}
+
+.payment-methods-section #orderSummaryRight {
+  margin-top: -20px;
+}
+
+.payment-methods-section .continue {
+  margin-top: 20px;
+}
+
+
+/* Media Queries */
+@media only screen and (min-width: 1200px) and (max-width: 1336px) {
+  .payment-methods-section #creditCard,
+  .payment-methods-section #cashOnDelivery {
+    width: 120%;
+  }
+
+  .payment-methods-section .order-summary {
+    width: 120%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  .payment-methods-section {
+    margin: 60px 150px 60px 150px;
+  }
+
+  .payment-methods-section .payment-method {
+    width: 125%;
+  }
+
+  .payment-methods-section .order-summary {
+    width: 125%;
+  }
+
+  .payment-methods-section #orderSummaryRight {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 990px) and (max-width: 1023px) {
+  .steps-section .stepper {
+    margin: 20px 140px 20px 150px;
+  }
+
+  .payment-methods-section {
+    margin: 60px 100px 60px 100px;
+  }
+
+  .payment-methods-section .payment-method {
+    width: 126%;
+  }
+
+  .payment-methods-section .order-summary {
+    width: 126%;
+  }
+
+  .payment-methods-section #orderSummaryRight {
+    width: 100%;
+  }
+
+  .payment-methods-section .continue {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 989px) {
+  .steps-section .stepper {
+    margin: 20px 70px 20px 80px;
+  }
+
+  .payment-methods-section {
+    margin: 60px 50px 60px 50px;
+  }
+
+  .payment-methods-section .payment-method {
+    width: 110%;
+  }
+
+  .payment-methods-section .order-summary {
+    width: 110%;
+  }
+
+  .payment-methods-section #orderSummaryRight {
+    width: 100%;
+  }
+
+  .payment-methods-section .continue {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .steps-section .stepper {
+    margin: 20px 10px 20px 20px;
+  }
+
+  .payment-methods-section {
+    margin: 60px 130px 60px 130px;
+  }
+
+  .payment-methods-section #paymentDetails {
+    margin-top: 60px;
+  }
+
+  .payment-methods-section h3 {
+    text-align: center;
+  }
+
+  .payment-methods-section td {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 599px) {
+  .steps-section .stepper {
+    margin: 20px 10px 20px 20px;
+  }
+
+  .payment-methods-section {
+    margin: 60px 70px 60px 70px;
+  }
+
+  .payment-methods-section #paymentDetails {
+    margin-top: 60px;
+  }
+
+  .payment-methods-section h3 {
+    text-align: center;
+  }
+
+  .payment-methods-section td {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+  .steps-section .stepper {
+    margin: 20px 10px 20px 20px;
+  }
+
+  .step .step-icon {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+  }
+
+  .steps-section span {
+    font-size: 13px;
+  }
+
+  .payment-methods-section {
+    margin: 40px 50px 60px 50px;
+  }
+
+  .payment-methods-section #paymentDetails {
+    margin-top: 50px;
+  }
+
+  .payment-methods-section h3 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .payment-methods-section td {
+    font-size: 14px;
+  }
+
+  .payment-methods-section button {
+    font-size: 15px;
+  }
+
+  .payment-methods-section label {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  .steps-section .stepper {
+    margin: 20px 0px 20px 10px;
+  }
+
+  .step .step-icon {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+  }
+
+  .stepper::before {
+    top: 18px;
+  }
+
+  .steps-section span {
+    font-size: 10px;
+  }
+
+  .payment-methods-section {
+    margin: 30px 20px 30px 20px;
+  }
+
+  .payment-methods-section #paymentDetails {
+    margin-top: 40px;
+  }
+
+  .payment-methods-section h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .payment-methods-section .order-summary h4 {
+    font-size: 16px;
+  }
+
+  .payment-methods-section td {
+    font-size: 12px;
+  }
+
+  .payment-methods-section button {
+    font-size: 13px;
+  }
+
+  .payment-methods-section label {
+    font-size: 13px;
+  }
 }
