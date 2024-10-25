@@ -5,10 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const orderSummaryRight = document.getElementById("orderSummaryRight");
   const cardTitle = document.getElementById("cardTitle");
   const cardForm = document.getElementById("creditCardForm");
+  const continueButton = document.getElementById("continue");
 
   // Initial state
   creditCardButton.classList.add("active");
   cashOnDeliveryButton.classList.add("inactive");
+  continueButton.style.display = "none";
 
   // Credit card button
   creditCardButton.addEventListener("click", () => {
@@ -17,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
     cardForm.style.display = "block";
     orderSummaryLeft.style.display = "block";
     orderSummaryRight.style.display = "none";
+    continueButton.style.display = "none";
+    continueButton.style.display = "none";
 
     // Update button styles
     creditCardButton.classList.add("active");
@@ -32,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cardForm.style.display = "none";
     orderSummaryLeft.style.display = "none";
     orderSummaryRight.style.display = "block";
+    continueButton.style.display = "block";
 
     // Update button styles
     cashOnDeliveryButton.classList.add("active");
