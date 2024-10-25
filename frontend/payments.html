@@ -30,6 +30,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/images/nav-img/fav-logo.png"
+    />
 
     <link rel="stylesheet" href="./assets/css/nav.css" />
     <link rel="stylesheet" href="./assets/css/payments.css" />
@@ -37,7 +42,7 @@
     <link rel="stylesheet" href="./assets/css/navbar-forms.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
 
-    <title>Payments</title>
+    <title>Oakly | Furniture</title>
   </head>
   <body>
     <!-- Special Header Component -->
@@ -77,38 +82,42 @@
             <div class="payment-method">
               <h3>Payment Method</h3>
               <div>
-                  <button id="creditCard" class="btn btn-primary">Credit Card</button>
+                <button id="creditCard" class="btn btn-primary">
+                  Credit Card
+                </button>
               </div>
               <div>
-                  <button id="cashOnDelivery" class="btn btn-primary">Cash on Delivery</button>
+                <button id="cashOnDelivery" class="btn btn-primary">
+                  Cash on Delivery
+                </button>
               </div>
             </div>
 
-            <div class="order-summary" id="orderSummary">
+            <div class="order-summary" id="orderSummaryLeft">
               <h4>Order Summary</h4>
-              <hr class="line1"/>
+              <hr class="line1" />
               <table id="orderSummaryTable">
-                  <tbody id="orderItems">
-                    <tr>
-                      <td>Items</td>
-                      <td class="second-data">3</td>
-                    </tr>
-                    <tr>
-                      <td>Sub Total</td>
-                      <td class="second-data">Rs 5200.00</td>
-                    </tr>
-                    <tr>
-                      <td>Delivery Fee</td>
-                      <td class="second-data">Rs 2000.00</td>
-                    </tr>
-                    <tr id = "orderTotal">
-                      <td class="total">Total</td>
-                      <td class="second-data">Rs 7200.00</td>
-                    </tr>
-                  </tbody>
+                <tbody id="orderItems">
+                  <tr>
+                    <td>Items</td>
+                    <td class="second-data">3</td>
+                  </tr>
+                  <tr>
+                    <td>Sub Total</td>
+                    <td class="second-data">Rs 5200.00</td>
+                  </tr>
+                  <tr>
+                    <td>Delivery Fee</td>
+                    <td class="second-data">Rs 2000.00</td>
+                  </tr>
+                  <tr id="orderTotal">
+                    <td class="total">Total</td>
+                    <td class="second-data">Rs 7200.00</td>
+                  </tr>
+                </tbody>
               </table>
               <div id="orderTotal">
-                  <!-- Total will be inserted here -->
+                <!-- Total will be inserted here -->
               </div>
             </div>
           </div>
@@ -172,6 +181,38 @@
                 <button type="submit" class="btn btn-primary">Pay Now</button>
               </form>
             </div>
+
+            <div
+              class="order-summary"
+              id="orderSummaryRight"
+              style="display: none"
+            >
+              <h4>Order Summary</h4>
+              <hr class="line1" />
+              <table id="orderSummaryTable">
+                <tbody id="orderItems">
+                  <tr>
+                    <td>Items</td>
+                    <td class="second-data">3</td>
+                  </tr>
+                  <tr>
+                    <td>Sub Total</td>
+                    <td class="second-data">Rs 5200.00</td>
+                  </tr>
+                  <tr>
+                    <td>Delivery Fee</td>
+                    <td class="second-data">Rs 2000.00</td>
+                  </tr>
+                  <tr id="orderTotal">
+                    <td class="total">Total</td>
+                    <td class="second-data">Rs 7200.00</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div id="orderTotal">
+                <!-- Total will be inserted here -->
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -186,6 +227,7 @@
     <script src="./assets/js/nav.js"></script>
     <script src="./assets/widgets/registration.js"></script>
     <script src="./assets/widgets/login.js"></script>
+    <script src="./assets/widgets/profile.js"></script>
     <script src="./assets/js/form-validation.js"></script>
 
     <!-- Footer Component -->
