@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const userRoutes = require("./routes/user-routes");
 const contactRoutes = require('./routes/contact-routes');
-const productRoutes = require('./routes/products-routes');
+const productRoutes = require('./routes/product-routes');
 const errorHandler = require("./middleware/error-handler");
 const { authenticateUser, authorizeAdmin } = require('./middleware/auth-middleware');
 
