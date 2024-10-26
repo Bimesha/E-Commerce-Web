@@ -144,6 +144,10 @@ body {
   margin-top: 25px;
 }
 
+.payment-methods-section .invalid-feedback {
+  font-size: 85%;
+}
+
 .payment-methods-section .expiry-date-container {
   display: flex;
   justify-content: space-between;
@@ -193,6 +197,14 @@ body {
 
   .payment-methods-section #orderSummaryRight {
     width: 100%;
+  }
+
+  .payment-methods-section .invalid-feedback {
+    font-size: 80%;
+  }
+
+  .payment-methods-section input::placeholder {
+    font-size: 14px;
   }
 }
 
@@ -283,6 +295,18 @@ body {
     margin-top: 60px;
   }
 
+  .payment-methods-section .invalid-feedback {
+    font-size: 71%;
+  }
+
+  .payment-methods-section .form-group {
+    margin-bottom: 15px;
+  }
+
+  .payment-methods-section input::placeholder {
+    font-size: 10px;
+  }
+
   .payment-methods-section h3 {
     text-align: center;
   }
@@ -318,6 +342,18 @@ body {
 
   .payment-methods-section #paymentDetails {
     margin-top: 50px;
+  }
+
+  .payment-methods-section .invalid-feedback {
+    font-size: 71%;
+  }
+
+  .payment-methods-section .form-group {
+    margin-bottom: 15px;
+  }
+
+  .payment-methods-section input::placeholder {
+    font-size: 10px;
   }
 
   .payment-methods-section h3 {
@@ -364,6 +400,18 @@ body {
 
   .payment-methods-section #paymentDetails {
     margin-top: 40px;
+  }
+
+  .payment-methods-section .invalid-feedback {
+    font-size: 70%;
+  }
+
+  .payment-methods-section .form-group {
+    margin-bottom: 10px;
+  }
+
+  .payment-methods-section input::placeholder {
+    font-size: 10px;
   }
 
   .payment-methods-section h3 {
