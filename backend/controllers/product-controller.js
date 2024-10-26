@@ -1,5 +1,5 @@
 const db = require('../config/db'); 
-const { getProducts } = require('../models/products-model');
+const { getProducts } = require('../models/product-model');
 
 // Controller to fetch all products to the admin page
 const getAllProducts = async (req, res) => {
