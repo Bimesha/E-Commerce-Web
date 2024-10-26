@@ -138,11 +138,11 @@
                     class="form-control"
                     id="cardNumber"
                     name="cardNumber"
-                    pattern="\\d{12}"
+                    pattern="\\d{16}"
                     required
                   />
                   <div class="invalid-feedback">
-                    Please enter a 12-digit card number.
+                    Please enter a 16-digit card number.
                   </div>
                 </div>
                 <div class="form-group">
@@ -172,9 +172,7 @@
                         pattern="(0[1-9]|1[0-2])"
                         required
                       />
-                      <div class="invalid-feedback">
-                        Please enter a valid month.
-                      </div>
+                      <div class="invalid-feedback">Please enter 2 digits.</div>
                     </div>
 
                     <div>

@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Bootstrap for card form validation
+// Bootstrap for credit card form validation
 (function () {
   "use strict";
 
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Validation functions for each field
   function validateCardNumber() {
-    if (/^\d{12}$/.test(cardNumberInput.value)) {
+    if (/^\d{16}$/.test(cardNumberInput.value)) {
       cardNumberInput.classList.add("is-valid");
       cardNumberInput.classList.remove("is-invalid");
       return true;
