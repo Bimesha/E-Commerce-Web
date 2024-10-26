@@ -304,6 +304,10 @@ body {
     font-size: 16px;
   }
 
+  .stepper::before {
+    top: 20px;
+  }
+
   .steps-section span {
     font-size: 13px;
   }
