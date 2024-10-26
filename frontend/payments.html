@@ -161,44 +161,46 @@
                 <div class="form-group">
                   <label for="expiryDate" class="form-label">Expiry Date</label>
                   <div class="expiry-date-container">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="expiryMonth"
-                      name="expiryMonth"
-                      placeholder="MM"
-                      maxlength="2"
-                      pattern="(0[1-9]|1[0-2])"
-                      required
-                    />
-                    <div class="invalid-feedback">
-                      Please enter a valid month (1-12).
+                    <div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="expiryMonth"
+                        name="expiryMonth"
+                        placeholder="MM"
+                        maxlength="2"
+                        pattern="(0[1-9]|1[0-2])"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please enter a valid month.
+                      </div>
                     </div>
 
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="expiryYear"
-                      name="expiryYear"
-                      placeholder="YY"
-                      maxlength="4"
-                      required
-                    />
-                    <div class="invalid-feedback">
-                      Please enter a valid 4-digit year.
+                    <div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="expiryYear"
+                        name="expiryYear"
+                        placeholder="YY"
+                        maxlength="4"
+                        required
+                      />
+                      <div class="invalid-feedback">Please enter 4 digits.</div>
                     </div>
 
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="cvv"
-                      name="cvv"
-                      placeholder="CVV"
-                      maxlength="3"
-                      required
-                    />
-                    <div class="invalid-feedback">
-                      Please enter a 3-digit CVV.
+                    <div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="cvv"
+                        name="cvv"
+                        placeholder="CVV"
+                        maxlength="3"
+                        required
+                      />
+                      <div class="invalid-feedback">Please enter 3 digits.</div>
                     </div>
                   </div>
                 </div>
