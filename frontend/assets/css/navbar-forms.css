@@ -29,7 +29,7 @@
 }
 
 .modal-header {
-  background-image: url(../assets/nav-img/reg.jpg);
+  background-image: url(../images/nav-img/reg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,8 +48,9 @@
 .modal-header .modal-title {
   margin-left: 66px;
   font-weight: 600;
-  color: white;
+  color: black;
   font-size: 2rem;
+  letter-spacing: 0.1rem;
 }
 
 .modal-header .close-btn {
@@ -90,11 +91,10 @@
 .modal-body input[type="email"],
 .modal-body input[type="password"],
 .modal-body input[type="text"] {
-  padding: 10px;
+  padding: 6px;
 }
 
 .btn-submit {
-  padding: 10px;
   font-size: 16px;
   width: 100%;
 }
@@ -129,10 +129,22 @@ button.btn-dark {
 }
 
 .form-dark-background input,
+.form-dark-background textarea,
+.form-dark-background .picture-container,
 .form-dark-background .input-group-text {
   background-color: rgba(26, 24, 24, 0.1) !important;
   color: rgba(43, 40, 40, 0.559) !important;
   border-color: rgba(45, 44, 44, 0.24) !important;
+}
+
+.form-dark-background #profileIcon {
+  height: 100px;
+  width: 100px;
+  font-size: 5rem;
+}
+
+.form-dark-background .invalid-feedback {
+  color: rgba(43, 40, 40, 0.559) !important;
 }
 
 .form-dark-background input::placeholder {
@@ -161,6 +173,79 @@ button.btn-dark {
   background-blend-mode: darken;
 }
 
+/* my profile modal */
+#profileForm {
+  max-height: 600px;
+  width: 100%;
+  padding: 0px 5px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+#myProfile .modal-header {
+  background-image: none;
+  border-bottom: 0;
+  padding: 20px 0;
+}
+
+#myProfile .close-btn {
+  margin-left: 18em;
+}
+
+#myProfile input::placeholder,
+textarea::placeholder {
+  font-size: 0.9rem;
+}
+
+#myProfile .modal-header .modal-title {
+  color: rgb(0, 0, 0);
+}
+
+#myProfile .picture-container {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+#profileImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+#profileIcon {
+  font-size: 5.7rem;
+  color: rgb(153, 153, 153);
+}
+
+#imgAddEditBtn {
+  background-color: rgb(48, 48, 48);
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+#imgAddEditBtn:hover {
+  background-color: rgb(214, 214, 214);
+  color: rgb(0, 0, 0);
+  border: 1px solid;
+}
+
+#imgDeleteBtn {
+  margin-left: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+#imgDeleteBtn:hover {
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border: none;
+}
+
 /* Invalid feedback */
 .invalid-feedback {
   display: none;
@@ -169,7 +254,6 @@ button.btn-dark {
 .was-validated .invalid-feedback {
   display: block;
 }
-
 
 /*media queries */
 @media only screen and (min-width: 500px) and (max-width: 600px) {
@@ -219,6 +303,12 @@ button.btn-dark {
 
   .was-validated .invalid-feedback .modal-body {
     padding-top: 30px;
+  }
+
+  #myProfile .modal-body {
+    max-height: 450px;
+    padding-top: 0;
+    padding-bottom: 10px;
   }
 }
 
@@ -274,18 +364,21 @@ button.btn-dark {
   }
 
   .btn-submit {
-    padding: 8px;
     font-size: 0.9rem;
   }
 
   .btn-log {
-    padding: 5px;
     font-size: 0.9rem;
   }
 
   .btn-createAcc {
-    padding: 5px;
     font-size: 0.9rem;
+  }
+
+  #myProfile .modal-body {
+    max-height: 450px;
+    padding-top: 0;
+    padding-bottom: 10px;
   }
 }
 
@@ -295,6 +388,7 @@ button.btn-dark {
     font-weight: 500;
     margin-left: 45px;
   }
+
   .modal-header .close-btn {
     position: absolute;
     padding: 8px 12px;
@@ -340,13 +434,39 @@ button.btn-dark {
   }
 
   .btn-submit {
-    padding: 8px;
     font-size: 0.9rem;
   }
 
   .btn-log {
-    padding: 5px;
     font-size: 0.9rem;
+  }
+
+  #myProfile .modal-body {
+    max-height: 450px;
+    padding: 0 20px;
+  }
+
+  #myProfile .picture-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  #profileIcon {
+    font-size: 5rem;
+  }
+
+  #imgDeleteBtn {
+    margin-left: 1.5px;
+    margin-top: 10px;
+  }
+
+  #userName {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  #userEmail {
+    font-size: 0.8rem;
   }
 }
 
@@ -356,6 +476,7 @@ button.btn-dark {
     font-weight: 600;
     margin-left: 38px;
   }
+
   .modal-header .close-btn {
     position: absolute;
     padding: 4px 7px;
@@ -366,8 +487,16 @@ button.btn-dark {
     margin-bottom: 10px;
   }
 
+  #loginForm .form-group {
+    margin-bottom: 10px;
+  }
+
   #registrationForm {
     padding: 10px;
+  }
+
+  #loginForm {
+    padding: 20px;
   }
 
   .modal-body {
@@ -391,13 +520,12 @@ button.btn-dark {
   }
 
   .btn-submit {
-    padding: 8px;
     font-size: 0.9rem;
   }
 
   .form-group .d-flex {
-    flex-direction: column; /* elements vertically */
-    align-items: flex-start; /* Align items to the left */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .form-group .text-muted {
@@ -405,9 +533,152 @@ button.btn-dark {
     display: block;
   }
 
-  .btn-log {
-    padding: 8px;
+  .btn-createAcc {
     font-size: 0.9rem;
-    width: 100%;
+  }
+
+  .btn-log {
+    font-size: 0.9rem;
+  }
+
+  #myProfile .modal-body {
+    max-height: 450px;
+    padding: 0 20px;
+  }
+
+  #myProfile .picture-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  #profileIcon {
+    font-size: 5rem;
+  }
+
+  #imgAddEditBtn {
+    font-size: 0.7rem;
+  }
+
+  #imgDeleteBtn {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  #userName {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  #userEmail {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .modal-header .modal-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-left: 38px;
+  }
+
+  .modal-header .close-btn {
+    position: absolute;
+    padding: 4px 7px;
+    right: 15px;
+  }
+
+  #registrationForm .form-group {
+    margin-bottom: 10px;
+  }
+
+  #loginForm .form-group {
+    margin-bottom: 10px;
+  }
+
+  #registrationForm {
+    padding: 10px;
+  }
+
+  #loginForm {
+    padding: 20px;
+  }
+
+  .modal-body {
+    padding: 1px;
+    font-size: 0.9rem;
+  }
+
+  .modal-body input[type="email"],
+  .modal-body input[type="password"],
+  .modal-body input[type="text"] {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  .was-validated .invalid-feedback .modal-body {
+    padding-top: 30px;
+  }
+
+  .was-validated .invalid-feedback {
+    font-size: 0.2rem;
+  }
+
+  .btn-submit {
+    font-size: 0.9rem;
+  }
+
+  .form-group .d-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-group .text-muted {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .btn-createAcc {
+    font-size: 0.9rem;
+  }
+
+  .btn-log {
+    font-size: 0.9rem;
+  }
+
+  #myProfile .modal-body {
+    max-height: 450px;
+    padding: 0 20px;
+  }
+
+  #myProfile .picture-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  #profileIcon {
+    font-size: 5rem;
+  }
+
+  #imgAddEditBtn {
+    font-size: 0.7rem;
+  }
+
+  #imgDeleteBtn {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  #userName {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  #userEmail {
+    font-size: 0.8rem;
+  }
+
+  #myProfile input::placeholder,
+  textarea::placeholder {
+    font-size: 0.8rem;
   }
 }
