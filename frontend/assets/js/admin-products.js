@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <td>${product.quantity}</td>
             <td>Rs ${product.price}</td>
             <td class="actions-buttons">
-              <button class="edit" data-id="${product.id}"><i class="bi bi-pencil" data-bs-toggle="modal" data-bs-target="#editProductModal"></i></button>
-              <button class="delete" data-id="${product.id}"><i class="bi bi-trash3"></i></button>
+              <button class="edit" data-id="${product.id}"><i class="fa-solid fa-pencil" data-bs-toggle="modal" data-bs-target="#editProductModal"></i></button>
+              <button class="delete" data-id="${product.id}"><i class="fa-regular fa-trash-can"></i></button>
             </td>
           `;
         productTable.appendChild(row);
@@ -232,3 +232,4 @@ document
     false
   );
 })();
+
