@@ -16,22 +16,22 @@ class SpecialSidebar extends HTMLElement {
                         </div>
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="./dashboard.html"><i class="bi bi-house-door"></i>Dashboard</a>
+                                <a class="nav-link" href="./dashboard.html"><i class="fa-solid fa-house-chimney"></i>Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./admin-products.html"><i class="bi bi-bag-dash"></i>Products</a>
+                                <a class="nav-link" href="./admin-products.html"><i class="fa-solid fa-bag-shopping"></i>Products</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="bi bi-truck"></i>Orders</a>
+                                <a class="nav-link" href="#"><i class="fa-solid fa-truck"></i>Orders</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="bi bi-people"></i>Customers</a>
+                                <a class="nav-link" href="#"><i class="fa-solid fa-users"></i>Customers</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="bi bi-quote"></i>Reviews</a>
+                                <a class="nav-link" href="#"><i class="fa-solid fa-quote-left"></i>Reviews</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="bi bi-person"></i>Profile</a>
+                                <a class="nav-link" href="#"><i class="fa-solid fa-user"></i>Profile</a>
                             </li>
                         </ul>
                     </div>
