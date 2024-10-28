@@ -23,38 +23,41 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => console.error("Error fetching products:", error));
 });
 
-// Image Preview for Product Image in Add Product Form
-document
-  .getElementById("productImage")
-  .addEventListener("change", function (event) {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        const imagePreview = document.getElementById("imagePreview");
-        imagePreview.src = e.target.result;
-        imagePreview.style.display = "block";
-      };
-      reader.readAsDataURL(file);
-    }
-  });
+// Funtion to handle add product image and delete image
+const productImageInput = document.getElementById("productImage");
+const imagePreview = document.getElementById("imagePreview");
+const pulseButton = document.getElementById("pulseButton");
+const deleteImageBtn = document.getElementById("deleteImageBtn");
+const productImageUpload = document.getElementById("productImageUpload");
 
-// Image Preview for Product Image in Edit Product Form
-document
-  .getElementById("productChangeImage")
-  .addEventListener("change", function (event) {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        const imageChangePreview =
-          document.getElementById("imageChangePreview");
-        imageChangePreview.src = e.target.result;
-        imageChangePreview.style.display = "block";
-      };
-      reader.readAsDataURL(file);
-    }
-  });
+// Open file dialog when the upload area is clicked
+productImageUpload.addEventListener("click", () => {
+  productImageInput.click();
+});
+
+// Handle image preview
+productImageInput.addEventListener("change", (e) => {
+  const file = e.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      imagePreview.src = event.target.result;
+      imagePreview.style.display = "block";
+      deleteImageBtn.style.display = "block";
+      pulseButton.style.display = "none";
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
+// Handle delete image button
+deleteImageBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  imagePreview.style.display = "none";
+  deleteImageBtn.style.display = "none";
+  pulseButton.style.display = "flex";
+  productImageInput.value = "";
+});
 
 // Real-time validation function
 function realTimeValidation(input) {
@@ -93,6 +96,7 @@ document
 document.getElementById("clearForm").addEventListener("click", function () {
   document.getElementById("addProductForm").reset();
   document.getElementById("imagePreview").style.display = "none";
+  document.getElementById("deleteImageBtn").style.display = "none";
   document
     .querySelectorAll(
       "#addProductForm input, #addProductForm select, #addProductForm textarea"
@@ -107,6 +111,7 @@ document
   .addEventListener("click", function () {
     document.getElementById("addProductForm").reset();
     document.getElementById("imagePreview").style.display = "none";
+    document.getElementById("deleteImageBtn").style.display = "none";
     document
       .querySelectorAll(
         "#addProductForm input, #addProductForm select, #addProductForm textarea"
@@ -182,3 +187,4 @@ document
     false
   );
 })();
+
