@@ -1,6 +1,6 @@
 // Fetch products from backend and display them in the table
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("http://localhost:5500/api/all-products")
+  fetch("http://localhost:5500/api/products/all-products")
     .then((response) => response.json())
     .then((data) => {
       const productTable = document.getElementById("productTable");
