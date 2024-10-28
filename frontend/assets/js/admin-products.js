@@ -97,6 +97,7 @@ document.getElementById("clearForm").addEventListener("click", function () {
   document.getElementById("addProductForm").reset();
   document.getElementById("imagePreview").style.display = "none";
   document.getElementById("deleteImageBtn").style.display = "none";
+  document.getElementById("pulseButton").style.display = "flex";
   document
     .querySelectorAll(
       "#addProductForm input, #addProductForm select, #addProductForm textarea"
@@ -112,6 +113,7 @@ document
     document.getElementById("addProductForm").reset();
     document.getElementById("imagePreview").style.display = "none";
     document.getElementById("deleteImageBtn").style.display = "none";
+    document.getElementById("pulseButton").style.display = "flex";
     document
       .querySelectorAll(
         "#addProductForm input, #addProductForm select, #addProductForm textarea"
