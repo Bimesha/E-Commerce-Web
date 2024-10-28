@@ -146,10 +146,61 @@ body {
   gap: 30px;
 }
 
+.add-new-product .product-image-upload {
+  position: relative;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  width: 300px;
+  height: 200px;
+}
+
+.add-new-product .pulse-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffba35;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.add-new-product .delete-image-btn {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 5px 8px;
+  cursor: pointer;
+  display: none;
+}
+
+.add-new-product .image-preview {
+  display: none;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
 .add-new-product img,
 .edit-product img {
-  margin-top: 10px;
-  margin-bottom: 12px;
   width: 350px;
   height: 200px;
 }
