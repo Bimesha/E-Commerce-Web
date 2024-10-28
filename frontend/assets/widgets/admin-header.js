@@ -8,15 +8,15 @@ class SpecialHeader extends HTMLElement {
                             </div>
                             <ul class="nav justify-content-end">
                                 <li class="nav-item" id="search">
-                                    <a class="nav-link" href="#"><i class="bi bi-search"></i></a>
+                                    <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                                 </li>
                                 <li class="nav-item" id="bell">
-                                    <a class="nav-link" href="#"><i class="bi bi-bell"></i></a>
+                                    <a class="nav-link" href="#"><i class="fa-regular fa-bell"></i></a>
                                 </li>
                                 <li class="nav-item" id="person">
-                                    <a class="nav-link" href="#"><i class="bi bi-person"></i></a>
+                                    <a class="nav-link" href="#"><i class="fa-regular fa-user"></i></a>
                                 </li>
-                                <li id="list" style="display: none"><i class="bi bi-list" onClick="toggleMenu()"></i>
+                                <li id="list" style="display: none"><i class="fa-solid fa-bars" onClick="toggleMenu()"></i>
                                     <ul id="drop-down" style="display: none">
                                         <li id="home-link"><a href="./dashboard.html">Dashboard</a></li>
                                         <li id="products-link"><a href="./admin-products.html">Products</a></li>
