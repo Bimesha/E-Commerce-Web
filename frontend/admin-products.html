@@ -390,27 +390,34 @@
                       </div>
                     </div>
                     <div class="product-image">
-                      <div class="preview">
+                      <label class="form-label">Upload Product Image</label>
+                      <div class="product-image-upload" id="productImageUpload">
+                        <button
+                          type="button"
+                          class="delete-image-btn"
+                          id="deleteImageBtn"
+                        >
+                          <i class="bi bi-trash3"></i>
+                        </button>
                         <img
-                          id="imageChangePreview"
+                          id="imagePreview"
+                          class="image-preview"
                           src="#"
                           alt="Image Preview"
-                          style="display: none; border-radius: 15px"
                         />
+                        <div id="pulseButton" class="pulse-button">+</div>
                       </div>
-                      <div class="image">
-                        <label for="productChangeImage" class="form-label"
-                          >Upload Product Image</label
-                        >
-                        <input
-                          type="file"
-                          class="form-control"
-                          id="productChangeImage"
-                          required
-                        />
-                        <div class="invalid-feedback">
-                          Please select a product image.
-                        </div>
+                      <input
+                        type="file"
+                        class="form-control"
+                        id="productImage"
+                        name="productImage"
+                        accept="image/*"
+                        style="display: none"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please select a product image.
                       </div>
                     </div>
                   </form>
