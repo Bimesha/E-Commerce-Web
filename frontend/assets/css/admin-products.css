@@ -146,7 +146,8 @@ body {
   gap: 30px;
 }
 
-.add-new-product .product-image-upload {
+.add-new-product .product-image-upload,
+.edit-product .product-image-upload {
   position: relative;
   border: 2px dashed #ccc;
   border-radius: 10px;
@@ -157,7 +158,8 @@ body {
   height: 245px;
 }
 
-.add-new-product .pulse-button {
+.add-new-product .pulse-button,
+.edit-product .pulse-button {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -180,7 +182,8 @@ body {
   }
 }
 
-.add-new-product .delete-image-btn {
+.add-new-product .delete-image-btn,
+.edit-product .delete-image-btn {
   position: absolute;
   top: 5px;
   left: 5px;
@@ -193,11 +196,13 @@ body {
   display: none;
 }
 
-.add-new-product .delete-image-btn i {
+.add-new-product .delete-image-btn i,
+.edit-product .delete-image-btn i {
   font-size: 18px;
 }
 
-.add-new-product .image-preview {
+.add-new-product .image-preview,
+.edit-product .image-preview {
   display: none;
   max-width: 100%;
   border-radius: 10px;
@@ -284,7 +289,8 @@ body {
     font-size: 18px;
   }
 
-  .add-new-product .delete-image-btn {
+  .add-new-product .delete-image-btn,
+  .edit-product .delete-image-btn {
     padding: 2px 0;
   }
 }
@@ -331,7 +337,8 @@ body {
     width: 70%;
   }
 
-  .add-new-product .delete-image-btn {
+  .add-new-product .delete-image-btn,
+  .edit-product .delete-image-btn {
     padding: 2px 1px;
   }
 }
@@ -389,12 +396,14 @@ body {
     width: 80%;
   }
 
-  .add-new-product .product-image-upload {
+  .add-new-product .product-image-upload,
+  .edit-product .product-image-upload {
     width: 250px;
     height: 225px;
   }
 
-  .add-new-product .delete-image-btn {
+  .add-new-product .delete-image-btn,
+  .edit-product .delete-image-btn {
     padding: 2px 1px;
   }
 
@@ -470,12 +479,14 @@ body {
     margin-top: -100px;
   }
 
-  .add-new-product .product-image-upload {
+  .add-new-product .product-image-upload,
+  .edit-product .product-image-upload {
     width: 330px;
     height: 245px;
   }
 
-  .add-new-product .delete-image-btn {
+  .add-new-product .delete-image-btn,
+  .edit-product .delete-image-btn {
     padding: 2px 1px;
   }
 
@@ -574,21 +585,21 @@ body {
     margin-top: -100px;
   }
 
-  .add-new-product .product-image-upload {
+  .add-new-product .product-image-upload,
+  .edit-product .product-image-upload {
     width: 280px;
     height: 225px;
   }
 
-  .add-new-product .delete-image-btn {
+  .add-new-product .delete-image-btn,
+  .edit-product .delete-image-btn {
     padding: 2px 1px;
-  }
-
-  .add-new-product .delete-image-btn {
     top: 7px;
     left: 7px;
   }
 
-  .add-new-product .delete-image-btn i {
+  .add-new-product .delete-image-btn i,
+  .edit-product .delete-image-btn i {
     font-size: 16px;
   }
 
@@ -718,22 +729,22 @@ body {
     margin-top: -100px;
   }
 
-  .add-new-product .product-image-upload {
+  .add-new-product .product-image-upload,
+  .edit-product .product-image-upload {
     width: 250px;
     height: 205px;
   }
 
-  .add-new-product .delete-image-btn {
+  .add-new-product .delete-image-btn,
+  .edit-product .delete-image-btn {
+    padding: 2px 1px;
     top: 7px;
     left: 7px;
   }
 
-  .add-new-product .delete-image-btn i {
+  .add-new-product .delete-image-btn i,
+  .edit-product .delete-image-btn i {
     font-size: 15px;
-  }
-
-  .add-new-product .delete-image-btn {
-    padding: 2px 1px;
   }
 
   .add-new-product img,
