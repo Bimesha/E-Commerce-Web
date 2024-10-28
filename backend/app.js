@@ -38,7 +38,7 @@ app.get('/api/home', authenticateUser, (req, res) => {
 app.use('/api', contactRoutes);
 
 // Load products from the database for admin panel
-app.use('/api', productRoutes);
+app.use('/api/products', productRoutes);
 
 // Error handler middleware
 app.use(errorHandler);
