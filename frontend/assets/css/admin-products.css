@@ -76,9 +76,9 @@ body {
 }
 
 .edit {
-  background-color: #ffc756;
+  background-color: #ffc041;
   border: none;
-  padding: 2px 0;
+  padding: 3px 0;
   color: white;
   border-radius: 5px;
   text-align: center;
@@ -90,7 +90,7 @@ body {
 .delete {
   background-color: rgb(246, 131, 131);
   border: none;
-  padding: 2px 0;
+  padding: 3px 0;
   color: white;
   border-radius: 5px;
   text-align: center;
