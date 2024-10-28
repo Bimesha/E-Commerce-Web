@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => console.error("Error fetching products:", error));
 });
 
+
 // Funtion to handle add product image and delete image
 const productImageInput = document.getElementById("productImage");
 const imagePreview = document.getElementById("imagePreview");
@@ -52,12 +53,50 @@ productImageInput.addEventListener("change", (e) => {
 
 // Handle delete image button
 deleteImageBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
+  e.stopPropagation(); 
   imagePreview.style.display = "none";
   deleteImageBtn.style.display = "none";
   pulseButton.style.display = "flex";
-  productImageInput.value = "";
+  productImageInput.value = ""; 
 });
+
+
+// Funtion to handle edit product image and delete image
+const productImageInputEdit = document.getElementById("productImageEdit");
+const imagePreviewEdit = document.getElementById("imagePreviewEdit");
+const pulseButtonEdit = document.getElementById("pulseButtonEdit");
+const deleteImageBtnEdit = document.getElementById("deleteImageBtnEdit");
+const productImageUploadEdit = document.getElementById("productImageUploadEdit");
+
+// Open file dialog when the upload area is clicked
+productImageUploadEdit.addEventListener("click", () => {
+  productImageInputEdit.click();
+});
+
+// Handle image preview
+productImageInputEdit.addEventListener("change", (e) => {
+  const file = e.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      imagePreviewEdit.src = event.target.result;
+      imagePreviewEdit.style.display = "block";
+      deleteImageBtnEdit.style.display = "block";
+      pulseButtonEdit.style.display = "none";
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
+// Handle delete image button
+deleteImageBtnEdit.addEventListener("click", (e) => {
+  e.stopPropagation(); 
+  imagePreviewEdit.style.display = "none";
+  deleteImageBtnEdit.style.display = "none";
+  pulseButtonEdit.style.display = "flex";
+  productImageInputEdit.value = ""; 
+});
+
 
 // Real-time validation function
 function realTimeValidation(input) {
@@ -126,7 +165,9 @@ document
 // Clear form event listener to reset image preview and form in Edit Product Form
 document.getElementById("clearEditForm").addEventListener("click", function () {
   document.getElementById("editProductForm").reset();
-  document.getElementById("imageChangePreview").style.display = "none";
+  document.getElementById("imagePreviewEdit").style.display = "none";
+  document.getElementById("deleteImageBtnEdit").style.display = "none";
+  document.getElementById("pulseButtonEdit").style.display = "flex";
   document
     .querySelectorAll(
       "#editProductForm input, #editProductForm select, #editProductForm textarea"
@@ -140,7 +181,9 @@ document
   .getElementById("clearMobileEditForm")
   .addEventListener("click", function () {
     document.getElementById("editProductForm").reset();
-    document.getElementById("imageChangePreview").style.display = "none";
+    document.getElementById("imagePreviewEdit").style.display = "none";
+    document.getElementById("deleteImageBtnEdit").style.display = "none";
+    document.getElementById("pulseButtonEdit").style.display = "flex";
     document
       .querySelectorAll(
         "#editProductForm input, #editProductForm select, #editProductForm textarea"
@@ -189,4 +232,3 @@ document
     false
   );
 })();
-
