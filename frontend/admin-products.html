@@ -30,12 +30,17 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/images/nav-img/fav-logo.png"
+    />
 
     <link rel="stylesheet" href="./assets/css/admin-nav.css" />
     <link rel="stylesheet" href="./assets/css/sidebar.css" />
     <link rel="stylesheet" href="./assets/css/admin-products.css" />
 
-    <title>Products</title>
+    <title>Oakly | Furniture</title>
   </head>
   <body>
     <!-- Special Header Component -->
@@ -110,19 +115,25 @@
                     class="needs-validation"
                     novalidate
                     autocomplete="off"
+                    enctype="multipart/form-data"
                   >
                     <div class="form">
                       <div class="mb-3">
                         <label for="category" class="form-label"
                           >Category</label
                         >
-                        <select class="form-select" id="category" required>
+                        <select
+                          class="form-select"
+                          id="category"
+                          name="categoryID"
+                          required
+                        >
                           <option value="" disabled selected>
                             Select Category
                           </option>
-                          <option value="chair">Chair</option>
-                          <option value="table">Table</option>
-                          <option value="sofa">Sofa</option>
+                          <option value="2">Chair</option>
+                          <option value="1">Table</option>
+                          <option value="3">Sofa</option>
                         </select>
                         <div class="invalid-feedback">
                           Please select a category.
@@ -136,6 +147,7 @@
                           type="text"
                           class="form-control"
                           id="productName"
+                          name="name"
                           required
                         />
                         <div class="invalid-feedback">
@@ -149,6 +161,7 @@
                             type="number"
                             class="form-control"
                             id="price"
+                            name="price"
                             required
                           />
                           <div class="invalid-feedback">Price is required.</div>
@@ -161,6 +174,7 @@
                             type="number"
                             class="form-control"
                             id="quantity"
+                            name="quantity"
                             required
                           />
                           <div class="invalid-feedback">
@@ -175,6 +189,7 @@
                         <textarea
                           class="form-control"
                           id="description"
+                          name="description"
                           rows="3"
                           required
                         ></textarea>
@@ -184,27 +199,34 @@
                       </div>
                     </div>
                     <div class="product-image">
-                      <div class="preview">
+                      <label class="form-label">Upload Product Image</label>
+                      <div class="product-image-upload" id="productImageUpload">
+                        <button
+                          type="button"
+                          class="delete-image-btn"
+                          id="deleteImageBtn"
+                        >
+                          <i class="fa-regular fa-trash-can"></i>
+                        </button>
                         <img
                           id="imagePreview"
+                          class="image-preview"
                           src="#"
                           alt="Image Preview"
-                          style="display: none; border-radius: 15px"
                         />
+                        <div id="pulseButton" class="pulse-button">+</div>
                       </div>
-                      <div class="image">
-                        <label for="productImage" class="form-label"
-                          >Upload Product Image</label
-                        >
-                        <input
-                          type="file"
-                          class="form-control"
-                          id="productImage"
-                          required
-                        />
-                        <div class="invalid-feedback">
-                          Please select a product image.
-                        </div>
+                      <input
+                        type="file"
+                        class="form-control"
+                        id="productImage"
+                        name="productImage"
+                        accept="image/*"
+                        style="display: none"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please select a product image.
                       </div>
                     </div>
                   </form>
@@ -368,27 +390,34 @@
                       </div>
                     </div>
                     <div class="product-image">
-                      <div class="preview">
+                      <label class="form-label">Upload Product Image</label>
+                      <div class="product-image-upload" id="productImageUploadEdit">
+                        <button
+                          type="button"
+                          class="delete-image-btn"
+                          id="deleteImageBtnEdit"
+                        >
+                          <i class="fa-regular fa-trash-can"></i>
+                        </button>
                         <img
-                          id="imageChangePreview"
+                          id="imagePreviewEdit"
+                          class="image-preview"
                           src="#"
                           alt="Image Preview"
-                          style="display: none; border-radius: 15px"
                         />
+                        <div id="pulseButtonEdit" class="pulse-button">+</div>
                       </div>
-                      <div class="image">
-                        <label for="productChangeImage" class="form-label"
-                          >Upload Product Image</label
-                        >
-                        <input
-                          type="file"
-                          class="form-control"
-                          id="productChangeImage"
-                          required
-                        />
-                        <div class="invalid-feedback">
-                          Please select a product image.
-                        </div>
+                      <input
+                        type="file"
+                        class="form-control"
+                        id="productImageEdit"
+                        name="productImageEdit"
+                        accept="image/*"
+                        style="display: none"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please select a product image.
                       </div>
                     </div>
                   </form>
