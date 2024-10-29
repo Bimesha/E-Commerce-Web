@@ -64,7 +64,19 @@ const loginUser = async (req, res) => {
 
 }
 
+// Controller to fetch all customer details to the admin page
+const getAllCustomers = async (req, res) => {
+  try {
+    const customers = await User.getCustomers();
+    res.json(customers);
+  } catch (err) {
+    console.error("Error in getAllCustomers controller:", err);
+    res.status(500).json({ error: "Database error" });
+  }
+};
+
 module.exports = {
   createUser,
   loginUser,
+  getAllCustomers
 };
