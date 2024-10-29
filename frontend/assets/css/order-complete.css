@@ -1,9 +1,65 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Steps Section */
+.steps-section .stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 180px 20px 190px;
+  position: relative;
+}
+
+.stepper::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: calc(2% + 20px);
+  right: calc(2% + 20px);
+  height: 2px;
+  background-color: #d8d8d8;
+  z-index: 0;
+}
+
+.step {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.step .step-icon {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  color: #6c757d;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.step.completed .step-icon {
+  background-color: #28a745;
+  color: white;
+}
+
+.step.completed i {
+  font-size: 20px;
+}
+
+.step.active .step-icon {
+  background-color: #ffba35;
+  color: white;
+}
+
+.step span {
+  display: block;
 }
