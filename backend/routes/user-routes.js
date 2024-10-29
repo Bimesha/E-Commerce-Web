@@ -16,5 +16,9 @@ router.post("/login", userController.loginUser);
 router.get('/login', (req, res) => {
     res.send("Log in route is working");
 });
+
+// Route to get all customers
+router.get("/all-customers", userController.getAllCustomers);
+
 module.exports = router;     
 
