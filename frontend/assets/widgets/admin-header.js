@@ -21,7 +21,7 @@ class SpecialHeader extends HTMLElement {
                                         <li id="home-link"><a href="./dashboard.html">Dashboard</a></li>
                                         <li id="products-link"><a href="./admin-products.html">Products</a></li>
                                         <li id="orders-link"><a href="#">Orders</a></li>
-                                        <li id="customers-link"><a href="#">Customers</a></li>
+                                        <li id="customers-link"><a href="./customers.html">Customers</a></li>
                                         <li id="reviews-link"><a href="#">Reviews</a></li>
                                         <li id="profile-link"><a href="#">Profile</a></li>
                                     </ul>
