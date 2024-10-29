@@ -521,7 +521,7 @@ body {
 
   .add-new-product .discard-btn,
   .edit-product .discard-btn {
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 
@@ -636,7 +636,7 @@ body {
 
   .add-new-product .discard-btn,
   .edit-product .discard-btn {
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 
@@ -782,6 +782,6 @@ body {
 
   .add-new-product .discard-btn,
   .edit-product .discard-btn {
-    margin-right: 0px;
+    margin-right: 0;
   }
 }

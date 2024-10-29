@@ -103,7 +103,7 @@ body {
   background-color: #e9ecef;
 }
 
-.payment-methods-section .order-summary {
+.order-summary {
   margin-top: 20px;
   padding: 10px 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -111,7 +111,7 @@ body {
   width: 100%;
 }
 
-.payment-methods-section .order-summary h4 {
+.order-summary h4 {
   font-size: 22px;
   font-weight: 500;
   margin-top: 15px;
@@ -122,7 +122,7 @@ body {
   border: 1px solid black;
 }
 
-.payment-methods-section #orderSummaryTable {
+#orderSummaryTable, #orderSummaryTableRight {
   width: 100%;
   margin-top: -10px;
   border-collapse: separate;
@@ -130,11 +130,11 @@ body {
   font-size: 15px;
 }
 
-.payment-methods-section #orderSummaryTable td:nth-child(2) {
+#orderSummaryTable td:nth-child(2), #orderSummaryTableRight td:nth-child(2) {
   text-align: right;
 }
 
-.payment-methods-section #orderTotal td {
+#orderTotal td, #orderTotalRight td {
   border-top: 1px solid rgb(155, 153, 153);
   font-weight: 500;
   padding: 12px 0 0 0;
@@ -161,14 +161,13 @@ body {
   color: #000000;
 }
 
-.payment-methods-section #orderSummaryRight {
+#orderSummaryRight {
   margin-top: -20px;
 }
 
 .payment-methods-section .continue {
   margin-top: 20px;
 }
-
 
 /* Media Queries */
 @media only screen and (min-width: 1200px) and (max-width: 1336px) {
@@ -177,7 +176,7 @@ body {
     width: 120%;
   }
 
-  .payment-methods-section .order-summary {
+  .order-summary {
     width: 120%;
   }
 }
@@ -191,11 +190,11 @@ body {
     width: 125%;
   }
 
-  .payment-methods-section .order-summary {
+  .order-summary {
     width: 125%;
   }
 
-  .payment-methods-section #orderSummaryRight {
+  #orderSummaryRight {
     width: 100%;
   }
 
@@ -221,11 +220,11 @@ body {
     width: 126%;
   }
 
-  .payment-methods-section .order-summary {
+  .order-summary {
     width: 126%;
   }
 
-  .payment-methods-section #orderSummaryRight {
+  #orderSummaryRight {
     width: 100%;
   }
 
@@ -247,11 +246,11 @@ body {
     width: 110%;
   }
 
-  .payment-methods-section .order-summary {
+  .order-summary {
     width: 110%;
   }
 
-  .payment-methods-section #orderSummaryRight {
+  #orderSummaryRight {
     width: 100%;
   }
 
@@ -419,7 +418,7 @@ body {
     text-align: center;
   }
 
-  .payment-methods-section .order-summary h4 {
+  .order-summary h4 {
     font-size: 16px;
   }
 
