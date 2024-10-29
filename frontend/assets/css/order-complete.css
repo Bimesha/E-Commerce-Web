@@ -63,3 +63,48 @@ body {
 .step span {
   display: block;
 }
+
+/* Complete Section */
+.complete-section {
+  margin: 50px 0px;
+}
+.complete-section .container {
+  text-align: center;
+  align-items: center;
+}
+
+.complete-section .complete-icon {
+  margin-bottom: 30px;
+}
+
+.complete-section i {
+  font-size: 50px;
+  padding: 5px 15px;
+  border-radius: 50%;
+  background-color: #ffba35;
+}
+
+.complete-section .first {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+.complete-section .second {
+  font-size: 15px;
+  font-weight: 400;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.complete-section .btn.btn-primary {
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
