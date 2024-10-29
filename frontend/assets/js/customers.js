@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <td>${customer.customerId}</td>
                 <td>${customer.name}</td>
                 <td>${customer.email}</td>
-                <td>Rs ${customer.address}</td>
+                <td>${customer.address}</td>
                 <td>${customer.phone}</td>
               `;
         customerTable.appendChild(row);
