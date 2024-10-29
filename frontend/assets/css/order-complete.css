@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Steps Section */
+.steps-section .stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 180px 20px 190px;
+  position: relative;
+}
+
+.stepper::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: calc(2% + 20px);
+  right: calc(2% + 20px);
+  height: 2px;
+  background-color: #d8d8d8;
+  z-index: 0;
+}
+
+.step {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.step .step-icon {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  color: #6c757d;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.step.completed .step-icon {
+  background-color: #28a745;
+  color: white;
+}
+
+.step.completed i {
+  font-size: 20px;
+}
+
+.step.active .step-icon {
+  background-color: #ffba35;
+  color: white;
+  font-size: 20px;
+}
+
+.step span {
+  display: block;
+}
+
+/* Complete Section */
+.complete-section {
+  margin: 50px 0px;
+}
+.complete-section .container {
+  text-align: center;
+  align-items: center;
+}
+
+.complete-section .complete-icon {
+  margin-bottom: 30px;
+}
+
+.complete-section .bi-check-lg {
+  font-size: 50px;
+  padding: 5px 15px;
+  border-radius: 50%;
+  background-color: #ffba35;
+}
+
+.complete-section .first {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+}
+
+.complete-section .second {
+  font-size: 15px;
+  font-weight: 400;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.complete-section .btn.btn-primary {
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+/* Media Queries */
+@media only screen and (min-width: 990px) and (max-width: 1023px) {
+  .steps-section .stepper {
+    margin: 20px 140px 20px 150px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 989px) {
+  .steps-section .stepper {
+    margin: 20px 70px 20px 80px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .steps-section .stepper {
+    margin: 20px 10px 20px 20px;
+  }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 599px) {
+  .steps-section .stepper {
+    margin: 20px 10px 20px 20px;
+  }
+
+  .complete-section .bi-check-lg {
+    font-size: 45px;
+    padding: 4px 13px;
+  }
+
+  .complete-section .first {
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  .complete-section .second {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+  .steps-section .stepper {
+    margin: 20px 10px 20px 20px;
+  }
+
+  .step .step-icon {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+  }
+
+  .stepper::before {
+    top: 20px;
+  }
+
+  .steps-section span {
+    font-size: 13px;
+  }
+
+  .complete-section .bi-check-lg {
+    font-size: 40px;
+    padding: 4px 12px;
+  }
+
+  .complete-section .first {
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .complete-section .second {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  .steps-section .stepper {
+    margin: 20px 0px 20px 10px;
+  }
+
+  .step .step-icon {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+  }
+
+  .stepper::before {
+    top: 18px;
+  }
+
+  .steps-section span {
+    font-size: 10px;
+  }
+
+  .complete-section .bi-check-lg {
+    font-size: 35px;
+    padding: 3px 10px;
+  }
+
+  .complete-section .first {
+    font-size: 13px;
+    line-height: 2;
+  }
+
+  .complete-section .second {
+    font-size: 11px;
+  }
+}

@@ -122,7 +122,8 @@ body {
   border: 1px solid black;
 }
 
-#orderSummaryTable, #orderSummaryTableRight {
+#orderSummaryTable,
+#orderSummaryTableRight {
   width: 100%;
   margin-top: -10px;
   border-collapse: separate;
@@ -130,11 +131,13 @@ body {
   font-size: 15px;
 }
 
-#orderSummaryTable td:nth-child(2), #orderSummaryTableRight td:nth-child(2) {
+#orderSummaryTable td:nth-child(2),
+#orderSummaryTableRight td:nth-child(2) {
   text-align: right;
 }
 
-#orderTotal td, #orderTotalRight td {
+#orderTotal td,
+#orderTotalRight td {
   border-top: 1px solid rgb(155, 153, 153);
   font-weight: 500;
   padding: 12px 0 0 0;
@@ -154,6 +157,11 @@ body {
   gap: 20px;
 }
 
+.payment-methods-section a {
+  text-decoration: none;
+  color: black;
+}
+
 .payment-methods-section #paymentDetails button {
   margin-top: 30px;
   width: 100%;
@@ -168,6 +176,7 @@ body {
 .payment-methods-section .continue {
   margin-top: 20px;
 }
+
 
 /* Media Queries */
 @media only screen and (min-width: 1200px) and (max-width: 1336px) {
