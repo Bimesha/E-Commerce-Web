@@ -1,4 +1,4 @@
-// Fetch products from backend and display them in the table
+// Fetch customers from backend and display them in the table
 document.addEventListener("DOMContentLoaded", function () {
   fetch("http://localhost:5500/api/users/all-customers")
     .then((response) => response.json())
