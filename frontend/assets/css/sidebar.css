@@ -99,9 +99,8 @@
   }
 
   #sidebar .nav-item a {
-    margin: 0 25px;
+    margin: 0 25px 10px 25px;
     font-size: 14px;
-    margin-bottom: 10px;
   }
 
   #sidebar .nav-item i {
