@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Funtion to handle add product image and delete image
+// Function to handle add product image and delete image
 const productImageInput = document.getElementById("productImage");
 const imagePreview = document.getElementById("imagePreview");
 const pulseButton = document.getElementById("pulseButton");
@@ -61,7 +61,7 @@ deleteImageBtn.addEventListener("click", (e) => {
 });
 
 
-// Funtion to handle edit product image and delete image
+// Function to handle edit product image and delete image
 const productImageInputEdit = document.getElementById("productImageEdit");
 const imagePreviewEdit = document.getElementById("imagePreviewEdit");
 const pulseButtonEdit = document.getElementById("pulseButtonEdit");
