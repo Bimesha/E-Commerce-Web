@@ -58,6 +58,7 @@ body {
 .step.active .step-icon {
   background-color: #ffba35;
   color: white;
+  font-size: 20px;
 }
 
 .step span {
@@ -107,4 +108,114 @@ body {
   font-size: 15px;
   font-weight: 500;
   cursor: pointer;
+}
+
+
+/* Media Queries */
+@media only screen and (min-width: 990px) and (max-width: 1023px) {
+  .steps-section .stepper {
+    margin: 20px 140px 20px 150px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 989px) {
+  .steps-section .stepper {
+    margin: 20px 70px 20px 80px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .steps-section .stepper {
+    margin: 20px 10px 20px 20px;
+  }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 599px) {
+  .steps-section .stepper {
+    margin: 20px 10px 20px 20px;
+  }
+
+  .complete-section .bi-check-lg {
+    font-size: 45px;
+    padding: 4px 13px;
+  }
+
+  .complete-section .first {
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  .complete-section .second {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+  .steps-section .stepper {
+    margin: 20px 10px 20px 20px;
+  }
+
+  .step .step-icon {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+  }
+
+  .stepper::before {
+    top: 20px;
+  }
+
+  .steps-section span {
+    font-size: 13px;
+  }
+
+  .complete-section .bi-check-lg {
+    font-size: 40px;
+    padding: 4px 12px;
+  }
+
+  .complete-section .first {
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .complete-section .second {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  .steps-section .stepper {
+    margin: 20px 0px 20px 10px;
+  }
+
+  .step .step-icon {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+  }
+
+  .stepper::before {
+    top: 18px;
+  }
+
+  .steps-section span {
+    font-size: 10px;
+  }
+
+  .complete-section .bi-check-lg {
+    font-size: 35px;
+    padding: 3px 10px;
+  }
+
+  .complete-section .first {
+    font-size: 13px;
+    line-height: 2;
+  }
+
+  .complete-section .second {
+    font-size: 11px;
+  }
 }
