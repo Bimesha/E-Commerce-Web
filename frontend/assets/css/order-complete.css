@@ -77,7 +77,7 @@ body {
   margin-bottom: 30px;
 }
 
-.complete-section i {
+.complete-section .bi-check-lg {
   font-size: 50px;
   padding: 5px 15px;
   border-radius: 50%;
