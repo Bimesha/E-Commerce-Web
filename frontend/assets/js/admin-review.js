@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
                       </div>
                       <div class="card-content">
                         <p class="card-text">
-                          "${review.Comment}"
+                          " ${review.Comment} "
                         </p>
                       </div>
                     </div>
