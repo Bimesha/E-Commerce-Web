@@ -65,3 +65,13 @@ body {
   background-color: #ffba35;
   border: none;
 }
+
+.reviews .delete-review .btn.btn-primary {
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.reviews .delete-review i {
+  color: black;
+}
