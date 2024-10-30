@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
                           <button class="btn btn-primary">Send Reply</button>
                         </div>
                         <div class="delete-review">
-                          <button class="btn btn-danger">Delete Review</button>
+                          <button class="btn btn-primary"><i class="fa-regular fa-trash-can"></i></button>
                         </div>
                       </div>
                     </div>
