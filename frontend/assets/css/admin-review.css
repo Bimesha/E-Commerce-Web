@@ -76,3 +76,166 @@ body {
 .reviews .delete-review i {
   color: black;
 }
+
+
+/* Media Queries */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  .content-section {
+    margin-right: 85px;
+  }
+}
+
+@media only screen and (min-width: 990px) and (max-width: 1024px) {
+  .content-section {
+    margin-right: 50px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  .content-section {
+    margin-left: -5px;
+    margin-right: 50px;
+  }
+
+  .reviews img {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .content-section {
+    margin-right: 15px;
+    margin-left: 5px;
+  }
+
+  .reviews img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .reviews .card-header h5 {
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 600px) {
+  .content-section {
+    margin-right: 12px;
+    margin-left: 12px;
+  }
+
+  .content-section h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .reviews img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .reviews .card-header h5 {
+    margin-top: 20px;
+    font-size: 1.1rem;
+  }
+
+  .reviews p {
+    font-size: 14px;
+  }
+
+  .reviews .review-footer {
+    gap: 10px;
+  }
+
+  .reviews .add-reply .btn.btn-primary {
+    font-size: 15px;
+  }
+
+  .reviews .delete-review .btn.btn-primary {
+    font-size: 15px;
+    padding: 6px 11px;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+  .content-section {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .content-section h1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .reviews img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .reviews .card-header h5 {
+    margin-top: 20px;
+    font-size: 1.1rem;
+  }
+
+  .reviews p {
+    font-size: 14px;
+  }
+
+  .reviews .review-footer {
+    gap: 10px;
+  }
+
+  .reviews .add-reply .btn.btn-primary {
+    font-size: 14px;
+  }
+
+  .reviews .delete-review .btn.btn-primary {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .content-section {
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  .content-section h1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .reviews img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .reviews .card-header h5 {
+    margin-top: 18px;
+    font-size: 0.9rem;
+  }
+
+  .reviews p {
+    font-size: 13px;
+  }
+
+  .reviews .review-footer {
+    gap: 10px;
+  }
+
+  .reviews .add-reply .btn.btn-primary {
+    font-size: 13px;
+  }
+
+  .reviews .delete-review .btn.btn-primary {
+    font-size: 13px;
+    padding: 6px 9px;
+  }
+}
