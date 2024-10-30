@@ -77,6 +77,36 @@ body {
   color: black;
 }
 
+/* Reply Modal */
+.reply-section .modal-dialog {
+  max-width: 700px;
+}
+
+.reply-section .modal-content {
+  border: none;
+}
+
+.reply-section p {
+  margin: 10px 0 20px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: gray;
+}
+
+.reply-section label {
+  font-size: 16px;
+}
+
+.reply-section textarea::placeholder {
+  font-size: 14px;
+}
+
+.reply-section .btn.btn-primary {
+  background-color: #000000;
+  border: none;
+  color: #fff;
+}
+
 
 /* Media Queries */
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
