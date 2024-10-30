@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       reviews.forEach((review) => {
         const reviewHTML = `
-              <div class="container">
                 <div class="col-lg-12 col-md-12 col-sm-12" style="border-bottom: 1px solid #C0C0C0; padding-bottom: 10px;">
                   <div class="card">
                     <div class="card-body">
@@ -41,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                   </div>
                 </div>
-              </div>
             `;
         reviewsContainer.innerHTML += reviewHTML;
       });
