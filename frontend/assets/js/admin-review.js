@@ -55,7 +55,7 @@ function openReplyModal(firstName, lastName, comment) {
   document.getElementById(
     "reviewerName"
   ).textContent = `${firstName} ${lastName}`;
-  document.getElementById("reviewComment").textContent = `"${comment}"`;
+  document.getElementById("reviewComment").textContent = `" ${comment} "`;
   document.getElementById("replyText").value = "";
   new bootstrap.Modal(document.getElementById("replyModal")).show();
 }
