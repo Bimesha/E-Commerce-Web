@@ -35,3 +35,35 @@ document
       alert("Product created successfully!");
     }
   });
+
+// Load product details for edit form
+async function fetchProductDetails(productId) {
+  try {
+    const response = await fetch(
+      `http://localhost:5500/api/products/${productId}`
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch product details");
+    }
+    const product = await response.json();
+
+    // Populate form fields with the fetched product details
+    document.getElementById("categoryEdit").value =
+      product.category.toLowerCase();
+    document.getElementById("productNameEdit").value = product.Name;
+    document.getElementById("priceEdit").value = product.Price;
+    document.getElementById("quantityEdit").value = product.Quantity;
+    document.getElementById("descriptionEdit").value = product.Description;
+
+    // Set the product image preview
+    const imagePreviewEdit = document.getElementById("imagePreviewEdit");
+    if (product.ImagePath) {
+      imagePreviewEdit.src = product.ImagePath;
+      imagePreviewEdit.style.display = "block";
+    } else {
+      imagePreviewEdit.style.display = "none";
+    }
+  } catch (error) {
+    console.error("Error fetching product details:", error);
+  }
+}
