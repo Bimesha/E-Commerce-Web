@@ -166,23 +166,8 @@
 
     <script>
       window.onload = function () {
-        // Retrieve token from cookies
-        const token = document.cookie
-          .split("; ")
-          .find((row) => row.startsWith("token="))
-          ?.split("=")[1];
-
-        if (!token) {
-          console.error("Token is missing! Please log in.");
-          return; // Stop the function if token is not found
-        }
-
         fetch("http://localhost:5500/api/reviews/get-reviews", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
+          method: "GET"
         })
           .then((response) => response.json())
           .then((data) => {
