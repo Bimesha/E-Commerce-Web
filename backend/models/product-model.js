@@ -17,6 +17,30 @@ const getProducts = async () => {
   }
 };
 
+// model to create product
+const createProduct = async (productData) => {
+  const { name, description, price, quantity, categoryID, imagePath } =
+    productData;
+  const query = `
+        INSERT INTO product (Name, Description, Price, Quantity, CategoryID, ImagePath)
+        VALUES (?, ?, ?, ?, ?, ?)
+    `;
+  try {
+    const [result] = await db.query(query, [
+      name,
+      description,
+      price,
+      quantity,
+      categoryID,
+      imagePath,
+    ]);
+    return result.insertId;
+  } catch (error) {
+    console.error("Error creating product:", error);
+    throw error;
+  }
+};
+
 // model to get a product details by its ID
 const getProductById = async (productId) => {
   const query = `
@@ -37,5 +61,6 @@ const getProductById = async (productId) => {
 
 module.exports = {
   getProducts,
+  createProduct,
   getProductById,
 };
