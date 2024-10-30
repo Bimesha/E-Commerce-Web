@@ -189,46 +189,48 @@
         </div>
 
         <!-- Reply Modal -->
-        <div
-          class="modal fade"
-          id="replyModal"
-          tabindex="-1"
-          aria-labelledby="replyModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="replyModalLabel">
-                  Reply to <span id="reviewerName"></span>
-                </h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <p id="reviewComment"></p>
-                <div class="mb-5">
-                  <label for="replyText" class="form-label">Reply</label>
-                  <textarea
-                    class="form-control"
-                    id="replyText"
-                    rows="5"
-                    placeholder="Type reply here..."
-                  ></textarea>
+        <div class="reply-section">
+          <div
+            class="modal fade"
+            id="replyModal"
+            tabindex="-1"
+            aria-labelledby="replyModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="replyModalLabel">
+                    Reply to <span id="reviewerName"></span>
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  onclick="submitReply()"
-                >
-                  Send Reply
-                </button>
+                <div class="modal-body">
+                  <p id="reviewComment"></p>
+                  <div class="mb-5">
+                    <label for="replyText" class="form-label">Reply</label>
+                    <textarea
+                      class="form-control"
+                      id="replyText"
+                      rows="5"
+                      placeholder="Type reply here..."
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    onclick="submitReply()"
+                  >
+                    Send Reply
+                  </button>
+                </div>
               </div>
             </div>
           </div>
