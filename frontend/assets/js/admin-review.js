@@ -30,6 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
                           " ${review.Comment} "
                         </p>
                       </div>
+                      <div class="review-footer">
+                        <div class="add-reply">
+                          <button class="btn btn-primary">Send Reply</button>
+                        </div>
+                        <div class="delete-review">
+                          <button class="btn btn-danger">Delete Review</button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
