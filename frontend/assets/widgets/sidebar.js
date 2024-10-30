@@ -28,7 +28,7 @@ class SpecialSidebar extends HTMLElement {
                                 <a class="nav-link" href="./customers.html"><i class="fa-solid fa-users"></i>Customers</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa-solid fa-quote-left"></i>Reviews</a>
+                                <a class="nav-link" href="./admin-review.html"><i class="fa-solid fa-quote-left"></i>Reviews</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fa-solid fa-user"></i>Profile</a>
