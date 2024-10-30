@@ -315,10 +315,10 @@
                   >
                     <div class="form">
                       <div class="mb-3">
-                        <label for="category" class="form-label"
+                        <label for="categoryEdit" class="form-label"
                           >Category</label
                         >
-                        <select class="form-select" id="category" required>
+                        <select class="form-select" id="categoryEdit" required>
                           <option value="" disabled selected>
                             Select Category
                           </option>
@@ -331,13 +331,13 @@
                         </div>
                       </div>
                       <div class="mb-3">
-                        <label for="productName" class="form-label"
+                        <label for="productNameEdit" class="form-label"
                           >Product Name</label
                         >
                         <input
                           type="text"
                           class="form-control"
-                          id="productName"
+                          id="productNameEdit"
                           required
                         />
                         <div class="invalid-feedback">
@@ -346,23 +346,23 @@
                       </div>
                       <div class="price-quantity">
                         <div class="mb-3">
-                          <label for="price" class="form-label">Price</label>
+                          <label for="priceEdit" class="form-label">Price</label>
                           <input
                             type="number"
                             class="form-control"
-                            id="price"
+                            id="priceEdit"
                             required
                           />
                           <div class="invalid-feedback">Price is required.</div>
                         </div>
                         <div class="mb-3">
-                          <label for="quantity" class="form-label"
+                          <label for="quantityEdit" class="form-label"
                             >Quantity</label
                           >
                           <input
                             type="number"
                             class="form-control"
-                            id="quantity"
+                            id="quantityEdit"
                             required
                           />
                           <div class="invalid-feedback">
@@ -371,12 +371,12 @@
                         </div>
                       </div>
                       <div class="mb-3">
-                        <label for="description" class="form-label"
+                        <label for="descriptionEdit" class="form-label"
                           >Product Description</label
                         >
                         <textarea
                           class="form-control"
-                          id="description"
+                          id="descriptionEdit"
                           rows="3"
                           required
                         ></textarea>
@@ -489,5 +489,6 @@
 
     <script src="./assets/js/admin-nav.js"></script>
     <script src="./assets/js/admin-products.js"></script>
+    <script src="./assets/js/product-form-submit.js"></script>
   </body>
 </html>
