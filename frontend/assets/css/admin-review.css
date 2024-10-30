@@ -53,3 +53,15 @@ body {
 .reviews hr {
   margin-top: -25px;
 }
+
+.reviews .review-footer {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+}
+
+.reviews .add-reply .btn.btn-primary {
+  background-color: #ffba35;
+  border: none;
+}
