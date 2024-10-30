@@ -212,15 +212,26 @@
                 </div>
                 <div class="modal-body">
                   <p id="reviewComment"></p>
-                  <div class="admin-reply mb-5">
-                    <label for="replyText" class="form-label">Reply</label>
-                    <textarea
-                      class="form-control"
-                      id="replyText"
-                      rows="5"
-                      placeholder="Type reply here..."
-                    ></textarea>
-                  </div>
+                  <form
+                    class="needs-validation"
+                    id="replyForm"
+                    novalidate
+                    autocomplete="off"
+                  >
+                    <div class="admin-reply mb-5">
+                      <label for="replyText" class="form-label">Reply</label>
+                      <textarea
+                        class="form-control"
+                        id="replyText"
+                        rows="5"
+                        placeholder="Type reply here..."
+                        required
+                      ></textarea>
+                      <div class="invalid-feedback">
+                        Please enter a reply message.
+                      </div>
+                    </div>
+                  </form>
                 </div>
                 <div class="modal-footer">
                   <button

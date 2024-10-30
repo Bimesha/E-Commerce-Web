@@ -60,10 +60,23 @@ function openReplyModal(firstName, lastName, comment) {
   new bootstrap.Modal(document.getElementById("replyModal")).show();
 }
 
+// Real-time validation for the reply textarea
+document.getElementById("replyText").addEventListener("input", function () {
+  if (this.value.trim() === "") {
+    this.classList.add("is-invalid");
+    this.classList.remove("is-valid");
+  } else {
+    this.classList.add("is-valid");
+    this.classList.remove("is-invalid");
+  }
+});
+
 function submitReply() {
-  const replyText = document.getElementById("replyText").value;
-  if (replyText.trim() === "") {
-    alert("Please enter a reply message.");
+  const replyText = document.getElementById("replyText");
+
+  // If replyText is empty, prevent submission
+  if (replyText.value.trim() === "") {
+    replyText.classList.add("is-invalid");
     return;
   }
 
