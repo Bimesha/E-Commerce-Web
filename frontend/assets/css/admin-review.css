@@ -64,6 +64,7 @@ body {
 .reviews .add-reply .btn.btn-primary {
   background-color: #ffba35;
   border: none;
+  color: #000000;
 }
 
 .reviews .delete-review .btn.btn-primary {
