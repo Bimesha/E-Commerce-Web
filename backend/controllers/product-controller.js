@@ -5,6 +5,7 @@ const {
   getProducts,
   getProductById,
   updateProductById,
+  deleteProductById,
 } = require("../models/product-model");
 
 // Controller to fetch all products to the admin page
