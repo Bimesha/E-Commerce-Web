@@ -101,6 +101,16 @@ body {
   text-align: center;
 }
 
+#recent-order-table td,
+#top-selling-product-table td {
+  background-color: rgba(243, 242, 242);
+}
+
+#recent-order-table tbody tr,
+#top-selling-product-table tr {
+  border-bottom: 3px solid #fff;
+}
+
 #recent-order-table th,
 #top-selling-product-table th {
   font-weight: 400;
