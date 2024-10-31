@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <td>Rs ${product.price}</td>
             <td class="actions-buttons">
               <button class="edit" onclick="fetchProductDetails(${product.productId})" ><i class="fa-solid fa-pencil" data-bs-toggle="modal" data-bs-target="#editProductModal"></i></button>
-              <button class="delete" data-id="${product.id}"><i class="fa-regular fa-trash-can"></i></button>
+              <button class="delete" onclick="deleteProduct(${product.productId})"><i class="fa-regular fa-trash-can"></i></button>
             </td>
           `;
         productTable.appendChild(row);
@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch((error) => console.error("Error fetching products:", error));
 });
-
 
 // Function to handle add product image and delete image
 const productImageInput = document.getElementById("productImage");
@@ -53,20 +52,21 @@ productImageInput.addEventListener("change", (e) => {
 
 // Handle delete image button
 deleteImageBtn.addEventListener("click", (e) => {
-  e.stopPropagation(); 
+  e.stopPropagation();
   imagePreview.style.display = "none";
   deleteImageBtn.style.display = "none";
   pulseButton.style.display = "flex";
-  productImageInput.value = ""; 
+  productImageInput.value = "";
 });
-
 
 // Function to handle edit product image and delete image
 const productImageInputEdit = document.getElementById("productImageEdit");
 const imagePreviewEdit = document.getElementById("imagePreviewEdit");
 const pulseButtonEdit = document.getElementById("pulseButtonEdit");
 const deleteImageBtnEdit = document.getElementById("deleteImageBtnEdit");
-const productImageUploadEdit = document.getElementById("productImageUploadEdit");
+const productImageUploadEdit = document.getElementById(
+  "productImageUploadEdit"
+);
 
 // Open file dialog when the upload area is clicked
 productImageUploadEdit.addEventListener("click", () => {
@@ -90,13 +90,12 @@ productImageInputEdit.addEventListener("change", (e) => {
 
 // Handle delete image button
 deleteImageBtnEdit.addEventListener("click", (e) => {
-  e.stopPropagation(); 
+  e.stopPropagation();
   imagePreviewEdit.style.display = "none";
   deleteImageBtnEdit.style.display = "none";
   pulseButtonEdit.style.display = "flex";
-  productImageInputEdit.value = ""; 
+  productImageInputEdit.value = "";
 });
-
 
 // Real-time validation function
 function realTimeValidation(input) {
@@ -232,4 +231,3 @@ document
     false
   );
 })();
-
