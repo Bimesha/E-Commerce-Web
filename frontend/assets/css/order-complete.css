@@ -187,7 +187,7 @@ body {
 
 @media only screen and (min-width: 320px) and (max-width: 374px) {
   .steps-section .stepper {
-    margin: 20px 0px 20px 10px;
+    margin: 20px 0 20px 10px;
   }
 
   .step .step-icon {

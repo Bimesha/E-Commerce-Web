@@ -329,7 +329,7 @@ body {
   }
 
   .logo-section .card-image2 img {
-    padding-top: 0px;
+    padding-top: 0;
     width: 225px;
   }
 }
@@ -423,7 +423,7 @@ body {
     padding: 0;
     align-items: center;
     font-size: 14px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.01rem;
   }
 
   .about-section img {
@@ -704,7 +704,7 @@ body {
 
 @media (max-width: 400px) {
   .service-section {
-    margin-top: 0rem;
+    margin-top: 0;
     margin-bottom: -2rem;
   }
 

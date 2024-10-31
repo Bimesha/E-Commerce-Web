@@ -5,6 +5,7 @@ const {
   getProducts,
   getProductById,
   updateProductById,
+  deleteProductById,
 } = require("../models/product-model");
 
 // Controller to fetch all products to the admin page
@@ -117,9 +118,27 @@ const updateProductDetails = async (req, res) => {
   }
 };
 
+// Controller to delete a product by ID
+const deleteProduct = async (req, res) => {
+  try {
+    const productId = req.params.id;
+
+    const result = await deleteProductById(productId);
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ message: "Product not found" });
+    }
+
+    res.status(200).json({ message: "Product deleted successfully" });
+  } catch (error) {
+    console.error("Unexpected error:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+};
+
 module.exports = {
   getAllProducts,
   createNewProduct,
   getProductDetails,
-  updateProductDetails
+  updateProductDetails,
+  deleteProduct,
 };

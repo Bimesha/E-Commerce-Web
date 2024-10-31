@@ -54,8 +54,19 @@
 }
 
 #sidebar .nav-item i {
-  margin-right: 15px;
   font-size: 20px;
+}
+
+#sidebar .fa-house-chimney,
+#sidebar .fa-truck,
+#sidebar .fa-users {
+  margin-right: 12px;
+}
+
+#sidebar .fa-bag-shopping,
+#sidebar .fa-quote-left,
+#sidebar .fa-user {
+  margin-right: 18px;
 }
 
 #sidebar .nav-item a:hover,
@@ -104,8 +115,19 @@
   }
 
   #sidebar .nav-item i {
-    font-size: 17px;
-    margin-right: 10px;
+    font-size: 18px;
+  }
+
+  #sidebar .fa-house-chimney,
+  #sidebar .fa-truck,
+  #sidebar .fa-users {
+    margin-right: 12px;
+  }
+
+  #sidebar .fa-bag-shopping,
+  #sidebar .fa-quote-left,
+  #sidebar .fa-user {
+    margin-right: 18px;
   }
 }
 

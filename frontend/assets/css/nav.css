@@ -100,7 +100,7 @@ header {
 #user i {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 28px;
-  padding: 8.5px 8.5px;
+  padding: 9px 9px;
   color: #000;
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -114,7 +114,7 @@ header {
   background-color: #ffba35;
 }
 
-#cart-count {
+/* #cart-count {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   position: absolute;
@@ -126,7 +126,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 ul li {
   list-style: none;
@@ -153,6 +153,7 @@ ul li {
 }
 
 #login-link,
+#signup-link,
 #profile-link {
   border-bottom: black 1px solid;
 }
@@ -236,7 +237,6 @@ ul li {
   border-radius: 3px;
 }
 
-
 /* Media Queries */
 @media (min-width: 1440px) {
   #products-dropdown {
@@ -244,43 +244,47 @@ ul li {
   }
 }
 
-@media only screen and (min-width: 1400px) and (max-width: 1440px) {
+@media only screen and (min-width: 1366px) and (max-width: 1440px) {
   #products-dropdown {
-    right: 710px;
+    right: 60%;
+    left: 32%;
+    width: 240px;
   }
 }
 
-@media only screen and (min-width: 1280px) and (max-width: 1399px) {
+@media only screen and (min-width: 1200px) and (max-width: 1365px) {
   #products-dropdown {
-    right: 670px;
+    right: 60%;
+    left: 30%;
+    width: 240px;
   }
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1280px) {
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
   #products-dropdown {
-    right: 630px;
+    right: 60%;
+    left: 26%;
+    width: 240px;
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+@media only screen and (min-width: 990px) and (max-width: 1023px) {
   #products-dropdown {
-    right: 530px;
+    right: 60%;
+    left: 25%;
+    width: 240px;
   }
 }
 
-@media only screen and (min-width: 900px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 989px) {
   #products-dropdown {
-    right: 460px;
+    right: 60%;
+    left: 22%;
+    width: 240px;
   }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 900px) {
-  #products-dropdown {
-    right: 410px;
-  }
-}
-
-@media only screen and (min-width: 600.98px) and (max-width: 768px) {
+@media only screen and (min-width: 600px) and (max-width: 767px) {
   .header-container {
     padding: 10px 50px 10px 40px;
   }
@@ -332,12 +336,13 @@ ul li {
   }
 
   #products-dropdown {
-    margin-top: 6px;
-    right: 310px;
+    right: 60%;
+    left: 16%;
+    width: 240px;
   }
 }
 
-@media only screen and (min-width: 425px) and (max-width: 600.98px) {
+@media only screen and (min-width: 425px) and (max-width: 599px) {
   header {
     height: 55px;
   }
@@ -386,7 +391,7 @@ ul li {
 
   #user i {
     font-size: 20px;
-    padding: 7.5px 7.5px;
+    padding: 8px 8px;
   }
 
   #search1 {
@@ -414,7 +419,7 @@ ul li {
     top: 55px;
     background-color: #fff;
     text-align: center;
-    padding: 0px 30px;
+    padding: 0 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
   }
@@ -471,6 +476,7 @@ ul li {
   #story-link a,
   #contact-link a,
   #login-link a,
+  #profile-link a,
   #logout-link a,
   #signup-link a,
   #chair-link a,
@@ -495,7 +501,7 @@ ul li {
     display: flex;
     align-items: center;
     margin-top: -10px;
-    padding: 0px 20px;
+    padding: 0 20px;
   }
 
   .header-search {
@@ -563,7 +569,7 @@ ul li {
     right: 10px;
     background-color: #fff;
     text-align: center;
-    padding: 0px 30px;
+    padding: 0 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
   }
@@ -620,6 +626,7 @@ ul li {
   #story-link a,
   #contact-link a,
   #login-link a,
+  #profile-link a,
   #logout-link a,
   #signup-link a,
   #chair-link a,
@@ -643,7 +650,7 @@ ul li {
   .header-container {
     align-items: center;
     margin-top: -5px;
-    padding: 0px 20px;
+    padding: 0 20px;
   }
 
   .header-search {
@@ -704,7 +711,7 @@ ul li {
     right: 10px;
     background-color: #fff;
     text-align: center;
-    padding: 0px 30px;
+    padding: 0 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     z-index: 1;
@@ -766,6 +773,7 @@ ul li {
   #story-link a,
   #contact-link a,
   #login-link a,
+  #profile-link a,
   #logout-link a,
   #signup-link a,
   #chair-link a,

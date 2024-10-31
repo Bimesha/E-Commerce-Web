@@ -4,6 +4,7 @@ const {
   createNewProduct,
   getProductDetails,
   updateProductDetails,
+  deleteProduct,
 } = require("../controllers/product-controller");
 const router = express.Router();
 const upload = require("../middleware/multer"); // for image upload
@@ -19,5 +20,8 @@ router.get("/:id", getProductDetails);
 
 // route to update a product details by its ID
 router.put("/:id", upload.single("productImage"), updateProductDetails);
+
+// route to delete a product details by its ID
+router.delete("/:id", deleteProduct);
 
 module.exports = router;
