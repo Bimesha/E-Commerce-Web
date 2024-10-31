@@ -138,3 +138,11 @@ document
     const productId = selectedProductId;
     updateProductDetails(productId);
   });
+
+// Function to close the edit modal
+function closeEditModal() {
+  const modal = document.getElementById("editProductModal");
+  if (modal) {
+    modal.style.display = "none";
+  }
+}
