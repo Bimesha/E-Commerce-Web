@@ -118,3 +118,23 @@ async function updateProductDetails(selectedProductId) {
     alert("Product updated successfully!");
   }
 }
+
+// Attach onclick handler to the "Save Changes" button
+document
+  .querySelector("#editProductForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Check if there is an existing image preview, meaning no new image is needed
+    const imageInput = document.getElementById("productImageEdit");
+    const imagePreview = document.getElementById("imagePreviewEdit");
+
+    if (!imagePreview.src || imagePreview.src === "#") {
+      imageInput.setAttribute("required", "true");
+    } else {
+      imageInput.removeAttribute("required");
+    }
+
+    const productId = selectedProductId;
+    updateProductDetails(productId);
+  });
