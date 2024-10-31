@@ -89,9 +89,22 @@ const updateProductById = async (productId, productData) => {
   }
 };
 
+// model to delete a product by ID
+const deleteProductById = async (productId) => {
+  const query = "DELETE FROM product WHERE ProductID = ?";
+  try {
+    const [result] = await db.query(query, [productId]);
+    return result;
+  } catch (err) {
+    console.error("Error deleting product:", err);
+    throw err;
+  }
+};
+
 module.exports = {
   getProducts,
   createProduct,
   getProductById,
   updateProductById,
+  deleteProductById,
 };
