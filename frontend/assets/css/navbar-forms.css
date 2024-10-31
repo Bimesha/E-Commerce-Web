@@ -6,15 +6,15 @@
 
 #registrationForm {
   max-height: 600px;
-  padding: 0px 20px;
-  margin: 0px 20px;
+  padding: 0 20px;
+  margin: 0 20px;
   z-index: 1;
 }
 
 #loginForm {
   max-height: 600px;
   width: 100%;
-  padding: 0px 5px;
+  padding: 0 5px;
   margin: 0 auto;
   z-index: 1;
 }
@@ -118,7 +118,7 @@
 
 button.btn-warning,
 button.btn-dark {
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Apply dark background and text color to entire modal after failure and success modal open*/
@@ -177,7 +177,7 @@ button.btn-dark {
 #profileForm {
   max-height: 600px;
   width: 100%;
-  padding: 0px 5px;
+  padding: 0 5px;
   margin: 0 auto;
   z-index: 1;
 }
@@ -224,7 +224,7 @@ textarea::placeholder {
 #imgAddEditBtn {
   background-color: rgb(48, 48, 48);
   color: white;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
 
@@ -236,7 +236,7 @@ textarea::placeholder {
 
 #imgDeleteBtn {
   margin-left: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
 
