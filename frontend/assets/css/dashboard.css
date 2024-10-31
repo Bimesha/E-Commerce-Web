@@ -91,7 +91,7 @@ body {
 }
 
 .content-section .recent-orders h3 {
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 #recent-order-table th,
@@ -105,6 +105,7 @@ body {
 #top-selling-product-table th {
   font-weight: 400;
 }
+
 
 /* Media Queries */
 @media only screen and (min-width: 1400px) and (max-width: 1440px) {
@@ -300,7 +301,7 @@ body {
   }
 
   .content-section .second-analyze {
-    gap: 0px;
+    gap: 0;
   }
 
   #recent-order-table {
@@ -364,7 +365,7 @@ body {
   }
 
   #recent-order-table {
-    margin: 10px 5px 10px 0px;
+    margin: 10px 5px 10px 0;
     width: 410px;
   }
 
@@ -420,11 +421,11 @@ body {
   }
 
   .content-section .second-analyze {
-    gap: 0px;
+    gap: 0;
   }
 
   #recent-order-table {
-    margin: 10px 5px 10px 0px;
+    margin: 10px 5px 10px 0;
     width: 340px;
   }
 
@@ -501,12 +502,12 @@ body {
   }
 
   .content-section .selling-products h3 {
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   #top-selling-product-table {
     width: 350px;
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 
@@ -561,18 +562,18 @@ body {
   }
 
   .content-section .selling-products h3 {
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   #top-selling-product-table {
     width: 200px;
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 
 @media only screen and (min-width: 500px) and (max-width: 600px) {
   .content-section {
-    margin-left: 0px;
+    margin-left: 0;
     margin-top: -10px;
   }
 
@@ -638,7 +639,7 @@ body {
 
 @media only screen and (min-width: 425px) and (max-width: 499px) {
   .content-section {
-    margin-left: 0px;
+    margin-left: 0;
     margin-top: -10px;
   }
 
@@ -720,7 +721,7 @@ body {
 
 @media only screen and (min-width: 375px) and (max-width: 424px) {
   .content-section {
-    margin-left: 0px;
+    margin-left: 0;
     margin-top: -5px;
   }
 
@@ -795,7 +796,7 @@ body {
 
 @media only screen and (min-width: 320px) and (max-width: 374px) {
   .content-section {
-    margin-left: 0px;
+    margin-left: 0;
     margin-top: -5px;
   }
 
