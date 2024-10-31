@@ -146,3 +146,31 @@ function closeEditModal() {
     modal.style.display = "none";
   }
 }
+
+// Delete product
+async function deleteProduct(productId) {
+  const confirmDelete = confirm(
+    "Are you sure you want to delete this product?"
+  );
+  if (!confirmDelete) return;
+
+  const response = await fetch(
+    `http://localhost:5500/api/products/${productId}`,
+    {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  if (!response.ok) {
+    const errorData = await response.json();
+    alert(`Error: ${errorData.message}`);
+    return;
+  }
+
+  const data = await response.json();
+  alert(data.message);
+  location.reload();
+}
