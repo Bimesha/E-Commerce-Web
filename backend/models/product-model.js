@@ -59,8 +59,39 @@ const getProductById = async (productId) => {
   }
 };
 
+// model to update a product by ID
+const updateProductById = async (productId, productData) => {
+  const { name, description, price, quantity, categoryID, imagePath } =
+    productData;
+
+  const query = `
+    UPDATE product
+    SET Name = ?, Description = ?, Price = ?, Quantity = ?, CategoryID = ?, ImagePath = ?
+    WHERE ProductID = ?
+  `;
+
+  const queryParams = [
+    name,
+    description,
+    price,
+    quantity,
+    categoryID,
+    imagePath,
+    productId,
+  ];
+
+  try {
+    const [result] = await db.query(query, queryParams);
+    return result;
+  } catch (error) {
+    console.error("Error updating product:", error);
+    throw error;
+  }
+};
+
 module.exports = {
   getProducts,
   createProduct,
   getProductById,
+  updateProductById,
 };
