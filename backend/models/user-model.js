@@ -22,7 +22,7 @@ const getCustomers = async () => {
                u.Email AS email, 
                u.Address AS address, 
                u.Phone AS phone
-        FROM user u
+        FROM user u WHERE u.Role = 'User'
     `;
   try {
     const [rows] = await db.query(query);
