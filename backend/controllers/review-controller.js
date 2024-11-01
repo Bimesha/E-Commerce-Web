@@ -76,14 +76,17 @@ const sendReplyEmail = async (req, res) => {
       return res.status(404).json({ error: "Review not found" });
     }
 
-    const userEmail = reviewResult[0].Email;
+    const { Email: userEmail, FirstName, LastName } = reviewResult[0];
+
+    // Construct personalized email message
+    const emailBody = `Dear ${FirstName} ${LastName},\n\n${replyMessage}\n\nSincerely,\nOakly Furniture Store,\nSri Lanka.`;
 
     // Send the reply email to the user
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: userEmail,
       subject: "Reply to Your Review of Our Online Furniture Store",
-      text: replyMessage,
+      text: emailBody,
     };
 
     transporter.sendMail(mailOptions, (error) => {
