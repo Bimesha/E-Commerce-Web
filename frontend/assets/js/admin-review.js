@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                     <div class="review-footer">
                       <div class="add-reply">
-                        <button class="btn btn-primary" onclick="openReplyModal('${review.FirstName}', '${review.LastName}', '${review.Comment}')">Send Reply</button>
+                        <button class="btn btn-primary" onclick="openReplyModal('${review.FirstName}', '${review.LastName}', '${review.Comment}', ${review.ReviewID})")">Send Reply</button>
                       </div>
                       <div class="delete-review">
                         <button class="btn btn-primary" onclick="deleteReview(${review.ReviewID})"><i class="fa-regular fa-trash-can"></i></button>
@@ -73,13 +73,56 @@ async function deleteReview(reviewId) {
   }
 }
 
-function openReplyModal(firstName, lastName, comment) {
+// Function to open the reply modal and set the current ReviewID
+let currentReviewID;
+function openReplyModal(firstName, lastName, comment, ReviewID) {
   document.getElementById(
     "reviewerName"
   ).textContent = `${firstName} ${lastName}`;
   document.getElementById("reviewComment").textContent = `" ${comment} "`;
   document.getElementById("replyText").value = "";
+
+  // Set the global variable to the current ReviewID
+  currentReviewID = ReviewID;
+
   new bootstrap.Modal(document.getElementById("replyModal")).show();
+}
+
+async function submitReply() {
+  const replyMessage = document.getElementById("replyText").value;
+
+  // Real-time validation for the reply textarea
+  const replyText = document.getElementById("replyText");
+  if (replyText.value.trim() === "") {
+    replyText.classList.add("is-invalid");
+    return false;
+  }
+
+  try {
+    const response = await fetch(
+      `http://localhost:5500/api/reviews/${currentReviewID}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ replyMessage }),
+      }
+    );
+
+    if (response.ok) {
+      alert("Reply sent successfully");
+      document.getElementById("replyText").value = "";
+      const modalElement = document.getElementById("replyModal");
+      const modal = bootstrap.Modal.getInstance(modalElement);
+      modal.hide();
+    } else {
+      alert("Failed to send the reply");
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    alert("An error occurred while sending the reply.");
+  }
 }
 
 // Real-time validation for the reply textarea
@@ -92,16 +135,3 @@ document.getElementById("replyText").addEventListener("input", function () {
     this.classList.remove("is-invalid");
   }
 });
-
-function submitReply() {
-  const replyText = document.getElementById("replyText");
-
-  // If replyText is empty, prevent submission
-  if (replyText.value.trim() === "") {
-    replyText.classList.add("is-invalid");
-    return;
-  }
-
-  // Close the modal after sending the reply
-  bootstrap.Modal.getInstance(document.getElementById("replyModal")).hide();
-}
