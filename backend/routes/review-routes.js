@@ -4,6 +4,7 @@ const {
   addReview,
   getAllReviews,
   deleteReview,
+  sendReplyEmail,
 } = require("../controllers/review-controller");
 const { authenticateUser } = require("../middleware/auth-middleware");
 
@@ -15,5 +16,8 @@ router.get("/get-reviews", getAllReviews);
 
 // route to delete a review
 router.delete("/:reviewId", deleteReview);
+
+// route to send a reply email
+router.post("/:reviewId", sendReplyEmail);
 
 module.exports = router;

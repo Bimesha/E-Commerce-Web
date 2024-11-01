@@ -1,10 +1,12 @@
+const db = require("../config/db");
 const Review = require("../models/review-model");
+const nodemailer = require("nodemailer");
 
-exports.addReview = async (req, res) => {
+//Controller to add review
+const addReview = async (req, res) => {
   const { comment } = req.body;
-  const userId = req.user.userId; // Extracted from JWT token
+  const userId = req.user.userId;
 
-  // Check if the comment is provided
   if (!comment) {
     return res.status(400).json({ message: "Comment is required" });
   }
@@ -26,8 +28,8 @@ exports.addReview = async (req, res) => {
   }
 };
 
-// Function to get all reviews
-exports.getAllReviews = async (req, res) => {
+// Controller to get all reviews
+const getAllReviews = async (req, res) => {
   try {
     const reviews = await Review.findAll();
     res.status(200).json(reviews);
@@ -38,7 +40,7 @@ exports.getAllReviews = async (req, res) => {
 };
 
 // Controller to delete a review
-exports.deleteReview = async (req, res) => {
+const deleteReview = async (req, res) => {
   const { reviewId } = req.params;
 
   try {
@@ -50,4 +52,61 @@ exports.deleteReview = async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Error deleting the review" });
   }
+};
+
+// Configure email transporter
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
+
+// Controller to send reply email
+const sendReplyEmail = async (req, res) => {
+  const { reviewId } = req.params;
+  const { replyMessage } = req.body;
+
+  try {
+    // Fetch the user's email based on ReviewID and UserID
+    const reviewResult = await Review.getUserEmailByReviewId(reviewId);
+
+    if (reviewResult.length === 0) {
+      return res.status(404).json({ error: "Review not found" });
+    }
+
+    const { Email: userEmail, FirstName, LastName } = reviewResult[0];
+
+    // Construct personalized email message
+    const emailBody = `Dear ${FirstName} ${LastName},\n\n${replyMessage}\n\nSincerely,\nOakly Furniture Store,\nSri Lanka.`;
+
+    // Send the reply email to the user
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: userEmail,
+      subject: "Reply to Your Review of Our Online Furniture Store",
+      text: emailBody,
+    };
+
+    transporter.sendMail(mailOptions, (error) => {
+      if (error) {
+        return res.status(500).json({ error: "Failed to send email" });
+      } else {
+        return res.status(200).json({ message: "Reply sent successfully" });
+      }
+    });
+  } catch (error) {
+    console.error("Error:", error);
+    res
+      .status(500)
+      .json({ error: "An error occurred while sending the reply" });
+  }
+};
+
+module.exports = {
+  addReview,
+  getAllReviews,
+  deleteReview,
+  sendReplyEmail,
 };
