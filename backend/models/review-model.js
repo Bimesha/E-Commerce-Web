@@ -23,10 +23,10 @@ const Review = {
     return result;
   },
 
-  // model to fetch user email based on ReviewID and UserID
+  // model to fetch user email and name based on ReviewID and UserID
   getUserEmailByReviewId: async (reviewId) => {
     const query =
-      "SELECT u.Email FROM review r JOIN user u ON r.UserID = u.UserID WHERE r.ReviewID = ?";
+      "SELECT u.Email, u.FirstName, u.LastName FROM review r JOIN user u ON r.UserID = u.UserID WHERE r.ReviewID = ?";
     const [result] = await db.query(query, [reviewId]);
     return result;
   },
