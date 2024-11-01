@@ -1,107 +1,104 @@
-// Fetch reviews from the database and display them on the page
-document.addEventListener("DOMContentLoaded", function () {
-  fetch("http://localhost:5500/api/reviews/get-reviews")
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Failed to fetch reviews");
-      }
-      return response.json();
-    })
-    .then((reviews) => {
-      const reviewsContainer = document.getElementById("reviews-container");
-      reviewsContainer.innerHTML = "";
+const Review = require("../models/review-model");
+const nodemailer = require("nodemailer");
 
-      reviews.forEach((review) => {
-        const reviewHTML = `
-              <div class="col-lg-12 col-md-12 col-sm-12" style="border-bottom: 1px solid #C0C0C0; padding-bottom: 10px;">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="card-header">
-                      <div class="card-avatar">
-                        <img src="./assets/images/home-img/man-1.jpg" alt="avatar" /> <!-- Default avatar -->
-                      </div>
-                      <div class="card-name">
-                        <h5 class="card-title">${review.FirstName} ${review.LastName}</h5> <!-- Full name -->
-                      </div>
-                    </div>
-                    <div class="card-content">
-                      <p class="card-text">
-                        " ${review.Comment} "
-                      </p>
-                    </div>
-                    <div class="review-footer">
-                      <div class="add-reply">
-                        <button class="btn btn-primary" onclick="openReplyModal('${review.FirstName}', '${review.LastName}', '${review.Comment}')">Send Reply</button>
-                      </div>
-                      <div class="delete-review">
-                        <button class="btn btn-primary" onclick="deleteReview(${review.ReviewID})"><i class="fa-regular fa-trash-can"></i></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          `;
-        reviewsContainer.innerHTML += reviewHTML;
-      });
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-      const reviewsContainer = document.getElementById("reviews-container");
-      reviewsContainer.innerHTML = "<p>Unable to load reviews.</p>";
+//Controller to add review
+exports.addReview = async (req, res) => {
+  const { comment } = req.body;
+  const userId = req.user.userId;
+
+  if (!comment) {
+    return res.status(400).json({ message: "Comment is required" });
+  }
+
+  try {
+    // Add review to the database
+    const result = await Review.create(userId, comment);
+
+    // Send success response with the insertId
+    return res.status(201).json({
+      message: "Review added successfully",
+      reviewId: result.insertId,
     });
+  } catch (err) {
+    console.error("Error adding review:", err);
+    return res
+      .status(500)
+      .json({ message: "Failed to add review", error: err });
+  }
+};
+
+// Controller to get all reviews
+exports.getAllReviews = async (req, res) => {
+  try {
+    const reviews = await Review.findAll();
+    res.status(200).json(reviews);
+  } catch (err) {
+    console.error("Error fetching reviews:", err);
+    res.status(500).json({ message: "Failed to fetch reviews" });
+  }
+};
+
+// Controller to delete a review
+exports.deleteReview = async (req, res) => {
+  const { reviewId } = req.params;
+
+  try {
+    const result = await Review.deleteById(reviewId);
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ error: "Review not found" });
+    }
+    res.status(200).json({ message: "Review deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: "Error deleting the review" });
+  }
+};
+
+// Configure email transporter
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
 });
 
-// Delete a review
-async function deleteReview(reviewId) {
+// Function to send reply email
+exports.sendReplyEmail = async (req, res) => {
+  const { reviewId } = req.params;
+  const { replyMessage } = req.body;
+
   try {
-    const response = await fetch(
-      `http://localhost:5500/api/reviews/${reviewId}`,
-      {
-        method: "DELETE",
-      }
+    // Fetch the user's email based on ReviewID and UserID
+    const [reviewResult] = await db.query(
+      "SELECT u.Email FROM review r JOIN user u ON r.UserID = u.UserID WHERE r.ReviewID = ?",
+      [reviewId]
     );
 
-    if (response.ok) {
-      alert("Review deleted successfully");
-      location.reload();
-    } else {
-      alert("Failed to delete the review");
+    if (reviewResult.length === 0) {
+      return res.status(404).json({ error: "Review not found" });
     }
+
+    const userEmail = reviewResult[0].Email;
+
+    // Send the reply email to the user
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: userEmail,
+      subject: "Reply to Your Review of Our Online Furniture Store",
+      text: replyMessage,
+    };
+
+    transporter.sendMail(mailOptions, (error) => {
+      if (error) {
+        return res.status(500).json({ error: "Failed to send email" });
+      } else {
+        return res.status(200).json({ message: "Reply sent successfully" });
+      }
+    });
   } catch (error) {
     console.error("Error:", error);
-    alert("An error occurred while deleting the review.");
+    res
+      .status(500)
+      .json({ error: "An error occurred while sending the reply" });
   }
-}
-
-function openReplyModal(firstName, lastName, comment) {
-  document.getElementById(
-    "reviewerName"
-  ).textContent = `${firstName} ${lastName}`;
-  document.getElementById("reviewComment").textContent = `" ${comment} "`;
-  document.getElementById("replyText").value = "";
-  new bootstrap.Modal(document.getElementById("replyModal")).show();
-}
-
-// Real-time validation for the reply textarea
-document.getElementById("replyText").addEventListener("input", function () {
-  if (this.value.trim() === "") {
-    this.classList.add("is-invalid");
-    this.classList.remove("is-valid");
-  } else {
-    this.classList.add("is-valid");
-    this.classList.remove("is-invalid");
-  }
-});
-
-function submitReply() {
-  const replyText = document.getElementById("replyText");
-
-  // If replyText is empty, prevent submission
-  if (replyText.value.trim() === "") {
-    replyText.classList.add("is-invalid");
-    return;
-  }
-
-  // Close the modal after sending the reply
-  bootstrap.Modal.getInstance(document.getElementById("replyModal")).hide();
-}
+};
