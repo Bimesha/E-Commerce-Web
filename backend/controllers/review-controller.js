@@ -1,8 +1,9 @@
+const db = require("../config/db");
 const Review = require("../models/review-model");
 const nodemailer = require("nodemailer");
 
 //Controller to add review
-exports.addReview = async (req, res) => {
+const addReview = async (req, res) => {
   const { comment } = req.body;
   const userId = req.user.userId;
 
@@ -28,7 +29,7 @@ exports.addReview = async (req, res) => {
 };
 
 // Controller to get all reviews
-exports.getAllReviews = async (req, res) => {
+const getAllReviews = async (req, res) => {
   try {
     const reviews = await Review.findAll();
     res.status(200).json(reviews);
@@ -39,7 +40,7 @@ exports.getAllReviews = async (req, res) => {
 };
 
 // Controller to delete a review
-exports.deleteReview = async (req, res) => {
+const deleteReview = async (req, res) => {
   const { reviewId } = req.params;
 
   try {
@@ -63,7 +64,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Function to send reply email
-exports.sendReplyEmail = async (req, res) => {
+const sendReplyEmail = async (req, res) => {
   const { reviewId } = req.params;
   const { replyMessage } = req.body;
 
@@ -101,4 +102,11 @@ exports.sendReplyEmail = async (req, res) => {
       .status(500)
       .json({ error: "An error occurred while sending the reply" });
   }
+};
+
+module.exports = {
+  addReview,
+  getAllReviews,
+  deleteReview,
+  sendReplyEmail,
 };
