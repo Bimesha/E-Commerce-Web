@@ -70,10 +70,7 @@ const sendReplyEmail = async (req, res) => {
 
   try {
     // Fetch the user's email based on ReviewID and UserID
-    const [reviewResult] = await db.query(
-      "SELECT u.Email FROM review r JOIN user u ON r.UserID = u.UserID WHERE r.ReviewID = ?",
-      [reviewId]
-    );
+    const reviewResult = await Review.getUserEmailByReviewId(reviewId);
 
     if (reviewResult.length === 0) {
       return res.status(404).json({ error: "Review not found" });
