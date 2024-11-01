@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <button class="btn btn-primary" onclick="openReplyModal('${review.FirstName}', '${review.LastName}', '${review.Comment}')">Send Reply</button>
                       </div>
                       <div class="delete-review">
-                        <button class="btn btn-primary"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="btn btn-primary" onclick="deleteReview(${review.ReviewID})"><i class="fa-regular fa-trash-can"></i></button>
                       </div>
                     </div>
                   </div>
@@ -50,6 +50,28 @@ document.addEventListener("DOMContentLoaded", function () {
       reviewsContainer.innerHTML = "<p>Unable to load reviews.</p>";
     });
 });
+
+// Delete a review
+async function deleteReview(reviewId) {
+  try {
+    const response = await fetch(
+      `http://localhost:5500/api/reviews/${reviewId}`,
+      {
+        method: "DELETE",
+      }
+    );
+
+    if (response.ok) {
+      alert("Review deleted successfully");
+      location.reload();
+    } else {
+      alert("Failed to delete the review");
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    alert("An error occurred while deleting the review.");
+  }
+}
 
 function openReplyModal(firstName, lastName, comment) {
   document.getElementById(
