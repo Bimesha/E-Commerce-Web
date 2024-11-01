@@ -63,7 +63,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Function to send reply email
+// Controller to send reply email
 const sendReplyEmail = async (req, res) => {
   const { reviewId } = req.params;
   const { replyMessage } = req.body;
