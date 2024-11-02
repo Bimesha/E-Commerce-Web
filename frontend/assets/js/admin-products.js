@@ -23,6 +23,31 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => console.error("Error fetching products:", error));
 });
 
+// Fetch products from backend and display them in the table for mobile view
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("http://localhost:5500/api/products/all-products")
+    .then((response) => response.json())
+    .then((data) => {
+      const productTable = document.getElementById("productTable1");
+      data.forEach((product) => {
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+            <td>${product.name}</td>
+            <td class="extra-columns">${product.category}</td>
+            <td class="extra-columns">${product.quantity}</td>
+            <td>Rs ${product.price}</td>
+            <td class="actions-buttons">
+              <button class="edit" onclick="fetchProductDetails(${product.productId})" ><i class="fa-solid fa-pencil" data-bs-toggle="modal" data-bs-target="#editProductModal"></i></button>
+              <button class="delete" onclick="deleteProduct(${product.productId})"><i class="fa-regular fa-trash-can"></i></button>
+            </td>
+          `;
+        productTable.appendChild(row);
+      });
+    })
+    .catch((error) => console.error("Error fetching products:", error));
+});
+
 // Function to handle add product image and delete image
 const productImageInput = document.getElementById("productImage");
 const imagePreview = document.getElementById("imagePreview");
