@@ -674,6 +674,14 @@ body {
     margin-top: -15px;
   }
 
+  .content-section .large-screen-table {
+    display: none;
+  }
+
+  .content-section .table-expand {
+    display: block !important;
+  }
+
   .table thead th,
   .table tbody td {
     font-size: 0.6rem;
