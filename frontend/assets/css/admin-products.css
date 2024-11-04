@@ -676,6 +676,23 @@ body {
 
   .table thead th,
   .table tbody td {
+    font-size: 0.6rem;
+  }
+
+  .extra-columns {
+    display: none;
+  }
+
+  .table-expanded .extra-columns {
+    display: table-cell;
+  }
+
+  .table-mobile {
+    transition: overflow-x 0.3s;
+  }
+
+  .table-expanded .table thead th,
+  .table-expanded .table tbody td {
     font-size: 8px;
   }
 
