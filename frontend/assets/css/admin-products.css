@@ -571,7 +571,7 @@ body {
     padding: 5px 10px;
     background-color: #ffba35;
     border: none;
-    color: black;
+    color: #000000;
   }
 
   .table-expand .btn-toggle {
@@ -729,7 +729,7 @@ body {
     padding: 5px 10px;
     background-color: #ffba35;
     border: none;
-    color: black;
+    color: #000000;
   }
 
   .table-expand .btn-toggle {
