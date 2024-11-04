@@ -556,11 +556,54 @@ body {
   }
 
   .content-section .table {
-    margin-top: -10px;
+    margin-top: -15px;
+  }
+  
+  .content-section .large-screen-table {
+    display: none;
+  }
+
+  .content-section .table-expand {
+    display: block !important;
+  }
+
+  .table-expand .btn.btn-primary {
+    padding: 5px 10px;
+    background-color: #ffba35;
+    border: none;
+    color: black;
+  }
+
+  .table-expand .btn-toggle {
+    font-size: 13px;
+  }
+
+  .table-expand .fa-eye-slash,
+  .table-expand .fa-eye {
+    padding-top: 4px;
+    font-size: 18px;
+    color: black;
   }
 
   .table thead th,
   .table tbody td {
+    font-size: 0.7rem;
+  }
+
+  .extra-columns {
+    display: none;
+  }
+
+  .table-expanded .extra-columns {
+    display: table-cell;
+  }
+
+  .table-mobile {
+    transition: overflow-x 0.3s;
+  }
+
+  .table-expanded .table thead th,
+  .table-expanded .table tbody td {
     font-size: 9px;
   }
 
