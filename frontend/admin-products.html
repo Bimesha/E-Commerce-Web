@@ -84,14 +84,14 @@
         </div>
 
         <!-- Table for mobile view -->
-        <div class="table-expand my-4" style="display: none;">
+        <div class="table-expand my-4" style="display: none">
           <!-- Toggle button for expanding the table -->
           <button
             id="expandTableBtn"
-            class="btn btn-primary mb-3"
+            class="btn btn-primary btn-toggle mb-3"
             onclick="toggleTableExpand()"
           >
-            <i class="fas fa-eye"></i>
+            <i class="fas fa-eye"></i> &nbsp; Show Full Table
           </button>
 
           <!-- Responsive table -->
@@ -524,9 +524,10 @@
         // Toggle button text
         const btn = document.getElementById("expandTableBtn");
         if (tableContainer.classList.contains("table-expanded")) {
-          btn.innerHTML = '<i class="fas fa-eye-slash"></i> Hide Full Table';
+          btn.innerHTML =
+            '<i class="fas fa-eye-slash"></i> &nbsp; Hide Full Table';
         } else {
-          btn.innerHTML = '<i class="fas fa-eye"></i> Show Full Table';
+          btn.innerHTML = '<i class="fas fa-eye"></i> &nbsp; Show Full Table';
         }
       }
     </script>

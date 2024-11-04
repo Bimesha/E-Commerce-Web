@@ -682,6 +682,24 @@ body {
     display: block !important;
   }
 
+  .table-expand .btn.btn-primary {
+    padding: 5px 10px;
+    background-color: #ffba35;
+    border: none;
+    color: black;
+  }
+
+  .table-expand .btn-toggle {
+    font-size: 12px;
+  }
+
+  .table-expand .fa-eye-slash,
+  .table-expand .fa-eye {
+    padding-top: 2px;
+    font-size: 15px;
+    color: black;
+  }
+
   .table thead th,
   .table tbody td {
     font-size: 0.6rem;
