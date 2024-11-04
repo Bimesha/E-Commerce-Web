@@ -9,6 +9,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"
+    /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -53,7 +57,7 @@
       <div class="content-section">
         <h1>CUSTOMERS</h1>
 
-        <div class="my-5">
+        <div class="large-screen-table my-5">
           <table class="table">
             <thead class="thead-dark">
               <tr>
@@ -69,14 +73,64 @@
             </tbody>
           </table>
         </div>
+
+        <!-- Table for mobile view -->
+        <div class="table-expand my-4" style="display: none">
+          <!-- Toggle button for expanding the table -->
+          <button
+            id="expandTableBtn"
+            class="btn btn-primary btn-toggle mb-3"
+            onclick="toggleTableExpand()"
+          >
+            <i class="fas fa-eye"></i> &nbsp; Show Full Table
+          </button>
+
+          <!-- Responsive table -->
+          <div class="my-3 table-mobile">
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th class="extra-columns">ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th class="extra-columns">Address</th>
+                  <th>Phone No.</th>
+                </tr>
+              </thead>
+              <tbody id="customerTable1">
+                <!-- Data will be dynamically loaded here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </section>
+
+    <script>
+      function toggleTableExpand() {
+        const tableContainer = document.querySelector(".table-mobile");
+        tableContainer.classList.toggle("table-expanded");
+
+        // Toggle button text
+        const btn = document.getElementById("expandTableBtn");
+        if (tableContainer.classList.contains("table-expanded")) {
+          btn.innerHTML =
+            '<i class="fas fa-eye-slash"></i> &nbsp; Hide Full Table';
+        } else {
+          btn.innerHTML = '<i class="fas fa-eye"></i> &nbsp; Show Full Table';
+        }
+      }
+    </script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script> -->
 
     <script src="./assets/js/admin-nav.js"></script>
     <script src="./assets/js/customers.js"></script>
