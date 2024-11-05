@@ -11,7 +11,7 @@ const Review = {
   //model to get all reviews
   findAll: async () => {
     const query =
-      "SELECT r.ReviewID, r.Comment, u.FirstName, u.LastName FROM review r JOIN user u ON r.UserID = u.UserID";
+      "SELECT r.ReviewID, r.UserID, r.Comment, u.FirstName, u.LastName FROM review r JOIN user u ON r.UserID = u.UserID";
     const [reviews] = await db.query(query);
     return reviews;
   },
