@@ -16,10 +16,17 @@ const Review = {
     return reviews;
   },
 
-  // model to delete a review by ReviewID
+  // model to delete a review by ReviewID only for admin
   deleteById: async (reviewId) => {
     const query = "DELETE FROM review WHERE ReviewID = ?";
     const [result] = await db.query(query, [reviewId]);
+    return result;
+  },
+
+  // model to delete review by ReviewID and UserID to ensure only owner can delete
+  deleteByUserAndId: async (reviewId, userId) => {
+    const query = "DELETE FROM review WHERE ReviewID = ? AND UserID = ?";
+    const [result] = await db.query(query, [reviewId, userId]);
     return result;
   },
 
