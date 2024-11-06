@@ -39,7 +39,7 @@ const getAllReviews = async (req, res) => {
   }
 };
 
-// Controller to delete a review
+// Controller to delete a review for admin
 const deleteReview = async (req, res) => {
   const { reviewId } = req.params;
 
@@ -51,6 +51,24 @@ const deleteReview = async (req, res) => {
     res.status(200).json({ message: "Review deleted successfully" });
   } catch (error) {
     res.status(500).json({ error: "Error deleting the review" });
+  }
+};
+
+// Controller for user to delete their own review
+const deleteReviewForUser = async (req, res) => {
+  const reviewId = req.params.reviewId;
+  const userId = req.user.userId;
+
+  try {
+    const result = await Review.deleteByUserAndId(reviewId, userId);
+
+    if (result.affectedRows > 0) {
+      res.json({ message: "Review deleted successfully" });
+    } else {
+      res.status(403).json({ error: "Unauthorized to delete this review" });
+    }
+  } catch (error) {
+    res.status(500).json({ error: "Failed to delete review" });
   }
 };
 
@@ -108,5 +126,6 @@ module.exports = {
   addReview,
   getAllReviews,
   deleteReview,
+  deleteReviewForUser,
   sendReplyEmail,
 };

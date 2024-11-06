@@ -158,55 +158,134 @@
       </div>
     </section>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-
     <script>
-      window.onload = function () {
+      // Helper function to get a cookie by name
+      function getCookie(name) {
+        return document.cookie
+          .split("; ")
+          .find((row) => row.startsWith(name + "="))
+          ?.split("=")[1];
+      }
+
+      // Function to parse JWT token
+      function parseJwt(token) {
+        const base64Url = token.split(".")[1];
+        const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+        const jsonPayload = decodeURIComponent(
+          atob(base64)
+            .split("")
+            .map(function (c) {
+              return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+            })
+            .join("")
+        );
+        return JSON.parse(jsonPayload);
+      }
+
+      // Global variable to store the current user's ID
+      let currentUserID = null;
+
+      // Check for authentication token
+      const token = getCookie("token");
+      if (token) {
+        const decodedToken = parseJwt(token);
+        currentUserID = decodedToken.userId;
+      }
+
+      // Function to delete a review
+      function deleteReview(reviewId) {
+        if (!token) {
+          alert("You need to log in to delete your review.");
+          return;
+        }
+
+        if (confirm("Are you sure you want to delete this review?")) {
+          fetch(`http://localhost:5500/api/reviews/user/${reviewId}`, {
+            method: "DELETE",
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.message) {
+                alert(data.message);
+                location.reload();
+              } else {
+                alert(data.error);
+              }
+            })
+            .catch((error) => {
+              console.error("Error deleting review:", error);
+            });
+        }
+      }
+
+      // Function to fetch and display reviews
+      function fetchReviews() {
         fetch("http://localhost:5500/api/reviews/get-reviews", {
-          method: "GET"
+          method: "GET",
         })
           .then((response) => response.json())
           .then((data) => {
             const reviewsContainer = document.querySelector(
               ".review-page-section .row"
             );
+            reviewsContainer.innerHTML = "";
+
             data.forEach((review) => {
-              // Adjusted to iterate over the data directly
+              // Show delete button only if the review's UserID matches currentUserID
+              const deleteButtonHTML =
+                review.UserID === currentUserID
+                  ? `<button class="btn btn-primary" onclick="deleteReview(${review.ReviewID})"><i class="fa-regular fa-trash-can"></i></button>`
+                  : " "; // Empty string for other reviews
+
               const reviewHTML = `
-                <div class="container">
-                  <div class="col-lg-12 col-md-12 col-sm-12" style="border-bottom: 1px solid #C0C0C0; padding-bottom: 10px;">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="card-header">
-                          <div class="card-avatar">
-                            <img src="./assets/images/home-img/man-1.jpg" alt="avatar" /> <!-- Use a default avatar -->
+                  <div class="container">
+                    <div class="col-lg-12 col-md-12 col-sm-12" style="border-bottom: 1px solid #C0C0C0; padding-bottom: 10px;">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="card-header">
+                            <div class="card-avatar">
+                              <img src="./assets/images/home-img/man-1.jpg" alt="avatar" />
+                            </div>
+                            <div class="card-name">
+                              <h5 class="card-title">${review.FirstName} ${review.LastName}</h5>
+                            </div>
                           </div>
-                          <div class="card-name">
-                            <h5 class="card-title">${review.FirstName} ${review.LastName}</h5> <!-- Combine first and last names -->
+                          <div class="card-content">
+                            <p class="card-text">" ${review.Comment} "</p>
                           </div>
-                        </div>
-                        <div class="card-content">
-                          <p class="card-text">
-                            " ${review.Comment} "
-                          </p>
+                          <div class="review-footer">
+                            <div class="delete-review">
+                              ${deleteButtonHTML} <!-- Only the owner's delete button will be shown -->
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              `;
+                `;
               reviewsContainer.innerHTML += reviewHTML;
             });
           })
           .catch((error) => {
             console.error("Error fetching reviews:", error);
           });
-      };
+      }
+
+      // Call the function to fetch reviews when the page loads
+      window.onload = fetchReviews;
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="./assets/js/nav.js"></script>
     <script src="./assets/widgets/registration.js"></script>
