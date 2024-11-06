@@ -5,6 +5,7 @@ const {
   getAllReviews,
   deleteReview,
   deleteReviewForUser,
+  updateReview,
   sendReplyEmail,
 } = require("../controllers/review-controller");
 const { authenticateUser } = require("../middleware/auth-middleware");
@@ -15,11 +16,14 @@ router.post("/add-review", authenticateUser, addReview);
 // route to fetch all reviews
 router.get("/get-reviews", getAllReviews);
 
-// route to delete a review
+// route to delete a review by ReviewID, accessible only to admin
 router.delete("/:reviewId", deleteReview);
 
 // route for user to delete their own review
 router.delete("/user/:reviewId", authenticateUser, deleteReviewForUser);
+
+// route to update a review, accessible only to the review owner
+router.put("/user/:reviewId", authenticateUser, updateReview);
 
 // route to send a reply email
 router.post("/:reviewId", sendReplyEmail);
