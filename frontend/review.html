@@ -189,7 +189,7 @@
       const token = getCookie("token");
       if (token) {
         const decodedToken = parseJwt(token);
-        currentUserID = decodedToken.userId; 
+        currentUserID = decodedToken.userId;
       }
 
       // Function to delete a review
@@ -239,7 +239,7 @@
               const deleteButtonHTML =
                 review.UserID === currentUserID
                   ? `<button class="btn btn-primary" onclick="deleteReview(${review.ReviewID})"><i class="fa-regular fa-trash-can"></i></button>`
-                  : ""; // Empty string for other reviews
+                  : " "; // Empty string for other reviews
 
               const reviewHTML = `
                   <div class="container">
@@ -255,7 +255,7 @@
                             </div>
                           </div>
                           <div class="card-content">
-                            <p class="card-text">"${review.Comment}"</p>
+                            <p class="card-text">" ${review.Comment} "</p>
                           </div>
                           <div class="review-footer">
                             <div class="delete-review">
