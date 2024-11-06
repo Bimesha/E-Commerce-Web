@@ -222,6 +222,52 @@
         }
       }
 
+      // Function to enable editing mode for a review
+      function enableEdit(reviewId) {
+        const reviewContent = document.getElementById(
+          `review-content-${reviewId}`
+        );
+        const editButton = document.getElementById(`edit-btn-${reviewId}`);
+        const saveButton = document.getElementById(`save-btn-${reviewId}`);
+
+        reviewContent.contentEditable = "true";
+        reviewContent.style.border = "1px solid #ccc";
+        reviewContent.focus();
+
+        editButton.style.display = "none";
+        saveButton.style.display = "inline";
+      }
+
+      // Function to save the updated review
+      function saveReview(reviewId) {
+        const reviewContent = document.getElementById(
+          `review-content-${reviewId}`
+        );
+        const newComment = reviewContent.innerText;
+        5;
+
+        fetch(`http://localhost:5500/api/reviews/user/${reviewId}`, {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ comment: newComment }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.message) {
+              alert(data.message);
+              location.reload();
+            } else {
+              alert(data.error);
+            }
+          })
+          .catch((error) => {
+            console.error("Error updating review:", error);
+          });
+      }
+
       // Function to fetch and display reviews
       function fetchReviews() {
         fetch("http://localhost:5500/api/reviews/get-reviews", {
@@ -235,38 +281,51 @@
             reviewsContainer.innerHTML = "";
 
             data.forEach((review) => {
-              // Show delete button only if the review's UserID matches currentUserID
+              // Add the comma only if it's not already there
+              let commentText = review.Comment;
+              if (!commentText.startsWith('"') || !commentText.endsWith('"')) {
+                commentText = `" ${commentText} "`;
+              }
+              const editButtonHTML =
+                review.UserID === currentUserID
+                  ? `<button id="edit-btn-${review.ReviewID}" class="btn btn-secondary" onclick="enableEdit(${review.ReviewID})"><i class="fa-regular fa-pen-to-square"></i> Edit</button>
+                     <button id="save-btn-${review.ReviewID}" class="btn btn-primary" onclick="saveReview(${review.ReviewID})" style="display: none;"><i class="fa-regular fa-save"></i> Save</button>`
+                  : "";
+
               const deleteButtonHTML =
                 review.UserID === currentUserID
-                  ? `<button class="btn btn-primary" onclick="deleteReview(${review.ReviewID})"><i class="fa-regular fa-trash-can"></i></button>`
-                  : " "; // Empty string for other reviews
+                  ? `<button class="btn btn-danger" onclick="deleteReview(${review.ReviewID})"><i class="fa-regular fa-trash-can"></i> Delete</button>`
+                  : "";
 
               const reviewHTML = `
-                  <div class="container">
-                    <div class="col-lg-12 col-md-12 col-sm-12" style="border-bottom: 1px solid #C0C0C0; padding-bottom: 10px;">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="card-header">
-                            <div class="card-avatar">
-                              <img src="./assets/images/home-img/man-1.jpg" alt="avatar" />
-                            </div>
-                            <div class="card-name">
-                              <h5 class="card-title">${review.FirstName} ${review.LastName}</h5>
-                            </div>
+                <div class="container">
+                  <div class="col-lg-12 col-md-12 col-sm-12" style="border-bottom: 1px solid #C0C0C0; padding-bottom: 10px;">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="card-header">
+                          <div class="card-avatar">
+                            <img src="./assets/images/home-img/man-1.jpg" alt="avatar" />
                           </div>
-                          <div class="card-content">
-                            <p class="card-text">" ${review.Comment} "</p>
+                          <div class="card-name">
+                            <h5 class="card-title">${review.FirstName} ${review.LastName}</h5>
                           </div>
-                          <div class="review-footer">
-                            <div class="delete-review">
-                              ${deleteButtonHTML} <!-- Only the owner's delete button will be shown -->
-                            </div>
+                        </div>
+                        <div class="card-content">
+                          <p id="review-content-${review.ReviewID}" class="card-text" style="border: none;">${commentText}</p>
+                        </div>
+                        <div class="review-footer">
+                          <div class="edit-review">
+                            ${editButtonHTML}
+                          </div>
+                          <div class="delete-review">
+                            ${deleteButtonHTML}
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                `;
+                </div>
+              `;
               reviewsContainer.innerHTML += reviewHTML;
             });
           })

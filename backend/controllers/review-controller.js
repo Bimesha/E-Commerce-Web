@@ -72,6 +72,35 @@ const deleteReviewForUser = async (req, res) => {
   }
 };
 
+// controller to update a review by ReviewID and UserID
+const updateReview = async (req, res) => {
+  const { reviewId } = req.params;
+  const { comment } = req.body;
+  const userId = req.user.userId;
+
+  try {
+    // first, check if the review exists and belongs to the logged-in user
+    const review = await Review.findReviewByIdAndUserId(reviewId, userId);
+
+    if (!review) {
+      return res
+        .status(404)
+        .json({ error: "Review not found or unauthorized" });
+    }
+
+    // now, update the review
+    const result = await Review.updateReviewById(reviewId, userId, comment);
+    if (result.affectedRows > 0) {
+      res.status(200).json({ message: "Review updated successfully" });
+    } else {
+      res.status(400).json({ error: "Failed to update review" });
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Failed to update review" });
+  }
+};
+
 // Configure email transporter
 const transporter = nodemailer.createTransport({
   service: "gmail",
@@ -127,5 +156,6 @@ module.exports = {
   getAllReviews,
   deleteReview,
   deleteReviewForUser,
+  updateReview,
   sendReplyEmail,
 };
