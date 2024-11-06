@@ -30,6 +30,14 @@ const Review = {
     return result;
   },
 
+  // model to update a review by ReviewID and UserID to ensure only the owner can update
+  updateReviewById: async (reviewId, userId, newComment) => {
+    const query =
+      "UPDATE review SET Comment = ? WHERE ReviewID = ? AND UserID = ?";
+    const [result] = await db.query(query, [newComment, reviewId, userId]);
+    return result;
+  },
+
   // model to fetch user email and name based on ReviewID and UserID
   getUserEmailByReviewId: async (reviewId) => {
     const query =
