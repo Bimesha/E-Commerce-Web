@@ -160,36 +160,47 @@
 
     <script>
       // Helper function to get a cookie by name
-      function getCookie(name) {
-        return document.cookie
-          .split("; ")
-          .find((row) => row.startsWith(name + "="))
-          ?.split("=")[1];
-      }
+      const token = document.cookie
+        .split("; ")
+        .find((row) => row.startsWith("token="))
+        ?.split("=")[1];
+      console.log("Token:", token);
 
       // Function to parse JWT token
       function parseJwt(token) {
-        const base64Url = token.split(".")[1];
-        const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
-        const jsonPayload = decodeURIComponent(
-          atob(base64)
+        let base64Url = token.split(".")[1];
+        let base64 = decodeURIComponent(
+          atob(base64Url)
             .split("")
             .map(function (c) {
               return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
             })
             .join("")
         );
-        return JSON.parse(jsonPayload);
+        return JSON.parse(base64);
       }
 
       // Global variable to store the current user's ID
       let currentUserID = null;
 
       // Check for authentication token
-      const token = getCookie("token");
       if (token) {
-        const decodedToken = parseJwt(token);
-        currentUserID = decodedToken.userId;
+        try {
+          const decodedToken = parseJwt(token);
+          console.log("Decoded Token:", decodedToken);
+
+          // Check for token expiration
+          const currentTime = Math.floor(Date.now() / 1000);
+          if (decodedToken.exp && decodedToken.exp < currentTime) {
+            console.error("Token has expired");
+            alert("Your session has expired. Please log in again.");
+          } else {
+            currentUserID = decodedToken.userId;
+            console.log("Current User ID:", currentUserID);
+          }
+        } catch (error) {
+          console.error("Error decoding token:", error);
+        }
       }
 
       // Function to delete a review
@@ -288,13 +299,13 @@
               }
               const editButtonHTML =
                 review.UserID === currentUserID
-                  ? `<button id="edit-btn-${review.ReviewID}" class="btn btn-secondary" onclick="enableEdit(${review.ReviewID})"><i class="fa-regular fa-pen-to-square"></i> Edit</button>
-                     <button id="save-btn-${review.ReviewID}" class="btn btn-primary" onclick="saveReview(${review.ReviewID})" style="display: none;"><i class="fa-regular fa-save"></i> Save</button>`
+                  ? `<button id="edit-btn-${review.ReviewID}" class="btn btn-primary review-edit" onclick="enableEdit(${review.ReviewID})"><i    class="fa-solid fa-pencil"></i></button>
+                     <button id="save-btn-${review.ReviewID}" class="btn btn-primary review-save" onclick="saveReview(${review.ReviewID})" style="display: none;"><i class="fa-regular fa-save"></i></button>`
                   : "";
 
               const deleteButtonHTML =
                 review.UserID === currentUserID
-                  ? `<button class="btn btn-danger" onclick="deleteReview(${review.ReviewID})"><i class="fa-regular fa-trash-can"></i> Delete</button>`
+                  ? `<button class="btn btn-primary review-delete" onclick="deleteReview(${review.ReviewID})"><i class="fa-regular fa-trash-can"></i></button>`
                   : "";
 
               const reviewHTML = `
@@ -338,13 +349,12 @@
       window.onload = fetchReviews;
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
 
     <script src="./assets/js/nav.js"></script>
     <script src="./assets/widgets/registration.js"></script>
