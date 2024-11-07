@@ -160,36 +160,47 @@
 
     <script>
       // Helper function to get a cookie by name
-      function getCookie(name) {
-        return document.cookie
-          .split("; ")
-          .find((row) => row.startsWith(name + "="))
-          ?.split("=")[1];
-      }
+      const token = document.cookie
+        .split("; ")
+        .find((row) => row.startsWith("token="))
+        ?.split("=")[1];
+      console.log("Token:", token);
 
       // Function to parse JWT token
       function parseJwt(token) {
-        const base64Url = token.split(".")[1];
-        const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
-        const jsonPayload = decodeURIComponent(
-          atob(base64)
+        let base64Url = token.split(".")[1];
+        let base64 = decodeURIComponent(
+          atob(base64Url)
             .split("")
             .map(function (c) {
               return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
             })
             .join("")
         );
-        return JSON.parse(jsonPayload);
+        return JSON.parse(base64);
       }
 
       // Global variable to store the current user's ID
       let currentUserID = null;
 
       // Check for authentication token
-      const token = getCookie("token");
       if (token) {
-        const decodedToken = parseJwt(token);
-        currentUserID = decodedToken.userId;
+        try {
+          const decodedToken = parseJwt(token);
+          console.log("Decoded Token:", decodedToken);
+
+          // Check for token expiration
+          const currentTime = Math.floor(Date.now() / 1000); 
+          if (decodedToken.exp && decodedToken.exp < currentTime) {
+            console.error("Token has expired");
+            alert("Your session has expired. Please log in again.");
+          } else {
+            currentUserID = decodedToken.userId;
+            console.log("Current User ID:", currentUserID);
+          }
+        } catch (error) {
+          console.error("Error decoding token:", error);
+        }
       }
 
       // Function to delete a review
