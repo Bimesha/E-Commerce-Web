@@ -190,7 +190,7 @@
           console.log("Decoded Token:", decodedToken);
 
           // Check for token expiration
-          const currentTime = Math.floor(Date.now() / 1000); 
+          const currentTime = Math.floor(Date.now() / 1000);
           if (decodedToken.exp && decodedToken.exp < currentTime) {
             console.error("Token has expired");
             alert("Your session has expired. Please log in again.");
