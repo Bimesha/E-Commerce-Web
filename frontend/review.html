@@ -288,13 +288,13 @@
               }
               const editButtonHTML =
                 review.UserID === currentUserID
-                  ? `<button id="edit-btn-${review.ReviewID}" class="btn btn-secondary" onclick="enableEdit(${review.ReviewID})"><i class="fa-regular fa-pen-to-square"></i> Edit</button>
-                     <button id="save-btn-${review.ReviewID}" class="btn btn-primary" onclick="saveReview(${review.ReviewID})" style="display: none;"><i class="fa-regular fa-save"></i> Save</button>`
+                  ? `<button id="edit-btn-${review.ReviewID}" class="btn btn-primary review-edit" onclick="enableEdit(${review.ReviewID})"><i    class="fa-solid fa-pencil"></i></button>
+                     <button id="save-btn-${review.ReviewID}" class="btn btn-primary review-save" onclick="saveReview(${review.ReviewID})" style="display: none;"><i class="fa-regular fa-save"></i></button>`
                   : "";
 
               const deleteButtonHTML =
                 review.UserID === currentUserID
-                  ? `<button class="btn btn-danger" onclick="deleteReview(${review.ReviewID})"><i class="fa-regular fa-trash-can"></i> Delete</button>`
+                  ? `<button class="btn btn-primary review-delete" onclick="deleteReview(${review.ReviewID})"><i class="fa-regular fa-trash-can"></i></button>`
                   : "";
 
               const reviewHTML = `
@@ -338,13 +338,12 @@
       window.onload = fetchReviews;
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
 
     <script src="./assets/js/nav.js"></script>
     <script src="./assets/widgets/registration.js"></script>
