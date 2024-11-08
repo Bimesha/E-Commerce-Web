@@ -159,50 +159,40 @@
     </section>
 
     <script>
-      // Helper function to get a cookie by name
+      // Helper function to get a cookie
       const token = document.cookie
         .split("; ")
         .find((row) => row.startsWith("token="))
         ?.split("=")[1];
       console.log("Token:", token);
+      localStorage.setItem("token", token);
 
-      // Function to parse JWT token
-      function parseJwt(token) {
-        let base64Url = token.split(".")[1];
-        let base64 = decodeURIComponent(
-          atob(base64Url)
-            .split("")
-            .map(function (c) {
-              return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
-            })
-            .join("")
-        );
-        return JSON.parse(base64);
-      }
+      let currentUserID = null; // Declare the variable to hold the userId
 
-      // Global variable to store the current user's ID
-      let currentUserID = null;
-
-      // Check for authentication token
       if (token) {
-        try {
-          const decodedToken = parseJwt(token);
-          console.log("Decoded Token:", decodedToken);
+        console.log("Token:", token); // Confirm token is retrieved
+        localStorage.setItem("token", token);
 
-          // Check for token expiration
-          const currentTime = Math.floor(Date.now() / 1000);
-          if (decodedToken.exp && decodedToken.exp < currentTime) {
-            console.error("Token has expired");
-            alert("Your session has expired. Please log in again.");
-          } else {
-            currentUserID = decodedToken.userId;
-            console.log("Current User ID:", currentUserID);
-          }
-        } catch (error) {
-          console.error("Error decoding token:", error);
-        }
+        // Fetch user information from the backend with the token in the header
+        fetch("http://localhost:5500/api/reviews/user/user-info", {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+          // credentials: "include", // Sends cookies with the request
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("User data:", data);
+            currentUserID = data.userId; // Set the currentUserID
+          })
+          .catch((error) => {
+            console.error("Error fetching user info:", error);
+          });
+      } else {
+        console.error("No token found in cookies.");
       }
-
       // Function to delete a review
       function deleteReview(reviewId) {
         if (!token) {
@@ -263,6 +253,7 @@
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
           },
+          // credentials: "include",
           body: JSON.stringify({ comment: newComment }),
         })
           .then((response) => response.json())
@@ -283,6 +274,10 @@
       function fetchReviews() {
         fetch("http://localhost:5500/api/reviews/get-reviews", {
           method: "GET",
+          // headers: {
+          //   "Content-Type": "application/json",
+          // },
+          // credentials: "include",
         })
           .then((response) => response.json())
           .then((data) => {
