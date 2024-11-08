@@ -25,6 +25,11 @@ router.delete("/user/:reviewId", authenticateUser, deleteReviewForUser);
 // route to update a review, accessible only to the review owner
 router.put("/user/:reviewId", authenticateUser, updateReview);
 
+// router to send back the userId and role of the authenticated user
+router.get("/user/user-info", authenticateUser, (req, res) => {
+  res.json({ userId: req.user.userId, role: req.user.role });
+});
+
 // route to send a reply email
 router.post("/:reviewId", sendReplyEmail);
 
