@@ -43,6 +43,27 @@ body {
   margin-top: -25px;
 }
 
+.review-page-section .review-footer {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+  justify-content: end;
+}
+
+.review-page-section .edit-review .btn.btn-primary {
+  background-color: #ffba35;
+  padding: 6px 10px;
+  border: none;
+  color: #000000;
+}
+
+.review-page-section .delete-review .btn.btn-primary {
+  background-color: #ffba35;
+  padding: 6px 10px;
+  border: none;
+  color: #000000;
+}
+
 
 /* Media Queries */
 @media screen and (min-width: 425px) and (max-width: 600px) {
@@ -62,6 +83,17 @@ body {
 
   .review-page-section p {
     font-size: 14px;
+  }
+
+  .review-page-section .review-footer {
+    gap: 10px;
+  }
+  
+  .review-page-section .edit-review .btn.btn-primary {
+    padding: 5px 9px;  }
+  
+  .review-page-section .delete-review .btn.btn-primary {
+    padding: 5px 9px;
   }
 }
 
@@ -83,5 +115,18 @@ body {
 
   .review-page-section p {
     font-size: 13px;
+  }
+
+  .review-page-section .review-footer {
+    gap: 10px;
+  }
+  
+  .review-page-section .edit-review .btn.btn-primary {
+    font-size: 15px;
+    padding: 4px 8px;  }
+  
+  .review-page-section .delete-review .btn.btn-primary {
+    font-size: 15px;
+    padding: 4px 8px;
   }
 }
