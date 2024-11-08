@@ -247,7 +247,6 @@
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
           },
-          // credentials: "include",
           body: JSON.stringify({ comment: newComment }),
         })
           .then((response) => response.json())
