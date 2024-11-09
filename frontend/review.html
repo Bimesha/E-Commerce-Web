@@ -276,11 +276,9 @@
             reviewsContainer.innerHTML = "";
 
             data.forEach((review) => {
-              // Add the comma only if it's not already there
-              let commentText = review.Comment;
-              if (!commentText.startsWith('"') || !commentText.endsWith('"')) {
-                commentText = `" ${commentText} "`;
-              }
+              // Format the comment text with super commas only for display
+              let commentText = `" ${review.Comment} "`;
+              
               const editButtonHTML =
                 review.UserID === currentUserID
                   ? `<button id="edit-btn-${review.ReviewID}" class="btn btn-primary review-edit" onclick="enableEdit(${review.ReviewID})"><i    class="fa-solid fa-pencil"></i></button>
