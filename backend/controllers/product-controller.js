@@ -3,9 +3,12 @@ const fs = require("fs");
 const {
   createProduct,
   getProducts,
+  getAllProductsByCategory,
   getProductById,
   updateProductById,
   deleteProductById,
+  getPopularProducts,
+  getNewProducts,
 } = require("../models/product-model");
 
 // Controller to fetch all products to the admin page
@@ -56,6 +59,19 @@ const createNewProduct = async (req, res) => {
   } catch (err) {
     console.error("Error creating product:", err);
     res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+// Controller to get products by category
+const getProductsByCategory = async (req, res) => {
+  try {
+    const { categoryId } = req.params;
+    const results = await getAllProductsByCategory(categoryId);
+
+    res.status(200).json(results);
+  } catch (err) {
+    console.error("Error fetching products by category:", err);
+    res.status(500).json({ message: "Server error" });
   }
 };
 
@@ -135,10 +151,41 @@ const deleteProduct = async (req, res) => {
   }
 };
 
+// Controller to get popular products
+const fetchPopularProducts = async (req, res) => {
+  try {
+    const products = await getPopularProducts();
+    res.status(200).json(products);
+  } catch (error) {
+    console.error("Error fetching popular products:", error);
+    res.status(500).json({
+      success: false,
+      message: "Failed to fetch popular products",
+    });
+  }
+};
+
+// Controller to get newly added products
+const fetchNewProducts = async (req, res) => {
+  try {
+    const products = await getNewProducts();
+    res.status(200).json(products);
+  } catch (error) {
+    console.error("Error fetching new products:", error);
+    res.status(500).json({
+      success: false,
+      message: "Unable to fetch new products.",
+    });
+  }
+};
+
 module.exports = {
   getAllProducts,
   createNewProduct,
+  getProductsByCategory,
   getProductDetails,
   updateProductDetails,
   deleteProduct,
+  fetchPopularProducts,
+  fetchNewProducts,
 };
