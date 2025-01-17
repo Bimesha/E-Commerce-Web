@@ -1,13 +1,10 @@
 const multer = require("multer");
 const path = require("path");
 
-// Resolve the uploads folder relative to the backend directory
-const uploadPath = path.join(__dirname, "..", "uploads");
-
 // Configure multer for handling file uploads
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, uploadPath);
+    // cb(null, uploadPath);
     cb(null, "./uploads/"); // define where to store the uploaded files
   },
   filename: function (req, file, cb) {
@@ -18,6 +15,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({
   storage: storage,
+
+  limits: { fileSize: 5 * 1024 * 1024 }, // 5 MB limit
 
   // blocking non-image files
   fileFilter: (req, file, cb) => {
