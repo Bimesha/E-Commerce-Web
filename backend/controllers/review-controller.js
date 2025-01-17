@@ -1,4 +1,3 @@
-const db = require("../config/db");
 const Review = require("../models/review-model");
 const nodemailer = require("nodemailer");
 
