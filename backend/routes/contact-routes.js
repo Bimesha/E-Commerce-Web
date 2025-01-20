@@ -11,11 +11,7 @@ router.post(
         check('contactEmail').isEmail().withMessage('Please enter a valid email'),
         check('contactMessage').not().isEmpty().withMessage('Message is required'),
     ],
-    sendContactMessage);
-
-router.get('/contact', (req, res) => {
-    res.send("Contact route is working");
-});
-    
+    sendContactMessage
+);
 
 module.exports = router;
